@@ -1,73 +1,32 @@
 #!/usr/bin/env node
 
-const yaml = require('js-yaml');
 const path = require('path');
 const fs = require('fs');
+const ConfigManager = require('../lib/config-manager');
 const SiteGenerator = require('../lib/site-generator');
-
-const getConfig = () => {
-    let config = defaultConfig;
-    const yamlConfigPath = path.join(cwd, 'pageforge.yaml');
-
-    if (fs.existsSync(yamlConfigPath)) {
-        try {
-            const yamlConfig = yaml.load(fs.readFileSync(yamlConfigPath, 'utf8'));
-            // 转换路径配置为绝对路径
-            const pathKeys = ['source_path', 'output_path', 'template_path', 'assets_path'];
-            pathKeys.forEach(key => {
-                if (yamlConfig[key]) {
-                    yamlConfig[key] = path.join(cwd, yamlConfig[key]);
-                }
-            });
-
-            // 将 snake_case 转换为 camelCase
-            config = {
-                ...defaultConfig,
-                sourcePath: yamlConfig.source_path,
-                outputPath: yamlConfig.output_path,
-                templatePath: yamlConfig.template_path,
-                assetsPath: yamlConfig.assets_path,
-                site: yamlConfig.site,
-                nav: yamlConfig.nav
-            };
-        }
-        catch (err) {
-            console.error('Error parsing pageforge.yaml:', err);
-            process.exit(1);
-        }
-    }
-    return config;
-};
+const ExampleReader = require('../lib/example-reader');
 
 // 获取当前工作目录
 const cwd = process.cwd();
-
-// 默认配置
-const defaultConfig = {
-    sourcePath: path.join(cwd, 'content'),
-    // outputPath: path.join(cwd, 'dist'),
-    templatePath: path.join(cwd, 'templates'),
-    assetsPath: path.join(cwd, 'assets')
-};
 
 // 解析命令行参数
 const args = process.argv.slice(2);
 const command = args[0];
 
 async function main() {
-
-    const config = getConfig();
+    const configManager = new ConfigManager(cwd);
+    const config = configManager.getConfig();
+    const exampleReader = new ExampleReader();
 
     switch (command) {
         case 'build':
             try {
                 // 检查是否存在自定义配置文件
-                let config = defaultConfig;
                 const customConfigPath = path.join(cwd, 'pageforge.config.js');
 
-                if (require('fs').existsSync(customConfigPath)) {
+                if (fs.existsSync(customConfigPath)) {
                     const customConfig = require(customConfigPath);
-                    config = {...defaultConfig, ...customConfig};
+                    config = {...config, ...customConfig};
                 }
 
                 const generator = new SiteGenerator(config);
@@ -104,42 +63,18 @@ async function main() {
                 });
 
                 // 创建 YAML 配置文件
-                const configContent = `# PageForge 配置文件
-source_path: content
-output_path: dist
-template_path: templates  # 可选，不创建也能工作
-assets_path: assets
-
-site:
-  title: My PageForge Site
-  description: A static site built with PageForge
-
-# 导航配置
-nav:
-  - url: /
-    text: 首页
-  - url: /about.html
-    text: 关于`;
-
                 if (!fs.existsSync('pageforge.yaml')) {
                     fs.writeFileSync(
                         path.join(cwd, 'pageforge.yaml'),
-                        configContent
+                        exampleReader.readExampleConfig()
                     );
                 }
 
                 // 创建示例内容
-                const markdownContent = `---
-title: 欢迎使用 PageForge
----
-# 欢迎使用 PageForge
-
-This is your first page!`;
-
                 if (!fs.existsSync('content/index.md')) {
                     fs.writeFileSync(
                         path.join(cwd, 'content', 'index.md'),
-                        markdownContent
+                        exampleReader.readExampleMarkdown()
                     );
                 }
 
