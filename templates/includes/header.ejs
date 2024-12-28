@@ -1,5 +1,35 @@
+<%
+function isPathMatch(currentPath, targetPath) {
+    const normalizedCurrent = currentPath.replace(/\.(md|html)$/, '');
+    const normalizedTarget = targetPath.replace(/\.(md|html)$/, '');
+
+    if (normalizedTarget === '/') {
+        return normalizedCurrent === '/' || normalizedCurrent === '/index';
+    }
+
+    return normalizedCurrent === normalizedTarget;
+}
+
+function processLink(link) {
+    if (link.endsWith('.html')) {
+        return link;
+    }
+
+    if (link === '/') {
+        return '/index.html';
+    }
+
+    const cleanLink = link.replace(/\.md$/, '');
+    return `${cleanLink}.html`;
+}
+
+function isActive(link) {
+    return isPathMatch(page.path, link);
+}
+%>
+
 <header>
-    <nav class="bg-white dark:bg-gray-800 border-b">
+    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-10">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-8">
@@ -19,10 +49,10 @@
                     <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                         <% nav.forEach(function(item) { %>
                             <li class="shrink-0">
-                                <a href="<%= item.link %>"
+                                <a href="<%= processLink(item.link) %>"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                          hover:bg-gray-100 dark:hover:bg-gray-700
-                                          text-sm font-medium leading-none text-gray-900 dark:text-white">
+                                          <%= isActive(item.link) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %>
+                                          text-sm font-medium leading-none dark:text-white">
                                     <%= item.text %>
                                 </a>
                             </li>

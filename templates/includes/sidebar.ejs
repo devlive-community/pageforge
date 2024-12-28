@@ -1,11 +1,8 @@
 <%
-// 路径匹配函数
 function isPathMatch(currentPath, targetPath) {
-    // 移除两个路径的扩展名后比较
     const normalizedCurrent = currentPath.replace(/\.(md|html)$/, '');
     const normalizedTarget = targetPath.replace(/\.(md|html)$/, '');
 
-    // 处理根路径的特殊情况
     if (normalizedTarget === '/') {
         return normalizedCurrent === '/' || normalizedCurrent === '/index';
     }
@@ -13,22 +10,16 @@ function isPathMatch(currentPath, targetPath) {
     return normalizedCurrent === normalizedTarget;
 }
 
-// 链接处理函数
 function processLink(link) {
-    // 如果链接已经包含扩展名，保持不变
     if (link.endsWith('.html')) {
         return link;
     }
 
-    // 处理根路径
     if (link === '/') {
         return '/index.html';
     }
 
-    // 移除可能存在的 .md 扩展名
     const cleanLink = link.replace(/\.md$/, '');
-
-    // 添加 .html 扩展名
     return `${cleanLink}.html`;
 }
 
@@ -45,8 +36,8 @@ function isGroupActive(items) {
 %>
 
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
-    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)]">
-    <% Object.entries(sidebar).forEach(([group, items]) => { %>
+    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar">
+        <% Object.entries(sidebar).forEach(([group, items]) => { %>
             <div class="mb-6 <%= isGroupActive(items) ? 'relative' : '' %>">
                 <% if (group !== 'default') { %>
                     <h3 class="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-3 px-4">
