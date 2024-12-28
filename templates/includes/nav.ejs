@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <% if (typeof nav !== 'undefined' && Array.isArray(nav)) { %>
+            <% nav.forEach(function(item) { %>
+                <li><a href="<%= item.url %>"><%= item.text %></a></li>
+            <% }); %>
+        <% } %>
+    </ul>
+</nav>

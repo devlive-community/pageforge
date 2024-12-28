@@ -1,0 +1,30 @@
+{
+  "name": "pageforge",
+  "version": "1.0.0",
+  "description": "PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。\n无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现 高效构建、智能部署 和 即时上线。",
+  "main": "lib/site-generator.js",
+  "bin": {
+    "pageforge": "./bin/pageforge.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/"
+  ],
+  "keywords": [
+    "static-site-generator",
+    "markdown",
+    "cli"
+  ],
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "marked": "^15.0.4"
+  }
+}
