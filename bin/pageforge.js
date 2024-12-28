@@ -5,6 +5,7 @@ const fs = require('fs');
 const ConfigManager = require('../lib/config-manager');
 const SiteGenerator = require('../lib/site-generator');
 const ExampleReader = require('../lib/example-reader');
+const CreateSiteCommand = require('../lib/commands/create-site');
 
 // 获取当前工作目录
 const cwd = process.cwd();
@@ -19,6 +20,24 @@ async function main() {
     const exampleReader = new ExampleReader();
 
     switch (command) {
+        case 'create-site':
+            try {
+                const sitePath = args[1];
+                if (!sitePath) {
+                    console.error('Error: Site path is required');
+                    console.log('Usage: pageforge create-site <site-path>');
+                    process.exit(1);
+                }
+
+                const createSite = new CreateSiteCommand();
+                await createSite.execute(sitePath);
+            }
+            catch (error) {
+                console.error('Error creating site:', error.message);
+                process.exit(1);
+            }
+            break;
+
         case 'build':
             try {
                 // 检查是否存在自定义配置文件
@@ -91,8 +110,10 @@ async function main() {
 PageForge - Static Site Generator
 
 Commands:
-  init    Initialize a new PageForge project
-  build   Build the static site
+    create-site <path>    Create a new site at the specified path
+    init                  Initialize a new PageForge project, relevant files will be generated in the current directory
+    serve                 Start a development server
+    build                 Build the static site
 `);
             break;
     }
