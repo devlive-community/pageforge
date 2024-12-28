@@ -8,15 +8,19 @@
 </head>
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 <div class="flex flex-col min-h-screen">
-    <%- include('../includes/header') %>
+    <% if (page.config && page.config.header !== false) { %>
+        <%- include('../includes/header') %>
+    <% } %>
 
     <main class="container flex-grow mx-auto px-4 py-8">
         <article class="prose dark:prose-invert lg:prose-lg mx-auto">
-            <%- content %>
+            <%- include(`../layouts/${page.layout || 'content'}`) %>
         </article>
     </main>
 
-    <%- include('../includes/footer') %>
+    <% if (page.config && page.config.footer !== false) { %>
+        <%- include('../includes/footer') %>
+    <% } %>
 </div>
 </body>
 </html>
