@@ -6,6 +6,8 @@ const ConfigManager = require('../lib/config-manager');
 const SiteGenerator = require('../lib/site-generator');
 const ExampleReader = require('../lib/example-reader');
 const CreateSiteCommand = require('../lib/commands/create-site');
+const DeployGithubCommand = require('../lib/commands/deploy-github');
+const HelpCommand = require('../lib/commands/help');
 
 // 获取当前工作目录
 const cwd = process.cwd();
@@ -34,6 +36,17 @@ async function main() {
             }
             catch (error) {
                 console.error('Error creating site:', error.message);
+                process.exit(1);
+            }
+            break;
+
+        case 'deploy-github':
+            try {
+                const deployGithub = new DeployGithubCommand(configManager);
+                await deployGithub.execute();
+            }
+            catch (error) {
+                console.error('Error deploying to GitHub Pages:', error.message);
                 process.exit(1);
             }
             break;
@@ -106,15 +119,8 @@ async function main() {
             break;
 
         default:
-            console.log(`
-PageForge - Static Site Generator
-
-Commands:
-    create-site <path>    Create a new site at the specified path
-    init                  Initialize a new PageForge project, relevant files will be generated in the current directory
-    serve                 Start a development server
-    build                 Build the static site
-`);
+            const help = new HelpCommand();
+            help.execute();
             break;
     }
 }
