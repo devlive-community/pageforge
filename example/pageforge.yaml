@@ -12,7 +12,25 @@ cdn:
   style: https://cdn.tailwindcss.com
 
 nav:
-  - url: /
+  - link: /
     text: 首页
-  - url: /about.html
+  - link: /about.html
     text: 关于
+
+sidebar:
+  default:
+    - text: '快速开始'
+      link: '/'
+    - text: '基础教程'
+      link: '/basics'
+
+  分组链接:
+    - text: '主题定制'
+      link: '/advanced/theming'
+      children:
+        - text: '颜色配置'
+          link: '/advanced/theming/colors'
+        - text: '字体设置'
+          link: '/advanced/theming/typography'
+    - text: '插件系统'
+      link: '/advanced/plugins'

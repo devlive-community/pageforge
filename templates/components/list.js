@@ -1,4 +1,4 @@
-const {loadComponent} = require('../component-loader');
+const {loadComponent} = require('../../lib/component-loader');
 
 module.exports = function h1(item) {
     const type = item.ordered ? 'ol' : 'ul';

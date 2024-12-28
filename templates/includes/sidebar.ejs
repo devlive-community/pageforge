@@ -1,0 +1,118 @@
+<%
+// 路径匹配函数
+function isPathMatch(currentPath, targetPath) {
+    // 移除两个路径的扩展名后比较
+    const normalizedCurrent = currentPath.replace(/\.(md|html)$/, '');
+    const normalizedTarget = targetPath.replace(/\.(md|html)$/, '');
+
+    // 处理根路径的特殊情况
+    if (normalizedTarget === '/') {
+        return normalizedCurrent === '/' || normalizedCurrent === '/index';
+    }
+
+    return normalizedCurrent === normalizedTarget;
+}
+
+// 链接处理函数
+function processLink(link) {
+    // 如果链接已经包含扩展名，保持不变
+    if (link.endsWith('.html')) {
+        return link;
+    }
+
+    // 处理根路径
+    if (link === '/') {
+        return '/index.html';
+    }
+
+    // 移除可能存在的 .md 扩展名
+    const cleanLink = link.replace(/\.md$/, '');
+
+    // 添加 .html 扩展名
+    return `${cleanLink}.html`;
+}
+
+function isActive(link) {
+    return isPathMatch(page.path, link);
+}
+
+function isGroupActive(items) {
+    return items.some(item =>
+            isActive(item.link) ||
+            (item.children && item.children.some(child => isActive(child.link)))
+    );
+}
+%>
+
+<% if (typeof sidebar === 'object' && sidebar !== null) { %>
+    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)]">
+    <% Object.entries(sidebar).forEach(([group, items]) => { %>
+            <div class="mb-6 <%= isGroupActive(items) ? 'relative' : '' %>">
+                <% if (group !== 'default') { %>
+                    <h3 class="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-3 px-4">
+                        <%= group %>
+                    </h3>
+                <% } %>
+
+                <ul class="space-y-1.5">
+                    <% items.forEach(item => { %>
+                        <li class="relative">
+                            <a href="<%= processLink(item.link) %>"
+                               class="group block">
+                                <div class="relative flex items-center px-4 py-2 <%= isActive(item.link) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %> rounded-md transition-all duration-200 ease-in-out">
+
+                                    <% if (item.icon) { %>
+                                        <span class="inline-flex mr-3 text-gray-500 dark:text-gray-400 transition-colors duration-200 <%= isActive(item.link) ? 'text-blue-600 dark:text-blue-400' : 'group-hover:text-gray-900 dark:group-hover:text-gray-200' %>">
+                                            <i class="<%= item.icon %>"></i>
+                                        </span>
+                                    <% } %>
+
+                                    <span class="flex-grow"><%= item.text %></span>
+
+                                    <% if (item.children && item.children.length > 0) { %>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="h-4 w-4 ml-2 text-gray-400 transition-all duration-200 <%= isActive(item.link) || item.children.some(child => isActive(child.link)) ? 'rotate-90 text-blue-600 dark:text-blue-400' : 'group-hover:text-gray-600 dark:group-hover:text-gray-300' %>"
+                                             viewBox="0 0 20 20"
+                                             fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    <% } %>
+                                </div>
+                            </a>
+
+                            <% if (item.children && item.children.length > 0) { %>
+                                <ul class="mt-1 mb-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+                                    <% item.children.forEach(child => { %>
+                                        <li>
+                                            <a href="<%= processLink(child.link) %>"
+                                               class="group flex items-center px-4 py-2 text-[0.875rem] <%= isActive(child.link) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %> rounded-md transition-all duration-200 ease-in-out">
+
+                                                <% if (child.icon) { %>
+                                                    <span class="mr-3 text-gray-400 dark:text-gray-500 <%= isActive(child.link) ? 'text-blue-600 dark:text-blue-400' : '' %>">
+                                                        <i class="<%= child.icon %>"></i>
+                                                    </span>
+                                                <% } %>
+
+                                                <span><%= child.text %></span>
+                                            </a>
+                                        </li>
+                                    <% }) %>
+                                </ul>
+                            <% } %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% }) %>
+
+        <% if (page.sidebar_footnote) { %>
+            <div class="mt-8 mx-2">
+                <div class="px-4 py-3 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-100 dark:border-gray-700/50">
+                    <%= page.sidebar_footnote %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } %>
