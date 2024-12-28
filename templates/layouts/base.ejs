@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh" class="scroll-smooth">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %> - <%= site.title %></title>
+    <script src="<%= (cdn && cdn.style) || 'https://cdn.tailwindcss.com' %>"></script>
 </head>
-<body>
-<%- include('../includes/header') %>
-<main>
-    <%- content %>
-</main>
-<%- include('../includes/footer') %>
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<div class="flex flex-col min-h-screen">
+    <%- include('../includes/header') %>
+
+    <main class="container flex-grow mx-auto px-4 py-8">
+        <article class="prose dark:prose-invert lg:prose-lg mx-auto">
+            <%- content %>
+        </article>
+    </main>
+
+    <%- include('../includes/footer') %>
+</div>
 </body>
 </html>

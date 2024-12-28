@@ -1,4 +1,35 @@
 <header>
-    <h1><%= site.title %></h1>
-    <%- include('./nav') %>
+    <nav class="bg-white dark:bg-gray-800 border-b">
+        <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-4 shrink-0">
+                        <% if (site.logo) { %>
+                            <a href="/" class="flex items-center">
+                                <img src="<%= basePath %>/<%= site.logo || 'assets/logo.svg' %>"
+                                     alt="<%= site.title %>"
+                                     class="h-10 w-auto object-contain transition-transform hover:scale-105">
+                            </a>
+                        <% } %>
+                        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                            <%= site.title %>
+                        </a>
+                    </div>
+
+                    <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                        <% nav.forEach(function(item) { %>
+                            <li class="shrink-0">
+                                <a href="<%= item.url %>"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          hover:bg-gray-100 dark:hover:bg-gray-700
+                                          text-sm font-medium leading-none text-gray-900 dark:text-white">
+                                    <%= item.text %>
+                                </a>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>

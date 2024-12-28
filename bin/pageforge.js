@@ -44,7 +44,6 @@ async function main() {
                 const DevServer = require('../lib/dev-server');
                 const server = new DevServer(config);
                 await server.start();
-                console.log('Development server started at http://localhost:3000');
             }
             catch (error) {
                 console.error('Error starting dev server:', error);

@@ -1,9 +1,18 @@
-<nav>
-    <ul>
-        <% if (typeof nav !== 'undefined' && Array.isArray(nav)) { %>
-            <% nav.forEach(function(item) { %>
-                <li><a href="<%= item.url %>"><%= item.text %></a></li>
-            <% }); %>
-        <% } %>
-    </ul>
+<nav class="bg-white dark:bg-gray-800 shadow">
+    <div class="container mx-auto px-4">
+        <ul class="flex flex-wrap justify-start space-x-6 py-4">
+            <% if (typeof nav !== 'undefined' && Array.isArray(nav)) { %>
+                <% nav.forEach(function(item) { %>
+                    <li>
+                        <a
+                                href="<%= item.url %>"
+                                class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 font-medium"
+                        >
+                            <%= item.text %>
+                        </a>
+                    </li>
+                <% }); %>
+            <% } %>
+        </ul>
+    </div>
 </nav>
