@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档中心 - </title>
+    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+
+    <!-- 基础样式文件 -->
+    <link rel="stylesheet" href="/assets/pageforge.min.css">
+
+    <!-- 加载主题配置中的额外 CSS 文件 -->
+    
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<div class="flex flex-col min-h-screen">
+    
+        
+
+<header>
+    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-10">
+        <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-4 shrink-0">
+                        
+                            <a href="/" class="flex items-center">
+                                <img src="..//assets/logo.svg"
+                                     alt=""
+                                     class="h-10 w-auto object-contain transition-transform hover:scale-105">
+                            </a>
+                        
+                        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                            
+                        </a>
+                    </div>
+
+                    <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                        
+                            <li class="shrink-0">
+                                <a href="/index.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                          text-sm font-medium leading-none dark:text-white">
+                                    首页
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/docs/index.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                          text-sm font-medium leading-none dark:text-white">
+                                    文档
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- 仓库链接 -->
+                
+                    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats">
+                        <a href="https://github.com/devlive-community/pageforge"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+                            <div class="inline-flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </div>
+                            <div class="inline-flex flex-col items-center gap-0.5">
+                                <div class="inline-flex items-center gap-1">
+                                    devlive-community/pageforge
+                                </div>
+                                <div class="space-x-2" id="repo-stats">
+                                    <!-- 初始显示配置的值 -->
+                                    <div class="inline-flex items-center gap-1 tag-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                            <path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path>
+                                        </svg>
+                                        
+                                    </div>
+                                    <div class="inline-flex items-center gap-1 stars-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+                                        </svg>
+                                        
+                                    </div>
+                                    <div class="inline-flex items-center gap-1 forks-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                            <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
+                                        </svg>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <script>
+                        // 初始化 GitHub Stats
+                        document.addEventListener('DOMContentLoaded', function () {
+                            if (window.PageForge && window.PageForge.GitHubStats) {
+                                window.PageForge.GitHubStats.init('devlive-community', 'pageforge');
+                            }
+                        });
+                    </script>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+    
+
+    <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        
+            <aside class="w-64 flex-shrink-0 pr-8">
+                <nav class="sticky top-20">
+                    <div class="space-y-4">
+                        
+
+
+    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar">
+        
+            <div class="mb-6 ">
+                
+
+                <ul class="space-y-1.5">
+                    
+                        <li class="relative">
+                            <a href="/docs/get-started.html"
+                               class="group block">
+                                <div class="relative flex items-center px-4 py-2 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
+
+                                    
+
+                                    <span class="flex-grow">安装 &amp; 部署</span>
+
+                                    
+                                </div>
+                            </a>
+
+                            
+                        </li>
+                    
+                </ul>
+            </div>
+        
+
+        
+    </div>
+
+                    </div>
+                </nav>
+            </aside>
+        
+
+        <!-- Main Content -->
+        <main class="flex-grow mt-6">
+            <article class="prose dark:prose-invert lg:prose-lg mx-auto">
+                <!-- 页面标题部分 -->
+<div class="mb-3">
+    
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
+            文档中心
+        </h1>
+
+        
+    
+</div>
+
+<!-- 分隔线 -->
+<div class="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 mb-8"></div>
+
+<!-- 主要内容部分 -->
+<div class="prose prose-gray dark:prose-invert max-w-none">
+    
+        <div class="space-y-4"></div>
+    
+</div>
+            </article>
+        </main>
+    </div>
+
+    
+        <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <div class="container mx-auto px-4 py-6">
+        <div class="text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; 2024  使用 ❤️ PageForge 构建 PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</p>
+        </div>
+    </div>
+</footer>
+    
+</div>
+</body>
+
+<!-- 基础脚本文件 -->
+<script src="/assets/pageforge.min.js"></script>
+
+<!-- 加载主题配置中的额外 JS 文件 -->
+
+</html>
