@@ -20,21 +20,38 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Link package globally
         run: |
-          npm link
-          npm link pageforge
+          pnpm link --global
+          pnpm link --global pageforge
 
       - name: Run linting
-        run: npm run lint || echo "No lint script found"
+        run: pnpm run lint || echo "No lint script found"
 
       - name: Run unit tests
-        run: npm test || echo "No test script found"
+        run: pnpm test || echo "No test script found"
 
       - name: Test create-site command
         run: |
@@ -62,4 +79,4 @@ jobs:
           curl -f http://localhost:3001 || exit 1
 
       - name: Build project
-        run: npm run build || echo "No build script found"
+        run: pnpm run build || echo "No build script found"
