@@ -58,6 +58,6 @@ PageForge 包括一个实时预览服务器，因此您可以在编写文档时�
 pageforge serve
 ```
 
-将浏览器指向 [localhost:3000](http://localhost:3000)，您应该会看到：
+将浏览器指向 [localhost:3000](http://localhost:3000 "localhost:3000" "_blank")，您应该会看到：
 
 ![img.png](img.png)
