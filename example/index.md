@@ -52,6 +52,17 @@ PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助�
 ---
 
 [无标题](https://github.com/devlive-community/pageforge)
+
 [有标题](https://github.com/devlive-community/pageforge "PageForge")
 
 [我可以在外部打开哦](https://github.com/devlive-community/pageforge "PageForge" "_blank")
+
+[我可以在外部打开哦](https://github.com/devlive-community/pageforge "PageForge" "_blank")
+
+# 图片
+
+---
+
+![PageForge](https://raw.githubusercontent.com/devlive-community/pageforge/d751a0bdc90e4cdd8b124a6c8b2adb499c47025f/assets/logo.svg)
+
+![PageForge](https://raw.githubusercontent.com/devlive-community/pageforge/d751a0bdc90e4cdd8b124a6c8b2adb499c47025f/assets/logo.svg "PageForge")
