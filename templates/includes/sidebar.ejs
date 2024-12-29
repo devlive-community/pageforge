@@ -1,102 +1,92 @@
 <%
-function isPathMatch(currentPath, targetPath) {
-    const normalizedCurrent = currentPath.replace(/\.(md|html)$/, '');
-    const normalizedTarget = targetPath.replace(/\.(md|html)$/, '');
+// 判断一个项目是否包含指定路径
+function isPathInItem(item, path) {
+    // 直接匹配
+    if (item.href === path) return true;
 
-    if (normalizedTarget === '/') {
-        return normalizedCurrent === '/' || normalizedCurrent === '/index';
+    // 检查子项
+    if (item.items) {
+        return item.items.some(subItem => isPathInItem(subItem, path));
     }
 
-    return normalizedCurrent === normalizedTarget;
+    return false;
 }
 
-function processLink(link) {
-    if (link.endsWith('.html')) {
-        return link;
-    }
-
-    if (link === '/') {
-        return '/index.html';
-    }
-
-    const cleanLink = link.replace(/\.md$/, '');
-    return `${cleanLink}.html`;
-}
-
-function isActive(link) {
-    return isPathMatch(page.path, link);
-}
-
-function isGroupActive(items) {
-    return items.some(item =>
-            isActive(item.link) ||
-            (item.children && item.children.some(child => isActive(child.link)))
-    );
-}
+// 修改后的查找逻辑
+sidebar = nav.find(item => {
+    // 判断当前项或其子项是否包含目标路径
+    return isPathInItem(item, page.path);
+});
 %>
+
+<% function isActive(href) { return href === page.path} %>
+
 
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar">
-        <% Object.entries(sidebar).forEach(([group, items]) => { %>
-            <div class="mb-6 <%= isGroupActive(items) ? 'relative' : '' %>">
-                <% if (group !== 'default') { %>
-                    <h3 class="text-xs font-semibold uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-3 px-4">
-                        <%= group %>
-                    </h3>
-                <% } %>
+        <div class="mb-6">
+            <ul class="space-y-1.5">
+                <% sidebar.items.forEach(item => { %>
+                    <li class="relative">
+                        <a href="<%= item.href %>"
+                           class="group block">
+                            <div class="relative flex items-center px-4 py-2
+                                        <%=
+                                            isActive(item.href)
+                                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                                : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                                        %>
+                                       rounded-md transition-all duration-200 ease-in-out">
 
-                <ul class="space-y-1.5">
-                    <% items.forEach(item => { %>
-                        <li class="relative">
-                            <a href="<%= processLink(item.link) %>"
-                               class="group block">
-                                <div class="relative flex items-center px-4 py-2 <%= isActive(item.link) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %> rounded-md transition-all duration-200 ease-in-out">
+                                <% if (item.icon) { %>
+                                    <span class="inline-flex mr-3 text-gray-500 dark:text-gray-400 transition-colors duration-200
+                                                 <%=
+                                                    isActive(item.href)
+                                                            ? 'text-blue-600 dark:text-blue-400'
+                                                            : 'group-hover:text-gray-900 dark:group-hover:text-gray-200'
+                                                 %>">
+                                        <i class="<%= item.icon %>"></i>
+                                    </span>
+                                <% } %>
 
-                                    <% if (item.icon) { %>
-                                        <span class="inline-flex mr-3 text-gray-500 dark:text-gray-400 transition-colors duration-200 <%= isActive(item.link) ? 'text-blue-600 dark:text-blue-400' : 'group-hover:text-gray-900 dark:group-hover:text-gray-200' %>">
-                                            <i class="<%= item.icon %>"></i>
-                                        </span>
-                                    <% } %>
+                                <span class="flex-grow"><%= item.title %></span>
 
-                                    <span class="flex-grow"><%= item.text %></span>
+                                <% if (item.items && item.items.length > 0) { %>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         class="h-4 w-4 ml-2 text-gray-400 transition-all duration-200 <%= isActive(item.href) || item.items.some(child => isActive(child.href)) ? 'rotate-90 text-blue-600 dark:text-blue-400' : 'group-hover:text-gray-600 dark:group-hover:text-gray-300' %>"
+                                         viewBox="0 0 20 20"
+                                         fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                <% } %>
+                            </div>
+                        </a>
 
-                                    <% if (item.children && item.children.length > 0) { %>
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             class="h-4 w-4 ml-2 text-gray-400 transition-all duration-200 <%= isActive(item.link) || item.children.some(child => isActive(child.link)) ? 'rotate-90 text-blue-600 dark:text-blue-400' : 'group-hover:text-gray-600 dark:group-hover:text-gray-300' %>"
-                                             viewBox="0 0 20 20"
-                                             fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                                  clip-rule="evenodd"/>
-                                        </svg>
-                                    <% } %>
-                                </div>
-                            </a>
+                        <% if (item.items && item.items.length > 0) { %>
+                            <ul class="mt-1 mb-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1.5">
+                                <% item.items.forEach(child => { %>
+                                    <li>
+                                        <a href="<%= child.href %>"
+                                           class="group flex items-center px-4 py-2 text-[0.875rem] <%= isActive(child.href) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %> rounded-md transition-all duration-200 ease-in-out">
 
-                            <% if (item.children && item.children.length > 0) { %>
-                                <ul class="mt-1 mb-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
-                                    <% item.children.forEach(child => { %>
-                                        <li>
-                                            <a href="<%= processLink(child.link) %>"
-                                               class="group flex items-center px-4 py-2 text-[0.875rem] <%= isActive(child.link) ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium' : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40' %> rounded-md transition-all duration-200 ease-in-out">
+                                            <% if (child.icon) { %>
+                                                <span class="mr-3 text-gray-400 dark:text-gray-500 <%= isActive(child.href) ? 'text-blue-600 dark:text-blue-400' : '' %>">
+                                                    <i class="<%= child.icon %>"></i>
+                                                </span>
+                                            <% } %>
 
-                                                <% if (child.icon) { %>
-                                                    <span class="mr-3 text-gray-400 dark:text-gray-500 <%= isActive(child.link) ? 'text-blue-600 dark:text-blue-400' : '' %>">
-                                                        <i class="<%= child.icon %>"></i>
-                                                    </span>
-                                                <% } %>
-
-                                                <span><%= child.text %></span>
-                                            </a>
-                                        </li>
-                                    <% }) %>
-                                </ul>
-                            <% } %>
-                        </li>
-                    <% }) %>
-                </ul>
-            </div>
-        <% }) %>
+                                            <span><%= child.title %></span>
+                                        </a>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        <% } %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
 
         <% if (page.sidebar_footnote) { %>
             <div class="mt-8 mx-2">

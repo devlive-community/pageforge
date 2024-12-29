@@ -1,5 +1,5 @@
 ---
-title: 创建你的网站
+title: 创建您的网站
 ---
 
 安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。
@@ -61,3 +61,15 @@ pageforge serve
 将浏览器指向 [localhost:3000](http://localhost:3000 "localhost:3000" "_blank")，您应该会看到：
 
 ![img.png](img.png)
+
+## 编译你的项目
+
+---
+
+完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站：
+
+```bash
+pageforge build
+```
+
+此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。
