@@ -85,7 +85,7 @@ jobs:
         run: pnpm run build || echo "No build script found"
 
   test-deploy:
-    needs: test
+    needs: test-command
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
