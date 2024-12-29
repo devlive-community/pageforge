@@ -28,6 +28,7 @@
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "marked": "^15.0.4",
-    "mkdirp": "^3.0.1"
+    "mkdirp": "^3.0.1",
+    "pinyin": "4.0.0-alpha.2"
   }
 }

@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       chalk:
-        specifier: ^4.1.2
+        specifier: 4.1.2
         version: 4.1.2
       chokidar:
         specifier: ^3.5.3
@@ -35,6 +35,9 @@ importers:
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
+      pinyin:
+        specifier: 4.0.0-alpha.2
+        version: 4.0.0-alpha.2
 
 packages:
 
@@ -260,6 +263,10 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  commander@1.1.1:
+    resolution: {integrity: sha512-71Rod2AhcH3JhkBikVpNd0pA+fWsmAaVoti6OR38T76chA7vE3pSerS0Jor4wDw+tOueD2zLVvFOw5H0Rcj7rA==}
+    engines: {node: '>= 0.6.x'}
+
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
@@ -454,6 +461,9 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  keypress@0.1.0:
+    resolution: {integrity: sha512-x0yf9PL/nx9Nw9oLL8ZVErFAk85/lslwEP7Vz7s5SI1ODXZIgit3C5qyWjw4DxOuO/3Hb4866SQh28a1V1d+WA==}
+
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -535,6 +545,22 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  pinyin@4.0.0-alpha.2:
+    resolution: {integrity: sha512-SED2wWr1X0QwH6rXIDgg20zS1mAk0AVMO8eM3KomUlOYzC8mNMWZnspZWhhI0M8MBIbF2xwa+5r30jTSjAqNsg==}
+    engines: {install-node: ^18.0.0}
+    hasBin: true
+    peerDependencies:
+      '@node-rs/jieba': ^1.6.0
+      nodejieba: 2.5.2
+      segmentit: ^2.0.3
+    peerDependenciesMeta:
+      '@node-rs/jieba':
+        optional: true
+      nodejieba:
+        optional: true
+      segmentit:
+        optional: true
 
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
@@ -802,6 +828,10 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  commander@1.1.1:
+    dependencies:
+      keypress: 0.1.0
+
   concat-map@0.0.1: {}
 
   content-disposition@0.5.4:
@@ -1029,6 +1059,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  keypress@0.1.0: {}
+
   kind-of@6.0.3: {}
 
   marked@15.0.4: {}
@@ -1078,6 +1110,10 @@ snapshots:
   path-to-regexp@0.1.12: {}
 
   picomatch@2.3.1: {}
+
+  pinyin@4.0.0-alpha.2:
+    dependencies:
+      commander: 1.1.1
 
   proxy-addr@2.0.7:
     dependencies:
