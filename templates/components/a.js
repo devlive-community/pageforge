@@ -3,7 +3,7 @@ module.exports = function template(item) {
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="${item.href}"
            target="${item.target || '_self'}"
-           title="item.title || ''}">
+           title="${item.title || ''}">
             ${item.text}
         </a>
     `;

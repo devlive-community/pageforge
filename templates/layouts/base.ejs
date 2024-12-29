@@ -26,6 +26,7 @@
     <% } %>
 
     <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        <!-- 左侧列表 -->
         <% if (page.config && page.config.sidebar !== false) { %>
             <aside class="w-64 flex-shrink-0 pr-8">
                 <nav class="sticky top-20">
@@ -36,12 +37,17 @@
             </aside>
         <% } %>
 
-        <!-- Main Content -->
-        <main class="flex-grow mt-6">
+        <!-- 中间内容 -->
+        <main class="flex-grow mt-6 w-2">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto">
                 <%- include(`../layouts/${page.layout || 'content'}`) %>
             </article>
         </main>
+
+        <!-- 右侧目录 -->
+        <% if (page.config && page.config.toc !== false && page.toc) { %>
+            <%- include('../includes/toc') %>
+        <% } %>
     </div>
 
     <% if (page.config && page.config.footer !== false) { %>

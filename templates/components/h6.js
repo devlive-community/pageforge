@@ -7,7 +7,7 @@ module.exports = function template(item) {
     }).flat().join('-');
 
     return `
-        <h6 class="text-base font-bold text-gray-900 mb-2">
+        <h6 class="text-base font-bold text-gray-900 my-2">
             <div id="${slug}">${item.text}</div>
         </h6>
     `;
