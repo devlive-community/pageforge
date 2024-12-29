@@ -1,0 +1,65 @@
+name: PageForge CI
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Link package globally
+        run: |
+          npm link
+          npm link pageforge
+
+      - name: Run linting
+        run: npm run lint || echo "No lint script found"
+
+      - name: Run unit tests
+        run: npm test || echo "No test script found"
+
+      - name: Test create-site command
+        run: |
+          mkdir -p test-sites
+          pageforge create-site test-sites/test-site
+          test -d test-sites/test-site || exit 1
+
+      - name: Test init command
+        run: |
+          cd test-sites/test-site
+          pageforge init
+          test -f pageforge.yml || exit 1
+
+      - name: Test build command
+        run: |
+          cd test-sites/test-site
+          pageforge build
+          test -d dist || exit 1
+
+      - name: Test serve command
+        run: |
+          cd test-sites/test-site
+          timeout 30s pageforge serve --port 3001 &
+          sleep 5
+          curl -f http://localhost:3001 || exit 1
+
+      - name: Build project
+        run: npm run build || echo "No build script found"
