@@ -75,10 +75,10 @@ PageForge 提供多种预设模板：
 
 ## 📮 联系我们
 
-- 问题反馈：[GitHub Issues](https://github.com/pageforge/pageforge/issues)
-- 邮箱：support@pageforge.dev
+- 问题反馈：[GitHub Issues](https://github.com/devlive-community/pageforge/issues)
+- 邮箱：support@devlive.org
 - 官方讨论区：[Discord](https://discord.gg/pageforge)
 
 ---
 
-使用 ❤️ 用 PageForge 构建
+使用 ❤️ PageForge 构建

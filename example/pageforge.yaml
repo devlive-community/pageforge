@@ -15,6 +15,11 @@ theme:
 cdn:
   style: https://cdn.tailwindcss.com
 
+repo:
+  owner: devlive-community
+  name: pageforge
+  url: https://github.com/devlive-community/pageforge
+
 nav:
   - link: /
     text: 首页
