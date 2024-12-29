@@ -118,6 +118,7 @@
     
 
     <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        <!-- 左侧列表 -->
         
             <aside class="w-64 flex-shrink-0 pr-8">
                 <nav class="sticky top-20">
@@ -149,7 +150,7 @@
                         </li>
                     
                         <li class="relative">
-                            <a href="/docs/create-site.html"
+                            <a href="/docs/create-site/index.html"
                                class="group block">
                                 <div class="relative flex items-center px-4 py-2 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
 
@@ -176,13 +177,10 @@
             </aside>
         
 
-        <!-- Main Content -->
-        <main class="flex-grow mt-6">
+        <!-- 中间内容 -->
+        <main class="flex-grow mt-6 w-2">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto">
-                
-
-
-<!-- 页面容器 -->
+                <!-- 页面容器 -->
 <div class="relative lg:flex lg:gap-8">
     <!-- 主要内容区域 -->
     <div class="min-w-0 flex-1">
@@ -216,23 +214,23 @@
             <div id="h1">h1</div>
         </h1>
     
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-5">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-5">
             <div id="h2">h2</div>
         </h2>
     
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        <h3 class="text-2xl font-bold text-gray-900 my-4">
             <div id="h3">h3</div>
         </h3>
     
-        <h4 class="text-xl font-bold text-gray-900 mb-3">
+        <h4 class="text-xl font-bold text-gray-900 my-3">
             <div id="h4">h4</div>
         </h4>
     
-        <h5 class="text-lg font-bold text-gray-900 mb-2">
+        <h5 class="text-lg font-bold text-gray-900 my-2">
             <div id="h5">h5</div>
         </h5>
     
-        <h6 class="text-base font-bold text-gray-900 mb-2">
+        <h6 class="text-base font-bold text-gray-900 my-2">
             <div id="h6">h6</div>
         </h6>
     
@@ -383,7 +381,7 @@
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://github.com/devlive-community/pageforge"
            target="_self"
-           title="item.title || ''}">
+           title="">
             无标题
         </a>
     </p>
@@ -393,7 +391,7 @@
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://github.com/devlive-community/pageforge"
            target="_self"
-           title="item.title || ''}">
+           title="PageForge">
             有标题
         </a>
     </p>
@@ -403,7 +401,7 @@
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://github.com/devlive-community/pageforge"
            target="_blank"
-           title="item.title || ''}">
+           title="PageForge">
             我可以在外部打开哦
         </a>
     </p>
@@ -536,167 +534,168 @@
 
         </div>
     </div>
+</div>
+            </article>
+        </main>
 
-    <!-- 侧边栏目录 -->
-    
-        <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-            <div class="sticky top-20">
-                <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+        <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+            
+            
+                
+                    <div class="pl-0">
+                        <a href="#h1-h6-mo-ban"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h1-h6-mo-ban">
+                            h1 - h6 模版
+                        </a>
+                    </div>
                     
+                
+                    <div class="pl-0">
+                        <a href="#h1"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h1">
+                            h1
+                        </a>
+                    </div>
                     
                         
-                            <div class="pl-0">
-                                <a href="#h1-h6-mo-ban"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h1-h6-mo-ban">
-                                    h1 - h6 模版
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#h1"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h1">
-                                    h1
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-4">
-                                <a href="#h2"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h2">
-                                    h2
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-8">
-                                <a href="#h3"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h3">
-                                    h3
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-12">
-                                <a href="#h4"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h4">
-                                    h4
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-16">
-                                <a href="#h5"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h5">
-                                    h5
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-20">
-                                <a href="#h6"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="h6">
-                                    h6
-                                </a>
-                            </div>
-                            
-                        
+                
+                    <div class="pl-4">
+                        <a href="#h2"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h2">
+                            h2
+                        </a>
+                    </div>
                     
-                            
                         
+                
+                    <div class="pl-8">
+                        <a href="#h3"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h3">
+                            h3
+                        </a>
+                    </div>
                     
-                            
                         
+                
+                    <div class="pl-12">
+                        <a href="#h4"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h4">
+                            h4
+                        </a>
+                    </div>
                     
-                            
                         
+                
+                    <div class="pl-16">
+                        <a href="#h5"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h5">
+                            h5
+                        </a>
+                    </div>
                     
-                            
                         
+                
+                    <div class="pl-20">
+                        <a href="#h6"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="h6">
+                            h6
+                        </a>
+                    </div>
                     
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#duan-luo"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="duan-luo">
-                                    段落
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#wu-xu-lie-biao"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="wu-xu-lie-biao">
-                                    无序列表
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#you-xu-lie-biao"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="you-xu-lie-biao">
-                                    有序列表
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#ren-wu-lie-biao"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="ren-wu-lie-biao">
-                                    任务列表
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#lian-jie"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="lian-jie">
-                                    链接
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#tu-pian"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="tu-pian">
-                                    图片
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-0">
-                                <a href="#biao-ge"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="biao-ge">
-                                    表格
-                                </a>
-                            </div>
-                            
-                        
+                
+            
                     
-                </nav>
-            </div>
-        </div>
-    
+                
+            
+                    
+                
+            
+                    
+                
+            
+                    
+                
+            
+                    
+                
+                    <div class="pl-0">
+                        <a href="#duan-luo"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="duan-luo">
+                            段落
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#wu-xu-lie-biao"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="wu-xu-lie-biao">
+                            无序列表
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#you-xu-lie-biao"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="you-xu-lie-biao">
+                            有序列表
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#ren-wu-lie-biao"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="ren-wu-lie-biao">
+                            任务列表
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#lian-jie"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="lian-jie">
+                            链接
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#tu-pian"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="tu-pian">
+                            图片
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-0">
+                        <a href="#biao-ge"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="biao-ge">
+                            表格
+                        </a>
+                    </div>
+                    
+                
+            
+        </nav>
+    </div>
 </div>
 
 <script>
@@ -725,8 +724,7 @@
         updateActiveState();
     });
 </script>
-            </article>
-        </main>
+        
     </div>
 
     

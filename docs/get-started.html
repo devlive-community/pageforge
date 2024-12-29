@@ -118,6 +118,7 @@
     
 
     <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        <!-- 左侧列表 -->
         
             <aside class="w-64 flex-shrink-0 pr-8">
                 <nav class="sticky top-20">
@@ -149,7 +150,7 @@
                         </li>
                     
                         <li class="relative">
-                            <a href="/docs/create-site.html"
+                            <a href="/docs/create-site/index.html"
                                class="group block">
                                 <div class="relative flex items-center px-4 py-2 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
 
@@ -176,13 +177,10 @@
             </aside>
         
 
-        <!-- Main Content -->
-        <main class="flex-grow mt-6">
+        <!-- 中间内容 -->
+        <main class="flex-grow mt-6 w-2">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto">
-                
-
-
-<!-- 页面容器 -->
+                <!-- 页面容器 -->
 <div class="relative lg:flex lg:gap-8">
     <!-- 主要内容区域 -->
     <div class="min-w-0 flex-1">
@@ -218,7 +216,7 @@
 
         <div class="space-y-4"></div>
     
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-5">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-5">
             <div id="an-zhuang">安装</div>
         </h2>
     
@@ -235,7 +233,7 @@
     <ul class="my-4 pl-4 list-inside list-disc"><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">在线安装</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">源码安装</li></ul>
         <div class="space-y-4"></div>
     
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        <h3 class="text-2xl font-bold text-gray-900 my-4">
             <div id="zai-xian-an-zhuang">在线安装</div>
         </h3>
     
@@ -249,69 +247,70 @@
     </p>
 
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="language-bash">pnpm add -g pageforge
-yarn global add pageforge</code></pre>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pnpm add -g pageforge
+yarn global add pageforge</code></div>
         <div class="space-y-4"></div>
     
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        <h3 class="text-2xl font-bold text-gray-900 my-4">
             <div id="yuan-ma-an-zhuang">源码安装</div>
         </h3>
     
         <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="language-bash">git clone https://github.com/devlive-community/pageforge.git
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">git clone https://github.com/devlive-community/pageforge.git
 cd pageforge
 pnpm install
-pnpm link --global</code></pre>
+pnpm link --global</code></div>
         </div>
     </div>
+</div>
+            </article>
+        </main>
 
-    <!-- 侧边栏目录 -->
-    
-        <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-            <div class="sticky top-20">
-                <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+        <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#an-zhuang"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="an-zhuang">
+                            安装
+                        </a>
+                    </div>
                     
+                        
+                
+                    <div class="pl-8">
+                        <a href="#zai-xian-an-zhuang"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="zai-xian-an-zhuang">
+                            在线安装
+                        </a>
+                    </div>
                     
-                        
-                            <div class="pl-4">
-                                <a href="#an-zhuang"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="an-zhuang">
-                                    安装
-                                </a>
-                            </div>
-                            
-                                
-                        
-                            <div class="pl-8">
-                                <a href="#zai-xian-an-zhuang"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="zai-xian-an-zhuang">
-                                    在线安装
-                                </a>
-                            </div>
-                            
-                        
-                            <div class="pl-8">
-                                <a href="#yuan-ma-an-zhuang"
-                                   class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                   data-slug="yuan-ma-an-zhuang">
-                                    源码安装
-                                </a>
-                            </div>
-                            
-                        
+                
+                    <div class="pl-8">
+                        <a href="#yuan-ma-an-zhuang"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="yuan-ma-an-zhuang">
+                            源码安装
+                        </a>
+                    </div>
                     
-                            
-                        
+                
+            
                     
-                </nav>
-            </div>
-        </div>
-    
+                
+            
+        </nav>
+    </div>
 </div>
 
 <script>
@@ -340,8 +339,7 @@ pnpm link --global</code></pre>
         updateActiveState();
     });
 </script>
-            </article>
-        </main>
+        
     </div>
 
     

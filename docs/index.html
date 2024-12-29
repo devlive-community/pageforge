@@ -118,6 +118,7 @@
     
 
     <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        <!-- 左侧列表 -->
         
             <aside class="w-64 flex-shrink-0 pr-8">
                 <nav class="sticky top-20">
@@ -149,7 +150,7 @@
                         </li>
                     
                         <li class="relative">
-                            <a href="/docs/create-site.html"
+                            <a href="/docs/create-site/index.html"
                                class="group block">
                                 <div class="relative flex items-center px-4 py-2 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
 
@@ -176,13 +177,10 @@
             </aside>
         
 
-        <!-- Main Content -->
-        <main class="flex-grow mt-6">
+        <!-- 中间内容 -->
+        <main class="flex-grow mt-6 w-2">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto">
-                
-
-
-<!-- 页面容器 -->
+                <!-- 页面容器 -->
 <div class="relative lg:flex lg:gap-8">
     <!-- 主要内容区域 -->
     <div class="min-w-0 flex-1">
@@ -206,21 +204,22 @@
     
         </div>
     </div>
+</div>
+            </article>
+        </main>
 
-    <!-- 侧边栏目录 -->
-    
-        <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-            <div class="sticky top-20">
-                <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
-                    
-                    
-                        
-                    
-                </nav>
-            </div>
-        </div>
-    
+        <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+            
+            
+                
+            
+        </nav>
+    </div>
 </div>
 
 <script>
@@ -249,8 +248,7 @@
         updateActiveState();
     });
 </script>
-            </article>
-        </main>
+        
     </div>
 
     

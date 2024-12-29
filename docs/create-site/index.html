@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>创建你的网站 - </title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -28,7 +28,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt=""
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -118,6 +118,7 @@
     
 
     <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
+        <!-- 左侧列表 -->
         
             <aside class="w-64 flex-shrink-0 pr-8">
                 <nav class="sticky top-20">
@@ -149,7 +150,7 @@
                         </li>
                     
                         <li class="relative">
-                            <a href="/docs/create-site.html"
+                            <a href="/docs/create-site/index.html"
                                class="group block">
                                 <div class="relative flex items-center px-4 py-2 text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium rounded-md transition-all duration-200 ease-in-out">
 
@@ -176,13 +177,10 @@
             </aside>
         
 
-        <!-- Main Content -->
-        <main class="flex-grow mt-6">
+        <!-- 中间内容 -->
+        <main class="flex-grow mt-6 w-2">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto">
-                
-
-
-<!-- 页面容器 -->
+                <!-- 页面容器 -->
 <div class="relative lg:flex lg:gap-8">
     <!-- 主要内容区域 -->
     <div class="min-w-0 flex-1">
@@ -217,7 +215,7 @@
     。</span></p>
 
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="language-bash">pageforge init</code></pre>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge init</code></div>
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7 mb-4">
@@ -226,7 +224,7 @@
     </p>
 
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="language-bash">pageforge create-site .</code></pre>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site .</code></div>
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7 mb-4">
@@ -235,7 +233,7 @@
     </p>
 
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="language-bash">pageforge create-site my-website</code></pre>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site my-website</code></div>
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7 mb-4">
@@ -244,37 +242,106 @@
     </p>
 
         <div class="space-y-4"></div>
-    <pre class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal"><code class="">├── content
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">├── content
 │   └── index.md
-└── pageforge.yaml</code></pre>
+└── pageforge.yaml</code></div>
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">然后，您可以使用 
+    
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-5">
+            <div id="pei-zhi-wen-jian">配置文件</div>
+        </h2>
+    
+        <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
+    
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">默认会在当前目录下创建名为 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            pageforge build
+            pageforge.yaml
         </code>
-     命令来构建网站，或者使用 </span><span class="inline-block my-1">
+     的配置文件，该文件包含了默认配置。</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">site:
+  title: PageForge
+  description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+
+nav:
+  - link: /
+    text: 首页</code></div>
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">如果您想要更改默认配置，可以在 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            pageforge serve
+            pageforge.yaml
         </code>
-     命令来预览网站。</span></p>
+     文件中进行修改。</span></p>
+
+        <div class="space-y-4"></div>
+    
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-5">
+            <div id="yu-lan-nin-de-xiu-gai">预览您的修改</div>
+        </h2>
+    
+        <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
+    
+        <div class="space-y-4"></div>
+    <p>
+        <p class="text-base text-gray-700 leading-7 mb-4">
+            PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始：
+        </p>
+    </p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge serve</code></div>
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">将浏览器指向 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="http://localhost:3000"
+           target="_blank"
+           title="localhost:3000">
+            localhost:3000
+        </a>
+    ，您应该会看到：</span></p>
+
+        <div class="space-y-4"></div>
+    <p><img src="img.png" 
+             alt="img.png" class="max-w-full h-auto"/></p>
 
         </div>
     </div>
+</div>
+            </article>
+        </main>
 
-    <!-- 侧边栏目录 -->
-    
-        <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-            <div class="sticky top-20">
-                <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+        <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar" id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#pei-zhi-wen-jian"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="pei-zhi-wen-jian">
+                            配置文件
+                        </a>
+                    </div>
                     
+                
+                    <div class="pl-4">
+                        <a href="#yu-lan-nin-de-xiu-gai"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="yu-lan-nin-de-xiu-gai">
+                            预览您的修改
+                        </a>
+                    </div>
                     
-                        
-                    
-                </nav>
-            </div>
-        </div>
-    
+                
+            
+        </nav>
+    </div>
 </div>
 
 <script>
@@ -303,8 +370,7 @@
         updateActiveState();
     });
 </script>
-            </article>
-        </main>
+        
     </div>
 
     
