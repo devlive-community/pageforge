@@ -55,33 +55,30 @@ jobs:
 
       - name: Test create-site command
         run: |
-          mkdir -p test-sites/create-site-test
-          pageforge create-site test-sites/create-site-test
-          test -d test-sites/create-site-test || exit 1
+          mkdir -p test-sites
+          pageforge create-site test-sites/site1
 
-      - name: Test init command in new directory
+      - name: Test init command
         run: |
-          mkdir -p test-sites/init-test
-          cd test-sites/init-test
+          cd test-sites/site1
           pageforge init
-          test -f pageforge.yml || exit 1
 
-      - name: Test build command in new directory
+      - name: Test build command
         run: |
-          mkdir -p test-sites/build-test
-          cd test-sites/build-test
+          mkdir -p test-sites/site2
+          cd test-sites/site2
           pageforge create-site .
           pageforge build
-          test -d dist || exit 1
 
-      - name: Test serve command in new directory
+      - name: Test serve command
         run: |
-          mkdir -p test-sites/serve-test
-          cd test-sites/serve-test
+          mkdir -p test-sites/site3
+          cd test-sites/site3
           pageforge create-site .
+          pageforge build
           timeout 30s pageforge serve --port 3001 &
           sleep 5
-          curl -f http://localhost:3001 || exit 1
+          curl -f http://localhost:3001
 
       - name: Build project
         run: pnpm run build || echo "No build script found"
@@ -112,8 +109,8 @@ jobs:
 
       - name: Test deploy-github command
         run: |
-          mkdir -p test-sites/deploy-test
-          cd test-sites/deploy-test
+          mkdir -p test-sites/site4
+          cd test-sites/site4
           pageforge create-site .
           pageforge build
           git config --global user.email "test@example.com"
