@@ -1,6 +1,4 @@
-module.exports = function template(value) {
-    const item = value.imageItem.item;
-
+module.exports = function template(item) {
     // 构建样式类
     let classes = ['max-w-full', 'h-auto'];
 
