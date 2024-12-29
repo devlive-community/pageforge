@@ -61,7 +61,7 @@ function isActive(link) {
                 </div>
 
                 <!-- 仓库链接 -->
-                <% if (repo) { %>
+                <% if (locals.repo) { %>
                     <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats">
                         <a href="<%= repo.url %>"
                            target="_blank"

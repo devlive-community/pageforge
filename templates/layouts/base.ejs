@@ -17,7 +17,7 @@
     <% } %>
 
     <!-- Tailwind CSS -->
-    <script src="<%= (cdn && cdn.style) || 'https://cdn.tailwindcss.com' %>"></script>
+    <script src="<%= locals.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
 </head>
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 <div class="flex flex-col min-h-screen">
@@ -54,7 +54,7 @@
 <script src="/assets/pageforge.min.js"></script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
-<% if (theme && theme.extra_js && Array.isArray(theme.extra_js)) { %>
+<% if (locals.theme?.extra_js && Array.isArray(theme.extra_js)) { %>
     <% theme.extra_js.forEach(function(js_path) { %>
         <script src="<%= js_path %>"></script>
     <% }); %>
