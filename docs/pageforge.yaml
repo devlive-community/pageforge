@@ -29,5 +29,7 @@ nav:
 
 sidebar:
   default:
-    - text: '安装 & 部署'
+    - text: 快速上手
       link: '/docs/get-started'
+    - text: 创建你的网站
+      link: '/docs/create-site'

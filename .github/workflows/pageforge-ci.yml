@@ -7,7 +7,7 @@ on:
     branches: [ dev ]
 
 jobs:
-  test:
+  test-command:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -60,20 +60,21 @@ jobs:
 
       - name: Test init command
         run: |
-          cd test-sites/site1
+          mkdir -p test-sites/site2
+          cd test-sites/site2
           pageforge init
 
       - name: Test build command
         run: |
-          mkdir -p test-sites/site2
-          cd test-sites/site2
+          mkdir -p test-sites/site3
+          cd test-sites/site3
           pageforge create-site .
           pageforge build
 
       - name: Test serve command
         run: |
-          mkdir -p test-sites/site3
-          cd test-sites/site3
+          mkdir -p test-sites/site4
+          cd test-sites/site4
           pageforge create-site .
           pageforge build
           timeout 30s pageforge serve --port 3001 &
