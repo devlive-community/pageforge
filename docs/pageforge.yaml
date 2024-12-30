@@ -18,7 +18,11 @@ repo:
 
 nav:
   - 快速开始:
-      - /docs/get-started
-      - /docs/create-site/index
-      - /docs/publish-site
-      - /docs/customization
+      - /getting-started/get-started
+      - /getting-started/create-site/index
+      - /getting-started/publish-site
+      - /getting-started/customization
+  - 设置:
+      - /setup/index
+  - 使用文档:
+      - /docs/index
