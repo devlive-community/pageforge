@@ -32,6 +32,10 @@ module.exports = function template(item) {
     const titleAttr = item.title ? ` title="${item.title}"` : '';
 
     // 返回完整的img标签
-    return `<img src="${item.href}" 
-             alt="${item.alt}"${titleAttr}${styleAttr}${classAttr}/>`;
+    return `
+        <div class="w-full h-full">
+            <img src="${item.href}" 
+                 alt="${item.alt}"${titleAttr}${styleAttr}${classAttr}/>
+        </div>
+    `;
 };

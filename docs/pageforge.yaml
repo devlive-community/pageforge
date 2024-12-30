@@ -26,3 +26,7 @@ nav:
       - /setup/index
   - 使用文档:
       - /docs/index
+      - 支持语法:
+          - /docs/support-syntax/href
+          - /docs/support-syntax/image
+          - /docs/support-syntax/alert
