@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面元数据 - </title>
+    <title>页面元数据 - PageForge</title>
     <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -30,7 +30,7 @@
                         
                             <a href="/" class="flex items-center">
                                 <img src="..//assets/logo.svg"
-                                     alt=""
+                                     alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         
@@ -217,6 +217,16 @@
                                         </a>
                                     </li>
                                 
+                                    <li>
+                                        <a href="/docs/support-syntax/tab.html"
+                                           class="group flex items-center px-4 py-2 text-[0.875rem] text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
+
+                                            
+
+                                            <span>选项卡</span>
+                                        </a>
+                                    </li>
+                                
                             </ul>
                         
                     </li>
@@ -257,7 +267,7 @@
             
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。
         </p>
     </p>
@@ -266,7 +276,7 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="yong-fa" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             用法
         </p>
     </div>
@@ -276,7 +286,7 @@
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             我们将详细描述如何在 PageForge 文件中使用 PageForge 的各种功能，以及如何在 Markdown 中使用 PageForge 的各种功能。
         </p>
     </p>
@@ -295,7 +305,7 @@
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。
         </p>
     </p>
@@ -306,7 +316,7 @@ title: 这里是标题
 ---</code></div>
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。
         </p>
     </p>
@@ -332,7 +342,7 @@ title: 这里是标题
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。
         </p>
     </p>
@@ -363,7 +373,7 @@ config:
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。
         </p>
     </p>
@@ -394,7 +404,7 @@ config:
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             在 markdown 文件的顶部，你可以设置是否关闭页面的底部。
         </p>
     </p>
@@ -490,6 +500,21 @@ config:
         </code>
      文件夹中创建自定义的布局文件，文件名便是模版名称。</span></p>
 
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">比如模版名字是 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            foo
+        </code>
+    ，那么文件名就是 </span><span class="inline-block my-1">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            foo.ejs
+        </code>
+    。在页面中使用以下代码配置模版:</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">---
+layout: foo
+---</code></div>
         </div>
     </div>
 </div>
@@ -507,10 +532,10 @@ config:
                 
                     <div class="pl-4">
                         <a href="#yong-fa"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="yong-fa">
                             
-        <p class="text-base text-gray-700 leading-7">
+        <p class="text-base text-gray-700 leading-7 my-2">
             用法
         </p>
     
@@ -521,7 +546,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-title"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-title">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -534,7 +559,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-header"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-header">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -547,7 +572,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-sidebar"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-sidebar">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -560,7 +585,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-footer"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-footer">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -573,7 +598,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-toc"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-toc">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -586,7 +611,7 @@ config:
                 
                     <div class="pl-8">
                         <a href="#she-zhi-layout"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-layout">
                             <span class="inline-block my-1">设置 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
@@ -638,7 +663,7 @@ config:
         <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
     <div class="container mx-auto px-4 py-6">
         <div class="text-center text-gray-600 dark:text-gray-400">
-            <p>&copy; 2024  使用 ❤️ PageForge 构建 PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</p>
+            <p>&copy; 2024 PageForge 使用 ❤️ PageForge 构建 PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</p>
         </div>
     </div>
 </footer>
