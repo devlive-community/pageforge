@@ -33,6 +33,13 @@ footer:
           href: https://github.com/devlive-community/pageforge
         - title: TailwindCSS
           href: https://github.com/tailwindlabs/tailwindcss
+    - 关于我们:
+        - title: 关于我们
+          href: https://github.com/devlive-community/pageforge/blob/dev/README.md
+        - title: 联系我们
+          href: https://github.com/devlive-community/pageforge/issues
+        - title: 隐私政策
+          href: https://github.com/devlive-community/pageforge/blob/dev/LICENSE
 
 theme:
   extra_css:
