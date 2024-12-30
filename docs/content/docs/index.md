@@ -1,5 +1,5 @@
 ---
-title: 参考
+title: 页面元数据
 ---
 
 PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。
@@ -15,7 +15,7 @@ PageForge 的材料包含许多强大的功能，使技术写作成为一项令�
 ---
 
 在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。
-    
+
 ```markdown
 ---
 title: 这里是标题
@@ -54,7 +54,7 @@ config:
 ---
 ```
 
-默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 `sidebar: false` 以关闭它。    
+默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 `sidebar: false` 以关闭它。
 
 ### 设置 `footer`
 
@@ -93,10 +93,7 @@ config:
 在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 `content`，但你可以在 markdown 文件的顶部设置 `layout: layout-name` 以更改它。
 
 > 你可以在 `templates/layouts` 中找到所有可用的布局。
-> ddd
-> 
-> ddd
-> dddd
-> dddd
+>
+> 目前支持 `content` 和 `page` 布局。
 
-> ddddddd
+如果是自定义的布局，可以直接在 `templates/layouts` 文件夹中创建自定义的布局文件，文件名便是模版名称。
