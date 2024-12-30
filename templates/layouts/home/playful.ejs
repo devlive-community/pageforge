@@ -1,0 +1,114 @@
+<% if (page.hero) { %>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-pink-100 to-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+                <h1 class="relative text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                    <%= page.hero.title %>
+                </h1>
+                <p class="mt-6 text-xl text-purple-700 max-w-3xl mx-auto">
+                    <%= page.hero.description %>
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <% if (page.hero.primaryCta) { %>
+                        <a href="<%= page.hero.primaryCta.url %>"
+                           class="transform hover:-rotate-2 hover:scale-105 transition-all duration-300 inline-flex items-center px-8 py-4 rounded-2xl text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 shadow-xl hover:shadow-2xl">
+                            <%= page.hero.primaryCta.text %>
+                        </a>
+                    <% } %>
+                    <% if (page.hero.secondaryCta) { %>
+                        <a href="<%= page.hero.secondaryCta.url %>"
+                           class="transform hover:rotate-2 hover:scale-105 transition-all duration-300 inline-flex items-center px-8 py-4 rounded-2xl text-purple-600 font-bold bg-white shadow-xl hover:shadow-2xl">
+                            <%= page.hero.secondaryCta.text %>
+                        </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } %>
+
+<% if (page.features) { %>
+    <!-- Features Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-bold text-purple-600 uppercase tracking-wide"><%= page.features.subtitle %></h2>
+                <p class="mt-2 text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"><%= page.features.title %></p>
+                <p class="mt-4 text-xl text-purple-700 max-w-3xl mx-auto"><%= page.features.description %></p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+                    <% page.features.items.forEach(function(feature, index) { %>
+                        <div class="group hover:-rotate-2 hover:scale-105 transition-all duration-300">
+                            <div class="relative bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                                <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-2xl bg-gradient-to-r <%= index % 2 === 0 ? 'from-pink-500 to-purple-500' : 'from-purple-500 to-pink-500' %>">
+                                    <div class="text-white">
+                                        <%- feature.icon %>
+                                    </div>
+                                </div>
+                                <h3 class="mt-6 text-xl font-bold text-center text-purple-900">
+                                    <%= feature.title %>
+                                </h3>
+                                <p class="mt-4 text-purple-700 text-center">
+                                    <%= feature.description %>
+                                </p>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } %>
+
+<% if (page.stats) { %>
+    <!-- Stats Section -->
+    <section class="bg-gradient-to-r from-pink-100 to-purple-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+                    <%= page.stats.title %>
+                </h2>
+                <p class="mt-4 text-xl text-purple-700 max-w-3xl mx-auto"><%= page.stats.description %></p>
+            </div>
+            <div class="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4">
+                <% page.stats.items.forEach(function(stat, index) { %>
+                    <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-1 transform">
+                        <dt class="text-lg font-bold text-purple-600"><%= stat.label %></dt>
+                        <dd class="mt-2 text-4xl font-black bg-gradient-to-r <%= index % 2 === 0 ? 'from-pink-500 to-purple-500' : 'from-purple-500 to-pink-500' %> bg-clip-text text-transparent">
+                            <%= stat.value %>
+                        </dd>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+<% } %>
+
+<% if (page.cta) { %>
+    <!-- CTA Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 transform -skew-y-6"></div>
+                <div class="relative bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="px-8 py-16 sm:px-16 sm:py-24 lg:py-32 lg:px-24 text-center">
+                        <h2 class="text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+                            <%= page.cta.title %>
+                        </h2>
+                        <p class="mt-4 text-xl text-purple-700">
+                            <%= page.cta.description %>
+                        </p>
+                        <a href="<%= page.cta.button.url %>"
+                           class="mt-8 inline-flex transform hover:scale-105 transition-transform duration-300 items-center px-8 py-4 rounded-2xl text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 shadow-xl hover:shadow-2xl">
+                            <%= page.cta.button.text %>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<% } %>
