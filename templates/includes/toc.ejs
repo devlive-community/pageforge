@@ -6,7 +6,7 @@
                 <% items.forEach(item => { %>
                     <div class="pl-<%= (item.level - 1) * 4 %>">
                         <a href="#<%= item.slug %>"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="<%= item.slug %>">
                             <%- item.text %>
                         </a>

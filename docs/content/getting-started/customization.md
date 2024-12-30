@@ -67,3 +67,11 @@ templates
 按照文件的路径，您可以覆盖默认的模板文件。
 
 如果自定义模版，可以直接在 `templates/layouts` 文件夹中创建自定义的布局文件，文件名便是模版名称。
+
+```
+<article>
+    <div class="content">
+        <%- content %>
+    </div>
+</article>
+```

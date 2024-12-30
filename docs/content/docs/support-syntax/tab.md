@@ -4,11 +4,9 @@ title: 选项卡
 
 PageForge 支持使用 markdown 实现了选项卡相关信息。
 
-::: danger
+### 基本语法
 
-:::
-
-## 基本语法
+---
 
 ```markdown
 ::: tabs
