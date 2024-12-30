@@ -42,7 +42,7 @@ function isPathInNavItem(currentPath, navItem) {
                             </a>
                         <% } %>
                         <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
-                            <%= site.title %>
+                            <%= !site.hiddenTitle ? site.title : '' %>
                         </a>
                     </div>
 
