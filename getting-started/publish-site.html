@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>设置 - </title>
+    <title>发布您的网站 - </title>
     <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -45,7 +45,7 @@
                                 <a href="/getting-started/get-started.html"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                           text-sm font-medium leading-none dark:text-white
-                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                          text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                     快速开始
                                 </a>
                             </li>
@@ -54,7 +54,7 @@
                                 <a href="/setup/index.html"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                           text-sm font-medium leading-none dark:text-white
-                                          text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
+                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
                                     设置
                                 </a>
                             </li>
@@ -143,7 +143,43 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/setup/index.html"
+                        <a href="/getting-started/get-started.html"
+                           class="group block">
+                            <div class="relative flex items-center px-4 py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+
+                                <span class="flex-grow">快速上手</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/getting-started/create-site/index.html"
+                           class="group block">
+                            <div class="relative flex items-center px-4 py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+
+                                <span class="flex-grow">创建您的网站</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/getting-started/publish-site.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
                                         text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
@@ -151,7 +187,25 @@
 
                                 
 
-                                <span class="flex-grow">设置</span>
+                                <span class="flex-grow">发布您的网站</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/getting-started/customization.html"
+                           class="group block">
+                            <div class="relative flex items-center px-4 py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+
+                                <span class="flex-grow">自定义您的网站</span>
 
                                 
                             </div>
@@ -182,7 +236,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    设置
+                    发布您的网站
                 </h1>
                 
             
@@ -197,16 +251,16 @@
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7">
-            PageForge 材料提供了多种自定义文档的选项。在本节中，我们将解释如何为您的网站创建有意义的结构、更改外观和感觉、添加博客和评论系统以及构建高度优化的网站。
+            在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。
         </p>
     </p>
 
         <div class="space-y-4"></div>
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
-            <div id="wang-zhan-jie-gou" class="inline-flex items-center">
+            <div id="GitHubPages" class="inline-flex items-center">
         <p class="text-base text-gray-700 leading-7">
-            网站结构
+            GitHub Pages
         </p>
     </div>
         </div>
@@ -216,10 +270,90 @@
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7">
-            通过根据您的喜好配置页眉和页脚、在多种导航模式中进行选择、设置站点搜索等来设置和自定义文档的结构。
+            如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。
         </p>
     </p>
 
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
+            <div id="shi-yong-GitHubActions" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            使用 GitHub Actions
+        </p>
+    </div>
+        </div>
+    <p><span class="inline-block my-1">使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            .github/workflows/ci.yml
+        </code>
+    ，然后复制并粘贴以下内容：</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+        
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: |
+          pageforge build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
+            <div id="shi-yong-PageForge" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            使用 PageForge
+        </p>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
+    
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            pageforge.yaml
+        </code>
+     文件，读取配置信息：</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">deploy:
+  github:
+    repository: devlive-community/pageforge
+    branch: gh-pages
+    cname: pageforge.devlive.community
+    buildDir: dist
+    username: devlive-community
+    email: support@devlive.org</code></div>
         </div>
     </div>
 </div>
@@ -236,16 +370,46 @@
             
                 
                     <div class="pl-4">
-                        <a href="#wang-zhan-jie-gou"
+                        <a href="#GitHubPages"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="wang-zhan-jie-gou">
+                           data-slug="GitHubPages">
                             
         <p class="text-base text-gray-700 leading-7">
-            网站结构
+            GitHub Pages
         </p>
     
                         </a>
                     </div>
+                    
+                        
+                
+                    <div class="pl-8">
+                        <a href="#shi-yong-GitHubActions"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="shi-yong-GitHubActions">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            使用 GitHub Actions
+        </p>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-8">
+                        <a href="#shi-yong-PageForge"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="shi-yong-PageForge">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            使用 PageForge
+        </p>
+    
+                        </a>
+                    </div>
+                    
+                
+            
                     
                 
             

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快速上手 - </title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <title>创建您的网站 - </title>
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -15,6 +15,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 <div class="flex flex-col min-h-screen">
     
@@ -28,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt=""
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -41,11 +42,29 @@
                     <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                         
                             <li class="shrink-0">
-                                <a href="/docs/get-started.html"
+                                <a href="/getting-started/get-started.html"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                           text-sm font-medium leading-none dark:text-white
                                           text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                     快速开始
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/setup/index.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none dark:text-white
+                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                    设置
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/docs/index.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none dark:text-white
+                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                    使用文档
                                 </a>
                             </li>
                         
@@ -124,10 +143,10 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/docs/get-started.html"
+                        <a href="/getting-started/get-started.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -142,10 +161,10 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/docs/create-site/index.html"
+                        <a href="/getting-started/create-site/index.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -160,7 +179,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/docs/publish-site.html"
+                        <a href="/getting-started/publish-site.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -178,7 +197,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/docs/customization.html"
+                        <a href="/getting-started/customization.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -217,7 +236,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    快速上手
+                    创建您的网站
                 </h1>
                 
             
@@ -231,66 +250,146 @@
             
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 mb-4">
-            PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+        <p class="text-base text-gray-700 leading-7">
+            安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。
         </p>
     </p>
 
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">我们假设您的文件夹是 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            my-website
+        </code>
+    。</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge init</code></div>
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 mb-4">
-            PageForge 的使用过程非常简单，只需几步即可完成网站的构建、部署。你只需要编写 markdown 文件，PageForge 会帮你生成高质量的静态网站。无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+        <p class="text-base text-gray-700 leading-7">
+            或者
         </p>
     </p>
 
         <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site .</code></div>
+        <div class="space-y-4"></div>
+    <p>
+        <p class="text-base text-gray-700 leading-7">
+            或者指定文件夹路径
+        </p>
+    </p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site my-website</code></div>
+        <div class="space-y-4"></div>
+    <p>
+        <p class="text-base text-gray-700 leading-7">
+            安装完成后，它将是如下目录结构：
+        </p>
+    </p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">├── content
+│   └── index.md
+└── pageforge.yaml</code></div>
+        <div class="space-y-4"></div>
     
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-5">
-            <div id="an-zhuang">安装</div>
-        </h2>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="pei-zhi-wen-jian" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            配置文件
+        </p>
+    </div>
+        </div>
     
-        <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
+    
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">默认会在当前目录下创建名为 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            pageforge.yaml
+        </code>
+     的配置文件，该文件包含了默认配置。</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">site:
+  title: PageForge
+  description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+
+nav:
+  - link: /
+    text: 首页</code></div>
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1">如果您想要更改默认配置，可以在 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            pageforge.yaml
+        </code>
+     文件中进行修改。</span></p>
+
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="yu-lan-nin-de-xiu-gai" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            预览您的修改
+        </p>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 mb-4">
-            PageForge 提供以下安装方式:
+        <p class="text-base text-gray-700 leading-7">
+            PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始：
         </p>
     </p>
 
         <div class="space-y-4"></div>
-    <ul class="my-4 pl-4 list-inside list-disc"><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">在线安装</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">源码安装</li></ul>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge serve</code></div>
+        <div class="space-y-4"></div>
+    <p><span class="inline-block my-1 mx-auto">将浏览器指向 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="http://localhost:3000"
+           target="_blank"
+           title="localhost:3000">
+            localhost:3000
+        </a>
+    ，您应该会看到：</span></p>
+
+        <div class="space-y-4"></div>
+    <p><img src="img.png" 
+             alt="img.png" class="max-w-full h-auto"/></p>
+
         <div class="space-y-4"></div>
     
-        <h3 class="text-2xl font-bold text-gray-900 my-4">
-            <div id="zai-xian-an-zhuang">在线安装</div>
-        </h3>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="bian-yi-ni-de-xiang-mu" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            编译你的项目
+        </p>
+    </div>
+        </div>
     
-        <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 mb-4">
-            您可以使用 pnpm 或 yarn 等包管理工具进行在线安装:
+        <p class="text-base text-gray-700 leading-7">
+            完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站：
         </p>
     </p>
 
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pnpm add -g pageforge
-yarn global add pageforge</code></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge build</code></div>
         <div class="space-y-4"></div>
-    
-        <h3 class="text-2xl font-bold text-gray-900 my-4">
-            <div id="yuan-ma-an-zhuang">源码安装</div>
-        </h3>
-    
-        <hr class="my-6 h-0.5 border-0 bg-gray-200"></hr>
-    
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">git clone https://github.com/devlive-community/pageforge.git
-cd pageforge
-pnpm install
-pnpm link --global</code></div>
+    <p>
+        <p class="text-base text-gray-700 leading-7">
+            此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。
+        </p>
+    </p>
+
         </div>
     </div>
 </div>
@@ -307,34 +406,42 @@ pnpm link --global</code></div>
             
                 
                     <div class="pl-4">
-                        <a href="#an-zhuang"
+                        <a href="#pei-zhi-wen-jian"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="an-zhuang">
-                            安装
-                        </a>
-                    </div>
-                    
-                        
-                
-                    <div class="pl-8">
-                        <a href="#zai-xian-an-zhuang"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="zai-xian-an-zhuang">
-                            在线安装
+                           data-slug="pei-zhi-wen-jian">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            配置文件
+        </p>
+    
                         </a>
                     </div>
                     
                 
-                    <div class="pl-8">
-                        <a href="#yuan-ma-an-zhuang"
+                    <div class="pl-4">
+                        <a href="#yu-lan-nin-de-xiu-gai"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="yuan-ma-an-zhuang">
-                            源码安装
+                           data-slug="yu-lan-nin-de-xiu-gai">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            预览您的修改
+        </p>
+    
                         </a>
                     </div>
                     
                 
-            
+                    <div class="pl-4">
+                        <a href="#bian-yi-ni-de-xiang-mu"
+                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="bian-yi-ni-de-xiang-mu">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            编译你的项目
+        </p>
+    
+                        </a>
+                    </div>
                     
                 
             
