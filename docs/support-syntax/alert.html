@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面元数据 - </title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <title>提示 - </title>
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt=""
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -63,7 +63,7 @@
                                 <a href="/docs/index.html"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                           text-sm font-medium leading-none dark:text-white
-                                          text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
+                                          hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
                                     使用文档
                                 </a>
                             </li>
@@ -146,7 +146,7 @@
                         <a href="/docs/index.html"
                            class="group block">
                             <div class="relative flex items-center px-4 py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -173,7 +173,7 @@
 
                                 
                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                         class="h-4 w-4 ml-2 text-gray-400 transition-all duration-200 group-hover:text-gray-600 dark:group-hover:text-gray-300"
+                                         class="h-4 w-4 ml-2 text-gray-400 transition-all duration-200 rotate-90 text-blue-600 dark:text-blue-400"
                                          viewBox="0 0 20 20"
                                          fill="currentColor">
                                         <path fill-rule="evenodd"
@@ -209,7 +209,7 @@
                                 
                                     <li>
                                         <a href="/docs/support-syntax/alert.html"
-                                           class="group flex items-center px-4 py-2 text-[0.875rem] text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40 rounded-md transition-all duration-200 ease-in-out">
+                                           class="group flex items-center px-4 py-2 text-[0.875rem] text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium rounded-md transition-all duration-200 ease-in-out">
 
                                             
 
@@ -243,7 +243,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    页面元数据
+                    提示
                 </h1>
                 
             
@@ -258,16 +258,46 @@
         <div class="space-y-4"></div>
     <p>
         <p class="text-base text-gray-700 leading-7">
-            PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。
+            PageForge 支持使用 markdown 实现了提示相关信息。
         </p>
     </p>
 
         <div class="space-y-4"></div>
     
-        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
-            <div id="yong-fa" class="inline-flex items-center">
+        <div class="rounded-lg border border-red-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-red-700">
+                    <p><span class="inline-block my-1">需要注意的是必须要使用 
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            !!!
+        </code>
+     包裹，且后面的内容需要缩进。</span></p>
+
+                </div>
+            </div>
+        </div>
+    
+        <div class="space-y-4"></div>
+    <p>
         <p class="text-base text-gray-700 leading-7">
-            用法
+            支持的类型有:
+        </p>
+    </p>
+
+        <div class="space-y-4"></div>
+    <ul class="my-4 pl-4 list-inside list-disc"><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`info`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`danger`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`success`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`warning`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`dark`</li></ul>
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="Info" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            Info
         </p>
     </div>
         </div>
@@ -275,221 +305,266 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p>
+    <p><span class="inline-block my-1">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            info
+        </code>
+     类型的提示信息可以使用如下的语法：</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info "标题"
+
+    这是一个提示信息
+
+!!!</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg border border-blue-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-blue-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">一行</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-blue-700">
+                    <p>
         <p class="text-base text-gray-700 leading-7">
-            我们将详细描述如何在 PageForge 文件中使用 PageForge 的各种功能，以及如何在 Markdown 中使用 PageForge 的各种功能。
+            这是一个提示信息
         </p>
     </p>
 
+                </div>
+            </div>
+        </div>
+    
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-title" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            title
-        </code>
-    </span></div>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="Danger" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            Danger
+        </p>
+    </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p>
-        <p class="text-base text-gray-700 leading-7">
-            在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。
-        </p>
-    </p>
-
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-title: 这里是标题
----</code></div>
-        <div class="space-y-4"></div>
-    <p>
-        <p class="text-base text-gray-700 leading-7">
-            每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。
-        </p>
-    </p>
-
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">生成的标题为 
+    <p><span class="inline-block my-1">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            page.title - site.title
+            danger
         </code>
-     的格式。</span></p>
+     类型的提示信息可以使用如下的语法：</span></p>
 
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! danger "标题"
+
+    这是一个提示信息
+
+!!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-header" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            header
-        </code>
-    </span></div>
+        <div class="rounded-lg border border-red-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-red-700">
+                    <p>
+        <p class="text-base text-gray-700 leading-7">
+            这是一个提示信息
+        </p>
+    </p>
+
+                </div>
+            </div>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="Success" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            Success
+        </p>
+    </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p>
+    <p><span class="inline-block my-1">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            success
+        </code>
+     类型的提示信息可以使用如下的语法：</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! success "标题"
+
+    这是一个提示信息
+
+!!!</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg border border-green-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-green-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-green-700">
+                    <p>
         <p class="text-base text-gray-700 leading-7">
-            在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。
+            这是一个提示信息
         </p>
     </p>
 
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  header: false
----</code></div>
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            header: false
-        </code>
-     以关闭它。</span></p>
-
+                </div>
+            </div>
+        </div>
+    
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-sidebar" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            sidebar
-        </code>
-    </span></div>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="Warning" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            Warning
+        </p>
+    </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p>
+    <p><span class="inline-block my-1">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            warning
+        </code>
+     类型的提示信息可以使用如下的语法。</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! warning "标题"
+
+    这是一个提示信息
+
+!!!</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg border border-yellow-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-yellow-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-yellow-700">
+                    <p>
         <p class="text-base text-gray-700 leading-7">
-            在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。
+            这是一个提示信息
         </p>
     </p>
 
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  sidebar: false
----</code></div>
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            sidebar: false
-        </code>
-     以关闭它。</span></p>
-
+                </div>
+            </div>
+        </div>
+    
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-footer" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            footer
-        </code>
-    </span></div>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="Dark" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            Dark
+        </p>
+    </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p>
+    <p><span class="inline-block my-1">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
+            dark
+        </code>
+     类型的提示信息可以使用如下的语法。</span></p>
+
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! dark "标题"
+
+    这是一个提示信息
+
+!!!</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg border border-gray-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-gray-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
+           </div>
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-gray-700">
+                    <p>
         <p class="text-base text-gray-700 leading-7">
-            在 markdown 文件的顶部，你可以设置是否关闭页面的底部。
+            这是一个提示信息
         </p>
     </p>
 
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  footer: false
----</code></div>
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            footer: false
-        </code>
-     以关闭它。</span></p>
-
+                </div>
+            </div>
+        </div>
+    
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-toc" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            toc
-        </code>
-    </span></div>
+        <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
+            <div id="bu-she-zhi-biao-ti" class="inline-flex items-center">
+        <p class="text-base text-gray-700 leading-7">
+            不设置标题
+        </p>
+    </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 
+    <p><span class="inline-block my-1">如果不设置标题，可将 
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            toc
+            ""
         </code>
-    ，页面的目录将不会显示。</span></p>
+     内容设置为空字符串。</span></p>
 
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  toc: false
----</code></div>
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            toc: false
-        </code>
-     以关闭它。</span></p>
+    <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info ""
 
+    这是一个提示信息
+
+!!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
-            <div id="she-zhi-layout" class="inline-flex items-center"><span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            layout
-        </code>
-    </span></div>
+        <div class="rounded-lg border border-blue-200">
+        
+        
+                   
+            <div class="ml-3 w-full p-2 py-3">
+                <div class="text-sm text-blue-700">
+                    <p>
+        <p class="text-base text-gray-700 leading-7">
+            这是一个提示信息
+        </p>
+    </p>
+
+                </div>
+            </div>
         </div>
     
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
-    
-        <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            content
-        </code>
-    ，但你可以在 markdown 文件的顶部设置 </span><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            layout: layout-name
-        </code>
-     以更改它。</span></p>
-
-        <div class="space-y-4"></div>
-    <div class="pl-4 my-2 border-l-4 border-gray-200 dark:border-gray-700">
-            <div class="py-1"><p><span class="inline-block my-1">你可以在 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            templates/layouts
-        </code>
-     中找到所有可用的布局。</span></p>
-</div>
-<div class="h-4"></div>
-<div class="py-1"><p><span class="inline-block my-1">目前支持 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            content
-        </code>
-     和 </span><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            page
-        </code>
-     布局。</span></p>
-</div>
-        </div><p><span class="inline-block my-1">如果是自定义的布局，可以直接在 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            templates/layouts
-        </code>
-     文件夹中创建自定义的布局文件，文件名便是模版名称。</span></p>
-
         </div>
     </div>
 </div>
@@ -506,98 +581,81 @@ config:
             
                 
                     <div class="pl-4">
-                        <a href="#yong-fa"
+                        <a href="#Info"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="yong-fa">
+                           data-slug="Info">
                             
         <p class="text-base text-gray-700 leading-7">
-            用法
+            Info
         </p>
     
                         </a>
                     </div>
                     
-                        
                 
-                    <div class="pl-8">
-                        <a href="#she-zhi-title"
+                    <div class="pl-4">
+                        <a href="#Danger"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-title">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            title
-        </code>
-    </span>
+                           data-slug="Danger">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            Danger
+        </p>
+    
                         </a>
                     </div>
                     
                 
-                    <div class="pl-8">
-                        <a href="#she-zhi-header"
+                    <div class="pl-4">
+                        <a href="#Success"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-header">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            header
-        </code>
-    </span>
+                           data-slug="Success">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            Success
+        </p>
+    
                         </a>
                     </div>
                     
                 
-                    <div class="pl-8">
-                        <a href="#she-zhi-sidebar"
+                    <div class="pl-4">
+                        <a href="#Warning"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-sidebar">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            sidebar
-        </code>
-    </span>
+                           data-slug="Warning">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            Warning
+        </p>
+    
                         </a>
                     </div>
                     
                 
-                    <div class="pl-8">
-                        <a href="#she-zhi-footer"
+                    <div class="pl-4">
+                        <a href="#Dark"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-footer">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            footer
-        </code>
-    </span>
+                           data-slug="Dark">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            Dark
+        </p>
+    
                         </a>
                     </div>
                     
                 
-                    <div class="pl-8">
-                        <a href="#she-zhi-toc"
+                    <div class="pl-4">
+                        <a href="#bu-she-zhi-biao-ti"
                            class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-toc">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            toc
-        </code>
-    </span>
+                           data-slug="bu-she-zhi-biao-ti">
+                            
+        <p class="text-base text-gray-700 leading-7">
+            不设置标题
+        </p>
+    
                         </a>
                     </div>
-                    
-                
-                    <div class="pl-8">
-                        <a href="#she-zhi-layout"
-                           class="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-layout">
-                            <span class="inline-block my-1">设置 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            layout
-        </code>
-    </span>
-                        </a>
-                    </div>
-                    
-                
-            
                     
                 
             
