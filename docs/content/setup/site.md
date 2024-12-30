@@ -87,3 +87,40 @@ nav:
 比如你的快速开始文档是 `/get-started` 则该文件的位置为 `content/get-started.md`。
 
 `/getting-started/get-started` 该文件的位置为 `content/getting-started/get-started.md`。
+
+## 底部设置
+
+---
+
+```markdown
+footer:
+  copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+  social:
+    github:
+      title: GitHub
+      href: https://github.com/devlive-community/pageforge
+
+  links:
+    - 资源项目:
+        - title: PageForge
+          href: https://github.com/devlive-community/pageforge
+        - title: TailwindCSS
+          href: https://tailwindcss.com
+```
+
+- `copyright`: 底部版权信息
+- `social`: 社交媒体链接
+- `links`: 底部链接
+
+其中 `social` 的子项包括:
+
+- `facebook`: Facebook
+- `github`: GitHub
+- `twitter`: Twitter
+- `discord`: Discord
+
+其中 `links` 的子项包括:
+
+- 分组名字
+- `title`: 链接标题
+- `href`: 链接地址
