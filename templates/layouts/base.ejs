@@ -46,7 +46,7 @@
         </main>
 
         <!-- 右侧目录 -->
-        <% if (page.config && page.config.toc !== false && page.toc) { %>
+        <% if (page.config && page.config.toc !== false && page.toc.length > 0) { %>
             <%- include('../includes/toc') %>
         <% } %>
     </div>

@@ -24,11 +24,10 @@ nav:
       - /getting-started/publish-site
       - /getting-started/customization
   - 设置:
-      - /setup/index
+      - /setup/site
+      - /setup/page
   - 使用文档:
-      - /docs/index
-      - 支持语法:
-          - /docs/support-syntax/href
-          - /docs/support-syntax/image
-          - /docs/support-syntax/alert
-          - /docs/support-syntax/tab
+      - /usage/href
+      - /usage/image
+      - /usage/alert
+      - /usage/tab
