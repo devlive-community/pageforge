@@ -46,6 +46,6 @@ PageForge 支持使用 markdown 实现了选项卡相关信息。
         第三个 Tab 的内容
 
         - 支持列表
-        - 支持其他 Markdown 内容
+        - 支持其他 **Markdown** 内容
 
 :::

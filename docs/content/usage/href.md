@@ -14,6 +14,8 @@ PageForge 实现了更多的语义，支持更多的超链接格式。
 [链接文本](链接URL)
 ```
 
+[PageForge](https://pageforge.devlive.org)
+
 ## 带标题
 
 ---
@@ -22,6 +24,8 @@ PageForge 实现了更多的语义，支持更多的超链接格式。
 [链接文本](链接URL "可选标题")
 ```
 
+[PageForge](https://pageforge.devlive.org "PageForge")
+
 ## 带打开方式
 
 ---
@@ -29,3 +33,5 @@ PageForge 实现了更多的语义，支持更多的超链接格式。
 ```
 [链接文本](链接URL "可选标题" "打开方式")
 ```
+
+[PageForge](https://pageforge.devlive.org "PageForge" "_blank")

@@ -40,16 +40,16 @@ module.exports = function alert({type = 'info', title, content}) {
     const style = styles[type];
 
     return `
-        <div class="rounded-lg ${style.wrapper}">
+        <div class="rounded-lg my-2 overflow-hidden ${style.wrapper}">
         
         ${title
-        ? `<div class="flex items-start space-x-2 p-2 rounded-t-lg ${style.headerWrapper}">
+            ? `<div class="flex items-start space-x-2 p-2 rounded-t-lg ${style.headerWrapper}">
                <div class="flex-shrink-0">${style.icon}</div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">${title}</h3>
            </div>`
-        : ''}
+            : ''}
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm ${style.content}">
                     ${content}
                 </div>
