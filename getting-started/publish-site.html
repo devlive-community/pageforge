@@ -250,18 +250,18 @@
             
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。
-        </p>
+        </span>
     </p>
 
         <div class="space-y-4"></div>
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="GitHubPages" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             GitHub Pages
-        </p>
+        </span>
     </div>
         </div>
     
@@ -269,25 +269,31 @@
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。
-        </p>
+        </span>
     </p>
 
         <div class="space-y-4"></div>
     
         <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
             <div id="shi-yong-GitHubActions" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             使用 GitHub Actions
-        </p>
+        </span>
     </div>
         </div>
-    <p><span class="inline-block my-1">使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            .github/workflows/ci.yml
-        </code>
-    ，然后复制并粘贴以下内容：</span></p>
+    <p>
+        <span class="text-base text-gray-700 leading-7 my-2">
+            使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 
+        </span>
+    
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">.github/workflows/ci.yml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+            ，然后复制并粘贴以下内容：
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">name: ci 
@@ -330,20 +336,26 @@ jobs:
     
         <div class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl my-3">
             <div id="shi-yong-PageForge" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             使用 PageForge
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            pageforge.yaml
-        </code>
-     文件，读取配置信息：</span></p>
+    <p>
+        <span class="text-base text-gray-700 leading-7 my-2">
+            您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 
+        </span>
+    
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             文件，读取配置信息：
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">deploy:
@@ -374,9 +386,9 @@ jobs:
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="GitHubPages">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             GitHub Pages
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -388,9 +400,9 @@ jobs:
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="shi-yong-GitHubActions">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             使用 GitHub Actions
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -401,9 +413,9 @@ jobs:
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="shi-yong-PageForge">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             使用 PageForge
-        </p>
+        </span>
     
                         </a>
                     </div>

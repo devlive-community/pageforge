@@ -250,27 +250,33 @@
             
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             PageForge 支持使用 markdown 实现了提示相关信息。
-        </p>
+        </span>
     </p>
 
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-red-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-red-700">
-                    <p><span class="inline-block my-1">需要注意的是必须要使用 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            !!!
-        </code>
-     包裹，且后面的内容需要缩进。</span></p>
+                    <p>
+        <span class="text-base text-gray-700 leading-7 my-2">
+            需要注意的是必须要使用 
+        </span>
+    
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">!!!</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             包裹，且后面的内容需要缩进。
+        </span>
+    </p>
 
                 </div>
             </div>
@@ -278,31 +284,67 @@
     
         <div class="space-y-4"></div>
     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             支持的类型有:
-        </p>
+        </span>
     </p>
 
         <div class="space-y-4"></div>
-    <ul class="my-4 pl-4 list-inside list-disc"><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`info`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`danger`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`success`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`warning`</li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">`dark`</li></ul>
+    <ul class="my-4 pl-4 list-inside list-disc"><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">
+        <span class="text-base text-gray-700 leading-7 my-2">
+            
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">info</code>
+    
+        </span>
+    </li>
+<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">
+        <span class="text-base text-gray-700 leading-7 my-2">
+            
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">danger</code>
+    
+        </span>
+    </li>
+<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">
+        <span class="text-base text-gray-700 leading-7 my-2">
+            
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">success</code>
+    
+        </span>
+    </li>
+<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">
+        <span class="text-base text-gray-700 leading-7 my-2">
+            
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">warning</code>
+    
+        </span>
+    </li>
+<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">
+        <span class="text-base text-gray-700 leading-7 my-2">
+            
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">dark</code>
+    
+        </span>
+    </li></ul>
         <div class="space-y-4"></div>
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="Info" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Info
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            info
-        </code>
-     类型的提示信息可以使用如下的语法：</span></p>
+    <p>
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">info</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             类型的提示信息可以使用如下的语法：
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info "标题"
@@ -312,19 +354,19 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-blue-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-blue-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">一行</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-blue-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -335,20 +377,22 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="Danger" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Danger
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            danger
-        </code>
-     类型的提示信息可以使用如下的语法：</span></p>
+    <p>
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">danger</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             类型的提示信息可以使用如下的语法：
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! danger "标题"
@@ -358,19 +402,19 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-red-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-red-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -381,20 +425,22 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="Success" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Success
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            success
-        </code>
-     类型的提示信息可以使用如下的语法：</span></p>
+    <p>
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">success</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             类型的提示信息可以使用如下的语法：
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! success "标题"
@@ -404,19 +450,19 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-green-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-green-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-green-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-green-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -427,20 +473,22 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="Warning" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Warning
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            warning
-        </code>
-     类型的提示信息可以使用如下的语法。</span></p>
+    <p>
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">warning</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             类型的提示信息可以使用如下的语法。
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! warning "标题"
@@ -450,19 +498,19 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-yellow-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-yellow-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-yellow-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-yellow-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -473,20 +521,22 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="Dark" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Dark
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            dark
-        </code>
-     类型的提示信息可以使用如下的语法。</span></p>
+    <p>
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">dark</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             类型的提示信息可以使用如下的语法。
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! dark "标题"
@@ -496,19 +546,19 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-gray-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-gray-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-gray-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
                <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
            </div>
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-gray-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -519,20 +569,26 @@
     
         <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl my-3">
             <div id="bu-she-zhi-biao-ti" class="inline-flex items-center">
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             不设置标题
-        </p>
+        </span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"></hr>
     
         <div class="space-y-4"></div>
-    <p><span class="inline-block my-1">如果不设置标题，可将 
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">
-            ""
-        </code>
-     内容设置为空字符串。</span></p>
+    <p>
+        <span class="text-base text-gray-700 leading-7 my-2">
+            如果不设置标题，可将 
+        </span>
+    
+            <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">""</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">
+             内容设置为空字符串。
+        </span>
+    </p>
 
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-2 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info ""
@@ -542,16 +598,16 @@
 !!!</code></div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg border border-blue-200">
+        <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
         
         
                    
-            <div class="ml-3 w-full p-2 py-3">
+            <div class="w-full px-5 py-3">
                 <div class="text-sm text-blue-700">
                     <p>
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             这是一个提示信息
-        </p>
+        </span>
     </p>
 
                 </div>
@@ -578,9 +634,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="Info">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Info
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -591,9 +647,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="Danger">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Danger
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -604,9 +660,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="Success">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Success
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -617,9 +673,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="Warning">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Warning
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -630,9 +686,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="Dark">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             Dark
-        </p>
+        </span>
     
                         </a>
                     </div>
@@ -643,9 +699,9 @@
                            class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="bu-she-zhi-biao-ti">
                             
-        <p class="text-base text-gray-700 leading-7 my-2">
+        <span class="text-base text-gray-700 leading-7 my-2">
             不设置标题
-        </p>
+        </span>
     
                         </a>
                     </div>
