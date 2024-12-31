@@ -1,5 +1,6 @@
 ---
 title: 提示
+icon: alert-triangle
 ---
 
 PageForge 支持使用 markdown 实现了提示相关信息。

@@ -1,5 +1,6 @@
 ---
 title: 图片
+icon: image
 ---
 
 PageForge 支持 Markdown 的默认图片语法。您可以使用 `![](图片URL)` 格式来插入图片，例如 `![](图片URL)`。

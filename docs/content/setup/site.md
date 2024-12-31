@@ -1,5 +1,6 @@
 ---
 title: 基础设置
+icon: baseline
 ---
 
 ```markdown

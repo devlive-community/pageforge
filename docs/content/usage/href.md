@@ -1,5 +1,6 @@
 ---
 title: 超链接
+icon: link
 ---
 
 PageForge 支持 Markdown 的默认超链接语法。您可以使用 `[]()` 格式来创建链接，例如 `[链接文本](链接URL)`。
