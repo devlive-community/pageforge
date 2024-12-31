@@ -150,8 +150,20 @@
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
+                                    <span class="inline-flex mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-4 h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                                <span class="flex-grow">站点设置</span>
+                                       <!-- 图标 -->
+                                       <i data-lucide="baseline"
+                                          style="display: none;"
+                                          class="w-4 h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow">基础设置</span>
 
                                 
                             </div>
@@ -168,8 +180,50 @@
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
+                                    <span class="inline-flex mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-4 h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                       <!-- 图标 -->
+                                       <i data-lucide="book-open"
+                                          style="display: none;"
+                                          class="w-4 h-4
+                                               text-blue-600 dark:text-blue-400">
+                                       </i>
+                                   </span>
+                                
 
                                 <span class="flex-grow">页面设置</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/setup/feature.html"
+                           class="group block">
+                            <div class="relative flex items-center px-4 py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-4 h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                       <!-- 图标 -->
+                                       <i data-lucide="feather"
+                                          style="display: none;"
+                                          class="w-4 h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow">特性设置</span>
 
                                 
                             </div>
@@ -233,10 +287,8 @@
         <div class="space-y-4"></div>
     
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-title" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">title</code>
+            <div id="she-zhi-yuan-shu-ju" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">设置元数据</span>
     </div>
         </div>
     
@@ -249,8 +301,15 @@
         <div class="space-y-4"></div>
     <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
 title: 这里是标题
+icon: feather
 ---</code></div>
         <div class="space-y-4"></div>
+    
+        <div class="text-lg sm:text-xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-lg [&_span]:sm:!text-xl">
+            <div id="title" class="inline-flex items-center">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">title</code>
+    </div>
+        </div>
     
         <span class="text-base text-gray-700 leading-7 my-2">每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。</span>
     
@@ -262,6 +321,25 @@ title: 这里是标题
     
         <span class="text-base text-gray-700 leading-7 my-2"> 的格式。</span>
     
+        <div class="space-y-4"></div>
+    
+        <div class="text-lg sm:text-xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-lg [&_span]:sm:!text-xl">
+            <div id="icon" class="inline-flex items-center">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">icon</code>
+    </div>
+        </div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。</span>
+    
+        <div class="space-y-4"></div>
+    <span class="inline-block my-1 mx-auto">目前支持 Lucide 图标，可以在 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://lucide.dev"
+           target="_blank"
+           title="Lucide">
+            Lucide
+        </a>
+     中找到更多图标。</span>
         <div class="space-y-4"></div>
     
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
@@ -467,7 +545,7 @@ layout: foo
                 
                     <div class="pl-4">
                         <a href="#yong-fa"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="yong-fa">
                             
         <span class="text-base text-gray-700 leading-7 my-2">用法</span>
@@ -478,21 +556,45 @@ layout: foo
                         
                 
                     <div class="pl-8">
-                        <a href="#she-zhi-title"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="she-zhi-title">
+                        <a href="#she-zhi-yuan-shu-ju"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-yuan-shu-ju">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="text-base text-gray-700 leading-7 my-2">设置元数据</span>
     
+                        </a>
+                    </div>
+                    
+                        
+                
+                    <div class="pl-12">
+                        <a href="#title"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="title">
+                            
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">title</code>
     
                         </a>
                     </div>
                     
                 
+                    <div class="pl-12">
+                        <a href="#icon"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="icon">
+                            
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline">icon</code>
+    
+                        </a>
+                    </div>
+                    
+                
+            
+                    
+                
                     <div class="pl-8">
                         <a href="#she-zhi-header"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-header">
                             
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
@@ -505,7 +607,7 @@ layout: foo
                 
                     <div class="pl-8">
                         <a href="#she-zhi-sidebar"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-sidebar">
                             
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
@@ -518,7 +620,7 @@ layout: foo
                 
                     <div class="pl-8">
                         <a href="#she-zhi-footer"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-footer">
                             
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
@@ -531,7 +633,7 @@ layout: foo
                 
                     <div class="pl-8">
                         <a href="#she-zhi-toc"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-toc">
                             
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
@@ -544,7 +646,7 @@ layout: foo
                 
                     <div class="pl-8">
                         <a href="#she-zhi-layout"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="she-zhi-layout">
                             
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
@@ -735,5 +837,28 @@ layout: foo
 <script src="/assets/pageforge.min.js"></script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
+
+
+<!-- 是否启用 Lucide 图标库 -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // 在页面加载完成后执行
+        window.addEventListener('load', () => {
+            // 初始化图标
+            lucide.createIcons();
+
+            // 延迟检查图标是否加载完成
+            setTimeout(() => {
+                document.querySelectorAll('[data-lucide]').forEach(icon => {
+                    if (icon.children.length > 0) {
+                        icon.style.display = 'block';
+                        const skeleton = icon.previousElementSibling;
+                        if (skeleton) skeleton.style.display = 'none';
+                    }
+                });
+            }, 100);
+        });
+    </script>
 
 </html>

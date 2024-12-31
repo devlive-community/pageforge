@@ -454,4 +454,27 @@
 
 <!-- 加载主题配置中的额外 JS 文件 -->
 
+
+<!-- 是否启用 Lucide 图标库 -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // 在页面加载完成后执行
+        window.addEventListener('load', () => {
+            // 初始化图标
+            lucide.createIcons();
+
+            // 延迟检查图标是否加载完成
+            setTimeout(() => {
+                document.querySelectorAll('[data-lucide]').forEach(icon => {
+                    if (icon.children.length > 0) {
+                        icon.style.display = 'block';
+                        const skeleton = icon.previousElementSibling;
+                        if (skeleton) skeleton.style.display = 'none';
+                    }
+                });
+            }, 100);
+        });
+    </script>
+
 </html>

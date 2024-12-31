@@ -385,7 +385,7 @@ nav:
                 
                     <div class="pl-4">
                         <a href="#pei-zhi-wen-jian"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="pei-zhi-wen-jian">
                             
         <span class="text-base text-gray-700 leading-7 my-2">配置文件</span>
@@ -396,7 +396,7 @@ nav:
                 
                     <div class="pl-4">
                         <a href="#yu-lan-nin-de-xiu-gai"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="yu-lan-nin-de-xiu-gai">
                             
         <span class="text-base text-gray-700 leading-7 my-2">预览您的修改</span>
@@ -407,7 +407,7 @@ nav:
                 
                     <div class="pl-4">
                         <a href="#bian-yi-ni-de-xiang-mu"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="bian-yi-ni-de-xiang-mu">
                             
         <span class="text-base text-gray-700 leading-7 my-2">编译你的项目</span>
@@ -593,5 +593,28 @@ nav:
 <script src="/assets/pageforge.min.js"></script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
+
+
+<!-- 是否启用 Lucide 图标库 -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // 在页面加载完成后执行
+        window.addEventListener('load', () => {
+            // 初始化图标
+            lucide.createIcons();
+
+            // 延迟检查图标是否加载完成
+            setTimeout(() => {
+                document.querySelectorAll('[data-lucide]').forEach(icon => {
+                    if (icon.children.length > 0) {
+                        icon.style.display = 'block';
+                        const skeleton = icon.previousElementSibling;
+                        if (skeleton) skeleton.style.display = 'none';
+                    }
+                });
+            }, 100);
+        });
+    </script>
 
 </html>

@@ -361,7 +361,7 @@ jobs:
                 
                     <div class="pl-4">
                         <a href="#GitHubPages"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="GitHubPages">
                             
         <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
@@ -373,7 +373,7 @@ jobs:
                 
                     <div class="pl-8">
                         <a href="#shi-yong-GitHubActions"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="shi-yong-GitHubActions">
                             
         <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
@@ -384,7 +384,7 @@ jobs:
                 
                     <div class="pl-8">
                         <a href="#shi-yong-PageForge"
-                           class="block px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="shi-yong-PageForge">
                             
         <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
@@ -573,5 +573,28 @@ jobs:
 <script src="/assets/pageforge.min.js"></script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
+
+
+<!-- 是否启用 Lucide 图标库 -->
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // 在页面加载完成后执行
+        window.addEventListener('load', () => {
+            // 初始化图标
+            lucide.createIcons();
+
+            // 延迟检查图标是否加载完成
+            setTimeout(() => {
+                document.querySelectorAll('[data-lucide]').forEach(icon => {
+                    if (icon.children.length > 0) {
+                        icon.style.display = 'block';
+                        const skeleton = icon.previousElementSibling;
+                        if (skeleton) skeleton.style.display = 'none';
+                    }
+                });
+            }, 100);
+        });
+    </script>
 
 </html>
