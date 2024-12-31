@@ -41,10 +41,6 @@ footer:
         - title: 隐私政策
           href: https://github.com/devlive-community/pageforge/blob/dev/LICENSE
 
-theme:
-  extra_css:
-    - /assets/extra.css
-
 cdn:
   style: https://cdn.tailwindcss.com
 

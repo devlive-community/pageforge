@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/assets/pageforge.min.css">
 
     <!-- 加载主题配置中的额外 CSS 文件 -->
-    <% if (site.theme && site.theme.extsite.ra_css && Array.isArray(theme.extra_css)) { %>
-        <% site.theme.extra_css.forEach(function(css_path) { %>
+    <% if (locals.theme?.extraCss && Array.isArray(theme.extraCss)) { %>
+        <% theme.extraCss.forEach(css_path => { %>
             <link rel="stylesheet" href="<%= css_path %>">
         <% }); %>
     <% } %>
@@ -61,8 +61,8 @@
 <script src="/assets/pageforge.min.js"></script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
-<% if (locals.theme?.extra_js && Array.isArray(theme.extra_js)) { %>
-    <% theme.extra_js.forEach(function(js_path) { %>
+<% if (locals.theme?.extraJs && Array.isArray(theme.extraJs)) { %>
+    <% theme.extraJs.forEach(js_path => { %>
         <script src="<%= js_path %>"></script>
     <% }); %>
 <% } %>
