@@ -34,9 +34,7 @@ PageForge 支持使用 markdown 实现了选项卡相关信息。
 
     === "Tab 1"
         这是第一个 Tab 的内容
-        
         支持多行内容
-
         这是 `dd` 哈哈
 
     === "Tab 2"
