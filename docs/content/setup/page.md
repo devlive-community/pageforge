@@ -10,7 +10,7 @@ PageForge 的材料包含许多强大的功能，使技术写作成为一项令�
 
 我们将详细描述如何在 PageForge 文件中使用 PageForge 的各种功能，以及如何在 Markdown 中使用 PageForge 的各种功能。
 
-### 设置 `title`
+### 设置元数据
 
 ---
 
@@ -19,12 +19,21 @@ PageForge 的材料包含许多强大的功能，使技术写作成为一项令�
 ```markdown
 ---
 title: 这里是标题
+icon: feather
 ---
 ```
+
+#### `title`
 
 每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。
 
 生成的标题为 `page.title - site.title` 的格式。
+
+#### `icon`
+
+每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。
+
+目前支持 Lucide 图标，可以在 [Lucide](https://lucide.dev "Lucide" "_blank") 中找到更多图标。
 
 ### 设置 `header`
 

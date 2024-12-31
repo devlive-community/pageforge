@@ -71,7 +71,22 @@
 <% if (locals.feature?.lucide?.enable) { %>
     <script src="<%= feature.lucide.cdn || 'https://unpkg.com/lucide@latest/dist/umd/lucide.js' %>"></script>
     <script>
-        lucide.createIcons();
+        // 在页面加载完成后执行
+        window.addEventListener('load', () => {
+            // 初始化图标
+            lucide.createIcons();
+
+            // 延迟检查图标是否加载完成
+            setTimeout(() => {
+                document.querySelectorAll('[data-lucide]').forEach(icon => {
+                    if (icon.children.length > 0) {
+                        icon.style.display = 'block';
+                        const skeleton = icon.previousElementSibling;
+                        if (skeleton) skeleton.style.display = 'none';
+                    }
+                });
+            }, 100);
+        });
     </script>
 <% } %>
 </html>

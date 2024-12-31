@@ -1,5 +1,6 @@
 ---
 title: 特性设置
+icon: feather
 ---
 
 PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。

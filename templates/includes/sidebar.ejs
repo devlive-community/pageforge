@@ -39,14 +39,20 @@ sidebar = nav.find(item => {
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 <% if (item.icon) { %>
-                                    <span class="inline-flex mr-3 text-gray-500 dark:text-gray-400 transition-colors duration-200
-                                                 <%=
-                                                    isActive(item.href)
-                                                            ? 'text-blue-600 dark:text-blue-400'
-                                                            : 'group-hover:text-gray-900 dark:group-hover:text-gray-200'
-                                                 %>">
-                                        <i class="<%= item.icon %>"></i>
-                                    </span>
+                                    <span class="inline-flex mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-4 h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                       <!-- 图标 -->
+                                       <i data-lucide="<%= item.icon %>"
+                                          style="display: none;"
+                                          class="w-4 h-4
+                                               <%= isActive(item.href)
+                                                  ? 'text-blue-600 dark:text-blue-400'
+                                                  : 'group-hover:text-gray-900 dark:group-hover:text-gray-200'
+                                          %>">
+                                       </i>
+                                   </span>
                                 <% } %>
 
                                 <span class="flex-grow"><%= item.title %></span>
