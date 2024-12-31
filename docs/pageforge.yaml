@@ -5,6 +5,18 @@ site:
   logo: /assets/logo.svg
   favicon: /assets/logo.svg
 
+cdn:
+  style: https://cdn.tailwindcss.com
+
+repo:
+  owner: devlive-community
+  name: pageforge
+  url: https://github.com/devlive-community/pageforge
+
+feature:
+  lucide:
+    enable: true
+
 footer:
   copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
   social:
@@ -41,14 +53,6 @@ footer:
         - title: 隐私政策
           href: https://github.com/devlive-community/pageforge/blob/dev/LICENSE
 
-cdn:
-  style: https://cdn.tailwindcss.com
-
-repo:
-  owner: devlive-community
-  name: pageforge
-  url: https://github.com/devlive-community/pageforge
-
 nav:
   - 快速开始:
       - /getting-started/get-started
@@ -58,6 +62,7 @@ nav:
   - 设置:
       - /setup/site
       - /setup/page
+      - /setup/feature
   - 使用文档:
       - /usage/href
       - /usage/image

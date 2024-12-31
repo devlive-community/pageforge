@@ -66,4 +66,12 @@
         <script src="<%= js_path %>"></script>
     <% }); %>
 <% } %>
+
+<!-- 是否启用 Lucide 图标库 -->
+<% if (locals.feature?.lucide?.enable) { %>
+    <script src="<%= feature.lucide.cdn || 'https://unpkg.com/lucide@latest/dist/umd/lucide.js' %>"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+<% } %>
 </html>

@@ -1,5 +1,5 @@
 ---
-title: 站点设置
+title: 基础设置
 ---
 
 ```markdown

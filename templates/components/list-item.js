@@ -14,7 +14,7 @@ module.exports = function template(item) {
     }
     else {
         // 处理普通列表项
-        listItemContent = `<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900">${item.text}</li>`;
+        listItemContent = `<li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">${item.text}</li>`;
     }
 
     return listItemContent;
