@@ -9,6 +9,36 @@
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
 
+    <script>
+        (function () {
+            document.addEventListener('click', function (e) {
+                var link = e.target.closest('a');
+                if (!link) return;
+
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+                e.preventDefault();
+
+                // 获取目标语言
+                const targetLang = href.split('/')[1];
+
+                fetch(href)
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = href;
+                        }
+                        else {
+                            window.location.href = `/${targetLang}/404.html`;
+                        }
+                    })
+                    .catch(() => {
+                        window.location.href = `/${targetLang}/404.html`;
+                    });
+            });
+        })();
+    </script>
+
     <!-- 加载主题配置中的额外 CSS 文件 -->
     
 
@@ -775,19 +805,6 @@
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
 
 </body>
-
-<!-- 处理 404 -->
-<script>
-    (function () {
-        const i18nEnable = `true`;
-        if (!i18nEnable) return;
-
-        const hasRule = `false`;
-        if (!hasRule) {
-            window.location.href = `/zh-CN/404.html` || `/404.html`;
-        }
-    })();
-</script>
 
 <!-- 基础脚本文件 -->
 <script src="/assets/pageforge.min.js"></script>
