@@ -16,6 +16,25 @@ repo:
 feature:
   lucide:
     enable: true
+  i18n:
+    enable: true
+
+i18n:
+  default: zh-CN
+  en:
+    name: English
+    flag: 🇬🇧
+    translations:
+      GetStarted: Getting Started
+      Setup: Setup
+      Usage: Usage Docs
+  zh-CN:
+    name: 中文
+    flag: 🇨🇳
+    translations:
+      GetStarted: 快速开始
+      Setup: 设置
+      Usage: 使用文档
 
 footer:
   copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
@@ -54,16 +73,16 @@ footer:
           href: https://github.com/devlive-community/pageforge/blob/dev/LICENSE
 
 nav:
-  - 快速开始:
+  - GetStarted:
       - /getting-started/get-started
       - /getting-started/create-site/index
       - /getting-started/publish-site
       - /getting-started/customization
-  - 设置:
+  - Setup:
       - /setup/site
       - /setup/page
       - /setup/feature
-  - 使用文档:
+  - Usage:
       - /usage/href
       - /usage/image
       - /usage/alert
