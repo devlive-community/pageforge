@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>发布网站 - PageForge</title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <title>选项卡 - PageForge</title>
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -60,16 +60,16 @@
                 <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                     
                         <li class="shrink-0">
-                            <a href="/getting-started/get-started.html"
+                            <a href="/zh-CN/getting-started/get-started.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
+                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
                                 快速开始
                             </a>
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/setup/site.html"
+                            <a href="/zh-CN/setup/site.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -78,10 +78,10 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/usage/href.html"
+                            <a href="/zh-CN/usage/href.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                 使用文档
                             </a>
                         </li>
@@ -90,41 +90,42 @@
 
                 <!-- 语言切换器 -->
                 
-                    <div class="hidden lg:flex items-center ml-4">
-                        <div class="relative">
-                            <button type="button"
-                                    onclick="document.getElementById('language-menu').classList.toggle('hidden')"
-                                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-                                <!-- 当前语言 -->
-                                
-                                <span>🇨🇳</span>
-                                <span>中文</span>
-                                <!-- 下拉箭头 -->
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </button>
-                            <!-- 语言选择下拉菜单 -->
-                            <div id="language-menu"
-                                 class="hidden absolute right-0 mt-2 py-2 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                
-                                    <a href="?lang=en"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/usage/tab.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
-                                        <span>🇬🇧</span>
-                                        <span>English</span>
-                                    </a>
-                                
-                                    <a href="?lang=zh-CN"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/usage/tab.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
-                                        <span>🇨🇳</span>
-                                        <span>中文</span>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -229,21 +230,21 @@
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
                 
-                    <a href="/getting-started/get-started.html"
+                    <a href="/zh-CN/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
+                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         快速开始
                     </a>
                 
-                    <a href="/setup/site.html"
+                    <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         设置
                     </a>
                 
-                    <a href="/usage/href.html"
+                    <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         使用文档
                     </a>
                 
@@ -252,14 +253,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="?lang=en"
+                            <a href="/en/usage/tab.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="?lang=zh-CN"
+                            <a href="/zh-CN/usage/tab.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -426,7 +427,7 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/getting-started/get-started.html"
+                        <a href="/zh-CN/usage/href.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -438,7 +439,7 @@
                                        <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                         <!-- 图标 -->
-                                       <i data-lucide="crosshair"
+                                       <i data-lucide="link"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
                                                group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -446,7 +447,7 @@
                                    </span>
                                 
 
-                                <span class="flex-grow text-sm sm:text-base">快速开始</span>
+                                <span class="flex-grow text-sm sm:text-base">超链接</span>
 
                                 
                             </div>
@@ -456,7 +457,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/getting-started/create-site/index.html"
+                        <a href="/zh-CN/usage/image.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -468,7 +469,7 @@
                                        <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                         <!-- 图标 -->
-                                       <i data-lucide="folder-plus"
+                                       <i data-lucide="image"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
                                                group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -476,7 +477,7 @@
                                    </span>
                                 
 
-                                <span class="flex-grow text-sm sm:text-base">创建网站</span>
+                                <span class="flex-grow text-sm sm:text-base">图片</span>
 
                                 
                             </div>
@@ -486,7 +487,37 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/getting-started/publish-site.html"
+                        <a href="/zh-CN/usage/alert.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="alert-triangle"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">提示</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/usage/tab.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
@@ -498,7 +529,7 @@
                                        <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                         <!-- 图标 -->
-                                       <i data-lucide="upload"
+                                       <i data-lucide="code"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
                                                text-blue-600 dark:text-blue-400">
@@ -506,37 +537,7 @@
                                    </span>
                                 
 
-                                <span class="flex-grow text-sm sm:text-base">发布网站</span>
-
-                                
-                            </div>
-                        </a>
-
-                        
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/getting-started/customization.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                                       <!-- 骨架屏 -->
-                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                        <!-- 图标 -->
-                                       <i data-lucide="dessert"
-                                          style="display: none;"
-                                          class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                                       </i>
-                                   </span>
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">自定义网站</span>
+                                <span class="flex-grow text-sm sm:text-base">选项卡</span>
 
                                 
                             </div>
@@ -568,7 +569,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    发布网站
+                    选项卡
                 </h1>
                 
             
@@ -582,100 +583,210 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">P
+a
+g
+e
+F
+o
+r
+g
+e
+ 
+支
+持
+使
+用
+ 
+m
+a
+r
+k
+d
+o
+w
+n
+ 
+实
+现
+了
+选
+项
+卡
+相
+关
+信
+息
+。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="GitHubPages" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="ji-ben-yu-fa" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">::: tabs
+
+    === "Tab 1"
+        这是第一个 Tab 的内容
+        支持多行内容
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。</span>
+    === "Tab 2"
+
+        这是第二个 Tab 的内容
+        也支持 **Markdown** 语法
+    
+    === "Tab 3"
+
+        第三个 Tab 的内容
+
+        - 支持列表
+        - 支持其他 Markdown 内容
+
+:::</code></div>
+        <div class="space-y-4"></div>
+    
+        <div class="w-full">
+            <div class="border-b border-gray-200">
+                <nav class="flex space-x-4" role="tablist" aria-label="Tabs">
+                    
+        <button role="tab"
+            class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
+                   border-blue-500 text-blue-600
+                   focus:outline-none"
+            onclick="switchTab(event, 'tabgroup-91txg07kq', 0)"
+            aria-selected="true"
+            aria-controls="tabgroup-91txg07kq-panel-0"
+            id="tabgroup-91txg07kq-tab-0">
+            Tab 1
+        </button>
+    
+        <button role="tab"
+            class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
+                   border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
+                   focus:outline-none"
+            onclick="switchTab(event, 'tabgroup-91txg07kq', 1)"
+            aria-selected="false"
+            aria-controls="tabgroup-91txg07kq-panel-1"
+            id="tabgroup-91txg07kq-tab-1">
+            Tab 2
+        </button>
+    
+        <button role="tab"
+            class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
+                   border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
+                   focus:outline-none"
+            onclick="switchTab(event, 'tabgroup-91txg07kq', 2)"
+            aria-selected="false"
+            aria-controls="tabgroup-91txg07kq-panel-2"
+            id="tabgroup-91txg07kq-tab-2">
+            Tab 3
+        </button>
+    
+                </nav>
+            </div>
+            <div class="mt-2">
+                
+        <div class="p-4 "
+            role="tabpanel"
+            aria-labelledby="tabgroup-91txg07kq-tab-0"
+            id="tabgroup-91txg07kq-panel-0">
+            
+        <span class="text-base text-gray-700 leading-7 my-2">这是第一个 Tab 的内容</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="shi-yong-GitHubActions" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
-    </div>
+        <span class="text-base text-gray-700 leading-7 my-2">支持多行内容</span>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">这是 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">dd</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 哈哈</span>
+    
         </div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">.github/workflows/ci.yml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">，然后复制并粘贴以下内容：</span>
+        <div class="p-4 hidden"
+            role="tabpanel"
+            aria-labelledby="tabgroup-91txg07kq-tab-1"
+            id="tabgroup-91txg07kq-panel-1">
+            
+        <span class="text-base text-gray-700 leading-7 my-2">这是第二个 Tab 的内容</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">name: ci 
-on:
-  push:
-    branches:
-      - master 
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-        
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build site
-        run: |
-          pageforge build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist</code></div>
-        <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="shi-yong-PageForge" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
-    </div>
+        <span class="text-base text-gray-700 leading-7 my-2">也支持 </span>
+    <strong>
+        <span class="text-base text-gray-700 leading-7 my-2">Markdown</span>
+    </strong>
+        <span class="text-base text-gray-700 leading-7 my-2"> 语法</span>
+    
         </div>
     
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+        <div class="p-4 hidden"
+            role="tabpanel"
+            aria-labelledby="tabgroup-91txg07kq-tab-2"
+            id="tabgroup-91txg07kq-panel-2">
+            
+        <span class="text-base text-gray-700 leading-7 my-2">第三个 Tab 的内容</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 </span>
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">支持列表</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">支持其他 </span>
+    <strong>
+        <span class="text-base text-gray-700 leading-7 my-2">Markdown</span>
+    </strong>
+        <span class="text-base text-gray-700 leading-7 my-2"> 内容</span>
+    </li>
+        </ul>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+        </div>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件，读取配置信息：</span>
+            </div>
+            
+        <script>
+            function switchTab(event, tabGroupId, selectedIndex) {
+                // 获取当前 tab 组的所有按钮和面板
+                const tabButtons = event.target.parentElement.children;
+                const tabPanels = document.querySelectorAll('[id^="' + tabGroupId + '-panel-"]');
+                
+                // 更新所有 tab 按钮的状态
+                Array.from(tabButtons).forEach((button, index) => {
+                    if (index === selectedIndex) {
+                        button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                        button.classList.add('border-blue-500', 'text-blue-600');
+                        button.setAttribute('aria-selected', 'true');
+                    } else {
+                        button.classList.remove('border-blue-500', 'text-blue-600');
+                        button.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                        button.setAttribute('aria-selected', 'false');
+                    }
+                });
+                
+                // 更新所有面板的显示状态
+                tabPanels.forEach((panel, index) => {
+                    if (index === selectedIndex) {
+                        panel.classList.remove('hidden');
+                    } else {
+                        panel.classList.add('hidden');
+                    }
+                });
+            }
+        </script>
     
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">deploy:
-  github:
-    repository: devlive-community/pageforge
-    branch: gh-pages
-    cname: pageforge.devlive.community
-    buildDir: dist
-    username: devlive-community
-    email: support@devlive.org</code></div>
+        </div>
+    
         </div>
     </div>
 </div>
@@ -692,41 +803,15 @@ jobs:
                         
                         
                             
-                                <div class="pl-4">
-                                    <a href="#GitHubPages"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="GitHubPages">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
-    
-                                    </a>
-                                </div>
-                                
-                                    
-                            
                                 <div class="pl-8">
-                                    <a href="#shi-yong-GitHubActions"
+                                    <a href="#ji-ben-yu-fa"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="shi-yong-GitHubActions">
+                                       data-slug="ji-ben-yu-fa">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
                                     </a>
                                 </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#shi-yong-PageForge"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="shi-yong-PageForge">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
                                 
                             
                         
@@ -759,41 +844,15 @@ jobs:
                 <nav class="overflow-y-auto max-h-[60vh] space-y-1">
                     
                             
-                                <div class="pl-4">
-                                    <a href="#GitHubPages"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="GitHubPages">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
-    
-                                    </a>
-                                </div>
-                                
-                                    
-                            
                                 <div class="pl-8">
-                                    <a href="#shi-yong-GitHubActions"
+                                    <a href="#ji-ben-yu-fa"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="shi-yong-GitHubActions">
+                                       data-slug="ji-ben-yu-fa">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
                                     </a>
                                 </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#shi-yong-PageForge"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="shi-yong-PageForge">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
                                 
                             
                         
@@ -811,7 +870,7 @@ jobs:
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/" class="flex items-center">
-                            <img src="..//assets/logo.svg"
+                            <img src="../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图片 - PageForge</title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -60,7 +60,7 @@
                 <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                     
                         <li class="shrink-0">
-                            <a href="/getting-started/get-started.html"
+                            <a href="/zh-CN/getting-started/get-started.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -69,7 +69,7 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/setup/site.html"
+                            <a href="/zh-CN/setup/site.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -78,7 +78,7 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/usage/href.html"
+                            <a href="/zh-CN/usage/href.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
@@ -90,41 +90,42 @@
 
                 <!-- 语言切换器 -->
                 
-                    <div class="hidden lg:flex items-center ml-4">
-                        <div class="relative">
-                            <button type="button"
-                                    onclick="document.getElementById('language-menu').classList.toggle('hidden')"
-                                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-                                <!-- 当前语言 -->
-                                
-                                <span>🇨🇳</span>
-                                <span>中文</span>
-                                <!-- 下拉箭头 -->
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </button>
-                            <!-- 语言选择下拉菜单 -->
-                            <div id="language-menu"
-                                 class="hidden absolute right-0 mt-2 py-2 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                
-                                    <a href="?lang=en"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/usage/image.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
-                                        <span>🇬🇧</span>
-                                        <span>English</span>
-                                    </a>
-                                
-                                    <a href="?lang=zh-CN"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/usage/image.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
-                                        <span>🇨🇳</span>
-                                        <span>中文</span>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -229,19 +230,19 @@
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
                 
-                    <a href="/getting-started/get-started.html"
+                    <a href="/zh-CN/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         快速开始
                     </a>
                 
-                    <a href="/setup/site.html"
+                    <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         设置
                     </a>
                 
-                    <a href="/usage/href.html"
+                    <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         使用文档
@@ -252,14 +253,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="?lang=en"
+                            <a href="/en/usage/image.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="?lang=zh-CN"
+                            <a href="/zh-CN/usage/image.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -426,7 +427,7 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/usage/href.html"
+                        <a href="/zh-CN/usage/href.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -456,7 +457,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/usage/image.html"
+                        <a href="/zh-CN/usage/image.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
@@ -486,7 +487,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/usage/alert.html"
+                        <a href="/zh-CN/usage/alert.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -516,7 +517,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/usage/tab.html"
+                        <a href="/zh-CN/usage/tab.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -885,7 +886,7 @@
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/" class="flex items-center">
-                            <img src="..//assets/logo.svg"
+                            <img src="../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>

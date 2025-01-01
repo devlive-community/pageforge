@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎使用 PageForge - PageForge</title>
-    <link rel="icon" href=".//assets/logo.svg" type="image/x-icon">
+    <title>超链接 - PageForge</title>
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src=".//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -81,7 +81,7 @@
                             <a href="/zh-CN/usage/href.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                 使用文档
                             </a>
                         </li>
@@ -89,6 +89,43 @@
                 </ul>
 
                 <!-- 语言切换器 -->
+                
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/usage/href.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    ">
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/usage/href.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    bg-gray-50 dark:bg-gray-700">
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -207,12 +244,30 @@
                 
                     <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         使用文档
                     </a>
                 
 
                 <!-- 移动端语言切换 -->
+                
+                    <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
+                        
+                            <a href="/en/usage/href.html"
+                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                ">
+                                <span>🇬🇧</span>
+                                <span>English</span>
+                            </a>
+                        
+                            <a href="/zh-CN/usage/href.html"
+                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                bg-gray-50 dark:bg-gray-700">
+                                <span>🇨🇳</span>
+                                <span>中文</span>
+                            </a>
+                        
+                    </div>
                 
 
                 <!-- 移动端的仓库链接 -->
@@ -332,189 +387,394 @@
 
     <!-- 移动端菜单按钮 -->
     
+        <button class="md:hidden fixed left-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                onclick="document.getElementById('sidebar-menu').classList.remove('-translate-x-full');
+                         document.getElementById('sidebar-overlay').classList.remove('hidden');">
+            <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    
 
     <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
         <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+        
+            <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
+                         inset-y-0 left-0 transform -translate-x-full md:translate-x-0
+                         transition duration-200 ease-in-out
+                         md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
+                         w-3/4 sm:w-64"
+                   id="sidebar-menu">
+                <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
+                    <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                            onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                                     document.getElementById('sidebar-overlay').classList.add('hidden');">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="md:sticky md:top-20 p-4 md:p-0">
+                    <div class="space-y-4">
+                        
+
+
+
+
+    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
+                sm:max-h-screen md:h-auto lg:max-h-[calc(100vh-2rem)]">
+        <div class="mb-6">
+            <ul class="space-y-1.5">
+                
+                    <li class="relative">
+                        <a href="/zh-CN/usage/href.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="link"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               text-blue-600 dark:text-blue-400">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">超链接</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/usage/image.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="image"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">图片</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/usage/alert.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="alert-triangle"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">提示</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/usage/tab.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="code"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">选项卡</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+            </ul>
+        </div>
+
+        
+    </div>
+
+                    </div>
+                </nav>
+            </aside>
         
 
         <!-- 中间内容 -->
         <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-4xl">
-                
-    <section class="relative overflow-hidden bg-gray-900 py-32 rounded-xl">
-        <div class="absolute inset-0 opacity-30">
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml,...')] opacity-10 bg-repeat"></div>
-            <div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-indigo-900/40"></div>
-        </div>
-
-        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-indigo-400">
-                    创新技术解决方案
+                <!-- 页面容器 -->
+<div class="relative lg:flex lg:gap-8">
+    <!-- 主要内容区域 -->
+    <div class="min-w-0 flex-1">
+        <!-- 页面标题部分 -->
+        <div class="mb-3">
+            
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
+                    超链接
                 </h1>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                    为您的企业或网站提供最前沿的技术支持和解决方案
-                </p>
-                <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="/getting-started/get-started.html"
-                       class="rounded-xl bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300">
-                        开始使用
-                    </a>
-                    <a href="/usage/href.html"
-                       class="text-sm font-semibold leading-6 text-white hover:text-indigo-300 transition-all duration-300">
-                        了解更多 <span aria-hidden="true">→</span>
-                    </a>
-                </div>
-            </div>
+                
+            
         </div>
-    </section>
 
+        <!-- 分隔线 -->
+        <div class="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 mb-8"></div>
 
-
-    <section class="py-24 bg-white sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-base font-semibold leading-7 text-indigo-600">
-                    核心优势
-                </h2>
-                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    为什么选择我们
-                </p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">
-                    提供全方位的技术支持和服务
-                </p>
-            </div>
-
-            <div class="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
-                <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-                    
-                        <div class="relative bg-white p-8 rounded-2xl shadow-sm ring-1 ring-gray-200/50 hover:shadow-lg transition-all duration-300">
-                            <div class="mb-6">
-                                <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-</svg>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-semibold leading-8 text-gray-900 mb-3">
-                                高性能
-                            </h3>
-                            <p class="text-base leading-7 text-gray-600">
-                                采用最新技术架构，确保系统高效运行
-                            </p>
-                        </div>
-                    
-                        <div class="relative bg-white p-8 rounded-2xl shadow-sm ring-1 ring-gray-200/50 hover:shadow-lg transition-all duration-300">
-                            <div class="mb-6">
-                                <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-</svg>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-semibold leading-8 text-gray-900 mb-3">
-                                安全可靠
-                            </h3>
-                            <p class="text-base leading-7 text-gray-600">
-                                全方位的安全防护，保障数据安全
-                            </p>
-                        </div>
-                    
-                        <div class="relative bg-white p-8 rounded-2xl shadow-sm ring-1 ring-gray-200/50 hover:shadow-lg transition-all duration-300">
-                            <div class="mb-6">
-                                <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-</svg>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-semibold leading-8 text-gray-900 mb-3">
-                                易于使用
-                            </h3>
-                            <p class="text-base leading-7 text-gray-600">
-                                直观的界面设计，简单易上手
-                            </p>
-                        </div>
-                    
-                </div>
-            </div>
+        <!-- 主要内容部分 -->
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+            
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Markdown 的默认超链接语法。您可以使用 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[]()</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 格式来创建链接，例如 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[链接文本](链接URL)</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 实现了更多的语义，支持更多的超链接格式。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="ji-ben-yu-fa" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    </div>
         </div>
-    </section>
-
-
-
-    <section class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 rounded-xl">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:max-w-none">
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                        用数据说话
-                    </h2>
-                    <p class="mt-4 text-lg leading-8 text-gray-300">
-                        我们取得的成就
-                    </p>
-                </div>
-                <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-                    
-                        <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-300">活跃用户</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-white">
-                                100K+
-                            </dd>
-                        </div>
-                    
-                        <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-300">服务客户</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-white">
-                                500+
-                            </dd>
-                        </div>
-                    
-                        <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-300">正常运行时间</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-white">
-                                99.99%
-                            </dd>
-                        </div>
-                    
-                        <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                            <dt class="text-sm leading-6 text-gray-300">客户满意度</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-white">
-                                98%
-                            </dd>
-                        </div>
-                    
-                </dl>
-            </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL)</code></div>
+        <div class="space-y-4"></div>
+    
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://pageforge.devlive.org"
+           target="_self"
+           title="">
+            PageForge
+        </a>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="dai-biao-ti" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
+    </div>
         </div>
-    </section>
-
-
-
-    <section class="relative isolate overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="relative bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
-                <h2 class="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                    准备好开始了吗？
-                </h2>
-                <p class="mx-auto mt-6 max-w-xl text-center text-lg leading-8 text-gray-300">
-                    立即加入我们，开启您的技术创新之旅
-                </p>
-                <div class="mt-10 flex justify-center">
-                    <a href="/getting-started/get-started.html"
-                       class="rounded-md bg-white px-8 py-3.5 text-center text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-300">
-                        立即注册
-                    </a>
-                </div>
-            </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL "可选标题")</code></div>
+        <div class="space-y-4"></div>
+    
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://pageforge.devlive.org"
+           target="_self"
+           title="PageForge">
+            PageForge
+        </a>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="dai-da-kai-fang-shi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
+    </div>
         </div>
-    </section>
-
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL "可选标题" "打开方式")</code></div>
+        <div class="space-y-4"></div>
+    
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://pageforge.devlive.org"
+           target="_blank"
+           title="PageForge">
+            PageForge
+        </a>
+    
+        </div>
+    </div>
+</div>
             </article>
         </main>
 
         <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+                <div class="sticky top-20">
+                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+                         id="table-of-contents">
+                        
+                        
+                            
+                                <div class="pl-4">
+                                    <a href="#ji-ben-yu-fa"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="ji-ben-yu-fa">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#dai-biao-ti"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="dai-biao-ti">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#dai-da-kai-fang-shi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="dai-da-kai-fang-shi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                    </nav>
+                </div>
+            </div>
+
+            <!-- 移动端目录按钮 -->
+            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+                </svg>
+            </button>
+
+            <!-- 移动端底部目录面板 -->
+            <div id="toc-mobile"
+                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                        transform translate-y-full transition duration-200 ease-in-out
+                        p-4 rounded-t-2xl shadow-lg">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold">目录</h3>
+                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                    
+                            
+                                <div class="pl-4">
+                                    <a href="#ji-ben-yu-fa"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="ji-ben-yu-fa">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#dai-biao-ti"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="dai-biao-ti">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#dai-da-kai-fang-shi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="dai-da-kai-fang-shi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                </nav>
+            </div>
         
     </div>
 
@@ -527,7 +787,7 @@
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/" class="flex items-center">
-                            <img src=".//assets/logo.svg"
+                            <img src="../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>
@@ -717,6 +977,12 @@
 </div>
 
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
+
+    <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
+         id="sidebar-overlay"
+         onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                  this.classList.add('hidden');">
+    </div>
 
 </body>
 

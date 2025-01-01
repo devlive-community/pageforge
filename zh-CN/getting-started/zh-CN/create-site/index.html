@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自定义网站 - PageForge</title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <title>创建网站 - PageForge</title>
+    <link rel="icon" href="../../../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../../../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -60,16 +60,16 @@
                 <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                     
                         <li class="shrink-0">
-                            <a href="/getting-started/get-started.html"
+                            <a href="/zh-CN/getting-started/get-started.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
+                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
                                 快速开始
                             </a>
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/setup/site.html"
+                            <a href="/zh-CN/setup/site.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -78,7 +78,7 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/usage/href.html"
+                            <a href="/zh-CN/usage/href.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -90,41 +90,42 @@
 
                 <!-- 语言切换器 -->
                 
-                    <div class="hidden lg:flex items-center ml-4">
-                        <div class="relative">
-                            <button type="button"
-                                    onclick="document.getElementById('language-menu').classList.toggle('hidden')"
-                                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-                                <!-- 当前语言 -->
-                                
-                                <span>🇨🇳</span>
-                                <span>中文</span>
-                                <!-- 下拉箭头 -->
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </button>
-                            <!-- 语言选择下拉菜单 -->
-                            <div id="language-menu"
-                                 class="hidden absolute right-0 mt-2 py-2 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                
-                                    <a href="?lang=en"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/getting-started/zh-CN/create-site/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
-                                        <span>🇬🇧</span>
-                                        <span>English</span>
-                                    </a>
-                                
-                                    <a href="?lang=zh-CN"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/getting-started/zh-CN/create-site/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
-                                        <span>🇨🇳</span>
-                                        <span>中文</span>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -229,19 +230,19 @@
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
                 
-                    <a href="/getting-started/get-started.html"
+                    <a href="/zh-CN/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
+                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         快速开始
                     </a>
                 
-                    <a href="/setup/site.html"
+                    <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         设置
                     </a>
                 
-                    <a href="/usage/href.html"
+                    <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         使用文档
@@ -252,14 +253,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="?lang=en"
+                            <a href="/en/getting-started/zh-CN/create-site/index.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="?lang=zh-CN"
+                            <a href="/zh-CN/getting-started/zh-CN/create-site/index.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -420,137 +421,6 @@
 
 
 
-    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
-                sm:max-h-screen md:h-auto lg:max-h-[calc(100vh-2rem)]">
-        <div class="mb-6">
-            <ul class="space-y-1.5">
-                
-                    <li class="relative">
-                        <a href="/getting-started/get-started.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                                       <!-- 骨架屏 -->
-                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                        <!-- 图标 -->
-                                       <i data-lucide="crosshair"
-                                          style="display: none;"
-                                          class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                                       </i>
-                                   </span>
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">快速开始</span>
-
-                                
-                            </div>
-                        </a>
-
-                        
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/getting-started/create-site/index.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                                       <!-- 骨架屏 -->
-                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                        <!-- 图标 -->
-                                       <i data-lucide="folder-plus"
-                                          style="display: none;"
-                                          class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                                       </i>
-                                   </span>
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">创建网站</span>
-
-                                
-                            </div>
-                        </a>
-
-                        
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/getting-started/publish-site.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                                       <!-- 骨架屏 -->
-                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                        <!-- 图标 -->
-                                       <i data-lucide="upload"
-                                          style="display: none;"
-                                          class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                                       </i>
-                                   </span>
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">发布网站</span>
-
-                                
-                            </div>
-                        </a>
-
-                        
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/getting-started/customization.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                                       <!-- 骨架屏 -->
-                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                        <!-- 图标 -->
-                                       <i data-lucide="dessert"
-                                          style="display: none;"
-                                          class="w-3 h-3 sm:w-4 sm:h-4
-                                               text-blue-600 dark:text-blue-400">
-                                       </i>
-                                   </span>
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">自定义网站</span>
-
-                                
-                            </div>
-                        </a>
-
-                        
-                    </li>
-                
-            </ul>
-        </div>
-
-        
-    </div>
-
                     </div>
                 </nav>
             </aside>
@@ -568,7 +438,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    自定义网站
+                    创建网站
                 </h1>
                 
             
@@ -582,13 +452,43 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 提供了一些可选的自定义选项，以满足不同的需求。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。</span>
     
         <div class="space-y-4"></div>
     
+        <span class="text-base text-gray-700 leading-7 my-2">我们假设您的文件夹是 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">my-website</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">。</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge init</code></div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">或者</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site .</code></div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">或者指定文件夹路径</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site my-website</code></div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">安装完成后，它将是如下目录结构：</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">├── content
+│   └── index.md
+└── pageforge.yaml</code></div>
+        <div class="space-y-4"></div>
+    
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="zi-ding-yi-CSS" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 CSS</span>
+            <div id="pei-zhi-wen-jian" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">配置文件</span>
     </div>
         </div>
     
@@ -596,43 +496,33 @@
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">您可以在 </span>
+        <span class="text-base text-gray-700 leading-7 my-2">默认会在当前目录下创建名为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。</span>
+        <span class="text-base text-gray-700 leading-7 my-2"> 的配置文件，该文件包含了默认配置。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">theme:
-    extra_css:
-        - /assets/extra.css</code></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">site:
+  title: PageForge
+  description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+
+nav:
+  - link: /
+    text: 首页</code></div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="zi-ding-yi-JavaScript" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 JavaScript</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">您可以在 </span>
+        <span class="text-base text-gray-700 leading-7 my-2">如果您想要更改默认配置，可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 JavaScript 文件，以便覆盖默认的 JavaScript 脚本。</span>
+        <span class="text-base text-gray-700 leading-7 my-2"> 文件中进行修改。</span>
     
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">theme:
-    extra_js:
-        - /assets/extra.js</code></div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="zi-ding-yi-mu-ban" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">自定义模板</span>
+            <div id="yu-lan-nin-de-xiu-gai" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">预览您的修改</span>
     </div>
         </div>
     
@@ -640,58 +530,46 @@
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">您可以在项目根目录创建 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">templates</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件夹，并在其中创建自定义的模板文件，以便覆盖默认的模板文件。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">templates
-├── components
-│   ├── a.js
-│   ├── block-code.js
-│   ├── checkbox.js
-│   ├── h1.js
-│   ├── h2.js
-│   ├── h3.js
-│   ├── h4.js
-│   ├── h5.js
-│   ├── h6.js
-│   ├── hr.js
-│   ├── image.js
-│   ├── inline-code.js
-│   ├── list.js
-│   ├── p.js
-│   └── space.js
-├── includes
-│   ├── footer.ejs
-│   ├── header.ejs
-│   ├── nav.ejs
-│   ├── sidebar.ejs
-│   └── toc.ejs
-└── layouts
-    ├── base.ejs
-    ├── content.ejs
-    └── page.ejs</code></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge serve</code></div>
+        <div class="space-y-4"></div>
+    <span class="inline-block my-1 mx-auto">将浏览器指向 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="http://localhost:3000"
+           target="_blank"
+           title="localhost:3000">
+            localhost:3000
+        </a>
+    ，您应该会看到：</span>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">按照文件的路径，您可以覆盖默认的模板文件。</span>
+        <div class="w-full h-full">
+            <img src="img.png" 
+                 alt="img.png" class="max-w-full h-auto"/>
+        </div>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果自定义模版，可以直接在 </span>
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="bian-yi-ni-de-xiang-mu" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">编译你的项目</span>
+    </div>
+        </div>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">templates/layouts</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件夹中创建自定义的布局文件，文件名便是模版名称。</span>
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">&lt;article&gt;
-    &lt;div class="content"&gt;
-        &lt;%- content %&gt;
-    &lt;/div&gt;
-&lt;/article&gt;</code></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站：</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge build</code></div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。</span>
+    
         </div>
     </div>
 </div>
@@ -709,33 +587,33 @@
                         
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-CSS"
+                                    <a href="#pei-zhi-wen-jian"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-CSS">
+                                       data-slug="pei-zhi-wen-jian">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 CSS</span>
+        <span class="text-base text-gray-700 leading-7 my-2">配置文件</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-JavaScript"
+                                    <a href="#yu-lan-nin-de-xiu-gai"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-JavaScript">
+                                       data-slug="yu-lan-nin-de-xiu-gai">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 JavaScript</span>
+        <span class="text-base text-gray-700 leading-7 my-2">预览您的修改</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-mu-ban"
+                                    <a href="#bian-yi-ni-de-xiang-mu"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-mu-ban">
+                                       data-slug="bian-yi-ni-de-xiang-mu">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义模板</span>
+        <span class="text-base text-gray-700 leading-7 my-2">编译你的项目</span>
     
                                     </a>
                                 </div>
@@ -772,33 +650,33 @@
                     
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-CSS"
+                                    <a href="#pei-zhi-wen-jian"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-CSS">
+                                       data-slug="pei-zhi-wen-jian">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 CSS</span>
+        <span class="text-base text-gray-700 leading-7 my-2">配置文件</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-JavaScript"
+                                    <a href="#yu-lan-nin-de-xiu-gai"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-JavaScript">
+                                       data-slug="yu-lan-nin-de-xiu-gai">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义 JavaScript</span>
+        <span class="text-base text-gray-700 leading-7 my-2">预览您的修改</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#zi-ding-yi-mu-ban"
+                                    <a href="#bian-yi-ni-de-xiang-mu"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-mu-ban">
+                                       data-slug="bian-yi-ni-de-xiang-mu">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义模板</span>
+        <span class="text-base text-gray-700 leading-7 my-2">编译你的项目</span>
     
                                     </a>
                                 </div>
@@ -819,7 +697,7 @@
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/" class="flex items-center">
-                            <img src="..//assets/logo.svg"
+                            <img src="../../../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>

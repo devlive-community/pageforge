@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快速开始 - PageForge</title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <title>发布网站 - PageForge</title>
+    <link rel="icon" href="../..//assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -29,7 +29,7 @@
                     <div class="flex items-center space-x-4 shrink-0">
                         
                             <a href="/" class="flex items-center">
-                                <img src="..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -60,7 +60,7 @@
                 <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                     
                         <li class="shrink-0">
-                            <a href="/getting-started/get-started.html"
+                            <a href="/zh-CN/getting-started/get-started.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
@@ -69,7 +69,7 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/setup/site.html"
+                            <a href="/zh-CN/setup/site.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -78,7 +78,7 @@
                         </li>
                     
                         <li class="shrink-0">
-                            <a href="/usage/href.html"
+                            <a href="/zh-CN/usage/href.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
@@ -90,41 +90,42 @@
 
                 <!-- 语言切换器 -->
                 
-                    <div class="hidden lg:flex items-center ml-4">
-                        <div class="relative">
-                            <button type="button"
-                                    onclick="document.getElementById('language-menu').classList.toggle('hidden')"
-                                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-                                <!-- 当前语言 -->
-                                
-                                <span>🇨🇳</span>
-                                <span>中文</span>
-                                <!-- 下拉箭头 -->
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
-                            </button>
-                            <!-- 语言选择下拉菜单 -->
-                            <div id="language-menu"
-                                 class="hidden absolute right-0 mt-2 py-2 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                
-                                    <a href="?lang=en"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/getting-started/publish-site.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
-                                        <span>🇬🇧</span>
-                                        <span>English</span>
-                                    </a>
-                                
-                                    <a href="?lang=zh-CN"
-                                       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/getting-started/publish-site.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
-                                        <span>🇨🇳</span>
-                                        <span>中文</span>
-                                    </a>
-                                
-                            </div>
-                        </div>
-                    </div>
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -229,19 +230,19 @@
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
                 
-                    <a href="/getting-started/get-started.html"
+                    <a href="/zh-CN/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         快速开始
                     </a>
                 
-                    <a href="/setup/site.html"
+                    <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         设置
                     </a>
                 
-                    <a href="/usage/href.html"
+                    <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         使用文档
@@ -252,14 +253,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="?lang=en"
+                            <a href="/en/getting-started/publish-site.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="?lang=zh-CN"
+                            <a href="/zh-CN/getting-started/publish-site.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -426,10 +427,10 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/getting-started/get-started.html"
+                        <a href="/zh-CN/getting-started/get-started.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -441,7 +442,7 @@
                                        <i data-lucide="crosshair"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               text-blue-600 dark:text-blue-400">
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                        </i>
                                    </span>
                                 
@@ -456,7 +457,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/getting-started/create-site/index.html"
+                        <a href="/zh-CN/getting-started/create-site/index.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -486,10 +487,10 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/getting-started/publish-site.html"
+                        <a href="/zh-CN/getting-started/publish-site.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -501,7 +502,7 @@
                                        <i data-lucide="upload"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                               text-blue-600 dark:text-blue-400">
                                        </i>
                                    </span>
                                 
@@ -516,7 +517,7 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/getting-started/customization.html"
+                        <a href="/zh-CN/getting-started/customization.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
@@ -568,7 +569,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    快速开始
+                    发布网站
                 </h1>
                 
             
@@ -582,17 +583,13 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 的使用过程非常简单，只需几步即可完成网站的构建、部署。你只需要编写 markdown 文件，PageForge 会帮你生成高质量的静态网站。无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。</span>
     
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="an-zhuang" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">安装</span>
+            <div id="GitHubPages" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
     </div>
         </div>
     
@@ -600,50 +597,86 @@
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 提供以下安装方式:</span>
-    
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
-        <span class="text-base text-gray-700 leading-7 my-2">在线安装</span>
-    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
-        <span class="text-base text-gray-700 leading-7 my-2">源码安装</span>
-    </li>
-        </ul>
+        <span class="text-base text-gray-700 leading-7 my-2">如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。</span>
     
         <div class="space-y-4"></div>
     
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="zai-xian-an-zhuang" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">在线安装</span>
+            <div id="shi-yong-GitHubActions" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
     </div>
         </div>
     
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">.github/workflows/ci.yml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，然后复制并粘贴以下内容：</span>
     
         <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">您可以使用 pnpm 或 yarn 等包管理工具进行在线安装:</span>
-    
-        <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pnpm add -g pageforge
-yarn global add pageforge</code></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">name: ci 
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+        
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        run: |
+          pageforge build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist</code></div>
         <div class="space-y-4"></div>
     
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="yuan-ma-an-zhuang" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">源码安装</span>
+            <div id="shi-yong-PageForge" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">git clone https://github.com/devlive-community/pageforge.git
-cd pageforge
-pnpm install
-pnpm link --global</code></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 文件，读取配置信息：</span>
+    
+        <div class="space-y-4"></div>
+    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">deploy:
+  github:
+    repository: devlive-community/pageforge
+    branch: gh-pages
+    cname: pageforge.devlive.community
+    buildDir: dist
+    username: devlive-community
+    email: support@devlive.org</code></div>
         </div>
     </div>
 </div>
@@ -661,11 +694,11 @@ pnpm link --global</code></div>
                         
                             
                                 <div class="pl-4">
-                                    <a href="#an-zhuang"
+                                    <a href="#GitHubPages"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="an-zhuang">
+                                       data-slug="GitHubPages">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
     
                                     </a>
                                 </div>
@@ -673,22 +706,22 @@ pnpm link --global</code></div>
                                     
                             
                                 <div class="pl-8">
-                                    <a href="#zai-xian-an-zhuang"
+                                    <a href="#shi-yong-GitHubActions"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zai-xian-an-zhuang">
+                                       data-slug="shi-yong-GitHubActions">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">在线安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-8">
-                                    <a href="#yuan-ma-an-zhuang"
+                                    <a href="#shi-yong-PageForge"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="yuan-ma-an-zhuang">
+                                       data-slug="shi-yong-PageForge">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">源码安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
     
                                     </a>
                                 </div>
@@ -728,11 +761,11 @@ pnpm link --global</code></div>
                     
                             
                                 <div class="pl-4">
-                                    <a href="#an-zhuang"
+                                    <a href="#GitHubPages"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="an-zhuang">
+                                       data-slug="GitHubPages">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">GitHub Pages</span>
     
                                     </a>
                                 </div>
@@ -740,22 +773,22 @@ pnpm link --global</code></div>
                                     
                             
                                 <div class="pl-8">
-                                    <a href="#zai-xian-an-zhuang"
+                                    <a href="#shi-yong-GitHubActions"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zai-xian-an-zhuang">
+                                       data-slug="shi-yong-GitHubActions">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">在线安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">使用 GitHub Actions</span>
     
                                     </a>
                                 </div>
                                 
                             
                                 <div class="pl-8">
-                                    <a href="#yuan-ma-an-zhuang"
+                                    <a href="#shi-yong-PageForge"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="yuan-ma-an-zhuang">
+                                       data-slug="shi-yong-PageForge">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">源码安装</span>
+        <span class="text-base text-gray-700 leading-7 my-2">使用 PageForge</span>
     
                                     </a>
                                 </div>
@@ -779,7 +812,7 @@ pnpm link --global</code></div>
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/" class="flex items-center">
-                            <img src="..//assets/logo.svg"
+                            <img src="../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>
