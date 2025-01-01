@@ -141,6 +141,19 @@
 <% } %>
 </body>
 
+<!-- 处理 404 -->
+<script>
+    (function () {
+        const i18nEnable = `<%- locals?.siteData?.feature?.i18n?.enable %>`;
+        if (!i18nEnable) return;
+
+        const hasRule = `<%= (locals?.pageData?.rules || []).includes(pageData.noLocalePath) %>`;
+        if (!hasRule) {
+            window.location.href = `/<%= pageData.language %>/404.html` || `/404.html`;
+        }
+    })();
+</script>
+
 <!-- 基础脚本文件 -->
 <script src="/assets/pageforge.min.js"></script>
 

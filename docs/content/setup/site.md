@@ -26,14 +26,14 @@ site:
 
 ```markdown
 theme:
-  extra_css:
+  extraCss:
     - /assets/extra.css
-  extra_js:
+  extraJs:
     - /assets/extra.js
 ```
 
-- `extra_css`: 附加的 CSS 文件路径
-- `extra_js`: 附加的 JavaScript 文件路径
+- `extraCss`: 附加的 CSS 文件路径
+- `extraJs`: 附加的 JavaScript 文件路径
 
 ## CDN 设置
 
