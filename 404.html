@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        var anchor = document.createElement("a");
+        anchor.href = window.location.href;
+        
+        var path = anchor.pathname;
+        if (path.indexOf(".html") === -1) {
+            path = path.replace(//$/, "");
+            path = path + ".html";
+        }
+        
+        var lang = path.split("/")[1];
+        var supportedLanguages = ["en","zh-CN"];
+        
+        if (supportedLanguages.includes(lang)) {
+            window.location.replace("/" + lang + "/404.html");
+        } else {
+            window.location.replace("/zh-CN/404.html");
+        }
+    </script>
+</head>
+<body></body>
+</html>
