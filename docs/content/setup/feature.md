@@ -85,3 +85,5 @@ icon: crosshair
 ```
 
 只需要将 `title` 中替换为国际化的 key 就可以了
+
+国际化的文档名格式为 `<file>.<lang>.md` ，比如我们的 `index.md` 如果要配置国际化文件名，可以这样写 `index.en.md`

@@ -12,22 +12,10 @@ const GitHubStats = {
 
     // 显示加载状态的辅助方法
     showLoading() {
-        const loadingHTML = `
-            <div class="stats-loading">
-                <div class="tag-container">
-                    <div class="skeleton-loader"></div>
-                </div>
-                <div class="stars-container">
-                    <div class="skeleton-loader"></div>
-                </div>
-                <div class="forks-container">
-                    <div class="skeleton-loader"></div>
-                </div>
-            </div>
-        `;
-
-        const style = document.createElement('style');
-        style.textContent = `
+        // 只在第一次调用时添加样式
+        if (!this.styleAdded) {
+            const style = document.createElement('style');
+            style.textContent = `
             .skeleton-loader {
                 width: 60px;
                 height: 16px;
@@ -41,15 +29,17 @@ const GitHubStats = {
                 100% { background-position: -200% 0; }
             }
         `;
-        document.head.appendChild(style);
+            document.head.appendChild(style);
+            this.styleAdded = true;
+        }
 
-        // 更新所有容器为加载状态
-        ['.tag-container', '.stars-container', '.forks-container'].forEach(selector => {
-            const containers = document.querySelectorAll(selector);
-            containers.forEach(container => {
-                container.innerHTML = '<div class="skeleton-loader"></div>';
-            });
-        });
+        // 直接通过 updateUI 更新所有容器
+        const loadingStats = {
+            tag: '<div class="skeleton-loader"></div>',
+            stars: '<div class="skeleton-loader"></div>',
+            forks: '<div class="skeleton-loader"></div>'
+        };
+        this.updateUI(loadingStats);
     },
 
     async fetchStats(owner, repo) {
