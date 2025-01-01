@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> - <%= site.title %></title>
-    <link rel="icon" href="<%= basePath %>/<%= site.favicon || '/favicon.ico' %>" type="image/x-icon">
+    <title><%= pageData.title %> - <%= siteData.site.title %></title>
+    <link rel="icon" href="<%= pageData.basePath %>/<%= siteData.site.favicon || '/favicon.ico' %>" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
 
     <!-- 加载主题配置中的额外 CSS 文件 -->
-    <% if (locals.theme?.extraCss && Array.isArray(theme.extraCss)) { %>
-        <% theme.extraCss.forEach(css_path => { %>
+    <% if (locals.siteData?.theme?.extraCss && Array.isArray(locals.siteData?.theme?.extraCss)) { %>
+        <% locals.siteData?.theme?.extraCss.forEach(css_path => { %>
             <link rel="stylesheet" href="<%= css_path %>">
         <% }); %>
     <% } %>
 
     <!-- Tailwind CSS -->
-    <script src="<%= locals.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
+    <script src="<%= locals.siteData.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 <div class="flex flex-col min-h-screen">
-    <% if (page.config && page.config.header !== false) { %>
+    <% if (locals.pageData?.config?.header !== false) { %>
         <%- include('../includes/header') %>
     <% } %>
 
     <!-- 移动端菜单按钮 -->
-    <% if (page.config && page.config.sidebar !== false) { %>
+    <% if (locals.pageData?.config?.sidebar !== false) { %>
         <button class="md:hidden fixed left-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
                 onclick="document.getElementById('sidebar-menu').classList.remove('-translate-x-full');
                          document.getElementById('sidebar-overlay').classList.remove('hidden');">
@@ -39,7 +39,7 @@
 
     <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
         <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
-        <% if (page.config && page.config.sidebar !== false) { %>
+        <% if (locals.pageData?.config?.sidebar !== false) { %>
             <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
                          inset-y-0 left-0 transform -translate-x-full md:translate-x-0
                          transition duration-200 ease-in-out
@@ -67,19 +67,19 @@
         <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-4xl">
-                <%- include(`../layouts/${page.layout || 'content'}`) %>
+                <%- include(pageData.layout.startsWith('layouts/') ? pageData.layout : 'content') %>
             </article>
         </main>
 
         <!-- 右侧目录 -->
-        <% if (page.config && page.config.toc !== false && page.toc.length > 0) { %>
+        <% if (locals.pageData?.config?.toc !== false) { %>
             <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
                 <div class="sticky top-20">
                     <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
                     <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
                          id="table-of-contents">
                         <% function renderTocItem(items) { %>
-                            <% items.forEach(item => { %>
+                            <% items?.forEach(item => { %>
                                 <div class="pl-<%= (item.level - 1) * 4 %>">
                                     <a href="#<%= item.slug %>"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
@@ -92,7 +92,7 @@
                                 <% } %>
                             <% }) %>
                         <% } %>
-                        <% renderTocItem(page.toc) %>
+                        <% renderTocItem(pageData.toc) %>
                     </nav>
                 </div>
             </div>
@@ -120,19 +120,19 @@
                     </button>
                 </div>
                 <nav class="overflow-y-auto max-h-[60vh] space-y-1">
-                    <% renderTocItem(page.toc) %>
+                    <% renderTocItem(locals.pageData.toc) %>
                 </nav>
             </div>
         <% } %>
     </div>
 
-    <% if (page.config && page.config.footer !== false) { %>
+    <% if (locals.pageData?.config?.footer !== false) { %>
         <%- include('../includes/footer') %>
     <% } %>
 </div>
 
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
-<% if (page.config && page.config.sidebar !== false) { %>
+<% if (locals.pageData?.config?.sidebar !== false) { %>
     <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
          id="sidebar-overlay"
          onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
@@ -152,15 +152,15 @@
 </script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
-<% if (locals.theme?.extraJs && Array.isArray(theme.extraJs)) { %>
-    <% theme.extraJs.forEach(js_path => { %>
+<% if (locals.siteData?.theme?.extraJs && Array.isArray(locals.siteData?.theme?.extraJs)) { %>
+    <% locals.siteData.theme.extraJs.forEach(js_path => { %>
         <script src="<%= js_path %>"></script>
     <% }); %>
 <% } %>
 
 <!-- 是否启用 Lucide 图标库 -->
-<% if (locals.feature?.lucide?.enable) { %>
-    <script src="<%= feature.lucide.cdn || 'https://unpkg.com/lucide@latest/dist/umd/lucide.js' %>"></script>
+<% if (locals.siteData.feature?.lucide?.enable) { %>
+    <script src="<%= locals.siteData.feature.lucide.cdn || 'https://unpkg.com/lucide@latest/dist/umd/lucide.js' %>"></script>
     <script>
         // 在页面加载完成后执行
         window.addEventListener('load', () => {

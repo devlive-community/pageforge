@@ -4,13 +4,13 @@
     <div class="min-w-0 flex-1">
         <!-- 页面标题部分 -->
         <div class="mb-3">
-            <% if (page.title) { %>
+            <% if (pageData.title) { %>
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    <%- page.title %>
+                    <%- pageData.title %>
                 </h1>
-                <% if (page.description) { %>
+                <% if (pageData.description) { %>
                     <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                        <%- page.description %>
+                        <%- pageData.description %>
                     </p>
                 <% } %>
             <% } %>
@@ -21,7 +21,7 @@
 
         <!-- 主要内容部分 -->
         <div class="prose prose-gray dark:prose-invert max-w-none">
-            <%- content %>
+            <%- pageData.content %>
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@
                 onclick="document.getElementById('language-menu').classList.toggle('hidden')"
                 class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
             <!-- 当前语言 -->
-            <% const currentLocale = locals.page.config.languages.find(locale => locale.key === locals.page.language) %>
+            <% const currentLocale = locals.siteData.languages.find(locale => locale.key === locals.pageData.language) %>
             <span><%= currentLocale?.flag %></span>
             <span><%= currentLocale?.name %></span>
             <!-- 下拉箭头 -->
@@ -13,13 +13,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
         </button>
+
         <!-- 语言选择下拉菜单 -->
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-            <% locals.page.config.languages.forEach(locale => { %>
-                <a href="<%= `/${locale.key}${page.noLocalePath}` %>"
+            <% locals.siteData.languages.forEach(locale => { %>
+                <a href="<%= `/${locale.key}${pageData.noLocalePath}` %>"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                    <%= locale.key === locals.page.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
+                                    <%= locale.key === locals.pageData.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
                     <span><%= locale.flag %></span>
                     <span><%= locale.name %></span>
                 </a>

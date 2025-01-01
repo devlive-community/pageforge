@@ -34,15 +34,15 @@ function isPathInNavItem(currentPath, navItem) {
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center justify-between flex-1 lg:flex-none">
                     <div class="flex items-center space-x-4 shrink-0">
-                        <% if (site.logo) { %>
-                            <a href="<%= page.language ? `/${page.language}` : '/' %>" class="flex items-center">
-                                <img src="<%= basePath %>/<%= site.logo || '/assets/logo.svg' %>"
-                                     alt="<%= site.title %>"
+                        <% if (locals.siteData?.site?.logo) { %>
+                            <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
+                                <img src="<%= pageData.basePath %>/<%= siteData.site.logo || '/assets/logo.svg' %>"
+                                     alt="<%= siteData.site.title %>"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         <% } %>
-                        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
-                            <%= !site.hiddenTitle ? site.title : '' %>
+                        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                            <%= !siteData.site.hiddenTitle ? siteData.site.title : '' %>
                         </a>
                     </div>
 
@@ -65,15 +65,14 @@ function isPathInNavItem(currentPath, navItem) {
 
                 <!-- 桌面端导航 -->
                 <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
-                    <% for(let item of nav) { %>
+                    <% for(let item of siteData.nav) { %>
                         <li class="shrink-0">
-                            <a href="<%= page.language ? `/${page.language}${item.href}` : item.href %>"
+                            <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      <%=
-                                   isPathInNavItem(page.noLocalePath, item)
-                                           ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                           : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                                      <%= isPathInNavItem(pageData.noLocalePath, item)
+                                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                       : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
                                %>">
                                 <%= item.title %>
                             </a>
@@ -82,7 +81,7 @@ function isPathInNavItem(currentPath, navItem) {
                 </ul>
 
                 <!-- 语言切换器 -->
-                <% if (locals.page.config.feature?.i18n?.enable && locals.page.config?.languages?.length > 0) { %>
+                <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData?.languages?.length > 0) { %>
                     <%- include('./language') %>
                 <% } %>
 
@@ -96,10 +95,10 @@ function isPathInNavItem(currentPath, navItem) {
         <!-- 移动端菜单 -->
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
-                <% for(let item of nav) { %>
-                    <a href="<%= page.language ? `/${page.language}${item.href}` : item.href %>"
+                <% for(let item of siteData.nav) { %>
+                    <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              <%= isPathInNavItem(page.noLocalePath, item)
+                              <%= isPathInNavItem(pageData.noLocalePath, item)
                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20'
                                : 'text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
                        %>">
@@ -108,12 +107,12 @@ function isPathInNavItem(currentPath, navItem) {
                 <% } %>
 
                 <!-- 移动端语言切换 -->
-                <% if (locals.page.config.feature?.i18n?.enable && locals.page.config?.languages?.length > 0) { %>
+                <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData.languages?.length > 0) { %>
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
-                        <% locals.page.config.languages.forEach(locale => { %>
-                            <a href="<%= `/${locale.key}${page.noLocalePath}` %>"
+                        <% locals.siteData.languages.forEach(locale => { %>
+                            <a href="<%= `/${locale.key}${pageData.noLocalePath}` %>"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                <%= locale.key === locals.page.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
+                                <%= locale.key === locals.pageData.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
                                 <span><%= locale.flag %></span>
                                 <span><%= locale.name %></span>
                             </a>

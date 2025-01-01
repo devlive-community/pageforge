@@ -1,9 +1,10 @@
 ---
 title: 欢迎使用 PageForge
-layout: home
+layout: home/modern
 
 config:
   sidebar: false
+  toc: false
 
 hero:
   title: 创新技术解决方案

@@ -3,7 +3,7 @@ site:
   hiddenTitle: true
   description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
   logo: /assets/logo.svg
-  favicon: /assets/logo.svg
+  favicon: assets/logo.svg
 
 cdn:
   style: https://cdn.tailwindcss.com
@@ -37,7 +37,7 @@ i18n:
       Usage: 使用文档
 
 footer:
-  copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+  copyright: © 2024 PageForge All Rights Reserved.
   social:
     github:
       title: GitHub

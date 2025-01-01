@@ -13,13 +13,13 @@ function isPathInItem(item, path) {
 }
 
 // 修改后的查找逻辑
-sidebar = nav.find(item => {
+sidebar = siteData.nav.find(item => {
     // 判断当前项或其子项是否包含目标路径
-    return isPathInItem(item, page.noLocalePath);
+    return isPathInItem(item, pageData.noLocalePath);
 });
 %>
 
-<% function isActive(href) { return href === page.noLocalePath } %>
+<% function isActive(href) { return href === pageData.noLocalePath } %>
 
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
@@ -28,7 +28,7 @@ sidebar = nav.find(item => {
             <ul class="space-y-1.5">
                 <% sidebar.items.forEach(item => { %>
                     <li class="relative">
-                        <a href="<%= page.language ? `/${page.language}${item.href}` : item.href %>"
+                        <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         <%=
@@ -38,7 +38,7 @@ sidebar = nav.find(item => {
                                         %>
                                        rounded-md transition-all duration-200 ease-in-out">
 
-                                <% if (locals.config.feature?.lucide?.enable && item.icon) { %>
+                                <% if (locals.siteData?.feature?.lucide?.enable && item.icon) { %>
                                     <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
                                        <!-- 骨架屏 -->
                                        <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
@@ -93,13 +93,5 @@ sidebar = nav.find(item => {
                 <% }) %>
             </ul>
         </div>
-
-        <% if (page.sidebar_footnote) { %>
-            <div class="mt-6 sm:mt-8 mx-1 sm:mx-2">
-                <div class="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-100 dark:border-gray-700/50">
-                    <%= page.sidebar_footnote %>
-                </div>
-            </div>
-        <% } %>
     </div>
 <% } %>

@@ -72,7 +72,9 @@ templates
 ```
 <article>
     <div class="content">
-        <%- content %>
+        <%- pageData.content %>
     </div>
 </article>
 ```
+
+页面相关的数据在 `pageData` 中
