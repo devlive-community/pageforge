@@ -19,7 +19,7 @@ sidebar = nav.find(item => {
 });
 %>
 
-<% function isActive(href) { return href === page.path.replace(`/${page.language}`, '')} %>
+<% function isActive(href) { return href === page.noLocalePath } %>
 
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
