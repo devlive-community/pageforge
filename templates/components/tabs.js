@@ -4,28 +4,24 @@ module.exports = function tabs({tabs}) {
 
     // 生成 tab 按钮 HTML
     const tabButtons = tabs.map((tab, index) => `
-        <button
+        <button role="tab"
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    ${index === 0 ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}
                    focus:outline-none"
             onclick="switchTab(event, '${tabGroupId}', ${index})"
-            role="tab"
             aria-selected="${index === 0 ? 'true' : 'false'}"
             aria-controls="${tabGroupId}-panel-${index}"
-            id="${tabGroupId}-tab-${index}"
-        >
+            id="${tabGroupId}-tab-${index}">
             ${tab.title}
         </button>
     `).join('');
 
     // 生成 tab 内容 HTML
     const tabPanels = tabs.map((tab, index) => `
-        <div
-            class="p-4 ${index === 0 ? '' : 'hidden'}"
+        <div class="p-4 ${index === 0 ? '' : 'hidden'}"
             role="tabpanel"
             aria-labelledby="${tabGroupId}-tab-${index}"
-            id="${tabGroupId}-panel-${index}"
-        >
+            id="${tabGroupId}-panel-${index}">
             ${tab.content}
         </div>
     `).join('');

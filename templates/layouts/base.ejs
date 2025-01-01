@@ -26,11 +26,36 @@
         <%- include('../includes/header') %>
     <% } %>
 
-    <div class="container mx-auto px-4 py-8 flex-grow flex pt-16">
-        <!-- 左侧列表 -->
+    <!-- 移动端菜单按钮 -->
+    <% if (page.config && page.config.sidebar !== false) { %>
+        <button class="md:hidden fixed left-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                onclick="document.getElementById('sidebar-menu').classList.remove('-translate-x-full');
+                         document.getElementById('sidebar-overlay').classList.remove('hidden');">
+            <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    <% } %>
+
+    <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
+        <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
         <% if (page.config && page.config.sidebar !== false) { %>
-            <aside class="w-64 flex-shrink-0 pr-8">
-                <nav class="sticky top-20">
+            <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
+                         inset-y-0 left-0 transform -translate-x-full md:translate-x-0
+                         transition duration-200 ease-in-out
+                         md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
+                         w-3/4 sm:w-64"
+                   id="sidebar-menu">
+                <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
+                    <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                            onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                                     document.getElementById('sidebar-overlay').classList.add('hidden');">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="md:sticky md:top-20 p-4 md:p-0">
                     <div class="space-y-4">
                         <%- include('../includes/sidebar') %>
                     </div>
@@ -39,15 +64,65 @@
         <% } %>
 
         <!-- 中间内容 -->
-        <main class="flex-grow mt-6 w-2">
-            <article class="prose dark:prose-invert lg:prose-lg mx-auto">
+        <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
+            <article class="prose dark:prose-invert lg:prose-lg mx-auto
+                          max-w-none md:max-w-2xl lg:max-w-4xl">
                 <%- include(`../layouts/${page.layout || 'content'}`) %>
             </article>
         </main>
 
         <!-- 右侧目录 -->
         <% if (page.config && page.config.toc !== false && page.toc.length > 0) { %>
-            <%- include('../includes/toc') %>
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+                <div class="sticky top-20">
+                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+                         id="table-of-contents">
+                        <% function renderTocItem(items) { %>
+                            <% items.forEach(item => { %>
+                                <div class="pl-<%= (item.level - 1) * 4 %>">
+                                    <a href="#<%= item.slug %>"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="<%= item.slug %>">
+                                        <%- item.text %>
+                                    </a>
+                                </div>
+                                <% if (item.children && item.children.length > 0) { %>
+                                    <% renderTocItem(item.children) %>
+                                <% } %>
+                            <% }) %>
+                        <% } %>
+                        <% renderTocItem(page.toc) %>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- 移动端目录按钮 -->
+            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+                </svg>
+            </button>
+
+            <!-- 移动端底部目录面板 -->
+            <div id="toc-mobile"
+                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                        transform translate-y-full transition duration-200 ease-in-out
+                        p-4 rounded-t-2xl shadow-lg">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold">目录</h3>
+                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                    <% renderTocItem(page.toc) %>
+                </nav>
+            </div>
         <% } %>
     </div>
 
@@ -55,10 +130,26 @@
         <%- include('../includes/footer') %>
     <% } %>
 </div>
+
+<!-- 遮罩层 - 移动端菜单打开时显示 -->
+<% if (page.config && page.config.sidebar !== false) { %>
+    <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
+         id="sidebar-overlay"
+         onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                  this.classList.add('hidden');">
+    </div>
+<% } %>
 </body>
 
 <!-- 基础脚本文件 -->
 <script src="/assets/pageforge.min.js"></script>
+
+<script>
+    // 移动端侧边栏打开时显示遮罩
+    document.querySelector('[onclick*="sidebar-menu"]').addEventListener('click', function () {
+        document.getElementById('sidebar-overlay').classList.remove('hidden');
+    });
+</script>
 
 <!-- 加载主题配置中的额外 JS 文件 -->
 <% if (locals.theme?.extraJs && Array.isArray(theme.extraJs)) { %>

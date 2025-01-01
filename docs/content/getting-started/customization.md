@@ -1,5 +1,6 @@
 ---
 title: 自定义网站
+icon: dessert
 ---
 
 PageForge 提供了一些可选的自定义选项，以满足不同的需求。

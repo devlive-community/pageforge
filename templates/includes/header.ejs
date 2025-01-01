@@ -29,10 +29,10 @@ function isPathInNavItem(currentPath, navItem) {
 %>
 
 <header>
-    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-10">
+    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-40">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center justify-between flex-1 lg:flex-none">
                     <div class="flex items-center space-x-4 shrink-0">
                         <% if (site.logo) { %>
                             <a href="/" class="flex items-center">
@@ -46,26 +46,80 @@ function isPathInNavItem(currentPath, navItem) {
                         </a>
                     </div>
 
-                    <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
-                        <% for(let item of nav) { %>
-                            <li class="shrink-0">
-                                <a href="<%= item.href %>"
-                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                          text-sm font-medium leading-none dark:text-white
-                                          <%=
-                                       isPathInNavItem(page.path, item)
-                                               ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                               : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
-                                   %>">
-                                    <%= item.title %>
-                                </a>
-                            </li>
-                        <% } %>
-                    </ul>
+                    <!-- 移动端菜单按钮 -->
+                    <button type="button"
+                            class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700"
+                            onclick="document.getElementById('mobile-menu').classList.toggle('hidden');
+                                     this.querySelector('svg:first-child').classList.toggle('hidden');
+                                     this.querySelector('svg:last-child').classList.toggle('hidden');">
+                        <!-- 菜单图标 -->
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        <!-- 关闭图标 -->
+                        <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
                 </div>
 
-                <%- include('./repo') %>
+                <!-- 桌面端导航 -->
+                <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                    <% for(let item of nav) { %>
+                        <li class="shrink-0">
+                            <a href="<%= item.href %>"
+                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                      text-sm font-medium leading-none dark:text-white
+                                      <%=
+                                   isPathInNavItem(page.path, item)
+                                           ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                           : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                               %>">
+                                <%= item.title %>
+                            </a>
+                        </li>
+                    <% } %>
+                </ul>
+
+                <!-- 仓库链接 -->
+                <div class="hidden lg:block">
+                    <%- include('./repo') %>
+                </div>
+            </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 border-t dark:border-gray-700">
+                <% for(let item of nav) { %>
+                    <a href="<%= item.href %>"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              <%= isPathInNavItem(page.path, item)
+                               ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20'
+                               : 'text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+                       %>">
+                        <%= item.title %>
+                    </a>
+                <% } %>
+                <!-- 移动端的仓库链接 -->
+                <div class="px-3 py-2">
+                    <%- include('./repo') %>
+                </div>
             </div>
         </div>
     </nav>
 </header>
+
+<script>
+    // 点击外部区域关闭移动端菜单
+    document.addEventListener('click', function (event) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
+
+        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuButton.querySelector('svg:first-child').classList.remove('hidden');
+            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        }
+    });
+</script>
