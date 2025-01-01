@@ -15,11 +15,11 @@ function isPathInItem(item, path) {
 // 修改后的查找逻辑
 sidebar = nav.find(item => {
     // 判断当前项或其子项是否包含目标路径
-    return isPathInItem(item, page.path);
+    return isPathInItem(item, page.noLocalePath);
 });
 %>
 
-<% function isActive(href) { return href === page.path} %>
+<% function isActive(href) { return href === page.path.replace(`/${page.language}`, '')} %>
 
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
@@ -28,7 +28,7 @@ sidebar = nav.find(item => {
             <ul class="space-y-1.5">
                 <% sidebar.items.forEach(item => { %>
                     <li class="relative">
-                        <a href="<%= item.href %>"
+                        <a href="<%= page.language ? `/${page.language}${item.href}` : item.href %>"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         <%=

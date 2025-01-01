@@ -71,10 +71,10 @@ function isPathInNavItem(currentPath, navItem) {
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
                                       <%=
-                                           isPathInNavItem(page.path, item)
-                                                   ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                                   : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
-                                       %>">
+                                   isPathInNavItem(page.noLocalePath, item)
+                                           ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                           : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                               %>">
                                 <%= item.title %>
                             </a>
                         </li>
@@ -97,9 +97,9 @@ function isPathInNavItem(currentPath, navItem) {
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
                 <% for(let item of nav) { %>
-                    <a href="<%= item.href %>"
+                    <a href="<%= page.language ? `/${page.language}${item.href}` : item.href %>"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              <%= isPathInNavItem(page.path, item)
+                              <%= isPathInNavItem(page.noLocalePath, item)
                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20'
                                : 'text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
                        %>">
@@ -111,9 +111,9 @@ function isPathInNavItem(currentPath, navItem) {
                 <% if (locals.page.config.feature?.i18n?.enable && locals.page.config?.languages?.length > 0) { %>
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         <% locals.page.config.languages.forEach(locale => { %>
-                            <a href="?lang=<%= locale.key %>"
+                            <a href="<%= `/${locale.key}${page.noLocalePath}` %>"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                <%= locale.key === locals.page.config.i18n.default ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
+                                <%= locale.key === locals.page.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
                                 <span><%= locale.flag %></span>
                                 <span><%= locale.name %></span>
                             </a>
