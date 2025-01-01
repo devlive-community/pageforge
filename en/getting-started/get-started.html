@@ -978,6 +978,19 @@ pnpm link --global</code></div>
 
 </body>
 
+<!-- 处理 404 -->
+<script>
+    (function () {
+        const i18nEnable = `true`;
+        if (!i18nEnable) return;
+
+        const hasRule = `false`;
+        if (!hasRule) {
+            window.location.href = `/en/404.html` || `/404.html`;
+        }
+    })();
+</script>
+
 <!-- 基础脚本文件 -->
 <script src="/assets/pageforge.min.js"></script>
 
