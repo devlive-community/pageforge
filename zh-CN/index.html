@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎使用 PageForge - PageForge</title>
-    <link rel="icon" href="..//assets/logo.svg" type="image/x-icon">
+    <link rel="icon" href="../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -34,7 +34,7 @@
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         
-                        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                        <a href="/zh-CN" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
                             
                         </a>
                     </div>
@@ -89,6 +89,44 @@
                 </ul>
 
                 <!-- 语言切换器 -->
+                
+                    <!-- 语言切换器 -->
+<div class="hidden lg:flex items-center ml-4">
+    <div class="relative">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+            <!-- 当前语言 -->
+            
+            <span>🇨🇳</span>
+            <span>中文</span>
+            <!-- 下拉箭头 -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+
+        <!-- 语言选择下拉菜单 -->
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+            
+                <a href="/en/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    ">
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </a>
+            
+                <a href="/zh-CN/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    bg-gray-50 dark:bg-gray-700">
+                    <span>🇨🇳</span>
+                    <span>中文</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
                 
 
                 <!-- 仓库链接 -->
@@ -213,6 +251,24 @@
                 
 
                 <!-- 移动端语言切换 -->
+                
+                    <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
+                        
+                            <a href="/en/index.html"
+                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                ">
+                                <span>🇬🇧</span>
+                                <span>English</span>
+                            </a>
+                        
+                            <a href="/zh-CN/index.html"
+                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                bg-gray-50 dark:bg-gray-700">
+                                <span>🇨🇳</span>
+                                <span>中文</span>
+                            </a>
+                        
+                    </div>
                 
 
                 <!-- 移动端的仓库链接 -->
@@ -340,7 +396,7 @@
         <!-- 中间内容 -->
         <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto
-                          max-w-none md:max-w-2xl lg:max-w-4xl">
+                          max-w-none md:max-w-2xl lg:max-w-full">
                 
     <section class="relative overflow-hidden bg-gray-900 py-32 rounded-xl">
         <div class="absolute inset-0 opacity-30">
@@ -526,12 +582,12 @@
             <div class="md:w-1/3">
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                        <a href="/" class="flex items-center">
+                        <a href="/zh-CN" class="flex items-center">
                             <img src="..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>
-                        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                        <a href="/zh-CN" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
                             
                         </a>
                     </div>
