@@ -28,6 +28,7 @@ i18n:
       GetStarted: Getting Started
       Setup: Setup
       Usage: Usage Docs
+      EjsTemplate: EJS Template
   zh-CN:
     name: 中文
     flag: 🇨🇳
@@ -35,6 +36,7 @@ i18n:
       GetStarted: 快速开始
       Setup: 设置
       Usage: 使用文档
+      EjsTemplate: EJS 模板
 
 footer:
   copyright: © 2024 PageForge All Rights Reserved.
@@ -87,3 +89,4 @@ nav:
       - /usage/image
       - /usage/alert
       - /usage/tab
+      - /usage/ejs

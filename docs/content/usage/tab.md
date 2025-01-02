@@ -1,6 +1,6 @@
 ---
 title: 选项卡
-icon: code
+icon: pill
 ---
 
 PageForge 支持使用 markdown 实现了选项卡相关信息。
