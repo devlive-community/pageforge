@@ -10,10 +10,10 @@ hero:
   title: 创新技术解决方案
   description: 为您的企业或网站提供最前沿的技术支持和解决方案
   primaryCta:
-    url: /getting-started/get-started.html
+    url: /<%= pageData.language %>/getting-started/get-started.html
     text: 开始使用
   secondaryCta:
-    url: /usage/href.html
+    url: /<%= pageData.language %>/usage/href.html
     text: 了解更多
 
 features:
@@ -59,6 +59,6 @@ cta:
   title: 准备好开始了吗？
   description: 立即加入我们，开启您的技术创新之旅
   button:
-    url: /getting-started/get-started.html
+    url: /<%= pageData.language %>/getting-started/get-started.html
     text: 立即注册
 ---
