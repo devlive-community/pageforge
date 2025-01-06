@@ -29,6 +29,7 @@ i18n:
       Setup: Setup
       Usage: Usage Docs
       EjsTemplate: EJS Template
+      ReleaseNotes: Release Notes
   zh-CN:
     name: 中文
     flag: 🇨🇳
@@ -37,6 +38,7 @@ i18n:
       Setup: 设置
       Usage: 使用文档
       EjsTemplate: EJS 模板
+      ReleaseNotes: 发布日志
 
 footer:
   copyright: © 2024 PageForge All Rights Reserved.
@@ -90,3 +92,6 @@ nav:
       - /usage/alert
       - /usage/tab
       - /usage/ejs
+  - ReleaseNotes:
+      - /release/2025.1.0
+      - /release/1.0.0

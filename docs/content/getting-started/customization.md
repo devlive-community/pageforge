@@ -13,7 +13,7 @@ PageForge 提供了一些可选的自定义选项，以满足不同的需求。
 
 ```yaml
 theme:
-    extra_css:
+    extraCss:
         - /assets/extra.css
 ```
 
@@ -25,7 +25,7 @@ theme:
 
 ```yaml
 theme:
-    extra_js:
+    extraJs:
         - /assets/extra.js
 ```
 
