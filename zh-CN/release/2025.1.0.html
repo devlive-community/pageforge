@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面未找到 - PageForge</title>
+    <title>2025.1.0 - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -120,7 +120,7 @@
                             <a href="/zh-CN/release/2025.1.0.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                 发布日志
                             </a>
                         </li>
@@ -149,14 +149,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/404.html"
+                <a href="/en/release/2025.1.0.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/404.html"
+                <a href="/zh-CN/release/2025.1.0.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -290,7 +290,7 @@
                 
                     <a href="/zh-CN/release/2025.1.0.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         发布日志
                     </a>
                 
@@ -299,14 +299,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="/en/404.html"
+                            <a href="/en/release/2025.1.0.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="/zh-CN/404.html"
+                            <a href="/zh-CN/release/2025.1.0.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -433,28 +433,276 @@
 
     <!-- 移动端菜单按钮 -->
     
+        <button class="md:hidden fixed left-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                onclick="document.getElementById('sidebar-menu').classList.remove('-translate-x-full');
+                         document.getElementById('sidebar-overlay').classList.remove('hidden');">
+            <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    
 
     <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
         <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+        
+            <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
+                         inset-y-0 left-0 transform -translate-x-full md:translate-x-0
+                         transition duration-200 ease-in-out
+                         md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
+                         w-3/4 sm:w-64"
+                   id="sidebar-menu">
+                <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
+                    <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                            onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                                     document.getElementById('sidebar-overlay').classList.add('hidden');">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="md:sticky md:top-20 p-4 md:p-0">
+                    <div class="space-y-4">
+                        
+
+
+
+
+    <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
+                sm:max-h-screen md:h-auto lg:max-h-[calc(100vh-2rem)]">
+        <div class="mb-6">
+            <ul class="space-y-1.5">
+                
+                    <li class="relative">
+                        <a href="/zh-CN/release/2025.1.0.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">2025.1.0</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/release/1.0.0.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">1.0.0</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+                    </div>
+                </nav>
+            </aside>
         
 
         <!-- 中间内容 -->
         <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
             <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-full">
-                <div class="w-full h-[calc(100vh-30rem)] flex items-center justify-center px-4">
-    <div class="max-w-md w-full space-y-8">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">页面未找到</h1>
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">抱歉，您访问的页面不存在。</p>
-            <a id="homeLink"
-               href="/zh-CN"
-               class="inline-flex items-center px-4 py-2 border border-transparent
-                      text-base font-medium rounded-md text-white
-                      bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600
-                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                返回首页
-            </a>
+                <!-- 页面容器 -->
+<div class="relative lg:flex lg:gap-8">
+    <!-- 主要内容区域 -->
+    <div class="min-w-0 flex-1">
+        <!-- 页面标题部分 -->
+        <div class="mb-3">
+            
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
+                    2025.1.0
+                </h1>
+                
+            
+        </div>
+
+        <!-- 分隔线 -->
+        <div class="h-px bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 mb-8"></div>
+
+        <!-- 主要内容部分 -->
+        <div class="prose prose-gray dark:prose-invert max-w-none">
+            
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">我们很高兴地宣布 PageForge 2025.1.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="he-xin-te-xing-geng-xin" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">核心特性更新</span>
+    </div>
+        </div>
+    
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="1-guo-ji-hua-zhi-chi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">1. 国际化支持</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">新增多语言支持系统</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">添加语言切换选择器</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">优化国际化资源文件管理</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">完善多语言路由处理</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="2-mu-ban-xi-tong-zeng-qiang" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">2. 模板系统增强</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">支持 EJS 模板语法</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">支持在 Markdown 中使用 EJS 模板</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">新增 404 错误页面模板</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">优化模板渲染机制</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="3-yi-dong-duan-shi-pei" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">3. 移动端适配</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">全面支持移动设备</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">优化移动端用户体验</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">响应式设计改进</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="4UIUX-gai-jin" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">4. UI/UX 改进</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">集成 Lucide 图标库</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">添加加载动画效果</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">优化文档图标显示</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">支持自定义 CSS 和 JavaScript</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
+            <div id="5-wen-ti-xiu-fu" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">5. 问题修复</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">修复列表渲染问题</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">优化文本段落换行处理</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">修复子目录编译问题</span>
+    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+        <span class="text-base text-gray-700 leading-7 my-2">完善导航系统</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="wen-dang-yu-lian-jie" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">文档与链接</span>
+    </div>
+        </div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8"><span class="inline-block my-1 mx-auto">GitHub: 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://github.com/devlive-community/pageforge"
+           target="_self"
+           title="">
+            https://github.com/devlive-community/pageforge
+        </a>
+    </span></li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8"><span class="inline-block my-1 mx-auto">官网: 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://pageforge.devlive.org"
+           target="_self"
+           title="">
+            https://pageforge.devlive.org
+        </a>
+    </span></li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="hou-xu-ji-hua" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
+    </div>
+        </div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">我们将继续完善功能，提升用户体验，欢迎社区贡献者参与项目开发。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="fan-kui-yu-zhi-chi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
+    </div>
+        </div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！</span>
+    
+        <div class="space-y-4"></div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">此版本在保持核心功能稳定的同时，重点加入了国际化支持，并对模板系统进行了重要升级。欢迎下载使用，共同推进 PageForge 的发展。</span>
+    
         </div>
     </div>
 </div>
@@ -462,6 +710,254 @@
         </main>
 
         <!-- 右侧目录 -->
+        
+            <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+                <div class="sticky top-20">
+                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+                         id="table-of-contents">
+                        
+                        
+                            
+                                <div class="pl-4">
+                                    <a href="#he-xin-te-xing-geng-xin"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="he-xin-te-xing-geng-xin">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">核心特性更新</span>
+    
+                                    </a>
+                                </div>
+                                
+                                    
+                            
+                                <div class="pl-8">
+                                    <a href="#1-guo-ji-hua-zhi-chi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="1-guo-ji-hua-zhi-chi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">1. 国际化支持</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#2-mu-ban-xi-tong-zeng-qiang"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="2-mu-ban-xi-tong-zeng-qiang">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">2. 模板系统增强</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#3-yi-dong-duan-shi-pei"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="3-yi-dong-duan-shi-pei">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">3. 移动端适配</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#4UIUX-gai-jin"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="4UIUX-gai-jin">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">4. UI/UX 改进</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#5-wen-ti-xiu-fu"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="5-wen-ti-xiu-fu">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">5. 问题修复</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#wen-dang-yu-lian-jie"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="wen-dang-yu-lian-jie">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">文档与链接</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#hou-xu-ji-hua"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="hou-xu-ji-hua">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#fan-kui-yu-zhi-chi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="fan-kui-yu-zhi-chi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                    </nav>
+                </div>
+            </div>
+
+            <!-- 移动端目录按钮 -->
+            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+                </svg>
+            </button>
+
+            <!-- 移动端底部目录面板 -->
+            <div id="toc-mobile"
+                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                        transform translate-y-full transition duration-200 ease-in-out
+                        p-4 rounded-t-2xl shadow-lg">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold">目录</h3>
+                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                    
+                            
+                                <div class="pl-4">
+                                    <a href="#he-xin-te-xing-geng-xin"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="he-xin-te-xing-geng-xin">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">核心特性更新</span>
+    
+                                    </a>
+                                </div>
+                                
+                                    
+                            
+                                <div class="pl-8">
+                                    <a href="#1-guo-ji-hua-zhi-chi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="1-guo-ji-hua-zhi-chi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">1. 国际化支持</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#2-mu-ban-xi-tong-zeng-qiang"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="2-mu-ban-xi-tong-zeng-qiang">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">2. 模板系统增强</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#3-yi-dong-duan-shi-pei"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="3-yi-dong-duan-shi-pei">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">3. 移动端适配</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#4UIUX-gai-jin"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="4UIUX-gai-jin">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">4. UI/UX 改进</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-8">
+                                    <a href="#5-wen-ti-xiu-fu"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="5-wen-ti-xiu-fu">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">5. 问题修复</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#wen-dang-yu-lian-jie"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="wen-dang-yu-lian-jie">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">文档与链接</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#hou-xu-ji-hua"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="hou-xu-ji-hua">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                                <div class="pl-4">
+                                    <a href="#fan-kui-yu-zhi-chi"
+                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                                       data-slug="fan-kui-yu-zhi-chi">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
+    
+                                    </a>
+                                </div>
+                                
+                            
+                        
+                </nav>
+            </div>
         
     </div>
 
@@ -664,6 +1160,12 @@
 </div>
 
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
+
+    <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
+         id="sidebar-overlay"
+         onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                  this.classList.add('hidden');">
+    </div>
 
 </body>
 
