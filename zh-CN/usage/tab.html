@@ -733,10 +733,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-blue-500 text-blue-600
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-k1pi53nyq', 0)"
+            onclick="switchTab(event, 'tabgroup-sizw1ghly', 0)"
             aria-selected="true"
-            aria-controls="tabgroup-k1pi53nyq-panel-0"
-            id="tabgroup-k1pi53nyq-tab-0">
+            aria-controls="tabgroup-sizw1ghly-panel-0"
+            id="tabgroup-sizw1ghly-tab-0">
             Tab 1
         </button>
     
@@ -744,10 +744,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-k1pi53nyq', 1)"
+            onclick="switchTab(event, 'tabgroup-sizw1ghly', 1)"
             aria-selected="false"
-            aria-controls="tabgroup-k1pi53nyq-panel-1"
-            id="tabgroup-k1pi53nyq-tab-1">
+            aria-controls="tabgroup-sizw1ghly-panel-1"
+            id="tabgroup-sizw1ghly-tab-1">
             Tab 2
         </button>
     
@@ -755,10 +755,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-k1pi53nyq', 2)"
+            onclick="switchTab(event, 'tabgroup-sizw1ghly', 2)"
             aria-selected="false"
-            aria-controls="tabgroup-k1pi53nyq-panel-2"
-            id="tabgroup-k1pi53nyq-tab-2">
+            aria-controls="tabgroup-sizw1ghly-panel-2"
+            id="tabgroup-sizw1ghly-tab-2">
             Tab 3
         </button>
     
@@ -768,8 +768,8 @@ n
                 
         <div class="p-4 "
             role="tabpanel"
-            aria-labelledby="tabgroup-k1pi53nyq-tab-0"
-            id="tabgroup-k1pi53nyq-panel-0">
+            aria-labelledby="tabgroup-sizw1ghly-tab-0"
+            id="tabgroup-sizw1ghly-panel-0">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第一个 Tab 的内容</span>
     
@@ -789,8 +789,8 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-k1pi53nyq-tab-1"
-            id="tabgroup-k1pi53nyq-panel-1">
+            aria-labelledby="tabgroup-sizw1ghly-tab-1"
+            id="tabgroup-sizw1ghly-panel-1">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第二个 Tab 的内容</span>
     
@@ -806,23 +806,31 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-k1pi53nyq-tab-2"
-            id="tabgroup-k1pi53nyq-panel-2">
+            aria-labelledby="tabgroup-sizw1ghly-tab-2"
+            id="tabgroup-sizw1ghly-panel-2">
             
         <span class="text-base text-gray-700 leading-7 my-2">第三个 Tab 的内容</span>
     
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
-            <li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+            
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span>
         <span class="text-base text-gray-700 leading-7 my-2">支持列表</span>
-    </li><li class="mb-2 text-gray-700 leading-relaxed hover:text-gray-900 pl-8 -indent-8">
+    </span>
+            </li>
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span>
         <span class="text-base text-gray-700 leading-7 my-2">支持其他 </span>
     <strong>
         <span class="text-base text-gray-700 leading-7 my-2">Markdown</span>
     </strong>
         <span class="text-base text-gray-700 leading-7 my-2"> 内容</span>
-    </li>
+    </span>
+            </li>
         </ul>
     
         </div>
