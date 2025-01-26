@@ -37,7 +37,8 @@
     "js-yaml": "^4.1.0",
     "marked": "^15.0.4",
     "mkdirp": "^3.0.1",
-    "pinyin": "4.0.0-alpha.2"
+    "pinyin": "4.0.0-alpha.2",
+    "prismjs": "^1.29.0"
   },
   "devDependencies": {
     "vm2": "^3.9.19"

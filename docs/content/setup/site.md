@@ -3,7 +3,7 @@ title: 基础设置
 icon: baseline
 ---
 
-```markdown
+```yaml
 site:
   title: PageForge
   hiddenTitle: true

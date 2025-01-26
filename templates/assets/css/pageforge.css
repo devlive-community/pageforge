@@ -32,3 +32,8 @@
 .dark .pageforge-scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: rgba(156, 163, 175, 0.4)
 }
+
+code[class*="language-"], pre[class*="language-"] {
+    background: transparent !important;
+    text-shadow: none !important;
+}
