@@ -29,6 +29,7 @@ i18n:
       Setup: Setup
       Usage: Usage Docs
       EjsTemplate: EJS Template
+      CodeBlock: Code Block
       ReleaseNotes: Release Notes
   zh-CN:
     name: 中文
@@ -38,6 +39,7 @@ i18n:
       Setup: 设置
       Usage: 使用文档
       EjsTemplate: EJS 模板
+      CodeBlock: 代码块
       ReleaseNotes: 发布日志
 
 footer:
@@ -92,6 +94,7 @@ nav:
       - /usage/alert
       - /usage/tab
       - /usage/ejs
+      - /usage/code
   - ReleaseNotes:
       - /release/2025.1.0
       - /release/1.0.0
