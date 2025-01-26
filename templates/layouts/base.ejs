@@ -8,7 +8,6 @@
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-dark.min.css" rel="stylesheet" />
 
     <script>
         (function () {
@@ -49,6 +48,9 @@
 
     <!-- Tailwind CSS -->
     <script src="<%= locals.siteData.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="<%= locals.siteData.cdn?.prismStyle || 'https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css' %>" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">

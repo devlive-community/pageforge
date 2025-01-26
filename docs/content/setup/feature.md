@@ -18,7 +18,7 @@ feature:
 
 PageForge 默认支持 [Lucide](https://lucide.dev "Lucide" "_blank") 图标库，需要启用后才能使用 Lucide 图标。
 
-```markdown
+```yaml
 lucide:
     enable: true
     cdn: https://unpkg.com/lucide@latest/dist/umd/lucide.js
@@ -33,14 +33,14 @@ lucide:
 
 PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。
 
-```markdown
+```yaml
 i18n:
     enable: true
 ```
 
 启用国际化后，需要配置国际化语言
 
-```markdown
+```yaml
 i18n:
   default: zh-CN
   en:
@@ -67,7 +67,7 @@ i18n:
 
 在 `pageforge.yaml` 中配置国际化后，可以在 `nav` 中使用以下方式来获取翻译的结果。
 
-```markdown
+```yaml
 nav:
 - GetStarted:
     - /getting-started/get-started
@@ -77,7 +77,7 @@ nav:
 
 在页面中使用使用以下方式来获取翻译的结果
 
-```markdown
+```yaml
 ---
 title: GetStarted
 icon: crosshair

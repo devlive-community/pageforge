@@ -24,7 +24,7 @@ site:
 
 ---
 
-```markdown
+```yaml
 theme:
   extraCss:
     - /assets/extra.css
@@ -39,13 +39,15 @@ theme:
 
 ---
 
-```markdown
+```yaml
 cdn:
   style: https://cdn.tailwindcss.com
+  prismStyle: https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css
   script: https://cdn.tailwindcss.com
 ```
 
 - `style`: Tailwind CSS CDN 地址
+- `prismStyle`: Prism CSS CDN 地址
 - `script`: Tailwind CSS CDN 地址
 
 !!! info "提示"
@@ -58,7 +60,7 @@ cdn:
 
 ---
 
-```markdown
+```yaml
 repo:
   owner: username
   name: pageforge
@@ -75,7 +77,7 @@ repo:
 
 ---
 
-```markdown
+```yaml
 nav:
   - 快速开始:
       - /getting-started/get-started
@@ -93,7 +95,7 @@ nav:
 
 ---
 
-```markdown
+```yaml
 footer:
   copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
   social:

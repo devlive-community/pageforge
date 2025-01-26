@@ -17,7 +17,7 @@ PageForge 的材料包含许多强大的功能，使技术写作成为一项令�
 
 在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。
 
-```markdown
+```yaml
 ---
 title: 这里是标题
 icon: feather
@@ -42,7 +42,7 @@ icon: feather
 
 在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。
 
-```markdown
+```yaml
 ---
 config:
   header: false
@@ -57,7 +57,7 @@ config:
 
 在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。
 
-```markdown
+```yaml
 ---
 config:
   sidebar: false
@@ -72,7 +72,7 @@ config:
 
 在 markdown 文件的顶部，你可以设置是否关闭页面的底部。
 
-```markdown
+```yaml
 ---
 config:
   footer: false
@@ -87,7 +87,7 @@ config:
 
 在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 `toc`，页面的目录将不会显示。
 
-```markdown
+```yaml
 ---
 config:
   toc: false
