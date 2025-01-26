@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -622,6 +625,36 @@
                         
                     </li>
                 
+                    <li class="relative">
+                        <a href="/zh-CN/usage/code.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="code"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">代码块</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -738,11 +771,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info "标题"
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! info "标题"
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
@@ -778,11 +819,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! danger "标题"
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! danger "标题"
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-red-200">
@@ -818,11 +867,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! success "标题"
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! success "标题"
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-green-200">
@@ -858,11 +915,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! warning "标题"
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! warning "标题"
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-yellow-200">
@@ -898,11 +963,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! dark "标题"
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! dark "标题"
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-gray-200">
@@ -940,11 +1013,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 内容设置为空字符串。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">!!! info ""
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! info ""
 
-    这是一个提示信息
+<span class="token code keyword">    这是一个提示信息</span>
 
-!!!</code></div>
+!!!</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-blue-200">

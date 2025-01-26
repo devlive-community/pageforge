@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -658,42 +661,50 @@
         <span class="text-base text-gray-700 leading-7 my-2">，然后复制并粘贴以下内容：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">name: ci 
-on:
-  push:
-    branches:
-      - master 
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> ci 
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> master 
+      <span class="token punctuation">-</span> main
+<span class="token key atrule">permissions</span><span class="token punctuation">:</span>
+  <span class="token key atrule">contents</span><span class="token punctuation">:</span> write
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v4
 
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Use Node.js 18.x
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> 18.x
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install pnpm
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> pnpm/action<span class="token punctuation">-</span>setup@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token number">8</span>
         
-      - name: Install dependencies
-        run: pnpm install
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> pnpm install
 
-      - name: Build site
-        run: |
-          pageforge build
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build site
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          pageforge build</span>
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist</code></div>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy to GitHub Pages
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> ./dist</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
@@ -713,14 +724,22 @@ jobs:
         <span class="text-base text-gray-700 leading-7 my-2"> 文件，读取配置信息：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">deploy:
-  github:
-    repository: devlive-community/pageforge
-    branch: gh-pages
-    cname: pageforge.devlive.community
-    buildDir: dist
-    username: devlive-community
-    email: support@devlive.org</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">github</span><span class="token punctuation">:</span>
+    <span class="token key atrule">repository</span><span class="token punctuation">:</span> devlive<span class="token punctuation">-</span>community/pageforge
+    <span class="token key atrule">branch</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages
+    <span class="token key atrule">cname</span><span class="token punctuation">:</span> pageforge.devlive.community
+    <span class="token key atrule">buildDir</span><span class="token punctuation">:</span> dist
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> devlive<span class="token punctuation">-</span>community
+    <span class="token key atrule">email</span><span class="token punctuation">:</span> support@devlive.org</code></pre>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 </div>

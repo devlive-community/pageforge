@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -628,10 +631,18 @@
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-title: 这里是标题
-icon: feather
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 这里是标题
+<span class="token key atrule">icon</span><span class="token punctuation">:</span> feather
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-lg sm:text-xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-lg [&_span]:sm:!text-xl">
@@ -686,10 +697,18 @@ icon: feather
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  header: false
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">config</span><span class="token punctuation">:</span>
+  <span class="token key atrule">header</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 </span>
@@ -715,10 +734,18 @@ config:
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  sidebar: false
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">config</span><span class="token punctuation">:</span>
+  <span class="token key atrule">sidebar</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 </span>
@@ -744,10 +771,18 @@ config:
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的底部。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  footer: false
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">config</span><span class="token punctuation">:</span>
+  <span class="token key atrule">footer</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 </span>
@@ -777,10 +812,18 @@ config:
         <span class="text-base text-gray-700 leading-7 my-2">，页面的目录将不会显示。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-config:
-  toc: false
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">config</span><span class="token punctuation">:</span>
+  <span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 </span>
@@ -854,9 +897,17 @@ config:
         <span class="text-base text-gray-700 leading-7 my-2">。在页面中使用以下代码配置模版:</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">---
-layout: foo
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">layout</span><span class="token punctuation">:</span> foo
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 </div>

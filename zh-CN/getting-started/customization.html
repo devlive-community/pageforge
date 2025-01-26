@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -648,9 +651,17 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">theme:
-    extraCss:
-        - /assets/extra.css</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
+    <span class="token key atrule">extraCss</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> /assets/extra.css</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -670,9 +681,17 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 JavaScript 文件，以便覆盖默认的 JavaScript 脚本。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">theme:
-    extraJs:
-        - /assets/extra.js</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
+    <span class="token key atrule">extraJs</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> /assets/extra.js</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -692,33 +711,41 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件夹，并在其中创建自定义的模板文件，以便覆盖默认的模板文件。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">templates
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">templates
 ├── components
-│   ├── a.js
-│   ├── block-code.js
-│   ├── checkbox.js
-│   ├── h1.js
-│   ├── h2.js
-│   ├── h3.js
-│   ├── h4.js
-│   ├── h5.js
-│   ├── h6.js
-│   ├── hr.js
-│   ├── image.js
-│   ├── inline-code.js
-│   ├── list.js
-│   ├── p.js
-│   └── space.js
+│   ├── a.js
+│   ├── block-code.js
+│   ├── checkbox.js
+│   ├── h1.js
+│   ├── h2.js
+│   ├── h3.js
+│   ├── h4.js
+│   ├── h5.js
+│   ├── h6.js
+│   ├── hr.js
+│   ├── image.js
+│   ├── inline-code.js
+│   ├── list.js
+│   ├── p.js
+│   └── space.js
 ├── includes
-│   ├── footer.ejs
-│   ├── header.ejs
-│   ├── nav.ejs
-│   ├── sidebar.ejs
-│   └── toc.ejs
+│   ├── footer.ejs
+│   ├── header.ejs
+│   ├── nav.ejs
+│   ├── sidebar.ejs
+│   └── toc.ejs
 └── layouts
     ├── base.ejs
     ├── content.ejs
-    └── page.ejs</code></div>
+    └── page.ejs</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">按照文件的路径，您可以覆盖默认的模板文件。</span>
@@ -732,11 +759,19 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件夹中创建自定义的布局文件，文件名便是模版名称。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">&lt;article&gt;
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="">&lt;article&gt;
     &lt;div class="content"&gt;
         &lt;%- pageData.content %&gt;
     &lt;/div&gt;
-&lt;/article&gt;</code></div>
+&lt;/article&gt;</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">页面相关的数据在 </span>

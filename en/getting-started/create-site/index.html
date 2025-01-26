@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -638,27 +641,59 @@
         <span class="text-base text-gray-700 leading-7 my-2">。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge init</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge init</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">或者</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site .</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge create-site <span class="token builtin class-name">.</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">或者指定文件夹路径</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge create-site my-website</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge create-site my-website</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">安装完成后，它将是如下目录结构：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">├── content
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="">├── content
 │   └── index.md
-└── pageforge.yaml</code></div>
+└── pageforge.yaml</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -678,13 +713,21 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 的配置文件，该文件包含了默认配置。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">site:
-  title: PageForge
-  description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">site</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> PageForge
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
 
-nav:
-  - link: /
-    text: 首页</code></div>
+<span class="token key atrule">nav</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">link</span><span class="token punctuation">:</span> /
+    <span class="token key atrule">text</span><span class="token punctuation">:</span> 首页</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">如果您想要更改默认配置，可以在 </span>
@@ -708,7 +751,15 @@ nav:
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge serve</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge serve</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     <span class="inline-block my-1 mx-auto">将浏览器指向 
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
@@ -740,7 +791,15 @@ nav:
         <span class="text-base text-gray-700 leading-7 my-2">完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站：</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-bash">pageforge build</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge build</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。</span>

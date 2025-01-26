@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -596,12 +599,20 @@
         <div class="prose prose-gray dark:prose-invert max-w-none">
             
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">site:
-  title: PageForge
-  hiddenTitle: true
-  description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
-  logo: /assets/logo.svg
-  favicon: /assets/logo.svg</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">site</span><span class="token punctuation">:</span>
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> PageForge
+  <span class="token key atrule">hiddenTitle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">description</span><span class="token punctuation">:</span> PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+  <span class="token key atrule">logo</span><span class="token punctuation">:</span> /assets/logo.svg
+  <span class="token key atrule">favicon</span><span class="token punctuation">:</span> /assets/logo.svg</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     <div class="pl-4 my-2 border-l-4 border-gray-200 dark:border-gray-700">
             <div class="py-1">
@@ -667,11 +678,19 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">theme:
-  extraCss:
-    - /assets/extra.css
-  extraJs:
-    - /assets/extra.js</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
+  <span class="token key atrule">extraCss</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /assets/extra.css
+  <span class="token key atrule">extraJs</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /assets/extra.js</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -705,9 +724,18 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">cdn:
-  style: https://cdn.tailwindcss.com
-  script: https://cdn.tailwindcss.com</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">cdn</span><span class="token punctuation">:</span>
+  <span class="token key atrule">style</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.tailwindcss.com
+  <span class="token key atrule">prismStyle</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdnjs.cloudflare.com/ajax/libs/prism<span class="token punctuation">-</span>themes/1.9.0/prism<span class="token punctuation">-</span>ghcolors.css
+  <span class="token key atrule">script</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.tailwindcss.com</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -718,6 +746,14 @@
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">style</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">: Tailwind CSS CDN 地址</span>
+    </span>
+            </li>
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">prismStyle</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: Prism CSS CDN 地址</span>
     </span>
             </li>
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
@@ -763,10 +799,18 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">repo:
-  owner: username
-  name: pageforge
-  url: https://github.com/username/pageforge</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">repo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">owner</span><span class="token punctuation">:</span> username
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pageforge
+  <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/username/pageforge</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -816,11 +860,19 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">nav:
-  - 快速开始:
-      - /getting-started/get-started
-      - /getting-started/create-site/index
-      - /getting-started/publish-site</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">nav</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">快速开始</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /getting<span class="token punctuation">-</span>started/get<span class="token punctuation">-</span>started
+      <span class="token punctuation">-</span> /getting<span class="token punctuation">-</span>started/create<span class="token punctuation">-</span>site/index
+      <span class="token punctuation">-</span> /getting<span class="token punctuation">-</span>started/publish<span class="token punctuation">-</span>site</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">相关的内容全部都存放在 </span>
@@ -862,19 +914,27 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">footer:
-  copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
-  social:
-    github:
-      title: GitHub
-      href: https://github.com/devlive-community/pageforge
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">footer</span><span class="token punctuation">:</span>
+  <span class="token key atrule">copyright</span><span class="token punctuation">:</span> © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+  <span class="token key atrule">social</span><span class="token punctuation">:</span>
+    <span class="token key atrule">github</span><span class="token punctuation">:</span>
+      <span class="token key atrule">title</span><span class="token punctuation">:</span> GitHub
+      <span class="token key atrule">href</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/devlive<span class="token punctuation">-</span>community/pageforge
 
-  links:
-    - 资源项目:
-        - title: PageForge
-          href: https://github.com/devlive-community/pageforge
-        - title: TailwindCSS
-          href: https://tailwindcss.com</code></div>
+  <span class="token key atrule">links</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">资源项目</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> PageForge
+          <span class="token key atrule">href</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/devlive<span class="token punctuation">-</span>community/pageforge
+        <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> TailwindCSS
+          <span class="token key atrule">href</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//tailwindcss.com</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">

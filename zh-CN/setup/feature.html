@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -608,8 +611,16 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中进行配置，且支持嵌套配置。 格式为</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-yaml">feature:
-  xxx</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
+  xxx</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -630,9 +641,17 @@
         </a>
      图标库，需要启用后才能使用 Lucide 图标。</span>
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">lucide:
-    enable: true
-    cdn: https://unpkg.com/lucide@latest/dist/umd/lucide.js</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">lucide</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//unpkg.com/lucide@latest/dist/umd/lucide.js</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -676,29 +695,45 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">i18n:
-    enable: true</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">i18n</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用国际化后，需要配置国际化语言</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">i18n:
-  default: zh-CN
-  en:
-    name: English
-    flag: 🇬🇧
-    translations:
-      GetStarted: Getting Started
-      Setup: Setup
-      Usage: Usage Docs
-  zh-CN:
-    name: 中文
-    flag: 🇨🇳
-    translations:
-      GetStarted: 快速开始
-      Setup: 设置
-      Usage: 使用文档</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">i18n</span><span class="token punctuation">:</span>
+  <span class="token key atrule">default</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+  <span class="token key atrule">en</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> English
+    <span class="token key atrule">flag</span><span class="token punctuation">:</span> 🇬🇧
+    <span class="token key atrule">translations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span> Getting Started
+      <span class="token key atrule">Setup</span><span class="token punctuation">:</span> Setup
+      <span class="token key atrule">Usage</span><span class="token punctuation">:</span> Usage Docs
+  <span class="token key atrule">zh-CN</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> 中文
+    <span class="token key atrule">flag</span><span class="token punctuation">:</span> 🇨🇳
+    <span class="token key atrule">translations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span> 快速开始
+      <span class="token key atrule">Setup</span><span class="token punctuation">:</span> 设置
+      <span class="token key atrule">Usage</span><span class="token punctuation">:</span> 使用文档</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -756,9 +791,17 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 中使用以下方式来获取翻译的结果。</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">nav:
-- GetStarted:
-    - /getting-started/get-started</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">nav</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /getting<span class="token punctuation">-</span>started/get<span class="token punctuation">-</span>started</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -778,10 +821,18 @@
         <span class="text-base text-gray-700 leading-7 my-2">在页面中使用使用以下方式来获取翻译的结果</span>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="language-markdown">---
-title: GetStarted
-icon: crosshair
----</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> GetStarted
+<span class="token key atrule">icon</span><span class="token punctuation">:</span> crosshair
+<span class="token punctuation">---</span></code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">只需要将 </span>

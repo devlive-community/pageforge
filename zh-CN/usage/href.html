@@ -44,6 +44,9 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Prism.js 语法高亮样式 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -622,6 +625,36 @@
                         
                     </li>
                 
+                    <li class="relative">
+                        <a href="/zh-CN/usage/code.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="code"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">代码块</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -682,7 +715,15 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL)</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL)</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
@@ -703,7 +744,15 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL "可选标题")</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL "可选标题")</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
@@ -724,7 +773,15 @@
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="block w-full bg-gray-100 text-gray-900 my-3 px-3 py-2.5 rounded font-mono leading-normal overflow-x-auto" style="white-space: pre;"><code class="">[链接文本](链接URL "可选标题" "打开方式")</code></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        
+        <div class="!overflow-x-auto !flex">
+            
+            <div class="!flex-1">
+                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL "可选标题" "打开方式")</code></pre>
+            </div>
+        </div>
+    </div>
         <div class="space-y-4"></div>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
