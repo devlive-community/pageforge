@@ -33,7 +33,7 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =100x200)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =100x200)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =100x200)
 
 只设置宽度
 
@@ -41,7 +41,7 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =100x)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =100x)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =100x)
 
 只设置高度
 
@@ -49,7 +49,7 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =x200)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =x200)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =x200)
 
 ## 对齐方式
 
@@ -63,7 +63,7 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =100x200 left)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =100x200 left)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =100x200 left)
 
 中对齐
 
@@ -71,7 +71,7 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =100x200 center)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =100x200 center)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =100x200 center)
 
 右对齐
 
@@ -79,4 +79,4 @@ PageForge 实现了更多的语义，支持更多的图片格式。
 ![](图片URL "可选标题" =100x200 right)
 ```
 
-![alt文本](https://github.com/devlive-community/pageforge/raw/dev/docs/assets/logo.svg "可选标题" =100x200 right)
+![alt文本](https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg "可选标题" =100x200 right)

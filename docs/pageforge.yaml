@@ -64,11 +64,11 @@ footer:
         - title: Community
           href: https://community.devlive.org
     - 开源项目:
-        - title: Node.js
-          href: https://github.com/nodejs/node
-        - title: PageForge
-          href: https://github.com/devlive-community/pageforge
-        - title: TailwindCSS
+        - title: 服务调用框架 LightCall
+          href: https://github.com/devlive-community/lightcall
+        - title: 开源数据中台 DataCap
+          href: https://github.com/devlive-community/datacap
+        - title: 前端框架 View Shadcn UI
           href: https://github.com/tailwindlabs/tailwindcss
     - 关于我们:
         - title: 关于我们

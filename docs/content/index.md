@@ -46,10 +46,10 @@ stats:
   title: 用数据说话
   description: 我们取得的成就
   items:
-    - label: 活跃用户
-      value: 100K+
+    - label: GitHub Stars
+      value: 10+
     - label: 服务客户
-      value: 500+
+      value: 2+
     - label: 正常运行时间
       value: 99.99%
     - label: 客户满意度
