@@ -20,6 +20,8 @@ feature:
     enable: true
   issues:
     enable: true
+  tooltip:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -98,6 +100,7 @@ nav:
       - /usage/ejs
       - /usage/code
       - /usage/issues
+      - /usage/tooltip
   - ReleaseNotes:
       - /release/2025.1.1
       - /release/2025.1.0

@@ -3,7 +3,7 @@ title: Issues 解析
 icon: git-merge
 ---
 
-PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues:
+PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues。
 
 ## 基本语法
 
@@ -32,3 +32,5 @@ devlive-community/pageforge#1
 ```
 
 这是一个自定义的 Issues 链接 devlive-community/pageforge#1，可以根据实际情况替换为正确的仓库路径。
+
+[Hover me](https://example.com "I'm a tooltip!")
