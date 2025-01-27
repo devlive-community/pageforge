@@ -18,6 +18,8 @@ feature:
     enable: true
   i18n:
     enable: true
+  issues:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -95,6 +97,7 @@ nav:
       - /usage/tab
       - /usage/ejs
       - /usage/code
+      - /usage/issues
   - ReleaseNotes:
       - /release/2025.1.1
       - /release/2025.1.0

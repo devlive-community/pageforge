@@ -87,3 +87,21 @@ icon: crosshair
 只需要将 `title` 中替换为国际化的 key 就可以了
 
 国际化的文档名格式为 `file.lang.md` ，比如我们的 `index.md` 如果要配置国际化文件名，可以这样写 `index.en.md`
+
+## Github Issues
+
+---
+
+PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。
+
+```yaml
+feature:
+  issues:
+    enable: true
+```
+
+启用后，可以在 Markdown 中使用 `#123` 格式来引用 Issues，例如
+
+```markdown
+`#123`
+```
