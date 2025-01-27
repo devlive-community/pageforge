@@ -88,7 +88,7 @@ icon: crosshair
 
 国际化的文档名格式为 `file.lang.md` ，比如我们的 `index.md` 如果要配置国际化文件名，可以这样写 `index.en.md`
 
-## Github Issues
+## Issues 解析
 
 ---
 
