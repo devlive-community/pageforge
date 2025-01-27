@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>代码块 - PageForge</title>
+    <title>Issues 解析 - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -152,14 +152,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/usage/code.html"
+                <a href="/en/usage/issues.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/usage/code.html"
+                <a href="/zh-CN/usage/issues.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -302,14 +302,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="/en/usage/code.html"
+                            <a href="/en/usage/issues.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="/zh-CN/usage/code.html"
+                            <a href="/zh-CN/usage/issues.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -629,7 +629,7 @@
                         <a href="/zh-CN/usage/code.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -641,7 +641,7 @@
                                        <i data-lucide="code"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               text-blue-600 dark:text-blue-400">
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                        </i>
                                    </span>
                                 
@@ -659,7 +659,7 @@
                         <a href="/zh-CN/usage/issues.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -671,7 +671,7 @@
                                        <i data-lucide="git-merge"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                               text-blue-600 dark:text-blue-400">
                                        </i>
                                    </span>
                                 
@@ -706,7 +706,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    代码块
+                    Issues 解析
                 </h1>
                 
             
@@ -720,7 +720,7 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持使用代码块，用户可以自定义代码块的样式，以便更好地展示代码的语法和格式。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues:</span>
     
         <div class="space-y-4"></div>
     
@@ -729,74 +729,114 @@
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     </div>
         </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">以下是一个简单的示例：</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">java</div>
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
         <div class="!overflow-x-auto !flex">
             
             <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown"><span class="token code-snippet code keyword">`#123`</span></code></pre>
             </div>
         </div>
     </div>
         <div class="space-y-4"></div>
     
+        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
+           </div>
+                   
+            <div class="w-full px-5 py-3">
+                <div class="text-sm text-red-700">
+                    
+        <span class="text-base text-gray-700 leading-7 my-2">该功能需要在配置文件中启用，可以在 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">feature.issues.enable: true</code>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">支持所有平台的 Issues 链接，包括 GitHub、GitLab、Bitbucket 等等。需要依赖在 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.owner</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.name</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，才会构建完整的链接路径。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">#123</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 这是一个示例的 Issues 编号，您可以根据实际情况替换为正确的编号</span>
+    </span>
+            </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="pei-zhi-hang-hao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">配置行号</span>
+            <div id="zi-ding-yi-cang-ku" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
     
         <div class="space-y-4"></div>
-    <div class="pl-4 my-2 border-l-4 border-gray-200 dark:border-gray-700">
-            <div class="py-1">
-        <span class="text-base text-gray-700 leading-7 my-2">默认情况下，代码块不会显示行号，但可以通过配置 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">showLineNumbers</code>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持自定义仓库，不依赖在 </span>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 或者 </span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">showLineNumbers=true</code>
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 参数来启用行号显示。格式为 </span>
-    </div>
-<div class="py-1"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">```java showLineNumbers</span>
-    </strong>
-        <span class="text-base text-gray-700 leading-7 my-2"> </span>
-    </div>
-<div class="py-1">
-        <span class="text-base text-gray-700 leading-7 my-2">或者</span>
-    </div>
-<div class="py-1"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">```java showLineNumbers=true</span>
-    </strong></div>
-        </div><div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">java</div>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.owner</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.name</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，直接指定仓库路径即可。例如</span>
+    
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
         <div class="!overflow-x-auto !flex">
-            <div class="!py-2.5 !bg-gray-200 !dark:bg-gray-700"><span class="!block !w-8 !pr-2 !text-right !text-gray-500 !select-none">1</span><span class="!block !w-8 !pr-2 !text-right !text-gray-500 !select-none">2</span><span class="!block !w-8 !pr-2 !text-right !text-gray-500 !select-none">3</span><span class="!block !w-8 !pr-2 !text-right !text-gray-500 !select-none">4</span><span class="!block !w-8 !pr-2 !text-right !text-gray-500 !select-none">5</span></div>
+            
             <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">devlive-community/pageforge#1</code></pre>
             </div>
         </div>
     </div>
+        <div class="space-y-4"></div>
+    这是一个自定义的 Issues 链接 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://github.com/devlive-community/pageforge/issues/1"
+           target="_blank"
+           title="#1">
+            #1
+        </a>
+    ，可以根据实际情况替换为正确的仓库路径。
         </div>
     </div>
 </div>
@@ -825,11 +865,11 @@
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#pei-zhi-hang-hao"
+                                    <a href="#zi-ding-yi-cang-ku"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="pei-zhi-hang-hao">
+                                       data-slug="zi-ding-yi-cang-ku">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">配置行号</span>
+        <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
     
                                     </a>
                                 </div>
@@ -877,11 +917,11 @@
                                 
                             
                                 <div class="pl-4">
-                                    <a href="#pei-zhi-hang-hao"
+                                    <a href="#zi-ding-yi-cang-ku"
                                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="pei-zhi-hang-hao">
+                                       data-slug="zi-ding-yi-cang-ku">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">配置行号</span>
+        <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
     
                                     </a>
                                 </div>
