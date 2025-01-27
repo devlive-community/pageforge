@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>超链接 - PageForge</title>
+    <title>Tooltip - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -152,14 +152,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/usage/href.html"
+                <a href="/en/usage/tooltip.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/usage/href.html"
+                <a href="/zh-CN/usage/tooltip.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -302,14 +302,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="/en/usage/href.html"
+                            <a href="/en/usage/tooltip.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="/zh-CN/usage/href.html"
+                            <a href="/zh-CN/usage/tooltip.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -479,7 +479,7 @@
                         <a href="/zh-CN/usage/href.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -491,7 +491,7 @@
                                        <i data-lucide="link"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               text-blue-600 dark:text-blue-400">
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                        </i>
                                    </span>
                                 
@@ -689,7 +689,7 @@
                         <a href="/zh-CN/usage/tooltip.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
@@ -701,7 +701,7 @@
                                        <i data-lucide="figma"
                                           style="display: none;"
                                           class="w-3 h-3 sm:w-4 sm:h-4
-                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                               text-blue-600 dark:text-blue-400">
                                        </i>
                                    </span>
                                 
@@ -736,7 +736,7 @@
         <div class="mb-3">
             
                 <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                    超链接
+                    Tooltip
                 </h1>
                 
             
@@ -750,19 +750,7 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Markdown 的默认超链接语法。您可以使用 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[]()</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 格式来创建链接，例如 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[链接文本](链接URL)</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 实现了更多的语义，支持更多的超链接格式。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 tooltip 的链接，您可以在 Markdown 中使用以下语法来插入 tooltip。</span>
     
         <div class="space-y-4"></div>
     
@@ -771,85 +759,54 @@
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     </div>
         </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        
+        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
         <div class="!overflow-x-auto !flex">
             
             <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL)</code></pre>
+                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!tip<span class="token url">[<span class="token content">提示文本</span>](<span class="token url">这是tooltip中显示的内容</span>)</span></code></pre>
             </div>
         </div>
     </div>
         <div class="space-y-4"></div>
     
-        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://pageforge.devlive.org"
-           target="_self"
-           title="">
-            PageForge
-        </a>
+        <span class="text-base text-gray-700 leading-7 my-2">这是一个普通文本，这里有一个</span>
     
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="dai-biao-ti" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        
-        <div class="!overflow-x-auto !flex">
-            
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL "可选标题")</code></pre>
+        <div class="relative inline-block group">
+            <span class="text-gray-900 cursor-help border-b border-dotted border-gray-500">
+                提示文本
+            </span>
+            <div class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 bottom-full left-1/2 -translate-x-1/2 mb-2">
+                <div class="relative" style="min-width: max-content; max-width: 24rem;">
+                    <div class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm">
+                        这是tooltip中显示的内容
+                    </div>
+                    <div class="absolute w-0 h-0 border-4 bottom-0 left-1/2 -translate-x-1/2 translate-y-full border-t-gray-800 border-x-transparent border-b-transparent"></div>
+                </div>
             </div>
         </div>
-    </div>
-        <div class="space-y-4"></div>
     
-        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://pageforge.devlive.org"
-           target="_self"
-           title="PageForge">
-            PageForge
-        </a>
+        <span class="text-base text-gray-700 leading-7 my-2">。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="dai-da-kai-fang-shi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
-    </div>
-        </div>
+        <span class="text-base text-gray-700 leading-7 my-2">你可以用它来解释专业术语，比如：</span>
     
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        
-        <div class="!overflow-x-auto !flex">
-            
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="">[链接文本](链接URL "可选标题" "打开方式")</code></pre>
+        <div class="relative inline-block group">
+            <span class="text-gray-900 cursor-help border-b border-dotted border-gray-500">
+                REST
+            </span>
+            <div class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 bottom-full left-1/2 -translate-x-1/2 mb-2">
+                <div class="relative" style="min-width: max-content; max-width: 24rem;">
+                    <div class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm">
+                        Representational State Transfer 是一种软件架构风格，它允许应用程序与应用程序之间的数据通信，以及应用程序与外部世界的数据通信
+                    </div>
+                    <div class="absolute w-0 h-0 border-4 bottom-0 left-1/2 -translate-x-1/2 translate-y-full border-t-gray-800 border-x-transparent border-b-transparent"></div>
+                </div>
             </div>
         </div>
-    </div>
-        <div class="space-y-4"></div>
     
-        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://pageforge.devlive.org"
-           target="_blank"
-           title="PageForge">
-            PageForge
-        </a>
+        <span class="text-base text-gray-700 leading-7 my-2"> 鼠标移向可以看到提示。</span>
     
         </div>
     </div>
@@ -873,28 +830,6 @@
                                        data-slug="ji-ben-yu-fa">
                                         
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-biao-ti"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-biao-ti">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-da-kai-fang-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-da-kai-fang-shi">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
     
                                     </a>
                                 </div>
@@ -936,28 +871,6 @@
                                        data-slug="ji-ben-yu-fa">
                                         
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-biao-ti"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-biao-ti">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-da-kai-fang-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-da-kai-fang-shi">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">带打开方式</span>
     
                                     </a>
                                 </div>
