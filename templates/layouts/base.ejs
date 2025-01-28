@@ -51,6 +51,11 @@
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="<%= locals.siteData.cdn?.prismStyle || 'https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css' %>" rel="stylesheet" />
+
+    <!-- 统计代码 -->
+    <% if (locals.siteData.feature?.statistics?.enable) { %>
+        <%- locals.siteData.feature.statistics.content %>
+    <% } %>
 </head>
 
 <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">

@@ -105,3 +105,31 @@ feature:
 ```markdown
 `#123`
 ```
+
+## Tooltip
+
+---
+
+PageForge 支持解析 tooltip 的链接，需要启用后才能使用。
+
+```yaml
+feature:
+  tooltip:
+    enable: true
+```
+
+## 统计代码
+
+---
+
+PageForge 支持统计代码，需要启用后才能使用。
+
+```yaml
+feature:
+  statistics:
+    enable: true
+    content: |
+      服务商返回的统计代码
+```
+
+- `content`: 自定义统计代码，需要填写完整的统计代码。
