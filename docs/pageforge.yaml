@@ -30,6 +30,8 @@ feature:
       <script>LA.init({id:"KhuPJkgSiYG5j4Xr",ck:"KhuPJkgSiYG5j4Xr",autoTrack:true,hashMode:true,screenRecord:true})</script>
   edit:
     enable: true
+  view:
+    enable: true
 
 i18n:
   default: zh-CN

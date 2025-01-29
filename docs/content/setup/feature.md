@@ -134,7 +134,7 @@ feature:
 
 - `content`: 自定义统计代码，需要填写完整的统计代码。
 
-## 编辑文档
+## 编辑源码
 
 ---
 
@@ -147,3 +147,17 @@ feature:
 ```
 
 启用后，系统会根据 `pageforge.yaml` 中配置的 `repo.url` 和 `repo.branch` 生成编辑文档的链接，默认为 `main` 分支，可以在 `pageforge.yaml` 中配置 `repo.branch` 来更改分支。
+
+## 查看源码
+
+---
+
+PageForge 支持查看源码，需要启用后才能使用。
+
+```yaml
+feature:
+  view:
+    enable: true
+```
+
+启用后，系统会根据 `pageforge.yaml` 中配置的 `repo.url` 和 `repo.branch` 生成查看源码的链接。默认为 `main` 分支，可以在 `pageforge.yaml` 中配置 `repo.branch` 来更改分支。
