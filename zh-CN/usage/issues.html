@@ -821,11 +821,11 @@
                     
         <span class="text-base text-gray-700 leading-7 my-2">该功能需要在配置文件中启用，可以在 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">feature.issues.enable: true</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">feature.issues.enable: true</code>
     
                 </div>
             </div>
@@ -835,15 +835,15 @@
     
         <span class="text-base text-gray-700 leading-7 my-2">支持所有平台的 Issues 链接，包括 GitHub、GitLab、Bitbucket、Gitea、Gitee 等等。需要依赖在 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.owner</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.owner</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.name</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.name</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">，才会构建完整的链接路径。</span>
     
@@ -854,7 +854,7 @@
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
                 <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">#123</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">#123</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">: 这是一个示例的 Issues 编号，您可以根据实际情况替换为正确的编号</span>
     </span>
@@ -875,15 +875,15 @@
     
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持自定义仓库，不依赖在 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">pageforge.yaml</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.owner</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.owner</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">repo.name</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.name</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">，直接指定仓库路径即可。例如</span>
     
@@ -911,6 +911,55 @@
         <span class="text-base text-gray-700 leading-7 my-2">，可以根据实际情况替换为正确的仓库路径。</span>
     
         </div>
+
+        <!-- Git 信息部分 -->
+        
+            <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex items-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+                    <!-- 最后提交时间 -->
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-4 h-4">
+                            <circle cx="12" cy="12" r="3"/>
+                            <line x1="3" y1="12" y2="12" x2="9"/>
+                            <line x1="15" y1="12" y2="12" x2="21"/>
+                        </svg>
+                        <span>提交于 2025年1月29日 12:42</span>
+                    </div>
+
+                    <!-- 最后修改时间 -->
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-4 h-4">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/>
+                            <path d="M12 7v5l4 2"/>
+                        </svg>
+                        <span>最后修改于 2025年1月29日 12:42</span>
+                    </div>
+
+                    <!-- Hash 链接 -->
+                    
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="w-4 h-4">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                            </svg>
+                            <a href="https://github.com/devlive-community/pageforge/commit/94215fc49505eb8ca855078895edda687883aa20"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="hover:text-blue-600 dark:hover:text-blue-400">
+                                查看详情 (94215fc)
+                            </a>
+                        </div>
+                    
+                </div>
+            </div>
+        
     </div>
 </div>
             </article>

@@ -791,11 +791,11 @@
     
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Markdown 的默认超链接语法。您可以使用 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[]()</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">[]()</code>
     
         <span class="text-base text-gray-700 leading-7 my-2"> 格式来创建链接，例如 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline break-words whitespace-pre-wrap">[链接文本](链接URL)</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">[链接文本](链接URL)</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">。</span>
     
@@ -891,6 +891,55 @@
         </a>
     
         </div>
+
+        <!-- Git 信息部分 -->
+        
+            <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex items-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+                    <!-- 最后提交时间 -->
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-4 h-4">
+                            <circle cx="12" cy="12" r="3"/>
+                            <line x1="3" y1="12" y2="12" x2="9"/>
+                            <line x1="15" y1="12" y2="12" x2="21"/>
+                        </svg>
+                        <span>提交于 2025年1月29日 12:42</span>
+                    </div>
+
+                    <!-- 最后修改时间 -->
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-4 h-4">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                            <path d="M3 3v5h5"/>
+                            <path d="M12 7v5l4 2"/>
+                        </svg>
+                        <span>最后修改于 2025年1月29日 12:42</span>
+                    </div>
+
+                    <!-- Hash 链接 -->
+                    
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="w-4 h-4">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                            </svg>
+                            <a href="https://github.com/devlive-community/pageforge/commit/94215fc49505eb8ca855078895edda687883aa20"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="hover:text-blue-600 dark:hover:text-blue-400">
+                                查看详情 (94215fc)
+                            </a>
+                        </div>
+                    
+                </div>
+            </div>
+        
     </div>
 </div>
             </article>
