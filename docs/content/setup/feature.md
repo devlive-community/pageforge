@@ -161,3 +161,23 @@ feature:
 ```
 
 启用后，系统会根据 `pageforge.yaml` 中配置的 `repo.url` 和 `repo.branch` 生成查看源码的链接。默认为 `main` 分支，可以在 `pageforge.yaml` 中配置 `repo.branch` 来更改分支。
+
+## Git 提交信息
+
+---
+
+PageForge 支持 Git 提交信息，需要启用后才能使用。
+
+```yaml
+feature:
+  revision:
+    enable: true
+```
+
+启用后，系统会根据 `pageforge.yaml` 中配置的 `repo.url` 和 `repo.branch` 生成 Git 提交信息的链接。
+
+支持以下信息:
+
+- 创建时间
+- 最后修改时间
+- 提交详情

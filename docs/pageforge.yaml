@@ -32,6 +32,8 @@ feature:
     enable: true
   view:
     enable: true
+  revision:
+    enable: true
 
 i18n:
   default: zh-CN
