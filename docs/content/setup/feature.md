@@ -133,3 +133,17 @@ feature:
 ```
 
 - `content`: 自定义统计代码，需要填写完整的统计代码。
+
+## 编辑文档
+
+---
+
+PageForge 支持编辑文档，需要启用后才能使用。
+
+```yaml
+feature:
+  edit:
+    enable: true
+```
+
+启用后，系统会根据 `pageforge.yaml` 中配置的 `repo.url` 和 `repo.branch` 生成编辑文档的链接，默认为 `main` 分支，可以在 `pageforge.yaml` 中配置 `repo.branch` 来更改分支。

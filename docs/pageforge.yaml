@@ -12,6 +12,7 @@ repo:
   owner: devlive-community
   name: pageforge
   url: https://github.com/devlive-community/pageforge
+  branch: dev-2025.1.2
 
 feature:
   lucide:
@@ -27,6 +28,8 @@ feature:
     content: |
       <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
       <script>LA.init({id:"KhuPJkgSiYG5j4Xr",ck:"KhuPJkgSiYG5j4Xr",autoTrack:true,hashMode:true,screenRecord:true})</script>
+  edit:
+    enable: true
 
 i18n:
   default: zh-CN
