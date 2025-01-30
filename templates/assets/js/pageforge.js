@@ -153,6 +153,31 @@ const GitHubStats = {
     }
 };
 
+// 代码复制模块
+const CodeCopy = {
+    copy(button) {
+        const codeBlock = button.closest('div').querySelector('code');
+        const text = codeBlock.textContent;
+
+        navigator.clipboard.writeText(text).then(() => {
+            // 切换图标显示
+            const copyIcon = button.querySelector('.copy-icon');
+            const checkIcon = button.querySelector('.check-icon');
+            copyIcon.classList.add('!hidden');
+            checkIcon.classList.remove('!hidden');
+
+            // 2秒后恢复原始图标
+            setTimeout(() => {
+                copyIcon.classList.remove('!hidden');
+                checkIcon.classList.add('!hidden');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy text:', err);
+        });
+    }
+};
+
 // 暴露到全局
 window.PageForge = window.PageForge || {};
 window.PageForge.GitHubStats = GitHubStats;
+window.PageForge.CodeCopy = CodeCopy;
