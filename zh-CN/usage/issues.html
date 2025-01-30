@@ -798,15 +798,51 @@
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     </div>
         </div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-        <div class="!overflow-x-auto !flex">
+    
+        
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown"><span class="token code-snippet code keyword">`#123`</span></code></pre>
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown"><span class="token code-snippet code keyword">`#123`</span></code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-red-200">
@@ -888,15 +924,51 @@
         <span class="text-base text-gray-700 leading-7 my-2">，直接指定仓库路径即可。例如</span>
     
         <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-        <div class="!overflow-x-auto !flex">
+    
+        
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">devlive-community/pageforge#1</code></pre>
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">devlive-community/pageforge#1</code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">这是一个自定义的 Issues 链接 </span>

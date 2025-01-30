@@ -690,17 +690,53 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。</span>
     
         <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-        <div class="!overflow-x-auto !flex">
+    
+        
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
     <span class="token key atrule">extraCss</span><span class="token punctuation">:</span>
         <span class="token punctuation">-</span> /assets/extra.css</code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -720,17 +756,53 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中指定自定义的 JavaScript 文件，以便覆盖默认的 JavaScript 脚本。</span>
     
         <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-        <div class="!overflow-x-auto !flex">
+    
+        
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span>
     <span class="token key atrule">extraJs</span><span class="token punctuation">:</span>
         <span class="token punctuation">-</span> /assets/extra.js</code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -750,12 +822,47 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件夹，并在其中创建自定义的模板文件，以便覆盖默认的模板文件。</span>
     
         <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-        <div class="!absolute !right-2 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
-        <div class="!overflow-x-auto !flex">
+    
+        
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">templates
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">templates
 ├── components
 │   ├── a.js
 │   ├── block-code.js
@@ -782,9 +889,10 @@
     ├── base.ejs
     ├── content.ejs
     └── page.ejs</code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">按照文件的路径，您可以覆盖默认的模板文件。</span>
@@ -798,19 +906,55 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件夹中创建自定义的布局文件，文件名便是模版名称。</span>
     
         <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    
         
-        <div class="!overflow-x-auto !flex">
+        <script>
+            function copyCode(button) {
+                const codeBlock = button.closest('div').querySelector('code');
+                const text = codeBlock.textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    // 切换图标显示
+                    const copyIcon = button.querySelector('.copy-icon');
+                    const checkIcon = button.querySelector('.check-icon');
+                    copyIcon.classList.add('!hidden');
+                    checkIcon.classList.remove('!hidden');
+                    
+                    // 2秒后恢复原始图标
+                    setTimeout(() => {
+                        copyIcon.classList.remove('!hidden');
+                        checkIcon.classList.add('!hidden');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text:', err);
+                });
+            }
+        </script>
+    
+        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
-            <div class="!flex-1">
-                <pre class="!px-3 !py-2.5 !m-0"><code class="">&lt;article&gt;
+            
+        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="">&lt;article&gt;
     &lt;div class="content"&gt;
         &lt;%- pageData.content %&gt;
     &lt;/div&gt;
 &lt;/article&gt;</code></pre>
+                </div>
             </div>
         </div>
-    </div>
+    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">页面相关的数据在 </span>
