@@ -650,35 +650,10 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 文件中进行配置，且支持嵌套配置。 格式为</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -695,7 +670,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -716,35 +690,10 @@
         </a>
      图标库，需要启用后才能使用 Lucide 图标。</span>
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -762,7 +711,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -806,35 +754,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -851,41 +774,15 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用国际化后，需要配置国际化语言</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -916,7 +813,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -974,35 +870,10 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 中使用以下方式来获取翻译的结果。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1020,7 +891,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -1040,35 +910,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">在页面中使用使用以下方式来获取翻译的结果</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1087,7 +932,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">只需要将 </span>
@@ -1125,35 +969,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1171,7 +990,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用后，可以在 Markdown 中使用 </span>
@@ -1181,35 +999,10 @@
         <span class="text-base text-gray-700 leading-7 my-2"> 格式来引用 Issues，例如</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1225,7 +1018,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -1241,35 +1033,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 tooltip 的链接，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1287,7 +1054,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
@@ -1303,35 +1069,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持统计代码，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1351,7 +1092,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
@@ -1381,35 +1121,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持编辑文档，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1427,7 +1142,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
@@ -1471,35 +1185,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持查看源码，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1517,7 +1206,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
@@ -1561,35 +1249,10 @@
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Git 提交信息，需要启用后才能使用。</span>
     
         <div class="space-y-4"></div>
-    
-        
-        <script>
-            function copyCode(button) {
-                const codeBlock = button.closest('div').querySelector('code');
-                const text = codeBlock.textContent;
-                
-                navigator.clipboard.writeText(text).then(() => {
-                    // 切换图标显示
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.classList.add('!hidden');
-                    checkIcon.classList.remove('!hidden');
-                    
-                    // 2秒后恢复原始图标
-                    setTimeout(() => {
-                        copyIcon.classList.remove('!hidden');
-                        checkIcon.classList.add('!hidden');
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text:', err);
-                });
-            }
-        </script>
-    
-        <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-        <button onclick="copyCode(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
@@ -1607,7 +1270,6 @@
                 </div>
             </div>
         </div>
-    
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
