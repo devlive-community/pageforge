@@ -180,4 +180,19 @@ feature:
 
 - 创建时间
 - 最后修改时间
-- 提交详情
+- 首次提交
+- 末次提交
+
+## 提交用户
+
+---
+
+PageForge 支持提交用户，需要启用后才能使用。
+
+```yaml
+feature:
+  contributors:
+    enable: true
+```
+
+启用后，系统会自动配置用户在 Github 中的头像。

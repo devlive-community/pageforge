@@ -34,6 +34,8 @@ feature:
     enable: true
   revision:
     enable: true
+  contributors:
+    enable: true
 
 i18n:
   default: zh-CN
