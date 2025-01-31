@@ -59,8 +59,8 @@
         <!-- Git 信息部分 -->
         <% if (locals.siteData.feature?.revision?.enable && pageData.gitInfo) { %>
             <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex items-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
-                    <!-- 最后提交时间 -->
+                <div class="space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-4">
+                    <!-- 首次提交时间 -->
                     <div class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -87,7 +87,7 @@
                             <path d="M3 3v5h5"/>
                             <path d="M12 7v5l4 2"/>
                         </svg>
-                        <span>最后修改于 <%= new Date(pageData.gitInfo.lastModifiedTime).toLocaleDateString('zh-CN', {
+                        <span>修改于 <%= new Date(pageData.gitInfo.lastModifiedTime).toLocaleDateString('zh-CN', {
                                 year: 'numeric',
                                 month: 'long',
                                 day: 'numeric',
@@ -98,6 +98,7 @@
 
                     <!-- Hash 链接 -->
                     <% if (locals.siteData?.repo?.url) { %>
+                        <!-- 首次提交 -->
                         <div class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -109,7 +110,23 @@
                                target="_blank"
                                rel="noopener noreferrer"
                                class="hover:text-blue-600 dark:hover:text-blue-400">
-                                查看详情 (<%= pageData.gitInfo.commitHash.slice(0, 7) %>)
+                                首次提交 (<%= pageData.gitInfo.commitHash.slice(0, 8) %>)
+                            </a>
+                        </div>
+
+                        <!-- 末次提交 -->
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                 class="w-4 h-4">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                            </svg>
+                            <a href="<%= `${locals.siteData.repo.url}/commit/${pageData.gitInfo.lastCommitHash}` %>"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="hover:text-blue-600 dark:hover:text-blue-400">
+                                末次提交 (<%= pageData.gitInfo.lastCommitHash.slice(0, 8) %>)
                             </a>
                         </div>
                     <% } %>
