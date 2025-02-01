@@ -883,10 +883,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-blue-500 text-blue-600
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-2ea6jz3sk', 0)"
+            onclick="switchTab(event, 'tabgroup-s3qxlnob6', 0)"
             aria-selected="true"
-            aria-controls="tabgroup-2ea6jz3sk-panel-0"
-            id="tabgroup-2ea6jz3sk-tab-0">
+            aria-controls="tabgroup-s3qxlnob6-panel-0"
+            id="tabgroup-s3qxlnob6-tab-0">
             Tab 1
         </button>
     
@@ -894,10 +894,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-2ea6jz3sk', 1)"
+            onclick="switchTab(event, 'tabgroup-s3qxlnob6', 1)"
             aria-selected="false"
-            aria-controls="tabgroup-2ea6jz3sk-panel-1"
-            id="tabgroup-2ea6jz3sk-tab-1">
+            aria-controls="tabgroup-s3qxlnob6-panel-1"
+            id="tabgroup-s3qxlnob6-tab-1">
             Tab 2
         </button>
     
@@ -905,10 +905,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-2ea6jz3sk', 2)"
+            onclick="switchTab(event, 'tabgroup-s3qxlnob6', 2)"
             aria-selected="false"
-            aria-controls="tabgroup-2ea6jz3sk-panel-2"
-            id="tabgroup-2ea6jz3sk-tab-2">
+            aria-controls="tabgroup-s3qxlnob6-panel-2"
+            id="tabgroup-s3qxlnob6-tab-2">
             Tab 3
         </button>
     
@@ -918,8 +918,8 @@ n
                 
         <div class="p-4 "
             role="tabpanel"
-            aria-labelledby="tabgroup-2ea6jz3sk-tab-0"
-            id="tabgroup-2ea6jz3sk-panel-0">
+            aria-labelledby="tabgroup-s3qxlnob6-tab-0"
+            id="tabgroup-s3qxlnob6-panel-0">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第一个 Tab 的内容</span>
     
@@ -939,8 +939,8 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-2ea6jz3sk-tab-1"
-            id="tabgroup-2ea6jz3sk-panel-1">
+            aria-labelledby="tabgroup-s3qxlnob6-tab-1"
+            id="tabgroup-s3qxlnob6-panel-1">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第二个 Tab 的内容</span>
     
@@ -956,8 +956,8 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-2ea6jz3sk-tab-2"
-            id="tabgroup-2ea6jz3sk-panel-2">
+            aria-labelledby="tabgroup-s3qxlnob6-tab-2"
+            id="tabgroup-s3qxlnob6-panel-2">
             
         <span class="text-base text-gray-700 leading-7 my-2">第三个 Tab 的内容</span>
     
@@ -1395,6 +1395,29 @@ n
 </footer>
     
 </div>
+
+<!-- 返回顶部按钮 -->
+
+    <button id="back-to-top"
+            class="fixed right-4 bottom-24 lg:bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg opacity-0 transition-opacity duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // 控制返回顶部按钮的显示和隐藏
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+            } else {
+                backToTop.style.opacity = '0';
+            }
+        });
+    </script>
+
 
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
 

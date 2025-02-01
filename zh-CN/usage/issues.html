@@ -1329,6 +1329,29 @@
     
 </div>
 
+<!-- 返回顶部按钮 -->
+
+    <button id="back-to-top"
+            class="fixed right-4 bottom-24 lg:bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg opacity-0 transition-opacity duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // 控制返回顶部按钮的显示和隐藏
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+            } else {
+                backToTop.style.opacity = '0';
+            }
+        });
+    </script>
+
+
 <!-- 遮罩层 - 移动端菜单打开时显示 -->
 
     <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
