@@ -108,6 +108,7 @@ nav:
       - /setup/site
       - /setup/page
       - /setup/feature
+      - /setup/i18n
   - Usage:
       - /usage/href
       - /usage/image
