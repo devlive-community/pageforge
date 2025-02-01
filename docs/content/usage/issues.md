@@ -1,5 +1,5 @@
 ---
-title: Issues 解析
+title: Issues
 icon: git-merge
 ---
 
