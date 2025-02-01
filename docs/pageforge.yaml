@@ -36,6 +36,8 @@ feature:
     enable: true
   contributors:
     enable: true
+  backTop:
+    enable: true
 
 i18n:
   default: zh-CN

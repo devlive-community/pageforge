@@ -36,3 +36,12 @@ PageForge 实现了更多的语义，支持更多的超链接格式。
 ```
 
 [PageForge](https://pageforge.devlive.org "PageForge" "_blank")
+
+<br />
+
+打开方式支持 
+
+- `_blank`
+- `_self`
+- `_parent`
+- `_top`

@@ -183,11 +183,11 @@ feature:
 - 首次提交
 - 末次提交
 
-## 提交用户
+## Git 提交用户
 
 ---
 
-PageForge 支持提交用户，需要启用后才能使用。
+PageForge 支持 Git 提交用户，需要启用后才能使用。
 
 ```yaml
 feature:
@@ -196,3 +196,15 @@ feature:
 ```
 
 启用后，系统会自动配置用户在 Github 中的头像。
+
+## 返回顶部
+
+---
+
+PageForge 支持返回顶部，需要启用后才能使用。
+
+```yaml
+feature:
+  backToTop:
+    enable: true
+```
