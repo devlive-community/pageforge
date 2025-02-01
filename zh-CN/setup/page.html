@@ -572,6 +572,36 @@
                         
                     </li>
                 
+                    <li class="relative">
+                        <a href="/zh-CN/setup/i18n.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="globe"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">国际化设置</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -1121,280 +1151,344 @@
         <!-- 右侧目录 -->
         
             <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-                <div class="sticky top-20">
-                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
-                         id="table-of-contents">
-                        
-                        
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+             id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#yong-fa"
+                           onclick="event.preventDefault(); const target = document.getElementById('yong-fa'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="yong-fa">
                             
-                                <div class="pl-4">
-                                    <a href="#yong-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="yong-fa">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">用法</span>
     
-                                    </a>
-                                </div>
-                                
-                                    
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-yuan-shu-ju"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-yuan-shu-ju">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置元数据</span>
-    
-                                    </a>
-                                </div>
-                                
-                                    
-                            
-                                <div class="pl-12">
-                                    <a href="#title"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="title">
-                                        
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-12">
-                                    <a href="#icon"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="icon">
-                                        
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-header"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-header">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-sidebar"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-sidebar">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-footer"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-footer">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-toc"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-toc">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-layout"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-layout">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">layout</code>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
-                                
-                            
-                        
-                    </nav>
-                </div>
-            </div>
-
-            <!-- 移动端目录按钮 -->
-            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
-                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
-                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
-                </svg>
-            </button>
-
-            <!-- 移动端底部目录面板 -->
-            <div id="toc-mobile"
-                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
-                        transform translate-y-full transition duration-200 ease-in-out
-                        p-4 rounded-t-2xl shadow-lg">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-lg font-semibold">目录</h3>
-                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
-                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                        </a>
+                    </div>
                     
+                        
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-yuan-shu-ju"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-yuan-shu-ju'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-yuan-shu-ju">
                             
-                                <div class="pl-4">
-                                    <a href="#yong-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="yong-fa">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">用法</span>
-    
-                                    </a>
-                                </div>
-                                
-                                    
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-yuan-shu-ju"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-yuan-shu-ju">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置元数据</span>
     
-                                    </a>
-                                </div>
-                                
-                                    
+                        </a>
+                    </div>
+                    
+                        
+                
+                    <div class="pl-12">
+                        <a href="#title"
+                           onclick="event.preventDefault(); const target = document.getElementById('title'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="title">
                             
-                                <div class="pl-12">
-                                    <a href="#title"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="title">
-                                        
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-12">
+                        <a href="#icon"
+                           onclick="event.preventDefault(); const target = document.getElementById('icon'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="icon">
                             
-                                <div class="pl-12">
-                                    <a href="#icon"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="icon">
-                                        
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+            
+                    
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-header"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-header'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-header">
                             
-                        
-                                
-                            
-                                <div class="pl-8">
-                                    <a href="#she-zhi-header"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-header">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-sidebar"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-sidebar'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-sidebar">
                             
-                                <div class="pl-8">
-                                    <a href="#she-zhi-sidebar"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-sidebar">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-footer"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-footer'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-footer">
                             
-                                <div class="pl-8">
-                                    <a href="#she-zhi-footer"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-footer">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-toc"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-toc'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-toc">
                             
-                                <div class="pl-8">
-                                    <a href="#she-zhi-toc"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-toc">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-8">
+                        <a href="#she-zhi-layout"
+                           onclick="event.preventDefault(); const target = document.getElementById('she-zhi-layout'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="she-zhi-layout">
                             
-                                <div class="pl-8">
-                                    <a href="#she-zhi-layout"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="she-zhi-layout">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">layout</code>
     
-                                    </a>
-                                </div>
-                                
-                            
+                        </a>
+                    </div>
+                    
+                
+            
+                    
+                
+            
+        </nav>
+    </div>
+</div>
+
+<!-- 移动端目录按钮 -->
+<button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端底部目录面板 -->
+<div id="toc-mobile"
+     class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                transform translate-y-full transition duration-200 ease-in-out
+                p-4 rounded-t-2xl shadow-lg">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">目录</h3>
+        <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+        
+        
+            
+                <div class="pl-4">
+                    <a href="#yong-fa"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('yong-fa');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="yong-fa">
                         
-                                
-                            
+        <span class="text-base text-gray-700 leading-7 my-2">用法</span>
+    
+                    </a>
+                </div>
+                
+                    
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-yuan-shu-ju"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-yuan-shu-ju');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-yuan-shu-ju">
                         
-                </nav>
-            </div>
+        <span class="text-base text-gray-700 leading-7 my-2">设置元数据</span>
+    
+                    </a>
+                </div>
+                
+                    
+            
+                <div class="pl-12">
+                    <a href="#title"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('title');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="title">
+                        
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-12">
+                    <a href="#icon"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('icon');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="icon">
+                        
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
+    
+                    </a>
+                </div>
+                
+            
+        
+                
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-header"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-header');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-header">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-sidebar"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-sidebar');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-sidebar">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-footer"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-footer');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-footer">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-toc"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-toc');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-toc">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-8">
+                    <a href="#she-zhi-layout"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('she-zhi-layout');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="she-zhi-layout">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">layout</code>
+    
+                    </a>
+                </div>
+                
+            
+        
+                
+            
+        
+    </nav>
+</div>
         
     </div>
 
@@ -1565,7 +1659,7 @@
         <!-- 底部版权和社交链接 -->
         <div class="flex flex-col items-center sm:flex-row sm:items-center justify-between gap-4">
             <span class="text-sm text-gray-500 dark:text-gray-400">
-                © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+                © 2024 PageForge All Rights Reserved. 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
             </span>
 
             

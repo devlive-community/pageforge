@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1.0.0 - PageForge</title>
+    <title>国际化设置 - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -112,7 +112,7 @@
                             <a href="/zh-CN/setup/site.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
+                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
                                 设置
                             </a>
                         </li>
@@ -130,7 +130,7 @@
                             <a href="/zh-CN/release/2025.1.1.html"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                       text-sm font-medium leading-none dark:text-white
-                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
+                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
                                 发布日志
                             </a>
                         </li>
@@ -159,14 +159,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/release/1.0.0.html"
+                <a href="/en/setup/i18n.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/release/1.0.0.html"
+                <a href="/zh-CN/setup/i18n.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -288,7 +288,7 @@
                 
                     <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
                         设置
                     </a>
                 
@@ -300,7 +300,7 @@
                 
                     <a href="/zh-CN/release/2025.1.1.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
+                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
                         发布日志
                     </a>
                 
@@ -309,14 +309,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
                         
-                            <a href="/en/release/1.0.0.html"
+                            <a href="/en/setup/i18n.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
                                 <span>🇬🇧</span>
                                 <span>English</span>
                             </a>
                         
-                            <a href="/zh-CN/release/1.0.0.html"
+                            <a href="/zh-CN/setup/i18n.html"
                                class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
                                 <span>🇨🇳</span>
@@ -483,15 +483,27 @@
             <ul class="space-y-1.5">
                 
                     <li class="relative">
-                        <a href="/zh-CN/release/2025.1.1.html"
+                        <a href="/zh-CN/setup/site.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                                <span class="flex-grow text-sm sm:text-base">2025.1.1</span>
+                                        <!-- 图标 -->
+                                       <i data-lucide="baseline"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">基础设置</span>
 
                                 
                             </div>
@@ -501,15 +513,27 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/zh-CN/release/2025.1.0.html"
+                        <a href="/zh-CN/setup/page.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                                <span class="flex-grow text-sm sm:text-base">2025.1.0</span>
+                                        <!-- 图标 -->
+                                       <i data-lucide="book-open"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">页面设置</span>
 
                                 
                             </div>
@@ -519,15 +543,57 @@
                     </li>
                 
                     <li class="relative">
-                        <a href="/zh-CN/release/1.0.0.html"
+                        <a href="/zh-CN/setup/feature.html"
+                           class="group block">
+                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                       rounded-md transition-all duration-200 ease-in-out">
+
+                                
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                        <!-- 图标 -->
+                                       <i data-lucide="feather"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">特性设置</span>
+
+                                
+                            </div>
+                        </a>
+
+                        
+                    </li>
+                
+                    <li class="relative">
+                        <a href="/zh-CN/setup/i18n.html"
                            class="group block">
                             <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                         text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                        rounded-md transition-all duration-200 ease-in-out">
 
                                 
+                                    <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                                       <!-- 骨架屏 -->
+                                       <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                                <span class="flex-grow text-sm sm:text-base">1.0.0</span>
+                                        <!-- 图标 -->
+                                       <i data-lucide="globe"
+                                          style="display: none;"
+                                          class="w-3 h-3 sm:w-4 sm:h-4
+                                               text-blue-600 dark:text-blue-400">
+                                       </i>
+                                   </span>
+                                
+
+                                <span class="flex-grow text-sm sm:text-base">国际化设置</span>
 
                                 
                             </div>
@@ -558,13 +624,13 @@
             
                 <div class="flex items-center justify-between">
                     <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-                        1.0.0
+                        国际化设置
                     </h1>
 
                     <div class="flex items-center gap-4">
                         <!-- 编辑源码 -->
                         
-                            <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//release/1.0.0.md"
+                            <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//setup/i18n.md"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="ml-4 text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300 w-5 h-5">
@@ -578,7 +644,7 @@
 
                         <!-- 查看源码 -->
                         
-                            <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//release/1.0.0.md"
+                            <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//setup/i18n.md"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300 w-5 h-5">
@@ -603,223 +669,208 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">我们很高兴地宣布 PageForge v1.0.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，为用户提供从创建到部署的一站式解决方案。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。</span>
     
         <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="he-xin-gong-neng" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">核心功能</span>
-    </div>
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">i18n</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+                </div>
+            </div>
         </div>
-    
-        <ol class="my-4 pl-4 list-inside list-decimal">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">内容创作与渲染</span>
-    </span>
-            </li>
-        </ol>
-    
         <div class="space-y-4"></div>
     
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">完整支持 Markdown 语法渲染</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">支持代码高亮和 HTML 标签解析</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">支持表格、引用块和警告提示</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">自动生成目录（TOC）</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">Tab 标签页支持</span>
-    </span>
-            </li>
-        </ul>
+        <span class="text-base text-gray-700 leading-7 my-2">启用国际化后，需要配置国际化语言</span>
     
         <div class="space-y-4"></div>
-    
-        <ol class="my-4 pl-4 list-inside list-decimal">
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">站点结构</span>
-    </span>
-            </li>
-        </ol>
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
     
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">可自定义导航和布局</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">支持多种首页模板</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">灵活的页面布局系统</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">支持静态资源文件管理</span>
-    </span>
-            </li>
-        </ul>
-    
-        <div class="space-y-4"></div>
-    
-        <ol class="my-4 pl-4 list-inside list-decimal">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">部署与集成</span>
-    </span>
-            </li>
-        </ol>
-    
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">一键部署到 GitHub Pages</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">支持自定义配置重载</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">CI/CD 支持</span>
-    </span>
-            </li>
-        </ul>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="ji-shu-gai-jin" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">技术改进</span>
-    </div>
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">i18n</span><span class="token punctuation">:</span>
+  <span class="token key atrule">default</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+  <span class="token key atrule">en</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> English
+    <span class="token key atrule">flag</span><span class="token punctuation">:</span> 🇬🇧
+    <span class="token key atrule">translations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span> Getting Started
+      <span class="token key atrule">Setup</span><span class="token punctuation">:</span> Setup
+      <span class="token key atrule">Usage</span><span class="token punctuation">:</span> Usage Docs
+  <span class="token key atrule">zh-CN</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> 中文
+    <span class="token key atrule">flag</span><span class="token punctuation">:</span> 🇨🇳
+    <span class="token key atrule">translations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span> 快速开始
+      <span class="token key atrule">Setup</span><span class="token punctuation">:</span> 设置
+      <span class="token key atrule">Usage</span><span class="token punctuation">:</span> 使用文档</code></pre>
+                </div>
+            </div>
         </div>
+        <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
             
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
                 <span>
-        <span class="text-base text-gray-700 leading-7 my-2">优化模板编译系统</span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">default</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 默认语言</span>
     </span>
             </li>
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
                 <span>
-        <span class="text-base text-gray-700 leading-7 my-2">重构解析引擎架构</span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">en</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">、</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">zh-CN</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 自定义语言</span>
     </span>
             </li>
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
                 <span>
-        <span class="text-base text-gray-700 leading-7 my-2">改进资源文件处理</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">升级依赖管理系统（使用 pnpm）</span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">translations</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 对应语言的翻译，格式为 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">key: value</code>
     </span>
             </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="lian-jie" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
-    </div>
+        <span class="text-base text-gray-700 leading-7 my-2">系统会通过 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的语言来自动加载对应的翻译，如果没有找到翻译，则会返回原 key</span>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">在 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置国际化后，可以在 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">nav</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中使用以下方式来获取翻译的结果。</span>
+    
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">nav</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">GetStarted</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> /getting<span class="token punctuation">-</span>started/get<span class="token punctuation">-</span>started</code></pre>
+                </div>
+            </div>
         </div>
+        <div class="space-y-4"></div>
     
         <ul class="my-4 pl-4 list-inside list-disc">
             
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
-                <span><span class="inline-block my-1 mx-auto">GitHub: 
-        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://github.com/devlive-community/pageforge"
-           target="_self"
-           title="">
-            https://github.com/devlive-community/pageforge
-        </a>
-    </span></span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span><span class="inline-block my-1 mx-auto">官网: 
-        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://pageforge.devlive.org"
-           target="_self"
-           title="">
-            https://pageforge.devlive.org
-        </a>
-    </span></span>
+                <span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">GetStarted</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 要翻译的 key，如果没有找到翻译，则会返回原 key</span>
+    </span>
             </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="kai-yuan-xie-yi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">开源协议</span>
-    </div>
-        </div>
+        <span class="text-base text-gray-700 leading-7 my-2">在页面中使用使用以下方式来获取翻译的结果</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">本项目采用开源协议授权</span>
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !bg-gray-100 !dark:bg-gray-400 !text-gray-600 !dark:text-gray-300 !hover:bg-gray-300 !dark:hover:bg-gray-600 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> GetStarted
+<span class="token key atrule">icon</span><span class="token punctuation">:</span> crosshair
+<span class="token punctuation">---</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">只需要将 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 中替换为国际化的 key 就可以了</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">感谢社区的支持！我们期待您的反馈和建议，共同推进 PageForge 的发展。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">国际化的文档名格式为 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">file.lang.md</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> ，比如我们的 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">index.md</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2"> 如果要配置国际化文件名，可以这样写 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">index.en.md</code>
     
         </div>
 
@@ -837,7 +888,7 @@
                             <line x1="3" y1="12" y2="12" x2="9"/>
                             <line x1="15" y1="12" y2="12" x2="21"/>
                         </svg>
-                        <span>提交于 2025年1月6日 01:57</span>
+                        <span>提交于 2025年2月1日 11:19</span>
                     </div>
 
                     <!-- 最后修改时间 -->
@@ -849,7 +900,7 @@
                             <path d="M3 3v5h5"/>
                             <path d="M12 7v5l4 2"/>
                         </svg>
-                        <span>修改于 2025年1月6日 01:57</span>
+                        <span>修改于 2025年2月1日 11:19</span>
                     </div>
 
                     <!-- Hash 链接 -->
@@ -862,11 +913,11 @@
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                             </svg>
-                            <a href="https://github.com/devlive-community/pageforge/commit/aec69f7be64be9454017f3f4efc0dcae7e0d4ef6"
+                            <a href="https://github.com/devlive-community/pageforge/commit/5a600df345575ec0536ac9ac72c3841a884ee1b7"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="hover:text-blue-600 dark:hover:text-blue-400">
-                                首次提交 (aec69f7b)
+                                首次提交 (5a600df3)
                             </a>
                         </div>
 
@@ -878,11 +929,11 @@
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                             </svg>
-                            <a href="https://github.com/devlive-community/pageforge/commit/aec69f7be64be9454017f3f4efc0dcae7e0d4ef6"
+                            <a href="https://github.com/devlive-community/pageforge/commit/5a600df345575ec0536ac9ac72c3841a884ee1b7"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="hover:text-blue-600 dark:hover:text-blue-400">
-                                末次提交 (aec69f7b)
+                                末次提交 (5a600df3)
                             </a>
                         </div>
                     
@@ -942,54 +993,6 @@
             
             
                 
-                    <div class="pl-4">
-                        <a href="#he-xin-gong-neng"
-                           onclick="event.preventDefault(); const target = document.getElementById('he-xin-gong-neng'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="he-xin-gong-neng">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">核心功能</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#ji-shu-gai-jin"
-                           onclick="event.preventDefault(); const target = document.getElementById('ji-shu-gai-jin'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="ji-shu-gai-jin">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">技术改进</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#lian-jie"
-                           onclick="event.preventDefault(); const target = document.getElementById('lian-jie'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="lian-jie">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#kai-yuan-xie-yi"
-                           onclick="event.preventDefault(); const target = document.getElementById('kai-yuan-xie-yi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="kai-yuan-xie-yi">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">开源协议</span>
-    
-                        </a>
-                    </div>
-                    
-                
             
         </nav>
     </div>
@@ -1020,74 +1023,6 @@
     <nav class="overflow-y-auto max-h-[60vh] space-y-1">
         
         
-            
-                <div class="pl-4">
-                    <a href="#he-xin-gong-neng"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('he-xin-gong-neng');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="he-xin-gong-neng">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">核心功能</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#ji-shu-gai-jin"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('ji-shu-gai-jin');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="ji-shu-gai-jin">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">技术改进</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#lian-jie"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('lian-jie');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="lian-jie">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#kai-yuan-xie-yi"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('kai-yuan-xie-yi');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="kai-yuan-xie-yi">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">开源协议</span>
-    
-                    </a>
-                </div>
-                
             
         
     </nav>

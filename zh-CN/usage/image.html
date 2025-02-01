@@ -903,9 +903,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto"/>
+                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto"
+                 style="opacity: 0; width: 100px;height: 200px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto"/>
         </div>
     
         <div class="space-y-4"></div>
@@ -934,9 +963,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="width: 100px" class="max-w-full h-auto"/>
+                 alt="alt文本" title="可选标题" style="width: 100px" class="max-w-full h-auto"
+                 style="opacity: 0; width: 100px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto"/>
         </div>
     
         <div class="space-y-4"></div>
@@ -965,9 +1023,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="height: 200px" class="max-w-full h-auto"/>
+                 alt="alt文本" title="可选标题" style="height: 200px" class="max-w-full h-auto"
+                 style="opacity: 0; height: 200px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto"/>
         </div>
     
         <div class="space-y-4"></div>
@@ -1020,9 +1107,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto float-left mr-4"/>
+                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto float-left mr-4"
+                 style="opacity: 0; width: 100px;height: 200px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto float-left mr-4"/>
         </div>
     
         <div class="space-y-4"></div>
@@ -1051,9 +1167,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto mx-auto block"/>
+                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto mx-auto block"
+                 style="opacity: 0; width: 100px;height: 200px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto mx-auto block"/>
         </div>
     
         <div class="space-y-4"></div>
@@ -1082,9 +1227,38 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="w-full h-full">
+        <div class="w-full h-full relative">
+            <style>
+                @keyframes loading-spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                .loading-flower {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #e5e7eb;
+                    border-top-color: #6b7280;
+                    border-radius: 50%;
+                    animation: loading-spin 0.8s linear infinite;
+                }
+                .dark .loading-flower {
+                    border-color: #4b5563;
+                    border-top-color: #9ca3af;
+                }
+            </style>
+            
+            <!-- 加载动画 -->
+            <div class="loading-indicator absolute inset-0 flex items-center justify-center">
+                <div class="loading-flower"></div>
+            </div>
+            
+            <!-- 图片 -->
             <img src="https://github.com/devlive-community/pageforge/raw/1.0.0/docs/assets/logo.svg" 
-                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto float-right ml-4"/>
+                 alt="alt文本" title="可选标题" style="width: 100px;height: 200px" class="max-w-full h-auto float-right ml-4"
+                 style="opacity: 0; width: 100px;height: 200px"
+                 onload="this.style.opacity = 1; this.previousElementSibling.style.display = 'none'"
+                 onerror="this.parentElement.innerHTML = '<div class='text-red-500 dark:text-red-400'>图片加载失败</div>'"
+                 class="transition-opacity duration-300 max-w-full h-auto float-right ml-4"/>
         </div>
     
         </div>
@@ -1201,134 +1375,163 @@
         <!-- 右侧目录 -->
         
             <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-                <div class="sticky top-20">
-                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
-                         id="table-of-contents">
-                        
-                        
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+             id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#ji-ben-yu-fa"
+                           onclick="event.preventDefault(); const target = document.getElementById('ji-ben-yu-fa'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="ji-ben-yu-fa">
                             
-                                <div class="pl-4">
-                                    <a href="#ji-ben-yu-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="ji-ben-yu-fa">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-biao-ti"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-biao-ti">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#kuan-gao-ge-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="kuan-gao-ge-shi">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">宽高格式</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dui-qi-fang-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dui-qi-fang-shi">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">对齐方式</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
-                    </nav>
-                </div>
-            </div>
-
-            <!-- 移动端目录按钮 -->
-            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
-                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
-                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
-                </svg>
-            </button>
-
-            <!-- 移动端底部目录面板 -->
-            <div id="toc-mobile"
-                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
-                        transform translate-y-full transition duration-200 ease-in-out
-                        p-4 rounded-t-2xl shadow-lg">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-lg font-semibold">目录</h3>
-                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
-                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                        </a>
+                    </div>
                     
+                
+                    <div class="pl-4">
+                        <a href="#dai-biao-ti"
+                           onclick="event.preventDefault(); const target = document.getElementById('dai-biao-ti'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="dai-biao-ti">
                             
-                                <div class="pl-4">
-                                    <a href="#ji-ben-yu-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="ji-ben-yu-fa">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#dai-biao-ti"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dai-biao-ti">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4">
+                        <a href="#kuan-gao-ge-shi"
+                           onclick="event.preventDefault(); const target = document.getElementById('kuan-gao-ge-shi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="kuan-gao-ge-shi">
                             
-                                <div class="pl-4">
-                                    <a href="#kuan-gao-ge-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="kuan-gao-ge-shi">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">宽高格式</span>
     
-                                    </a>
-                                </div>
-                                
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4">
+                        <a href="#dui-qi-fang-shi"
+                           onclick="event.preventDefault(); const target = document.getElementById('dui-qi-fang-shi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="dui-qi-fang-shi">
                             
-                                <div class="pl-4">
-                                    <a href="#dui-qi-fang-shi"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="dui-qi-fang-shi">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">对齐方式</span>
     
-                                    </a>
-                                </div>
-                                
-                            
+                        </a>
+                    </div>
+                    
+                
+            
+        </nav>
+    </div>
+</div>
+
+<!-- 移动端目录按钮 -->
+<button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端底部目录面板 -->
+<div id="toc-mobile"
+     class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                transform translate-y-full transition duration-200 ease-in-out
+                p-4 rounded-t-2xl shadow-lg">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">目录</h3>
+        <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+        
+        
+            
+                <div class="pl-4">
+                    <a href="#ji-ben-yu-fa"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('ji-ben-yu-fa');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="ji-ben-yu-fa">
                         
-                </nav>
-            </div>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-4">
+                    <a href="#dai-biao-ti"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('dai-biao-ti');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="dai-biao-ti">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">带标题</span>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-4">
+                    <a href="#kuan-gao-ge-shi"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('kuan-gao-ge-shi');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="kuan-gao-ge-shi">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">宽高格式</span>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-4">
+                    <a href="#dui-qi-fang-shi"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('dui-qi-fang-shi');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="dui-qi-fang-shi">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">对齐方式</span>
+    
+                    </a>
+                </div>
+                
+            
+        
+    </nav>
+</div>
         
     </div>
 
@@ -1499,7 +1702,7 @@
         <!-- 底部版权和社交链接 -->
         <div class="flex flex-col items-center sm:flex-row sm:items-center justify-between gap-4">
             <span class="text-sm text-gray-500 dark:text-gray-400">
-                © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+                © 2024 PageForge All Rights Reserved. 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
             </span>
 
             

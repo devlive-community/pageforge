@@ -1044,90 +1044,105 @@
         <!-- 右侧目录 -->
         
             <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
-                <div class="sticky top-20">
-                    <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-                    <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
-                         id="table-of-contents">
-                        
-                        
+    <div class="sticky top-20">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto max-h-[calc(100vh-8rem)] pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+             id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#ji-ben-yu-fa"
+                           onclick="event.preventDefault(); const target = document.getElementById('ji-ben-yu-fa'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="ji-ben-yu-fa">
                             
-                                <div class="pl-4">
-                                    <a href="#ji-ben-yu-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="ji-ben-yu-fa">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#zi-ding-yi-cang-ku"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-cang-ku">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                        
-                    </nav>
-                </div>
-            </div>
-
-            <!-- 移动端目录按钮 -->
-            <button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
-                    onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
-                <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
-                </svg>
-            </button>
-
-            <!-- 移动端底部目录面板 -->
-            <div id="toc-mobile"
-                 class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
-                        transform translate-y-full transition duration-200 ease-in-out
-                        p-4 rounded-t-2xl shadow-lg">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-lg font-semibold">目录</h3>
-                    <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
-                            class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+                        </a>
+                    </div>
                     
+                
+                    <div class="pl-4">
+                        <a href="#zi-ding-yi-cang-ku"
+                           onclick="event.preventDefault(); const target = document.getElementById('zi-ding-yi-cang-ku'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="zi-ding-yi-cang-ku">
                             
-                                <div class="pl-4">
-                                    <a href="#ji-ben-yu-fa"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="ji-ben-yu-fa">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
-    
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="pl-4">
-                                    <a href="#zi-ding-yi-cang-ku"
-                                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                                       data-slug="zi-ding-yi-cang-ku">
-                                        
         <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
     
-                                    </a>
-                                </div>
-                                
-                            
+                        </a>
+                    </div>
+                    
+                
+            
+        </nav>
+    </div>
+</div>
+
+<!-- 移动端目录按钮 -->
+<button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端底部目录面板 -->
+<div id="toc-mobile"
+     class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                transform translate-y-full transition duration-200 ease-in-out
+                p-4 rounded-t-2xl shadow-lg">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">目录</h3>
+        <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <nav class="overflow-y-auto max-h-[60vh] space-y-1">
+        
+        
+            
+                <div class="pl-4">
+                    <a href="#ji-ben-yu-fa"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('ji-ben-yu-fa');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="ji-ben-yu-fa">
                         
-                </nav>
-            </div>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                    </a>
+                </div>
+                
+            
+                <div class="pl-4">
+                    <a href="#zi-ding-yi-cang-ku"
+                       onclick="event.preventDefault();
+                               const target = document.getElementById('zi-ding-yi-cang-ku');
+                               const offset = 80;
+                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
+                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="zi-ding-yi-cang-ku">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">自定义仓库</span>
+    
+                    </a>
+                </div>
+                
+            
+        
+    </nav>
+</div>
         
     </div>
 
@@ -1298,7 +1313,7 @@
         <!-- 底部版权和社交链接 -->
         <div class="flex flex-col items-center sm:flex-row sm:items-center justify-between gap-4">
             <span class="text-sm text-gray-500 dark:text-gray-400">
-                © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建
+                © 2024 PageForge All Rights Reserved. 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
             </span>
 
             
