@@ -1039,109 +1039,111 @@
         </div>
         </div>
 
+        <div class="clear-both"></div>
+
         <!-- Git 信息部分 -->
         
-            <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <!-- 时间和提交信息 -->
-                <div class="space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-4 mb-4">
-                    <!-- 首次提交时间 -->
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="w-4 h-4">
-                            <circle cx="12" cy="12" r="3"/>
-                            <line x1="3" y1="12" y2="12" x2="9"/>
-                            <line x1="15" y1="12" y2="12" x2="21"/>
-                        </svg>
-                        <span>提交于 2024年12月29日 07:46</span>
-                    </div>
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
+    <!-- 时间和提交信息 -->
+    <div class="space-y-3 md:space-y-0 md:space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-4">
+        <!-- 首次提交时间 -->
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4 flex-shrink-0">
+                <circle cx="12" cy="12" r="3"/>
+                <line x1="3" y1="12" y2="12" x2="9"/>
+                <line x1="15" y1="12" y2="12" x2="21"/>
+            </svg>
+            <span class="truncate">提交于 2024年12月29日 07:46</span>
+        </div>
 
-                    <!-- 最后修改时间 -->
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="w-4 h-4">
-                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-                            <path d="M3 3v5h5"/>
-                            <path d="M12 7v5l4 2"/>
-                        </svg>
-                        <span>修改于 2025年1月26日 03:25</span>
-                    </div>
+        <!-- 最后修改时间 -->
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4 flex-shrink-0">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+                <path d="M12 7v5l4 2"/>
+            </svg>
+            <span class="truncate">修改于 2025年1月26日 03:25</span>
+        </div>
 
-                    <!-- Hash 链接 -->
-                    
-                        <!-- 首次提交 -->
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="w-4 h-4">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-                            </svg>
-                            <a href="https://github.com/devlive-community/pageforge/commit/a385120c8b75b064c3a936b4324d79c3ca021335"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="hover:text-blue-600 dark:hover:text-blue-400">
-                                首次提交 (a385120c)
-                            </a>
-                        </div>
-
-                        <!-- 末次提交 -->
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="w-4 h-4">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-                            </svg>
-                            <a href="https://github.com/devlive-community/pageforge/commit/85f3df974eea30933e76c4f0f0df467756675b0c"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="hover:text-blue-600 dark:hover:text-blue-400">
-                                末次提交 (85f3df97)
-                            </a>
-                        </div>
-                    
-                </div>
-
-                <!-- 贡献者信息 -->
-                
-                    <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
-                        <div class="flex items-center gap-2 mb-3 text-sm text-gray-600 dark:text-gray-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="w-4 h-4">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                            <span>贡献者</span>
-                        </div>
-                        <div class="flex flex-wrap gap-4">
-                            
-                                <a href="https://github.com/qianmoQ"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                   class="flex items-center gap-2 group">
-                                    <img src="https://github.com/qianmoQ.png?size=40"
-                                         alt="qianmoQ"
-                                         class="w-8 h-8 rounded-full"
-                                         loading="lazy">
-                                    <div class="text-sm">
-                                        <div class="text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                            qianmoQ
-                                        </div>
-                                        <div class="text-gray-500 dark:text-gray-400">
-                                            8 次提交
-                                        </div>
-                                    </div>
-                                </a>
-                            
-                        </div>
-                    </div>
-                
+        <!-- Hash 链接 -->
+        
+            <!-- 首次提交 -->
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="w-4 h-4 flex-shrink-0">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <a href="https://github.com/devlive-community/pageforge/commit/a385120c8b75b064c3a936b4324d79c3ca021335"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="truncate hover:text-blue-600 dark:hover:text-blue-400">
+                    首次提交 (a385120c)
+                </a>
             </div>
+
+            <!-- 末次提交 -->
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="w-4 h-4 flex-shrink-0">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <a href="https://github.com/devlive-community/pageforge/commit/85f3df974eea30933e76c4f0f0df467756675b0c"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="truncate hover:text-blue-600 dark:hover:text-blue-400">
+                    末次提交 (85f3df97)
+                </a>
+            </div>
+        
+    </div>
+</div>
+        
+
+        <!-- 贡献者信息 -->
+        
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
+    <div class="flex items-center gap-2 mb-3 text-sm text-gray-600 dark:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="w-4 h-4">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span>贡献者</span>
+    </div>
+    <div class="flex flex-wrap gap-4">
+        
+            <a href="https://github.com/qianmoQ"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex items-center gap-2 group">
+                <img src="https://github.com/qianmoQ.png?size=40"
+                     alt="qianmoQ"
+                     class="w-8 h-8 rounded-full"
+                     loading="lazy">
+                <div class="text-sm">
+                    <div class="text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        qianmoQ
+                    </div>
+                    <div class="text-gray-500 dark:text-gray-400">
+                        8 次提交
+                    </div>
+                </div>
+            </a>
+        
+    </div>
+</div>
         
     </div>
 </div>
