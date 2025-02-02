@@ -170,3 +170,15 @@ feature:
     如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 `pageforge.yaml` 中配置 `cdn.mermaidJs` 的值。
 
 !!!
+
+## Diff 语法
+
+---
+
+PageForge 支持使用 Diff 语法，需要启用后才能使用。
+
+```yaml
+feature:
+  diff:
+    enable: true
+```

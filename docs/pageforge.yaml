@@ -40,6 +40,8 @@ feature:
     enable: true
   mermaid:
     enable: true
+  diff:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -121,6 +123,7 @@ nav:
       - /usage/issues
       - /usage/tooltip
       - /usage/mermaid
+      - /usage/diff
   - ReleaseNotes:
       - /release/2025.1.1
       - /release/2025.1.0
