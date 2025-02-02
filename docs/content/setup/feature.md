@@ -147,3 +147,26 @@ feature:
   backToTop:
     enable: true
 ```
+
+## Mermaid 图表
+
+---
+
+PageForge 支持使用 [Mermaid](https://mermaid.js.org "Mermaid" "_blank") 图表语言，需要启用后才能使用。
+
+```yaml
+feature:
+  mermaid:
+    enable: true
+    options:
+      theme: dark
+```
+
+- `enable`: 是否启用 Mermaid 图表
+- `options`: Mermaid 图表选项，可以根据自己的需求进行配置，例如 `theme: dark`，该选项是可选的，默认为 null
+
+!!! danger "注意"
+
+    如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 `pageforge.yaml` 中配置 `cdn.mermaidJs` 的值。
+
+!!!

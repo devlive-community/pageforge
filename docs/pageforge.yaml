@@ -38,6 +38,8 @@ feature:
     enable: true
   backTop:
     enable: true
+  mermaid:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -118,6 +120,7 @@ nav:
       - /usage/code
       - /usage/issues
       - /usage/tooltip
+      - /usage/mermaid
   - ReleaseNotes:
       - /release/2025.1.1
       - /release/2025.1.0

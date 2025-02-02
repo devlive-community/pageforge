@@ -5,17 +5,17 @@ icon: git-merge
 
 PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues。
 
-## 基本语法
-
-```markdown
-`#123`
-```
-
 !!! danger "注意"
 
     该功能需要在配置文件中启用，可以在 `pageforge.yaml` 中配置 `feature.issues.enable: true`
 
 !!!
+
+## 基本语法
+
+```markdown
+`#123`
+```
 
 支持所有平台的 Issues 链接，包括 GitHub、GitLab、Bitbucket、Gitea、Gitee 等等。需要依赖在 `pageforge.yaml` 中配置 `repo.owner` 和 `repo.name`，才会构建完整的链接路径。
 

@@ -5,6 +5,12 @@ icon: figma
 
 PageForge 支持解析 tooltip 的链接，您可以在 Markdown 中使用以下语法来插入 tooltip。
 
+!!! danger "注意"
+
+    该功能需要在配置文件中启用，可以在 `pageforge.yaml` 中配置 `feature.tooltip.enable: true`
+
+!!!
+
 ## 基本语法
 
 ```markdown

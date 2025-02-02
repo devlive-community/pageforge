@@ -170,7 +170,7 @@ const CodeCopy = {
             setTimeout(() => {
                 copyIcon.classList.remove('!hidden');
                 checkIcon.classList.add('!hidden');
-            }, 2000);
+            }, 800);
         }).catch(err => {
             console.error('Failed to copy text:', err);
         });
