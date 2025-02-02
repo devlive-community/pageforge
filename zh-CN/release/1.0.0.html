@@ -13,10 +13,14 @@
         (function () {
             document.addEventListener('click', function (e) {
                 var link = e.target.closest('a');
-                if (!link) return;
+                if (!link) {
+                    return;
+                }
 
                 const href = link.getAttribute('href');
-                if (!href || href.startsWith('http') || href.startsWith('#')) return;
+                if (!href || href.startsWith('http') || href.startsWith('#')) {
+                    return;
+                }
 
                 e.preventDefault();
 
@@ -46,13 +50,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Prism.js 语法高亮样式 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
 
     <!-- 统计代码 -->
     
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"KhuPJkgSiYG5j4Xr",ck:"KhuPJkgSiYG5j4Xr",autoTrack:true,hashMode:true,screenRecord:true})</script>
 
+    
+
+    <!-- Mermaid 图表 -->
+    
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
     
 </head>
 
@@ -829,29 +838,29 @@
         
             <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
     <!-- 时间和提交信息 -->
-    <div class="space-y-3 md:space-y-0 md:space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-4">
+    <div class="space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-2 md:grid-cols-4 mb-4 gap-y-3 md:gap-y-0">
         <!-- 首次提交时间 -->
         <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="w-4 h-4 flex-shrink-0">
+                 class="w-4 h-4">
                 <circle cx="12" cy="12" r="3"/>
                 <line x1="3" y1="12" y2="12" x2="9"/>
                 <line x1="15" y1="12" y2="12" x2="21"/>
             </svg>
-            <span class="truncate">提交于 2025年1月6日 01:57</span>
+            <span>提交于 2025年1月6日 01:57</span>
         </div>
 
         <!-- 最后修改时间 -->
         <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="w-4 h-4 flex-shrink-0">
+                 class="w-4 h-4">
                 <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
                 <path d="M3 3v5h5"/>
                 <path d="M12 7v5l4 2"/>
             </svg>
-            <span class="truncate">修改于 2025年1月6日 01:57</span>
+            <span>修改于 2025年1月6日 01:57</span>
         </div>
 
         <!-- Hash 链接 -->
@@ -860,14 +869,14 @@
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="w-4 h-4 flex-shrink-0">
+                     class="w-4 h-4">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
                 <a href="https://github.com/devlive-community/pageforge/commit/aec69f7be64be9454017f3f4efc0dcae7e0d4ef6"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="truncate hover:text-blue-600 dark:hover:text-blue-400">
+                   class="hover:text-blue-600 dark:hover:text-blue-400">
                     首次提交 (aec69f7b)
                 </a>
             </div>
@@ -876,14 +885,14 @@
             <div class="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="w-4 h-4 flex-shrink-0">
+                     class="w-4 h-4">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
                 <a href="https://github.com/devlive-community/pageforge/commit/aec69f7be64be9454017f3f4efc0dcae7e0d4ef6"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="truncate hover:text-blue-600 dark:hover:text-blue-400">
+                   class="hover:text-blue-600 dark:hover:text-blue-400">
                     末次提交 (aec69f7b)
                 </a>
             </div>
@@ -1307,11 +1316,12 @@
 
     <script>
         // 控制返回顶部按钮的显示和隐藏
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTop = document.getElementById('back-to-top');
             if (window.scrollY > 300) {
                 backToTop.style.opacity = '1';
-            } else {
+            }
+            else {
                 backToTop.style.opacity = '0';
             }
         });
@@ -1356,7 +1366,9 @@
                     if (icon.children.length > 0) {
                         icon.style.display = 'block';
                         const skeleton = icon.previousElementSibling;
-                        if (skeleton) skeleton.style.display = 'none';
+                        if (skeleton) {
+                            skeleton.style.display = 'none';
+                        }
                     }
                 });
             }, 100);

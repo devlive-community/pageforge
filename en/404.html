@@ -13,10 +13,14 @@
         (function () {
             document.addEventListener('click', function (e) {
                 var link = e.target.closest('a');
-                if (!link) return;
+                if (!link) {
+                    return;
+                }
 
                 const href = link.getAttribute('href');
-                if (!href || href.startsWith('http') || href.startsWith('#')) return;
+                if (!href || href.startsWith('http') || href.startsWith('#')) {
+                    return;
+                }
 
                 e.preventDefault();
 
@@ -46,13 +50,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Prism.js 语法高亮样式 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
 
     <!-- 统计代码 -->
     
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"KhuPJkgSiYG5j4Xr",ck:"KhuPJkgSiYG5j4Xr",autoTrack:true,hashMode:true,screenRecord:true})</script>
 
+    
+
+    <!-- Mermaid 图表 -->
+    
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
     
 </head>
 
@@ -685,11 +694,12 @@
 
     <script>
         // 控制返回顶部按钮的显示和隐藏
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const backToTop = document.getElementById('back-to-top');
             if (window.scrollY > 300) {
                 backToTop.style.opacity = '1';
-            } else {
+            }
+            else {
                 backToTop.style.opacity = '0';
             }
         });
@@ -728,7 +738,9 @@
                     if (icon.children.length > 0) {
                         icon.style.display = 'block';
                         const skeleton = icon.previousElementSibling;
-                        if (skeleton) skeleton.style.display = 'none';
+                        if (skeleton) {
+                            skeleton.style.display = 'none';
+                        }
                     }
                 });
             }, 100);
