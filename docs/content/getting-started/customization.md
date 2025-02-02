@@ -69,7 +69,7 @@ templates
 
 如果自定义模版，可以直接在 `templates/layouts` 文件夹中创建自定义的布局文件，文件名便是模版名称。
 
-```
+```ejs
 <article>
     <div class="content">
         <%- pageData.content %>

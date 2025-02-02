@@ -96,11 +96,11 @@ config:
 
 默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 `toc: false` 以关闭它。
 
-### 设置 `layout`
+### 设置 `template`
 
 ---
 
-在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 `content`，但你可以在 markdown 文件的顶部设置 `layout: layout-name` 以更改它。
+在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 `content`，但你可以在 markdown 文件的顶部设置 `template: layout-name` 以更改它。
 
 > 你可以在 `templates/layouts` 中找到所有可用的布局。
 >
@@ -112,6 +112,6 @@ config:
 
 ```yaml
 ---
-layout: foo
+template: foo
 ---
 ```

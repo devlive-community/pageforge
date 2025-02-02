@@ -1,6 +1,6 @@
 ---
 title: 欢迎使用 PageForge
-layout: home
+template: home
 
 config:
   sidebar: false
