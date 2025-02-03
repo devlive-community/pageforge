@@ -1,8 +1,17 @@
-# PageForge
+<div align="center">
+
+<img src="logo.svg" height="60">
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Npm package yearly downloads](https://badgen.net/npm/dy/pageforge)](https://npmjs.com/package/pageforge)
+[![Npm package total downloads](https://badgen.net/npm/dt/pageforge)](https://npmjs.com/package/pageforge)
+[![Minimum node.js version](https://badgen.net/npm/node/pageforge)](https://npmjs.com/package/pageforge)
+[![Latest release](https://badgen.net/github/release/devlive-community/pageforge)](https://github.com/devlive-community/pageforge/releases)
+
 
 PageForge 是一款现代化的静态页面生成与部署平台，为用户提供从创建到部署的一站式解决方案。通过 PageForge，您可以轻松构建并部署各类静态网站到 GitHub Pages。
+
+</div>
 
 ## ✨ 特性
 

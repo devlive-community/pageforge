@@ -20,7 +20,8 @@
   "files": [
     "bin/",
     "lib/",
-    "templates/"
+    "templates/",
+    "logo.svg"
   ],
   "keywords": [
     "static-site-generator",
