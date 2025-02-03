@@ -46,7 +46,7 @@ sequenceDiagram
 
 ---
 
-:::mermaid
+::: mermaid
 mindmap
   root((mindmap))
     Origins
