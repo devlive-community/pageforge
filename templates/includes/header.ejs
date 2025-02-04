@@ -26,10 +26,11 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
 <header>
     <nav class="fixed top-0 w-full bg-white <%= darkClasses('dark:bg-gray-800') %> border-b z-40">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center justify-between flex-1 lg:flex-none">
-                    <!-- Logo 和标题 -->
-                    <div class="flex items-center space-x-4 shrink-0">
+            <div class="flex items-center h-16">
+                <!-- 左侧Logo和导航 -->
+                <div class="flex items-center flex-1">
+                    <!-- Logo和标题 -->
+                    <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
                         <% if (locals.siteData?.site?.logo) { %>
                             <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
                                 <img src="<%= pageData.basePath %>/<%= siteData.site.logo || '/assets/logo.svg' %>"
@@ -41,6 +42,56 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
                            class="text-xl font-bold text-gray-900 <%= darkClasses('dark:text-white hover:text-gray-700 dark:hover:text-gray-200') %> transition-colors">
                             <%= !siteData.site.hiddenTitle ? siteData.site.title : '' %>
                         </a>
+                    </div>
+
+                    <!-- 桌面端导航 -->
+                    <ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3">
+                        <% for(let item of siteData.nav) { %>
+                            <li class="shrink-0">
+                                <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none <%= darkClasses('dark:text-white') %>
+                                          <%= isPathInNavItem(pageData.noLocalePath, item)
+                                           ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')} font-medium`
+                                           : `hover:text-gray-900 ${darkClasses('dark:hover:text-gray-200')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-800/40')}`
+                                   %>">
+                                    <%= item.title %>
+                                </a>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+
+                <!-- 右侧工具栏 -->
+                <div class="flex items-center gap-2 lg:gap-4">
+                    <!-- 桌面端主题切换按钮 -->
+                    <% if (darkModeEnabled) { %>
+                        <button type="button"
+                                data-theme-toggle
+                                class="hidden lg:flex items-center justify-center p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <!-- 太阳图标 -->
+                            <svg class="w-5 h-5 sun-icon hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                            <!-- 月亮图标 -->
+                            <svg class="w-5 h-5 moon-icon block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                                </path>
+                            </svg>
+                        </button>
+                    <% } %>
+
+                    <!-- 语言切换器 -->
+                    <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData?.languages?.length > 0) { %>
+                        <%- include('./language') %>
+                    <% } %>
+
+                    <!-- 仓库链接 -->
+                    <div class="hidden lg:block">
+                        <%- include('./repo') %>
                     </div>
 
                     <!-- 移动端控制区 -->
@@ -75,53 +126,6 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
                             </svg>
                         </button>
                     </div>
-                </div>
-
-                <!-- 桌面端导航 -->
-                <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
-                    <% for(let item of siteData.nav) { %>
-                        <li class="shrink-0">
-                            <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
-                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none <%= darkClasses('dark:text-white') %>
-                                      <%= isPathInNavItem(pageData.noLocalePath, item)
-                                       ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')} font-medium`
-                                       : `hover:text-gray-900 ${darkClasses('dark:hover:text-gray-200')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-800/40')}`
-                               %>">
-                                <%= item.title %>
-                            </a>
-                        </li>
-                    <% } %>
-                </ul>
-
-                <!-- 桌面端主题切换按钮 - 只在启用时显示 -->
-                <% if (darkModeEnabled) { %>
-                    <button type="button"
-                            data-theme-toggle
-                            class="hidden lg:flex items-center justify-center p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <!-- 太阳图标 -->
-                        <svg class="w-5 h-5 sun-icon hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                            </path>
-                        </svg>
-                        <!-- 月亮图标 -->
-                        <svg class="w-5 h-5 moon-icon block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
-                            </path>
-                        </svg>
-                    </button>
-                <% } %>
-
-                <!-- 语言切换器 -->
-                <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData?.languages?.length > 0) { %>
-                    <%- include('./language') %>
-                <% } %>
-
-                <!-- 仓库链接 -->
-                <div class="hidden lg:block">
-                    <%- include('./repo') %>
                 </div>
             </div>
         </div>

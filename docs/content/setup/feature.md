@@ -183,7 +183,7 @@ feature:
     enable: true
 ```
 
-## Dark Mode
+## Dark 模式
 
 ---
 

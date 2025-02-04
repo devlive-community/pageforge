@@ -42,8 +42,6 @@ feature:
     enable: true
   diff:
     enable: true
-  darkMode:
-    enable: true
 
 i18n:
   default: zh-CN
