@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>提示 - PageForge</title>
+    <title>按钮 - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -160,14 +160,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/usage/alert.html"
+                <a href="/en/usage/button.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/usage/alert.html"
+                <a href="/zh-CN/usage/button.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -329,14 +329,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/usage/alert.html"
+        <a href="/en/usage/button.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
             <span>🇬🇧</span>
             <span>English</span>
         </a>
     
-        <a href="/zh-CN/usage/alert.html"
+        <a href="/zh-CN/usage/button.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
             <span>🇨🇳</span>
@@ -580,7 +580,7 @@
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -592,7 +592,7 @@
                                <i data-lucide="alert-triangle"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       text-blue-600 dark:text-blue-400">
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                </i>
                            </span>
                             
@@ -852,7 +852,7 @@
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -864,7 +864,7 @@
                                <i data-lucide="circle-arrow-up"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       text-blue-600 dark:text-blue-400">
                                </i>
                            </span>
                             
@@ -922,13 +922,13 @@
             
     <div class="flex items-center justify-between">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-            提示
+            按钮
         </h1>
 
         <div class="flex items-center gap-4">
             <!-- 编辑源码 -->
             
-                <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//usage/alert.md"
+                <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//usage/button.md"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="ml-4 text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -942,7 +942,7 @@
 
             <!-- 查看源码 -->
             
-                <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//usage/alert.md"
+                <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//usage/button.md"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -964,7 +964,7 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持使用 markdown 实现了提示相关信息。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持按钮，您可以创建基于 Tailwind CSS 的按钮。</span>
     
         <div class="space-y-4"></div>
     
@@ -978,71 +978,47 @@
             <div class="w-full px-5 py-3">
                 <div class="text-sm text-red-700">
                     
-        <span class="text-base text-gray-700 leading-7 my-2">需要注意的是必须要使用 </span>
+        <span class="text-base text-gray-700 leading-7 my-2">该功能需要在配置文件中启用，可以在 </span>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">!!!</code>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 包裹，且后面的内容需要缩进。</span>
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置</span>
     
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
+    <span class="token key atrule">button</span><span class="token punctuation">:</span>
+        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+                </div>
+            </div>
+        </div>
                 </div>
             </div>
         </div>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">支持的类型有:</span>
-    
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">info</code>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">danger</code>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">success</code>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">warning</code>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">dark</code>
-    </span>
-            </li>
-        </ul>
-    
-        <div class="space-y-4"></div>
-    
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Info" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Info</span>
+            <div id="ji-ben-yu-fa" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">info</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
     
         <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1060,47 +1036,140 @@
             <div class="!overflow-x-auto !flex">
                 
                 <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! info "标题"
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!btn[点击我]</code></pre>
                 </div>
             </div>
         </div>
+        <div class="space-y-4"></div>
+    
+            <button class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <span class="inline-flex items-center">
+                    点击我
+                </span>
+            </button>
+        
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="nei-bu-lian-jie" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">内部链接</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!btn<span class="token url">[<span class="token content">点击我跳转到首页</span>](<span class="token url">/</span>)</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+            <a href="/"
+                class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <span class="inline-flex items-center">
+                    点击我跳转到首页
+                </span>
+            </a>
+        
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="wai-bu-lian-jie" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">外部链接</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!btn<span class="token url">[<span class="token content">访问外部</span>](<span class="token url">https://example.com</span>)</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+            <a href="https://example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <span class="inline-flex items-center">
+                    访问外部
+                    <svg class="ml-2 h-4 w-4" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 20 20" 
+                        fill="currentColor">
+                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                    </svg>
+                </span>
+            </a>
+        
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="zi-ding-yi-yang-shi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
         
         <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-blue-50">
                <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">一行</h3>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">提示</h3>
            </div>
                    
             <div class="w-full px-5 py-3">
                 <div class="text-sm text-blue-700">
                     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">支持所有的 Tailwind CSS 的样式，可以使用自定义样式，例如 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">bg-green-500 hover:bg-green-600</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，只需要写类名即可，不需要加类名前面的 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">.</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，多个类名之间用空格分隔</span>
     
                 </div>
             </div>
         </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Danger" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Danger</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">danger</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
     
         <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1118,263 +1187,18 @@
             <div class="!overflow-x-auto !flex">
                 
                 <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! danger "标题"
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!btn[自定义按钮]{bg-green-500 hover:bg-green-600}</code></pre>
                 </div>
             </div>
         </div>
         <div class="space-y-4"></div>
     
-        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
+            <button class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors bg-green-500 hover:bg-green-600 text-white">
+                <span class="inline-flex items-center">
+                    自定义按钮
+                </span>
+            </button>
         
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-red-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Success" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Success</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">success</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法：</span>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! success "标题"
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-green-200">
-        
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-green-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-green-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Warning" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Warning</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">warning</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法。</span>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! warning "标题"
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-yellow-200">
-        
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-yellow-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-yellow-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Dark" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Dark</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">dark</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 类型的提示信息可以使用如下的语法。</span>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! dark "标题"
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-gray-200">
-        
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-gray-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">标题</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-gray-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="bu-she-zhi-biao-ti" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">不设置标题</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">如果不设置标题，可将 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">""</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 内容设置为空字符串。</span>
-    
-        <div class="space-y-4"></div>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!!! info ""
-
-<span class="token code keyword">    这是一个提示信息</span>
-
-!!!</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
-        
-        
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-blue-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。</span>
-    
-                </div>
-            </div>
-        </div>
-    
         </div>
 
         <div class="clear-both"></div>
@@ -1393,7 +1217,7 @@
                 <line x1="3" y1="12" y2="12" x2="9"/>
                 <line x1="15" y1="12" y2="12" x2="21"/>
             </svg>
-            <span>提交于 2024年12月30日 06:25</span>
+            <span>提交于 2025年2月4日 09:51</span>
         </div>
 
         <!-- 最后修改时间 -->
@@ -1405,7 +1229,7 @@
                 <path d="M3 3v5h5"/>
                 <path d="M12 7v5l4 2"/>
             </svg>
-            <span>修改于 2024年12月31日 17:38</span>
+            <span>修改于 2025年2月4日 09:51</span>
         </div>
 
         <!-- Hash 链接 -->
@@ -1418,11 +1242,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/762a68c3535aaeacd3089f4568a0c6b1669c9700"
+                <a href="https://github.com/devlive-community/pageforge/commit/4e94591926f0428f3c442db63c4e3fc2526cd105"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    首次提交 (762a68c3)
+                    首次提交 (4e945919)
                 </a>
             </div>
 
@@ -1434,11 +1258,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/b38fde6677f2daa221cc3043066b200bcd7ead89"
+                <a href="https://github.com/devlive-community/pageforge/commit/4e94591926f0428f3c442db63c4e3fc2526cd105"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    末次提交 (b38fde66)
+                    末次提交 (4e945919)
                 </a>
             </div>
         
@@ -1475,7 +1299,7 @@
                         qianmoQ
                     </div>
                     <div class="text-gray-500 dark:text-gray-400">
-                        4 次提交
+                        1 次提交
                     </div>
                 </div>
             </a>
@@ -1499,72 +1323,48 @@
             
                 
                     <div class="pl-4">
-                        <a href="#Info"
-                           onclick="event.preventDefault(); const target = document.getElementById('Info'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#ji-ben-yu-fa"
+                           onclick="event.preventDefault(); const target = document.getElementById('ji-ben-yu-fa'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Info">
+                           data-slug="ji-ben-yu-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Info</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
                         </a>
                     </div>
                     
                 
                     <div class="pl-4">
-                        <a href="#Danger"
-                           onclick="event.preventDefault(); const target = document.getElementById('Danger'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#nei-bu-lian-jie"
+                           onclick="event.preventDefault(); const target = document.getElementById('nei-bu-lian-jie'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Danger">
+                           data-slug="nei-bu-lian-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Danger</span>
+        <span class="text-base text-gray-700 leading-7 my-2">内部链接</span>
     
                         </a>
                     </div>
                     
                 
                     <div class="pl-4">
-                        <a href="#Success"
-                           onclick="event.preventDefault(); const target = document.getElementById('Success'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#wai-bu-lian-jie"
+                           onclick="event.preventDefault(); const target = document.getElementById('wai-bu-lian-jie'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Success">
+                           data-slug="wai-bu-lian-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Success</span>
+        <span class="text-base text-gray-700 leading-7 my-2">外部链接</span>
     
                         </a>
                     </div>
                     
                 
                     <div class="pl-4">
-                        <a href="#Warning"
-                           onclick="event.preventDefault(); const target = document.getElementById('Warning'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#zi-ding-yi-yang-shi"
+                           onclick="event.preventDefault(); const target = document.getElementById('zi-ding-yi-yang-shi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Warning">
+                           data-slug="zi-ding-yi-yang-shi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Warning</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Dark"
-                           onclick="event.preventDefault(); const target = document.getElementById('Dark'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Dark">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Dark</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#bu-she-zhi-biao-ti"
-                           onclick="event.preventDefault(); const target = document.getElementById('bu-she-zhi-biao-ti'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="bu-she-zhi-biao-ti">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">不设置标题</span>
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
     
                         </a>
                     </div>
@@ -1602,102 +1402,68 @@
         
             
                 <div class="pl-4">
-                    <a href="#Info"
+                    <a href="#ji-ben-yu-fa"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Info');
+                               const target = document.getElementById('ji-ben-yu-fa');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Info">
+                       data-slug="ji-ben-yu-fa">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Info</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
     
                     </a>
                 </div>
                 
             
                 <div class="pl-4">
-                    <a href="#Danger"
+                    <a href="#nei-bu-lian-jie"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Danger');
+                               const target = document.getElementById('nei-bu-lian-jie');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Danger">
+                       data-slug="nei-bu-lian-jie">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Danger</span>
+        <span class="text-base text-gray-700 leading-7 my-2">内部链接</span>
     
                     </a>
                 </div>
                 
             
                 <div class="pl-4">
-                    <a href="#Success"
+                    <a href="#wai-bu-lian-jie"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Success');
+                               const target = document.getElementById('wai-bu-lian-jie');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Success">
+                       data-slug="wai-bu-lian-jie">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Success</span>
+        <span class="text-base text-gray-700 leading-7 my-2">外部链接</span>
     
                     </a>
                 </div>
                 
             
                 <div class="pl-4">
-                    <a href="#Warning"
+                    <a href="#zi-ding-yi-yang-shi"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Warning');
+                               const target = document.getElementById('zi-ding-yi-yang-shi');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Warning">
+                       data-slug="zi-ding-yi-yang-shi">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Warning</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Dark"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Dark');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Dark">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Dark</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#bu-she-zhi-biao-ti"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('bu-she-zhi-biao-ti');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="bu-she-zhi-biao-ti">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">不设置标题</span>
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
     
                     </a>
                 </div>
