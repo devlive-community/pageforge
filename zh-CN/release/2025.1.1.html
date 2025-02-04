@@ -486,86 +486,126 @@
 
 
 
+
+
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
                 sm:max-h-screen md:h-auto lg:max-h-[calc(100vh-2rem)]">
-        <div class="mb-6">
-            <ul class="space-y-1.5">
+        <div class="mb-6 overflow-x-auto min-w-0">
+            <div class="min-w-fit">
                 
-                    <li class="relative">
-                        <a href="/zh-CN/release/2025.1.2.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">2025.1.2</span>
-
-                                
-                            </div>
-                        </a>
-
+    <ul class="space-y-1.5">
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/release/2025.1.2.html"
+                       class="group block">
                         
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/zh-CN/release/2025.1.1.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
-                                       rounded-md transition-all duration-200 ease-in-out">
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
 
-                                
+                            
 
-                                <span class="flex-grow text-sm sm:text-base">2025.1.1</span>
+                            <span class="flex-grow text-sm sm:text-base whitespace-nowrap">
+                            2025.1.2
+                        </span>
 
-                                
-                            </div>
-                        </a>
-
+                            
+                        </div>
                         
-                    </li>
+                    </a>
                 
-                    <li class="relative">
-                        <a href="/zh-CN/release/2025.1.0.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
-
-                                
-
-                                <span class="flex-grow text-sm sm:text-base">2025.1.0</span>
-
-                                
-                            </div>
-                        </a>
-
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/release/2025.1.1.html"
+                       class="group block">
                         
-                    </li>
-                
-                    <li class="relative">
-                        <a href="/zh-CN/release/1.0.0.html"
-                           class="group block">
-                            <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                        hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                                       rounded-md transition-all duration-200 ease-in-out">
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                               rounded-md transition-all duration-200 ease-in-out">
 
-                                
+                            
 
-                                <span class="flex-grow text-sm sm:text-base">1.0.0</span>
+                            <span class="flex-grow text-sm sm:text-base whitespace-nowrap">
+                            2025.1.1
+                        </span>
 
-                                
-                            </div>
-                        </a>
-
+                            
+                        </div>
                         
-                    </li>
+                    </a>
                 
-            </ul>
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/release/2025.1.0.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+
+                            <span class="flex-grow text-sm sm:text-base whitespace-nowrap">
+                            2025.1.0
+                        </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/release/1.0.0.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+
+                            <span class="flex-grow text-sm sm:text-base whitespace-nowrap">
+                            1.0.0
+                        </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+    </ul>
+
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleSubmenu(button) {
+            const submenu = button.nextElementSibling;
+            const arrow = button.querySelector('svg');
+
+            // 切换子菜单的类
+            if (submenu.classList.contains('max-h-0')) {
+                submenu.classList.remove('max-h-0', 'opacity-0');
+                submenu.classList.add('max-h-96', 'opacity-100');
+                arrow.classList.add('rotate-90');
+            } else {
+                submenu.classList.add('max-h-0', 'opacity-0');
+                submenu.classList.remove('max-h-96', 'opacity-100');
+                arrow.classList.remove('rotate-90');
+            }
+        }
+    </script>
 
                     </div>
                 </nav>
