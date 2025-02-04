@@ -117,6 +117,7 @@ nav:
       - /setup/page
       - /setup/feature
       - /setup/i18n
+      - /setup/compress
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise
