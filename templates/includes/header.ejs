@@ -1,38 +1,34 @@
 <%
 function isPathInNavItem(currentPath, navItem) {
-    // 先检查当前项的 href
     if (navItem.href && currentPath.startsWith(navItem.href)) {
         return true;
     }
-
-    // 如果导航项没有子项，直接返回 false
     if (!navItem.items) {
         return false;
     }
-
-    // 递归检查所有子项
     return navItem.items.some(item => {
-        // 如果是对象类型且有 href
         if (item.href) {
-            // 检查当前路径是否以该 href 开头
             return currentPath.startsWith(item.href);
         }
-
-        // 如果有子项，递归检查
         if (item.items) {
             return isPathInNavItem(currentPath, item);
         }
-
         return false;
     });
 }
+
+// 检查是否启用深色模式
+const darkModeEnabled = locals.siteData?.feature?.darkMode?.enable;
+// 获取深色模式相关的类名
+const darkClasses = (classes) => darkModeEnabled ? classes : '';
 %>
 
 <header>
-    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-40">
+    <nav class="fixed top-0 w-full bg-white <%= darkClasses('dark:bg-gray-800') %> border-b z-40">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center justify-between flex-1 lg:flex-none">
+                    <!-- Logo 和标题 -->
                     <div class="flex items-center space-x-4 shrink-0">
                         <% if (locals.siteData?.site?.logo) { %>
                             <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
@@ -41,26 +37,44 @@ function isPathInNavItem(currentPath, navItem) {
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         <% } %>
-                        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>"
+                           class="text-xl font-bold text-gray-900 <%= darkClasses('dark:text-white hover:text-gray-700 dark:hover:text-gray-200') %> transition-colors">
                             <%= !siteData.site.hiddenTitle ? siteData.site.title : '' %>
                         </a>
                     </div>
 
-                    <!-- 移动端菜单按钮 -->
-                    <button type="button"
-                            class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700"
-                            onclick="document.getElementById('mobile-menu').classList.toggle('hidden');
-                                     this.querySelector('svg:first-child').classList.toggle('hidden');
-                                     this.querySelector('svg:last-child').classList.toggle('hidden');">
-                        <!-- 菜单图标 -->
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                        <!-- 关闭图标 -->
-                        <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+                    <!-- 移动端控制区 -->
+                    <div class="flex items-center gap-2 lg:hidden">
+                        <!-- 深色模式切换按钮 - 只在启用时显示 -->
+                        <% if (darkModeEnabled) { %>
+                            <button type="button"
+                                    data-theme-toggle
+                                    class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700">
+                                <svg class="w-6 h-6 sun-icon hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                                    </path>
+                                </svg>
+                                <svg class="w-6 h-6 moon-icon block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                                    </path>
+                                </svg>
+                            </button>
+                        <% } %>
+
+                        <!-- 移动端菜单切换 -->
+                        <button type="button"
+                                data-menu-toggle
+                                class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 <%= darkClasses('dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700') %>">
+                            <svg class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                            <svg class="h-6 w-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 桌面端导航 -->
@@ -69,16 +83,36 @@ function isPathInNavItem(currentPath, navItem) {
                         <li class="shrink-0">
                             <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
                                class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none dark:text-white
+                                      text-sm font-medium leading-none <%= darkClasses('dark:text-white') %>
                                       <%= isPathInNavItem(pageData.noLocalePath, item)
-                                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                       : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                                       ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')} font-medium`
+                                       : `hover:text-gray-900 ${darkClasses('dark:hover:text-gray-200')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-800/40')}`
                                %>">
                                 <%= item.title %>
                             </a>
                         </li>
                     <% } %>
                 </ul>
+
+                <!-- 桌面端主题切换按钮 - 只在启用时显示 -->
+                <% if (darkModeEnabled) { %>
+                    <button type="button"
+                            data-theme-toggle
+                            class="hidden lg:flex items-center justify-center p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <!-- 太阳图标 -->
+                        <svg class="w-5 h-5 sun-icon hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                        <!-- 月亮图标 -->
+                        <svg class="w-5 h-5 moon-icon block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                    </button>
+                <% } %>
 
                 <!-- 语言切换器 -->
                 <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData?.languages?.length > 0) { %>
@@ -94,13 +128,13 @@ function isPathInNavItem(currentPath, navItem) {
 
         <!-- 移动端菜单 -->
         <div class="hidden lg:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-2 border-t <%= darkClasses('dark:border-gray-700') %>">
                 <% for(let item of siteData.nav) { %>
                     <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
                        class="block px-3 py-2 rounded-md text-base font-medium
                               <%= isPathInNavItem(pageData.noLocalePath, item)
-                               ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20'
-                               : 'text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+                               ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')}`
+                               : `text-gray-700 ${darkClasses('dark:text-gray-200')} hover:text-gray-900 ${darkClasses('dark:hover:text-white')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-700')}`
                        %>">
                         <%= item.title %>
                     </a>
@@ -112,7 +146,7 @@ function isPathInNavItem(currentPath, navItem) {
                 <% } %>
 
                 <!-- 移动端的仓库链接 -->
-                <div class="px-3 py-2 border-t dark:border-gray-700">
+                <div class="px-3 py-2 border-t <%= darkClasses('dark:border-gray-700') %>">
                     <%- include('./repo') %>
                 </div>
             </div>

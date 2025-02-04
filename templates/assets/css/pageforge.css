@@ -37,3 +37,29 @@ code[class*="language-"], pre[class*="language-"] {
     background: transparent !important;
     text-shadow: none !important;
 }
+
+/* Header 深色模式样式 */
+[data-theme='dark'] {
+    color-scheme: dark;
+}
+
+[data-theme='dark'] body {
+    background-color: rgb(17, 24, 39);
+    color: rgb(229, 231, 235);
+}
+
+[data-theme='dark'] .dark\:bg-gray-800 {
+    background-color: rgb(31, 41, 55) !important;
+}
+
+[data-theme='dark'] .dark\:text-white {
+    color: rgb(255, 255, 255) !important;
+}
+
+[data-theme='dark'] .dark\:text-gray-200 {
+    color: rgb(229, 231, 235) !important;
+}
+
+[data-theme='dark'] .dark\:border-gray-700 {
+    border-color: rgb(55, 65, 81) !important;
+}

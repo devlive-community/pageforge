@@ -182,3 +182,15 @@ feature:
   diff:
     enable: true
 ```
+
+## Dark Mode
+
+---
+
+PageForge 支持 Dark Mode，需要启用后才能使用。
+
+```yaml
+feature:
+  darkMode:
+    enable: true
+```
