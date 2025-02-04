@@ -1,6 +1,6 @@
 module.exports = function template(item) {
     const divClass = () => {
-        const baseClasses = 'font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit';
+        const baseClasses = 'font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit';
 
         switch (item.level) {
             case 1:
