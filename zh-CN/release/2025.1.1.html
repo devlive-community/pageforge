@@ -71,11 +71,13 @@
         
 
 <header>
-    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 border-b z-40">
+    <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center justify-between flex-1 lg:flex-none">
-                    <div class="flex items-center space-x-4 shrink-0">
+            <div class="flex items-center h-16">
+                <!-- 左侧Logo和导航 -->
+                <div class="flex items-center flex-1">
+                    <!-- Logo和标题 -->
+                    <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
                         
                             <a href="/zh-CN" class="flex items-center">
                                 <img src="../..//assets/logo.svg"
@@ -83,72 +85,62 @@
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         
-                        <a href="/zh-CN" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                        <a href="/zh-CN"
+                           class="text-xl font-bold text-gray-900  transition-colors">
                             
                         </a>
                     </div>
 
-                    <!-- 移动端菜单按钮 -->
-                    <button type="button"
-                            class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700"
-                            onclick="document.getElementById('mobile-menu').classList.toggle('hidden');
-                                     this.querySelector('svg:first-child').classList.toggle('hidden');
-                                     this.querySelector('svg:last-child').classList.toggle('hidden');">
-                        <!-- 菜单图标 -->
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                        <!-- 关闭图标 -->
-                        <svg class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+                    <!-- 桌面端导航 -->
+                    <ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3">
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/getting-started/get-started.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    快速开始
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/setup/site.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    设置
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/usage/href.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    使用文档
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/release/2025.1.2.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          text-blue-600  bg-blue-50/80  font-medium">
+                                    发布日志
+                                </a>
+                            </li>
+                        
+                    </ul>
                 </div>
 
-                <!-- 桌面端导航 -->
-                <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+                <!-- 右侧工具栏 -->
+                <div class="flex items-center gap-2 lg:gap-4">
+                    <!-- 桌面端主题切换按钮 -->
                     
-                        <li class="shrink-0">
-                            <a href="/zh-CN/getting-started/get-started.html"
-                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
-                                快速开始
-                            </a>
-                        </li>
-                    
-                        <li class="shrink-0">
-                            <a href="/zh-CN/setup/site.html"
-                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
-                                设置
-                            </a>
-                        </li>
-                    
-                        <li class="shrink-0">
-                            <a href="/zh-CN/usage/href.html"
-                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none dark:text-white
-                                      hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40">
-                                使用文档
-                            </a>
-                        </li>
-                    
-                        <li class="shrink-0">
-                            <a href="/zh-CN/release/2025.1.2.html"
-                               class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                      text-sm font-medium leading-none dark:text-white
-                                      text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium">
-                                发布日志
-                            </a>
-                        </li>
-                    
-                </ul>
 
-                <!-- 语言切换器 -->
-                
                     <!-- 语言切换器 -->
+                    
+                        <!-- 语言切换器 -->
 <div class="hidden lg:flex items-center ml-4">
     <div class="relative">
         <button type="button"
@@ -185,11 +177,11 @@
         </div>
     </div>
 </div>
-                
-
-                <!-- 仓库链接 -->
-                <div class="hidden lg:block">
                     
+
+                    <!-- 仓库链接 -->
+                    <div class="hidden lg:block">
+                        
     <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
@@ -281,35 +273,54 @@
         });
     </script>
 
+                    </div>
+
+                    <!-- 移动端控制区 -->
+                    <div class="flex items-center gap-2 lg:hidden">
+                        <!-- 深色模式切换按钮 - 只在启用时显示 -->
+                        
+
+                        <!-- 移动端菜单切换 -->
+                        <button type="button"
+                                data-menu-toggle
+                                class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 ">
+                            <svg class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                            <svg class="h-6 w-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- 移动端菜单 -->
         <div class="hidden lg:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-2 border-t dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-2 border-t ">
                 
                     <a href="/zh-CN/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         快速开始
                     </a>
                 
                     <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         设置
                     </a>
                 
                     <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700">
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         使用文档
                     </a>
                 
                     <a href="/zh-CN/release/2025.1.2.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20">
+                              text-blue-600  bg-blue-50/80 ">
                         发布日志
                     </a>
                 
@@ -317,26 +328,40 @@
                 <!-- 移动端语言切换 -->
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
-                        
-                            <a href="/en/release/2025.1.1.html"
-                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+    
+        <a href="/en/release/2025.1.1.html"
+           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
-                                <span>🇬🇧</span>
-                                <span>English</span>
-                            </a>
-                        
-                            <a href="/zh-CN/release/2025.1.1.html"
-                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+            <span>🇬🇧</span>
+            <span>English</span>
+        </a>
+    
+        <a href="/zh-CN/release/2025.1.1.html"
+           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
-                                <span>🇨🇳</span>
-                                <span>中文</span>
-                            </a>
-                        
-                    </div>
+            <span>🇨🇳</span>
+            <span>中文</span>
+        </a>
+    
+</div>
+
+<script>
+    // 点击外部区域关闭移动端菜单
+    document.addEventListener('click', function (event) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
+
+        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuButton.querySelector('svg:first-child').classList.remove('hidden');
+            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        }
+    });
+</script>
                 
 
                 <!-- 移动端的仓库链接 -->
-                <div class="px-3 py-2 border-t dark:border-gray-700">
+                <div class="px-3 py-2 border-t ">
                     
     <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
@@ -434,20 +459,6 @@
         </div>
     </nav>
 </header>
-
-<script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
-
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
-        }
-    });
-</script>
     
 
     <!-- 移动端菜单按钮 -->
@@ -671,7 +682,7 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
             <div id="xin-zeng-gong-neng" class="inline-flex items-center">
         <span class="text-base text-gray-700 leading-7 my-2">新增功能</span>
     </div>
@@ -701,7 +712,7 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
             <div id="wen-ti-xiu-fu" class="inline-flex items-center">
         <span class="text-base text-gray-700 leading-7 my-2">问题修复</span>
     </div>
@@ -749,7 +760,7 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
             <div id="lian-jie" class="inline-flex items-center">
         <span class="text-base text-gray-700 leading-7 my-2">链接</span>
     </div>
@@ -787,7 +798,7 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
             <div id="hou-xu-ji-hua" class="inline-flex items-center">
         <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
     </div>
@@ -797,7 +808,7 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
             <div id="fan-kui-yu-zhi-chi" class="inline-flex items-center">
         <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
     </div>
@@ -807,7 +818,7 @@
     
         <div class="space-y-4"></div>
     
-        <hr class="my-4 h-0.5 border-0 bg-gray-200"/>
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
