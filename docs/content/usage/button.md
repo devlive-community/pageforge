@@ -62,3 +62,13 @@ PageForge 支持按钮，您可以创建基于 Tailwind CSS 的按钮。
 ```
 
 !btn[自定义按钮]{bg-green-500 hover:bg-green-600 text-white}
+
+## 组合使用
+
+---
+
+```markdown
+前置内容!btn[点击我跳转到首页](/){bg-green-500 hover:bg-green-600 text-white}后置内容
+```
+
+前置内容!btn[点击我跳转到首页](/){bg-green-500 hover:bg-green-600 text-white}后置内容

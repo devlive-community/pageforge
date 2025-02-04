@@ -16,10 +16,25 @@
                target="_blank"
                rel="noopener noreferrer"
                class="flex items-center gap-2 group">
-                <img src="<%= `https://github.com/${contributor.author}.png?size=40` %>"
-                     alt="<%= contributor.author %>"
-                     class="w-8 h-8 rounded-full"
-                     loading="lazy">
+                <div class="relative w-8 h-8">
+                    <!-- 骨架屏加载效果 -->
+                    <div class="absolute inset-0 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+
+                    <!-- 头像图片 -->
+                    <img src="<%= `https://github.com/${contributor.author}.png?size=40` %>"
+                         alt="<%= contributor.author %>"
+                         class="relative w-8 h-8 rounded-full"
+                         loading="lazy"
+                         onload="this.style.opacity='1'; this.previousElementSibling.style.display='none'"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.previousElementSibling.style.display='none'"
+                         style="opacity: 0; transition: opacity 0.2s;">
+
+                    <!-- 首字母占位符 -->
+                    <div class="hidden w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300
+                                font-medium text-sm flex items-center justify-center uppercase">
+                        <%= contributor.author.charAt(0) %>
+                    </div>
+                </div>
                 <div class="text-sm">
                     <div class="text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                         <%= contributor.author %>
