@@ -29,8 +29,8 @@ sidebar = siteData.nav.find(item => {
                    class="group block">
                     <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
                                 <%= isActive(item.href)
-                                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                        : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                    : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
                                 %>
                                rounded-md transition-all duration-200 ease-in-out">
 
@@ -51,7 +51,7 @@ sidebar = siteData.nav.find(item => {
                            </span>
                         <% } %>
 
-                        <span class="flex-grow <%= level > 0 ? 'text-xs sm:text-sm md:text-base' : 'text-sm sm:text-base' %>">
+                        <span class="flex-grow <%= level > 0 ? 'text-xs sm:text-sm md:text-base' : 'text-sm sm:text-base' %> whitespace-nowrap">
                             <%= item.title %>
                         </span>
 
@@ -80,9 +80,10 @@ sidebar = siteData.nav.find(item => {
 <% if (typeof sidebar === 'object' && sidebar !== null) { %>
     <div class="text-[0.9375rem] text-gray-600 dark:text-gray-300 overflow-y-auto max-h-[calc(100vh-4rem)] pageforge-scrollbar
                 sm:max-h-screen md:h-auto lg:max-h-[calc(100vh-2rem)]">
-        <div class="mb-6">
-            <!-- 使用递归函数渲染整个导航 -->
-            <%- renderNavItems(sidebar.items) %>
+        <div class="mb-6 overflow-x-auto min-w-0">
+            <div class="min-w-fit">
+                <%- renderNavItems(sidebar.items) %>
+            </div>
         </div>
     </div>
 <% } %>
