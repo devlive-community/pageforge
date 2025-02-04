@@ -1,7 +1,7 @@
 ---
-title: 主页模板(默认)
+title: 主页模板(Modern)
 icon: home
-template: home
+template: home/modern
 
 config:
   toc: false

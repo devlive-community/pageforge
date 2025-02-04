@@ -116,6 +116,10 @@ nav:
       - /setup/i18n
       - InlineTemplate:
           - /setup/template/home
+          - /setup/template/enterprise
+          - /setup/template/minimal
+          - /setup/template/modern
+          - /setup/template/playful
   - Usage:
       - /usage/href
       - /usage/image

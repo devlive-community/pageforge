@@ -1,7 +1,7 @@
 ---
-title: 主页模板(默认)
+title: 主页模板(Minimal)
 icon: home
-template: home
+template: home/minimal
 
 config:
   toc: false
