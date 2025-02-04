@@ -42,6 +42,8 @@ feature:
     enable: true
   diff:
     enable: true
+  button:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -131,6 +133,7 @@ nav:
       - /usage/tooltip
       - /usage/mermaid
       - /usage/diff
+      - /usage/button
   - ReleaseNotes:
       - /release/2025.1.2
       - /release/2025.1.1
