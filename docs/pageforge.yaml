@@ -61,6 +61,7 @@ i18n:
     translations:
       GetStarted: 快速开始
       Setup: 设置
+      InlineTemplate: 内置模版
       Usage: 使用文档
       EjsTemplate: EJS 模板
       CodeBlock: 代码块
@@ -113,6 +114,12 @@ nav:
       - /setup/page
       - /setup/feature
       - /setup/i18n
+      - InlineTemplate:
+          - /setup/template/home
+          - /setup/template/enterprise
+          - /setup/template/minimal
+          - /setup/template/modern
+          - /setup/template/playful
   - Usage:
       - /usage/href
       - /usage/image
