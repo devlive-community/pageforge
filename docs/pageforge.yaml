@@ -53,6 +53,7 @@ i18n:
     translations:
       GetStarted: Getting Started
       Setup: Setup
+      InlineTemplate: Inline Template
       Usage: Usage Docs
       EjsTemplate: EJS Template
       CodeBlock: Code Block
