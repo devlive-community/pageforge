@@ -108,16 +108,7 @@ function isPathInNavItem(currentPath, navItem) {
 
                 <!-- 移动端语言切换 -->
                 <% if (locals.siteData?.feature?.i18n?.enable && locals.siteData.languages?.length > 0) { %>
-                    <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
-                        <% locals.siteData.languages.forEach(locale => { %>
-                            <a href="<%= `/${locale.key}${pageData.noLocalePath}` %>"
-                               class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                <%= locale.key === locals.pageData.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
-                                <span><%= locale.flag %></span>
-                                <span><%= locale.name %></span>
-                            </a>
-                        <% }) %>
-                    </div>
+                    <%- include('./language-mobile') %>
                 <% } %>
 
                 <!-- 移动端的仓库链接 -->
@@ -128,17 +119,3 @@ function isPathInNavItem(currentPath, navItem) {
         </div>
     </nav>
 </header>
-
-<script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
-
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
-        }
-    });
-</script>
