@@ -44,6 +44,12 @@ feature:
     enable: true
   button:
     enable: true
+  share:
+    enable: true
+    options:
+      qq: true
+      wechat: true
+      weibo: true
 
 i18n:
   default: zh-CN
@@ -118,6 +124,7 @@ nav:
       - /setup/feature
       - /setup/i18n
       - /setup/compress
+      - /setup/share
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise
