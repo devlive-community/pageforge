@@ -5,12 +5,15 @@
         </h1>
 
         <div class="flex items-center gap-4">
+            <!-- 分享按钮 -->
+            <%- include('./page-share') %>
+
             <!-- 编辑源码 -->
             <% if (locals.siteData.feature?.edit?.enable) { %>
                 <a href="<%= `${locals.siteData?.repo?.url}/edit/${locals.siteData?.repo?.branch || 'main'}/docs/content/${pageData.relativePath}` %>"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="ml-4 text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
+                   class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                          stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4">
                         <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
