@@ -2,7 +2,7 @@
 <html lang="zh" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎使用 PageForge - PageForge</title>
     <link rel="icon" href="../assets/logo.svg" type="image/x-icon">
 
@@ -50,7 +50,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Prism.js 语法高亮样式 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
 
     <!-- 统计代码 -->
     
@@ -71,7 +71,7 @@
         
 
 <header>
-    <nav class="fixed top-0 w-full bg-white border-b z-40">
+    <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center h-16">
                 <!-- 左侧Logo和导航 -->
@@ -80,10 +80,13 @@
                     <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
                         
                             <a href="/zh-CN" class="flex items-center">
-                                <img src="..//assets/logo.svg" alt="PageForge" class="h-10 w-auto object-contain transition-transform hover:scale-105">
+                                <img src="..//assets/logo.svg"
+                                     alt="PageForge"
+                                     class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
                         
-                        <a href="/zh-CN" class="text-xl font-bold text-gray-900 transition-colors">
+                        <a href="/zh-CN"
+                           class="text-xl font-bold text-gray-900  transition-colors">
                             
                         </a>
                     </div>
@@ -92,25 +95,37 @@
                     <ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3">
                         
                             <li class="shrink-0">
-                                <a href="/zh-CN/getting-started/get-started.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                <a href="/zh-CN/getting-started/get-started.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
                                     快速开始
                                 </a>
                             </li>
                         
                             <li class="shrink-0">
-                                <a href="/zh-CN/setup/site.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                <a href="/zh-CN/setup/site.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
                                     设置
                                 </a>
                             </li>
                         
                             <li class="shrink-0">
-                                <a href="/zh-CN/usage/href.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                <a href="/zh-CN/usage/href.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
                                     使用文档
                                 </a>
                             </li>
                         
                             <li class="shrink-0">
-                                <a href="/zh-CN/release/2025.1.2.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                <a href="/zh-CN/release/2025.1.2.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
                                     发布日志
                                 </a>
                             </li>
@@ -128,7 +143,9 @@
                         <!-- 语言切换器 -->
 <div class="hidden lg:flex items-center ml-4">
     <div class="relative">
-        <button type="button" onclick="document.getElementById('language-menu').classList.toggle('hidden')" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+        <button type="button"
+                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
             <!-- 当前语言 -->
             
             <span>🇨🇳</span>
@@ -140,14 +157,19 @@
         </button>
 
         <!-- 语言选择下拉菜单 -->
-        <div id="language-menu" class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+        <div id="language-menu"
+             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/index.html" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">
+                <a href="/en/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/index.html" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 bg-gray-50 dark:bg-gray-700">
+                <a href="/zh-CN/index.html"
+                   class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                    bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
                     <span>中文</span>
                 </a>
@@ -161,7 +183,10 @@
                     <div class="hidden lg:block">
                         
     <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
-        <a href="https://github.com/devlive-community/pageforge" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+        <a href="https://github.com/devlive-community/pageforge"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -198,7 +223,10 @@
 
     <!-- 移动端仓库信息 -->
     <div class="lg:hidden px-3 py-2" id="github-stats-mobile">
-        <a href="https://github.com/devlive-community/pageforge" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+        <a href="https://github.com/devlive-community/pageforge"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
             <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -253,7 +281,9 @@
                         
 
                         <!-- 移动端菜单切换 -->
-                        <button type="button" data-menu-toggle class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                        <button type="button"
+                                data-menu-toggle
+                                class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 ">
                             <svg class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                             </svg>
@@ -268,21 +298,29 @@
 
         <!-- 移动端菜单 -->
         <div class="hidden lg:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-2 border-t">
+            <div class="px-2 pt-2 pb-3 space-y-2 border-t ">
                 
-                    <a href="/zh-CN/getting-started/get-started.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                    <a href="/zh-CN/getting-started/get-started.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         快速开始
                     </a>
                 
-                    <a href="/zh-CN/setup/site.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                    <a href="/zh-CN/setup/site.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         设置
                     </a>
                 
-                    <a href="/zh-CN/usage/href.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                    <a href="/zh-CN/usage/href.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         使用文档
                     </a>
                 
-                    <a href="/zh-CN/release/2025.1.2.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                    <a href="/zh-CN/release/2025.1.2.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         发布日志
                     </a>
                 
@@ -291,12 +329,16 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/index.html" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">
+        <a href="/en/index.html"
+           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                ">
             <span>🇬🇧</span>
             <span>English</span>
         </a>
     
-        <a href="/zh-CN/index.html" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 bg-gray-50 dark:bg-gray-700">
+        <a href="/zh-CN/index.html"
+           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                bg-gray-50 dark:bg-gray-700">
             <span>🇨🇳</span>
             <span>中文</span>
         </a>
@@ -319,10 +361,13 @@
                 
 
                 <!-- 移动端的仓库链接 -->
-                <div class="px-3 py-2 border-t">
+                <div class="px-3 py-2 border-t ">
                     
     <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
-        <a href="https://github.com/devlive-community/pageforge" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+        <a href="https://github.com/devlive-community/pageforge"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -359,7 +404,10 @@
 
     <!-- 移动端仓库信息 -->
     <div class="lg:hidden px-3 py-2" id="github-stats-mobile">
-        <a href="https://github.com/devlive-community/pageforge" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+        <a href="https://github.com/devlive-community/pageforge"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
             <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -422,7 +470,8 @@
 
         <!-- 中间内容 -->
         <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
-            <article class="prose dark:prose-invert lg:prose-lg mx-auto max-w-none md:max-w-2xl lg:max-w-full">
+            <article class="prose dark:prose-invert lg:prose-lg mx-auto
+                          max-w-none md:max-w-2xl lg:max-w-full">
                 
     <section class="relative overflow-hidden bg-gray-900 py-32 rounded-xl">
         <div class="absolute inset-0 opacity-30">
@@ -439,10 +488,12 @@
                     为您的企业或网站提供最前沿的技术支持和解决方案
                 </p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
-                    <a href="/zh-CN/getting-started/get-started.html" class="rounded-xl bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300">
+                    <a href="/zh-CN/getting-started/get-started.html"
+                       class="rounded-xl bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all duration-300">
                         开始使用
                     </a>
-                    <a href="/zh-CN/usage/href.html" class="text-sm font-semibold leading-6 text-white hover:text-indigo-300 transition-all duration-300">
+                    <a href="/zh-CN/usage/href.html"
+                       class="text-sm font-semibold leading-6 text-white hover:text-indigo-300 transition-all duration-300">
                         了解更多 <span aria-hidden="true">→</span>
                     </a>
                 </div>
@@ -473,7 +524,7 @@
                             <div class="mb-6">
                                 <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
 </svg>
                                 </div>
                             </div>
@@ -489,7 +540,7 @@
                             <div class="mb-6">
                                 <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
 </svg>
                                 </div>
                             </div>
@@ -505,7 +556,7 @@
                             <div class="mb-6">
                                 <div class="rounded-lg bg-indigo-600/10 p-3 w-12 h-12 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
 </svg>
                                 </div>
                             </div>
@@ -582,7 +633,8 @@
                     立即加入我们，开启您的技术创新之旅
                 </p>
                 <div class="mt-10 flex justify-center">
-                    <a href="/zh-CN/getting-started/get-started.html" class="rounded-md bg-white px-8 py-3.5 text-center text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-300">
+                    <a href="/zh-CN/getting-started/get-started.html"
+                       class="rounded-md bg-white px-8 py-3.5 text-center text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-300">
                         立即注册
                     </a>
                 </div>
@@ -606,9 +658,12 @@
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/zh-CN" class="flex items-center">
-                            <img src="..//assets/logo.svg" alt="PageForge" class="h-12">
+                            <img src="..//assets/logo.svg"
+                                 alt="PageForge"
+                                 class="h-12">
                         </a>
-                        <a href="/zh-CN" class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+                        <a href="/zh-CN"
+                           class="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
                             
                         </a>
                     </div>
@@ -631,19 +686,25 @@
                             <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-3">
                                 
                                     <li>
-                                        <a href="https://nodejs.org" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://nodejs.org"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             Node.js
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/pageforge" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/pageforge"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             PageForge
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://tailwindcss.com" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://tailwindcss.com"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             TailwindCSS
                                         </a>
                                     </li>
@@ -657,19 +718,25 @@
                             <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-3">
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/pageforge/discussions" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/pageforge/discussions"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             GitHub
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://discord.gg/pageforge" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://discord.gg/pageforge"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             Discord
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://community.devlive.org" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://community.devlive.org"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             Community
                                         </a>
                                     </li>
@@ -683,19 +750,25 @@
                             <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-3">
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/lightcall" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/lightcall"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             服务调用框架 LightCall
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/datacap" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/datacap"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             开源数据中台 DataCap
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://github.com/tailwindlabs/tailwindcss" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/tailwindlabs/tailwindcss"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             前端框架 View Shadcn UI
                                         </a>
                                     </li>
@@ -709,19 +782,25 @@
                             <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-3">
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/pageforge/blob/dev/README.md" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/pageforge/blob/dev/README.md"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             关于我们
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/pageforge/issues" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/pageforge/issues"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             联系我们
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a href="https://github.com/devlive-community/pageforge/blob/dev/LICENSE" class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline" target="_blank">
+                                        <a href="https://github.com/devlive-community/pageforge/blob/dev/LICENSE"
+                                           class="text-sm hover:text-gray-900 dark:hover:text-white hover:underline"
+                                           target="_blank">
                                             隐私政策
                                         </a>
                                     </li>
@@ -733,12 +812,16 @@
             
         </div>
 
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
 
         <!-- 底部版权和社交链接 -->
         <div class="flex flex-col items-center sm:flex-row sm:items-center justify-between gap-4">
             <span class="text-sm text-gray-500 dark:text-gray-400">
                 © 2024 PageForge All Rights Reserved. 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
+
+                
+                    <a href="/sitemap.xml" target="_blank" class="ml-3 dark:hover:text-white hover:underline hover:text-blue-600">站点地图</a>
+                
             </span>
 
             
@@ -750,9 +833,13 @@
                     
 
                     
-                        <a href="https://github.com/devlive-community/pageforge" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
+                        <a href="https://github.com/devlive-community/pageforge"
+                           class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                           target="_blank">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                      d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                      clip-rule="evenodd"/>
                             </svg>
                             <span class="sr-only">GitHub</span>
                         </a>
@@ -767,7 +854,9 @@
 
 <!-- 返回顶部按钮 -->
 
-    <button id="back-to-top" class="fixed right-4 bottom-24 lg:bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg opacity-0 transition-opacity duration-200 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <button id="back-to-top"
+            class="fixed right-4 bottom-24 lg:bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg opacity-0 transition-opacity duration-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
