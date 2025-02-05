@@ -67,6 +67,8 @@ feature:
       weibo: true
   sitemap:
     enable: true
+  fontSize:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -144,6 +146,7 @@ nav:
       - /setup/share
       - /setup/sitemap
       - /setup/banner
+      - /setup/font-size
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise

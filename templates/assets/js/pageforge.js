@@ -8,8 +8,12 @@ const DOMUtils = {
 // GitHub Stats 模块
 const GitHubStats = {
     formatNumber(num) {
-        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'm';
-        if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+        if (num >= 1000000) {
+            return (num / 1000000).toFixed(1) + 'm';
+        }
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + 'k';
+        }
         return num.toString();
     },
 
@@ -65,7 +69,9 @@ const GitHubStats = {
                 fetch(`https://api.github.com/repos/${owner}/${repo}/tags`, {headers})
             ]);
 
-            if (!repoResponse.ok || !tagsResponse.ok) throw new Error('GitHub API request failed');
+            if (!repoResponse.ok || !tagsResponse.ok) {
+                throw new Error('GitHub API request failed');
+            }
 
             const [repoData, tagsData] = await Promise.all([
                 repoResponse.json(),
@@ -83,18 +89,21 @@ const GitHubStats = {
 
             this.updateUI(stats);
             return stats;
-        } catch (error) {
+        }
+        catch (error) {
             console.error('🤯 获取 GitHub Stats 失败', error);
-            const fallbackStats = { stars: '-', forks: '-', tag: '-' };
+            const fallbackStats = {stars: '-', forks: '-', tag: '-'};
             this.updateUI(fallbackStats);
             return fallbackStats;
         }
     },
 
     updateUI(stats) {
-        if (!stats) return;
+        if (!stats) {
+            return;
+        }
 
-        const { findAll } = DOMUtils;
+        const {findAll} = DOMUtils;
         const containers = {
             tag: findAll('.tag-container'),
             stars: findAll('.stars-container'),
@@ -115,7 +124,9 @@ const GitHubStats = {
     },
 
     init(owner, repo) {
-        if (!owner || !repo) return;
+        if (!owner || !repo) {
+            return;
+        }
         this.showLoading();
         const updateStats = async () => await this.fetchStats(owner, repo);
         updateStats();
@@ -126,9 +137,11 @@ const GitHubStats = {
 // 代码复制模块
 const CodeCopy = {
     copy(button) {
-        const { find, toggleClass } = DOMUtils;
+        const {find, toggleClass} = DOMUtils;
         const codeBlock = find('code', button.closest('div'));
-        if (!codeBlock) return;
+        if (!codeBlock) {
+            return;
+        }
 
         navigator.clipboard.writeText(codeBlock.textContent)
             .then(() => {
@@ -153,7 +166,9 @@ const Header = {
         observer: null,
 
         initObserver() {
-            if (this.observer) return;
+            if (this.observer) {
+                return;
+            }
 
             this.observer = new MutationObserver(mutations => {
                 mutations.forEach(mutation => {
@@ -180,7 +195,8 @@ const Header = {
             if (isDark) {
                 html.classList.add('dark');
                 html.setAttribute('data-theme', 'dark');
-            } else {
+            }
+            else {
                 html.classList.remove('dark');
                 html.setAttribute('data-theme', 'light');
             }
@@ -191,7 +207,8 @@ const Header = {
                         if (e.matches) {
                             html.classList.add('dark');
                             html.setAttribute('data-theme', 'dark');
-                        } else {
+                        }
+                        else {
                             html.classList.remove('dark');
                             html.setAttribute('data-theme', 'light');
                         }
@@ -275,16 +292,67 @@ const Header = {
     }
 };
 
+// 字体大小控制
+const FontSizeControl = {
+    init() {
+        const proseContent = document.querySelectorAll('.prose *:not(h1):not(.text-3xl)');
+        if (!proseContent.length) {
+            return;
+        }
+
+        const sizes = ['text-sm', 'text-base', 'text-lg', 'text-xl'];
+        let currentSizeIndex = 1;
+
+        const savedSize = localStorage.getItem('content-font-size');
+        if (savedSize) {
+            proseContent.forEach(el => {
+                el.classList.remove(...sizes);
+                el.classList.add(savedSize);
+            });
+            currentSizeIndex = sizes.indexOf(savedSize);
+        }
+
+        const updateFontSize = (newIndex) => {
+            if (newIndex >= 0 && newIndex < sizes.length) {
+                proseContent.forEach(el => {
+                    el.classList.remove(...sizes);
+                    el.classList.add(sizes[newIndex]);
+                });
+                localStorage.setItem('content-font-size', sizes[newIndex]);
+                currentSizeIndex = newIndex;
+            }
+        };
+
+        document.getElementById('increase-font')?.addEventListener('click', () => {
+            updateFontSize(currentSizeIndex + 1);
+        });
+
+        document.getElementById('decrease-font')?.addEventListener('click', () => {
+            updateFontSize(currentSizeIndex - 1);
+        });
+
+        document.getElementById('reset-font')?.addEventListener('click', () => {
+            updateFontSize(1);
+        });
+    }
+};
+
 // 暴露到全局
 window.PageForge = {
     GitHubStats,
     CodeCopy,
-    Header
+    Header,
+    FontSizeControl
 };
 
 // DOM 加载完成后初始化
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => Header.init());
-} else {
+    document.addEventListener('DOMContentLoaded', () => {
+        Header.init();
+        FontSizeControl.init();
+    });
+}
+else {
     Header.init();
+    FontSizeControl.init();
 }
