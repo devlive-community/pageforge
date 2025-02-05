@@ -1,6 +1,8 @@
 ---
 title: 页面设置
 icon: book-open
+status: 
+  type: updated
 ---
 
 PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。
@@ -25,6 +27,18 @@ icon: feather
 每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。
 
 生成的标题为 `page.title - site.title` 的格式。
+
+### 设置 `description`
+
+---
+
+PageForge 支持设置当前页面的描述，格式如下：
+
+```markdown
+---
+description: 这里是描述
+---
+```
 
 ### 设置 `icon`
 
@@ -113,3 +127,51 @@ config:
 template: foo
 ---
 ```
+
+### 设置 `status`
+
+---
+
+PageForge 支持设置当前页面的状态，当前支持以下状态：
+
+- `draft`: 草稿
+- `new`: 新添加
+- `updated`: 更新
+- `deprecated`: 已过期
+- `custom`: 自定义
+
+通过配置 markdown 文件的元数据来支持，格式如下：
+
+```markdown
+---
+status:
+  type: updated
+---
+```
+
+如果需要设置自定义提示的内容，可以修改为以下方式：
+
+```markdown
+---
+status:
+  type: updated
+  text: 自定义提示
+---
+```
+
+PageForge 还支持自定义状态，格式如下：
+
+```markdown
+---
+status:
+  type: custom
+  icon: feather
+  text: 自定义提示
+---
+```
+
+!!! danger "注意"
+
+    自定义状态情况下如果 `feature.lucide.enable` 为 `true` 时，`icon` 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。
+
+!!!

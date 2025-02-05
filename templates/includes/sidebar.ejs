@@ -45,7 +45,7 @@ sidebar = siteData.nav.find(item => {
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                                    <!-- 图标 -->
+                               <!-- 图标 -->
                                <i data-lucide="<%= item.icon %>"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -57,9 +57,10 @@ sidebar = siteData.nav.find(item => {
                            </span>
                             <% } %>
 
-                            <span class="flex-grow <%= level > 0 ? 'text-xs sm:text-sm md:text-base' : 'text-sm sm:text-base' %> whitespace-nowrap">
-                            <%= item.title %>
-                        </span>
+                            <span class="flex flex-grow items-center space-x-4 <%= level > 0 ? 'text-xs sm:text-sm md:text-base' : 'text-sm sm:text-base' %> whitespace-nowrap">
+                                <span><%= item.title %></span>
+                                <%- include('./page-status', { item: item }) %>
+                            </span>
 
                             <% if (item.items && item.items.length > 0) { %>
                                 <svg xmlns="http://www.w3.org/2000/svg"
