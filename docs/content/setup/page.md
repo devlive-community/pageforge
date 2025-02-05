@@ -1,6 +1,8 @@
 ---
 title: 页面设置
 icon: book-open
+status: 
+  type: updated
 ---
 
 PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。
@@ -111,5 +113,35 @@ config:
 ```yaml
 ---
 template: foo
+---
+```
+
+### 设置 `status`
+
+---
+
+PageForge 支持设置当前页面的状态，当前支持以下状态：
+
+- `draft`: 草稿
+- `new`: 新添加
+- `updated`: 更新
+- `deprecated`: 已过期
+
+通过配置 markdown 文件的元数据来支持，格式如下：
+
+```markdown
+---
+status:
+  type: updated
+---
+```
+
+如果需要设置自定义提示的内容，可以修改为以下方式：
+
+```markdown
+---
+status:
+  type: updated
+  text: 自定义提示
 ---
 ```
