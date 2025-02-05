@@ -15,6 +15,9 @@ repo:
   url: https://github.com/devlive-community/pageforge
   branch: dev-2025.1.2
 
+banner:
+  content: 💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
+
 feature:
   lucide:
     enable: true
@@ -64,6 +67,27 @@ feature:
       weibo: true
   sitemap:
     enable: true
+  fontSize:
+    enable: true
+  comment:
+    enable: true
+    content: |
+      <script src="https://giscus.app/client.js"
+        data-repo="devlive-community/pageforge"
+        data-repo-id="R_kgDONjP-BA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDONjP-BM4Cmr1n"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+      </script>
 
 i18n:
   default: zh-CN
@@ -140,6 +164,9 @@ nav:
       - /setup/compress
       - /setup/share
       - /setup/sitemap
+      - /setup/banner
+      - /setup/font-size
+      - /setup/comment
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise

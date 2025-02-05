@@ -8,7 +8,7 @@
         </div>
 
         <!-- 主要内容部分 -->
-        <div class="prose prose-gray dark:prose-invert max-w-none">
+        <div class="prose prose-gray dark:prose-invert max-w-none text-base">
             <%- pageData.content %>
         </div>
 
@@ -22,6 +22,13 @@
         <!-- 贡献者信息 -->
         <% if (locals.siteData.feature?.contributors?.enable && pageData.gitInfo?.contributors) { %>
             <%- include('../includes/git-contributors') %>
+        <% } %>
+
+        <!-- 评论部分 -->
+        <% if (locals.siteData.feature?.comment?.enable) { %>
+            <div class="mt-8">
+                <%- locals.siteData.feature.comment.content %>
+            </div>
         <% } %>
     </div>
 </div>
