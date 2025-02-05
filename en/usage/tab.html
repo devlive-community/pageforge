@@ -83,6 +83,23 @@
 
 <header>
     <nav class="fixed top-0 w-full bg-white  border-b z-40">
+        <!-- Banner -->
+        
+    <div class="w-full bg-blue-50 " data-banner>
+        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+            <div class="text-blue-700 ">
+                💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
+            </div>
+            <button class="text-blue-500 hover:text-blue-700 "
+                    onclick="this.closest('[data-banner]').remove()">
+                <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center h-16">
                 <!-- 左侧Logo和导航 -->
@@ -1007,6 +1024,23 @@
         </h1>
 
         <div class="flex items-center gap-4">
+            <!-- 字体大小控制按钮 -->
+            
+    <div class="flex items-center gap-2 p-0.5 bg-white dark:bg-gray-800 rounded-lg dark:border-gray-700">
+        <button id="decrease-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" title="减小字体">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        <button id="reset-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-sm" title="重置字体">A</button>
+        <button id="increase-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" title="增大字体">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+    </div>
+
+
             <!-- 分享按钮 -->
             
     <button type="button" id="share-btn" class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -1130,7 +1164,7 @@
         </div>
 
         <!-- 主要内容部分 -->
-        <div class="prose prose-gray dark:prose-invert max-w-none">
+        <div class="prose prose-gray dark:prose-invert max-w-none text-base">
             
         <div class="space-y-4"></div>
     
@@ -1228,10 +1262,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-blue-500 text-blue-600
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-btwjxnin1', 0)"
+            onclick="switchTab(event, 'tabgroup-rao0yotse', 0)"
             aria-selected="true"
-            aria-controls="tabgroup-btwjxnin1-panel-0"
-            id="tabgroup-btwjxnin1-tab-0">
+            aria-controls="tabgroup-rao0yotse-panel-0"
+            id="tabgroup-rao0yotse-tab-0">
             Tab 1
         </button>
     
@@ -1239,10 +1273,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-btwjxnin1', 1)"
+            onclick="switchTab(event, 'tabgroup-rao0yotse', 1)"
             aria-selected="false"
-            aria-controls="tabgroup-btwjxnin1-panel-1"
-            id="tabgroup-btwjxnin1-tab-1">
+            aria-controls="tabgroup-rao0yotse-panel-1"
+            id="tabgroup-rao0yotse-tab-1">
             Tab 2
         </button>
     
@@ -1250,10 +1284,10 @@ n
             class="px-4 py-2 text-sm font-medium border-b-2 transition-colors duration-200
                    border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300
                    focus:outline-none"
-            onclick="switchTab(event, 'tabgroup-btwjxnin1', 2)"
+            onclick="switchTab(event, 'tabgroup-rao0yotse', 2)"
             aria-selected="false"
-            aria-controls="tabgroup-btwjxnin1-panel-2"
-            id="tabgroup-btwjxnin1-tab-2">
+            aria-controls="tabgroup-rao0yotse-panel-2"
+            id="tabgroup-rao0yotse-tab-2">
             Tab 3
         </button>
     
@@ -1263,8 +1297,8 @@ n
                 
         <div class="p-4 "
             role="tabpanel"
-            aria-labelledby="tabgroup-btwjxnin1-tab-0"
-            id="tabgroup-btwjxnin1-panel-0">
+            aria-labelledby="tabgroup-rao0yotse-tab-0"
+            id="tabgroup-rao0yotse-panel-0">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第一个 Tab 的内容</span>
     
@@ -1284,8 +1318,8 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-btwjxnin1-tab-1"
-            id="tabgroup-btwjxnin1-panel-1">
+            aria-labelledby="tabgroup-rao0yotse-tab-1"
+            id="tabgroup-rao0yotse-panel-1">
             
         <span class="text-base text-gray-700 leading-7 my-2">这是第二个 Tab 的内容</span>
     
@@ -1301,8 +1335,8 @@ n
     
         <div class="p-4 hidden"
             role="tabpanel"
-            aria-labelledby="tabgroup-btwjxnin1-tab-2"
-            id="tabgroup-btwjxnin1-panel-2">
+            aria-labelledby="tabgroup-rao0yotse-tab-2"
+            id="tabgroup-rao0yotse-panel-2">
             
         <span class="text-base text-gray-700 leading-7 my-2">第三个 Tab 的内容</span>
     

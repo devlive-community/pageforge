@@ -56,6 +56,16 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/en/setup/banner.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/setup/font-size.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/en/setup/template/home.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -212,6 +222,16 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/setup/sitemap.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/setup/banner.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/setup/font-size.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
