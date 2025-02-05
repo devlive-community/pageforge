@@ -28,6 +28,18 @@ icon: feather
 
 生成的标题为 `page.title - site.title` 的格式。
 
+### 设置 `description`
+
+---
+
+PageForge 支持设置当前页面的描述，格式如下：
+
+```markdown
+---
+description: 这里是描述
+---
+```
+
 ### 设置 `icon`
 
 ---

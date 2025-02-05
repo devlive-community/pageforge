@@ -9,36 +9,14 @@
             <%- include('./page-share') %>
 
             <!-- 编辑源码 -->
-            <% if (locals.siteData.feature?.edit?.enable) { %>
-                <a href="<%= `${locals.siteData?.repo?.url}/edit/${locals.siteData?.repo?.branch || 'main'}/docs/content/${pageData.relativePath}` %>"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                    </svg>
-                </a>
-            <% } %>
+            <%- include('./page-edit') %>
 
             <!-- 查看源码 -->
-            <% if (locals.siteData.feature?.view?.enable) { %>
-                <a href="<%= `${locals.siteData?.repo?.url}/blob/${locals.siteData?.repo?.branch || 'main'}/docs/content/${pageData.relativePath}` %>"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-4 h-4">
-                        <polyline points="16 18 22 12 16 6"/>
-                        <polyline points="8 6 2 12 8 18"/>
-                    </svg>
-                </a>
-            <% } %>
+            <%- include('./page-source') %>
         </div>
     </div>
     <% if (pageData.description) { %>
-        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+        <p class="mt-6 text-sm sm:text-base leading-6 text-gray-500 dark:text-gray-400 border-l-4 border-gray-200 dark:border-gray-700 pl-4 py-1 italic">
             <%- pageData.description %>
         </p>
     <% } %>
