@@ -23,5 +23,12 @@
         <% if (locals.siteData.feature?.contributors?.enable && pageData.gitInfo?.contributors) { %>
             <%- include('../includes/git-contributors') %>
         <% } %>
+
+        <!-- 评论部分 -->
+        <% if (locals.siteData.feature?.comment?.enable) { %>
+            <div class="mt-8">
+                <%- locals.siteData.feature.comment.content %>
+            </div>
+        <% } %>
     </div>
 </div>
