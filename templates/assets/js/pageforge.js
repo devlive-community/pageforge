@@ -295,7 +295,9 @@ const Header = {
 // 字体大小控制
 const FontSizeControl = {
     init() {
-        const proseContent = document.querySelectorAll('.prose *:not(h1):not(.text-3xl)');
+        const allContent = document.querySelectorAll('.prose *:not(h1):not(.text-3xl)');
+        const proseContent = Array.from(allContent).filter(el => !el.closest('.not-prose'));
+
         if (!proseContent.length) {
             return;
         }
@@ -323,17 +325,9 @@ const FontSizeControl = {
             }
         };
 
-        document.getElementById('increase-font')?.addEventListener('click', () => {
-            updateFontSize(currentSizeIndex + 1);
-        });
-
-        document.getElementById('decrease-font')?.addEventListener('click', () => {
-            updateFontSize(currentSizeIndex - 1);
-        });
-
-        document.getElementById('reset-font')?.addEventListener('click', () => {
-            updateFontSize(1);
-        });
+        document.getElementById('increase-font')?.addEventListener('click', () => updateFontSize(currentSizeIndex + 1));
+        document.getElementById('decrease-font')?.addEventListener('click', () => updateFontSize(currentSizeIndex - 1));
+        document.getElementById('reset-font')?.addEventListener('click', () => updateFontSize(1));
     }
 };
 
