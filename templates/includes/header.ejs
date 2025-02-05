@@ -25,6 +25,9 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
 
 <header>
     <nav class="fixed top-0 w-full bg-white <%= darkClasses('dark:bg-gray-800') %> border-b z-40">
+        <!-- Banner -->
+        <%- include('./header-banner', { darkClasses }) %>
+
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center h-16">
                 <!-- 左侧Logo和导航 -->

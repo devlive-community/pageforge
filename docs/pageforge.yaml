@@ -15,6 +15,9 @@ repo:
   url: https://github.com/devlive-community/pageforge
   branch: dev-2025.1.2
 
+banner:
+  content: 💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
+
 feature:
   lucide:
     enable: true
@@ -140,6 +143,7 @@ nav:
       - /setup/compress
       - /setup/share
       - /setup/sitemap
+      - /setup/banner
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise
