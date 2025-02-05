@@ -126,6 +126,7 @@ PageForge 支持设置当前页面的状态，当前支持以下状态：
 - `new`: 新添加
 - `updated`: 更新
 - `deprecated`: 已过期
+- `custom`: 自定义
 
 通过配置 markdown 文件的元数据来支持，格式如下：
 
@@ -145,3 +146,20 @@ status:
   text: 自定义提示
 ---
 ```
+
+PageForge 还支持自定义状态，格式如下：
+
+```markdown
+---
+status:
+  type: custom
+  icon: feather
+  text: 自定义提示
+---
+```
+
+!!! danger "注意"
+
+    自定义状态情况下如果 `feature.lucide.enable` 为 `true` 时，`icon` 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。
+
+!!!
