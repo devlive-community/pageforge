@@ -911,6 +911,43 @@
         
             <li class="relative">
                 
+                    <a href="/en/setup/comment.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                               <!-- 图标 -->
+                               <i data-lucide="message-circle"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>评论设置</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
                 <button type="button"
                         class="group block w-full text-left"
                         onclick="toggleSubmenu(this)">
@@ -1186,7 +1223,7 @@
         <div class="flex items-center gap-4">
             <!-- 字体大小控制按钮 -->
             
-    <div class="flex items-center gap-2 p-0.5 bg-white dark:bg-gray-800 rounded-lg dark:border-gray-700">
+    <div class="flex items-center gap-2 p-0.5 bg-white dark:bg-gray-800 rounded-lg dark:border-gray-700 not-prose">
         <button id="decrease-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" title="减小字体">
             <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"/>
@@ -1343,8 +1380,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1406,8 +1441,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持设置当前页面的描述，格式如下：</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
@@ -1469,8 +1502,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1516,8 +1547,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1563,8 +1592,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的底部。</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1614,8 +1641,6 @@
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">，页面的目录将不会显示。</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1709,8 +1734,6 @@
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">foo.ejs</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">。在页面中使用以下代码配置模版:</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1797,8 +1820,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">通过配置 markdown 文件的元数据来支持，格式如下：</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
@@ -1824,8 +1845,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">如果需要设置自定义提示的内容，可以修改为以下方式：</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
@@ -1852,8 +1871,6 @@
         <div class="space-y-4"></div>
     
         <span class="text-base text-gray-700 leading-7 my-2">PageForge 还支持自定义状态，格式如下：</span>
-    
-        <div class="space-y-4"></div>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
             
@@ -1914,7 +1931,7 @@
 
         <!-- Git 信息部分 -->
         
-            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700 not-prose">
     <!-- 时间和提交信息 -->
     <div class="space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-2 md:grid-cols-4 mb-4 gap-y-3 md:gap-y-0">
         <!-- 首次提交时间 -->
@@ -1981,7 +1998,7 @@
 
         <!-- 贡献者信息 -->
         
-            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700">
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700 not-prose">
     <div class="flex items-center gap-2 mb-3 text-sm text-gray-600 dark:text-gray-300">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2030,6 +2047,29 @@
         
     </div>
 </div>
+        
+
+        <!-- 评论部分 -->
+        
+            <div class="mt-8">
+                <script src="https://giscus.app/client.js"
+  data-repo="devlive-community/pageforge"
+  data-repo-id="R_kgDONjP-BA"
+  data-category="Q&A"
+  data-category-id="DIC_kwDONjP-BM4Cmr1n"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+
+            </div>
         
     </div>
 </div>

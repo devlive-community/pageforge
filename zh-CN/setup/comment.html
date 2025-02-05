@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>特性设置 - PageForge</title>
+    <title>评论设置 - PageForge</title>
     <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
@@ -188,14 +188,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/setup/feature.html"
+                <a href="/en/setup/comment.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/setup/feature.html"
+                <a href="/zh-CN/setup/comment.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -357,14 +357,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/setup/feature.html"
+        <a href="/en/setup/comment.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
             <span>🇬🇧</span>
             <span>English</span>
         </a>
     
-        <a href="/zh-CN/setup/feature.html"
+        <a href="/zh-CN/setup/comment.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
             <span>🇨🇳</span>
@@ -628,7 +628,7 @@
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -640,7 +640,7 @@
                                <i data-lucide="feather"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       text-blue-600 dark:text-blue-400">
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                </i>
                            </span>
                             
@@ -915,7 +915,7 @@
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -927,7 +927,7 @@
                                <i data-lucide="message-circle"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       text-blue-600 dark:text-blue-400">
                                </i>
                            </span>
                             
@@ -1217,7 +1217,7 @@
             
     <div class="flex items-center justify-between">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-            特性设置
+            评论设置
         </h1>
 
         <div class="flex items-center gap-4">
@@ -1329,7 +1329,7 @@
 
             <!-- 编辑源码 -->
             
-    <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//setup/feature.md"
+    <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//setup/comment.md"
        target="_blank"
        rel="noopener noreferrer"
        class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -1343,7 +1343,7 @@
 
             <!-- 查看源码 -->
             
-    <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//setup/feature.md"
+    <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//setup/comment.md"
        target="_blank"
        rel="noopener noreferrer"
        class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -1364,116 +1364,27 @@
         <div class="prose prose-gray dark:prose-invert max-w-none text-base">
             
         <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">所有的特性配置均在 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中进行配置，且支持嵌套配置。 格式为</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  xxx</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Lucide-tu-biao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    <span class="inline-block my-1 mx-auto">PageForge 默认支持 
+    <span class="inline-block my-1 mx-auto">PageForge 支持将您选择的第三方评论系统添加到任何页面的页脚。例如，我们将集成 
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://lucide.dev"
+           href="https://giscus.app"
            target="_blank"
-           title="Lucide">
-            Lucide
+           title="Giscus">
+            Giscus
         </a>
-     图标库，需要启用后才能使用 Lucide 图标。</span><div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">lucide</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-    <span class="token key atrule">cdn</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//unpkg.com/lucide@latest/dist/umd/lucide.js</code></pre>
-                </div>
-            </div>
-        </div>
+    ，它是开源的、免费的，并使用 GitHub 讨论作为后端。</span>
         <div class="space-y-4"></div>
     
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">: 是否启用 Lucide 图标</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">cdn</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">: Lucide CDN 链接，默认为 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">https://unpkg.com/lucide@latest/dist/umd/lucide.js</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> ，可以根据自己的需求进行修改，这里要填写完整的 CDN 链接，例如 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">https://unpkg.com/lucide@latest/dist/umd/lucide.js</code>
-    </span>
-            </li>
-        </ul>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 的评论系统需要启用才可以。</span>
     
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Issues-jie-xi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
+            <div id="qi-yong-ping-lun" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">启用评论</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
             
@@ -1490,421 +1401,58 @@
                 
                 <div class="!flex-1">
                     <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">issues</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，可以在 Markdown 中使用 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">#123</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 格式来引用 Issues，例如</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown"><span class="token code-snippet code keyword">`#123`</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Tooltip" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 tooltip 的链接，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">tooltip</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="tong-ji-dai-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持统计代码，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">statistics</span><span class="token punctuation">:</span>
+  <span class="token key atrule">comment</span><span class="token punctuation">:</span>
     <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
     <span class="token key atrule">content</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-      服务商返回的统计代码</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">content</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">: 自定义统计代码，需要填写完整的统计代码。</span>
-    </span>
-            </li>
-        </ul>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="bian-ji-yuan-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持编辑文档，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">edit</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成编辑文档的链接，默认为 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">main</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 分支，可以在 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 来更改分支。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="zha-kan-yuan-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持查看源码，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">view</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成查看源码的链接。默认为 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">main</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 分支，可以在 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 来更改分支。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Git-ti-jiao-xin-xi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Git 提交信息，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">revision</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成 Git 提交信息的链接。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">支持以下信息:</span>
-    
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">创建时间</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">最后修改时间</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">首次提交</span>
-    </span>
-            </li>
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <span class="text-base text-gray-700 leading-7 my-2">末次提交</span>
-    </span>
-            </li>
-        </ul>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Git-ti-jiao-yong-hu" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Git 提交用户，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">contributors</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会自动配置用户在 Github 中的头像。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="fan-hui-ding-bu" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持返回顶部，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">backToTop</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+      第三方评论系统返回的代码</span></code></pre>
                 </div>
             </div>
         </div>
         <div class="space-y-4"></div>
     
         <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Mermaid-tu-biao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
+            <div id="Giscus-pei-zhi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">Giscus 配置</span>
     </div>
         </div>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
-    <span class="inline-block my-1 mx-auto">PageForge 支持使用 
+    <span class="inline-block my-1 mx-auto">在使用 
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
-           href="https://mermaid.js.org"
+           href="https://giscus.app"
            target="_blank"
-           title="Mermaid">
-            Mermaid
+           title="Giscus">
+            Giscus
         </a>
-     图表语言，需要启用后才能使用。</span><div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+     评论系统时，您需要完成以下步骤：</span>
+        <div class="space-y-4"></div>
+    
+        <ol class="my-4 pl-4 list-inside list-decimal">
+            
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span><span class="inline-block my-1 mx-auto">安装 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://github.com/apps/giscus"
+           target="_self"
+           title="">
+            Giscus GitHub 应用程序
+        </a>
+     并授予对应将评论作为 GitHub 讨论托管的存储库的访问权限。请注意，这可能是与您的文档不同的存储库。</span></span>
+            </li>
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span><span class="inline-block my-1 mx-auto">访问 
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="https://giscus.app/"
+           target="_self"
+           title="">
+            Giscus
+        </a>
+     并通过其配置工具生成代码段以加载评论系统。复制代码段以进行下一步。生成的代码段应类似于以下内容：</span><div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
             
         <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
             <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1918,134 +1466,35 @@
             <div class="!overflow-x-auto !flex">
                 
                 <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">mermaid</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-    <span class="token key atrule">options</span><span class="token punctuation">:</span>
-      <span class="token key atrule">theme</span><span class="token punctuation">:</span> dark</code></pre>
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-javascript"> <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://giscus.app/client.js"</span>
+     data<span class="token operator">-</span>repo<span class="token operator">=</span><span class="token string">"&lt;username>/&lt;repository>"</span>
+     data<span class="token operator">-</span>repo<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"..."</span>
+     data<span class="token operator">-</span>category<span class="token operator">=</span><span class="token string">"..."</span>
+     data<span class="token operator">-</span>category<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"..."</span>
+     data<span class="token operator">-</span>mapping<span class="token operator">=</span><span class="token string">"pathname"</span>
+     data<span class="token operator">-</span>reactions<span class="token operator">-</span>enabled<span class="token operator">=</span><span class="token string">"1"</span>
+     data<span class="token operator">-</span>emit<span class="token operator">-</span>metadata<span class="token operator">=</span><span class="token string">"1"</span>
+     data<span class="token operator">-</span>theme<span class="token operator">=</span><span class="token string">"light"</span>
+     data<span class="token operator">-</span>lang<span class="token operator">=</span><span class="token string">"en"</span>
+     crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
+     async<span class="token operator">></span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
                 </div>
             </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <ul class="my-4 pl-4 list-inside list-disc">
-            
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">: 是否启用 Mermaid 图表</span>
-    </span>
+        </div></span>
             </li>
             <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
                 <span class="text-gray-600 text-xl select-none">•</span>
                 <span>
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">options</code>
+        <span class="text-base text-gray-700 leading-7 my-2">将返回的代码粘贴到 </span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: Mermaid 图表选项，可以根据自己的需求进行配置，例如 </span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">feature.comment.content</code>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">theme: dark</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">，该选项是可选的，默认为 null</span>
+        <span class="text-base text-gray-700 leading-7 my-2"> 的值中。</span>
     </span>
             </li>
-        </ul>
+        </ol>
     
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
-        
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-red-700">
-                    
-        <span class="text-base text-gray-700 leading-7 my-2">如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">cdn.mermaidJs</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 的值。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Diff-yu-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持使用 Diff 语法，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">diff</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Dark-mo-shi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Dark Mode，需要启用后才能使用。</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
-  <span class="token key atrule">darkMode</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
-                </div>
-            </div>
-        </div>
         </div>
 
         <div class="clear-both"></div>
@@ -2064,7 +1513,7 @@
                 <line x1="3" y1="12" y2="12" x2="9"/>
                 <line x1="15" y1="12" y2="12" x2="21"/>
             </svg>
-            <span>提交于 2024年12月31日 17:07</span>
+            <span>提交于 2025年2月5日 14:42</span>
         </div>
 
         <!-- 最后修改时间 -->
@@ -2076,7 +1525,7 @@
                 <path d="M3 3v5h5"/>
                 <path d="M12 7v5l4 2"/>
             </svg>
-            <span>修改于 2025年2月4日 07:56</span>
+            <span>修改于 2025年2月5日 14:42</span>
         </div>
 
         <!-- Hash 链接 -->
@@ -2089,11 +1538,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/a4ea5813c53dc357c6e4a5dca866aa148109b69a"
+                <a href="https://github.com/devlive-community/pageforge/commit/70544bb215c762a9de9752e987e185cf0513279a"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    首次提交 (a4ea5813)
+                    首次提交 (70544bb2)
                 </a>
             </div>
 
@@ -2105,11 +1554,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/1c8dba91d9638dacd123d49e503c6a8a5dfd9a99"
+                <a href="https://github.com/devlive-community/pageforge/commit/70544bb215c762a9de9752e987e185cf0513279a"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    末次提交 (1c8dba91)
+                    末次提交 (70544bb2)
                 </a>
             </div>
         
@@ -2161,7 +1610,7 @@
                         qianmoQ
                     </div>
                     <div class="text-gray-500 dark:text-gray-400">
-                        19 次提交
+                        1 次提交
                     </div>
                 </div>
             </a>
@@ -2208,144 +1657,24 @@
             
                 
                     <div class="pl-4">
-                        <a href="#Lucide-tu-biao"
-                           onclick="event.preventDefault(); const target = document.getElementById('Lucide-tu-biao'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#qi-yong-ping-lun"
+                           onclick="event.preventDefault(); const target = document.getElementById('qi-yong-ping-lun'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Lucide-tu-biao">
+                           data-slug="qi-yong-ping-lun">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
+        <span class="text-base text-gray-700 leading-7 my-2">启用评论</span>
     
                         </a>
                     </div>
                     
                 
                     <div class="pl-4">
-                        <a href="#Issues-jie-xi"
-                           onclick="event.preventDefault(); const target = document.getElementById('Issues-jie-xi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
+                        <a href="#Giscus-pei-zhi"
+                           onclick="event.preventDefault(); const target = document.getElementById('Giscus-pei-zhi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Issues-jie-xi">
+                           data-slug="Giscus-pei-zhi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Tooltip"
-                           onclick="event.preventDefault(); const target = document.getElementById('Tooltip'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Tooltip">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#tong-ji-dai-ma"
-                           onclick="event.preventDefault(); const target = document.getElementById('tong-ji-dai-ma'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="tong-ji-dai-ma">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#bian-ji-yuan-ma"
-                           onclick="event.preventDefault(); const target = document.getElementById('bian-ji-yuan-ma'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="bian-ji-yuan-ma">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#zha-kan-yuan-ma"
-                           onclick="event.preventDefault(); const target = document.getElementById('zha-kan-yuan-ma'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="zha-kan-yuan-ma">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Git-ti-jiao-xin-xi"
-                           onclick="event.preventDefault(); const target = document.getElementById('Git-ti-jiao-xin-xi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Git-ti-jiao-xin-xi">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Git-ti-jiao-yong-hu"
-                           onclick="event.preventDefault(); const target = document.getElementById('Git-ti-jiao-yong-hu'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Git-ti-jiao-yong-hu">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#fan-hui-ding-bu"
-                           onclick="event.preventDefault(); const target = document.getElementById('fan-hui-ding-bu'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="fan-hui-ding-bu">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Mermaid-tu-biao"
-                           onclick="event.preventDefault(); const target = document.getElementById('Mermaid-tu-biao'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Mermaid-tu-biao">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Diff-yu-fa"
-                           onclick="event.preventDefault(); const target = document.getElementById('Diff-yu-fa'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Diff-yu-fa">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
-    
-                        </a>
-                    </div>
-                    
-                
-                    <div class="pl-4">
-                        <a href="#Dark-mo-shi"
-                           onclick="event.preventDefault(); const target = document.getElementById('Dark-mo-shi'); const offset = 80; const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset; window.scrollTo({top: targetPosition, behavior: 'smooth'});"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="Dark-mo-shi">
-                            
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
+        <span class="text-base text-gray-700 leading-7 my-2">Giscus 配置</span>
     
                         </a>
                     </div>
@@ -2383,204 +1712,34 @@
         
             
                 <div class="pl-4">
-                    <a href="#Lucide-tu-biao"
+                    <a href="#qi-yong-ping-lun"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Lucide-tu-biao');
+                               const target = document.getElementById('qi-yong-ping-lun');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Lucide-tu-biao">
+                       data-slug="qi-yong-ping-lun">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
+        <span class="text-base text-gray-700 leading-7 my-2">启用评论</span>
     
                     </a>
                 </div>
                 
             
                 <div class="pl-4">
-                    <a href="#Issues-jie-xi"
+                    <a href="#Giscus-pei-zhi"
                        onclick="event.preventDefault();
-                               const target = document.getElementById('Issues-jie-xi');
+                               const target = document.getElementById('Giscus-pei-zhi');
                                const offset = 80;
                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                                window.scrollTo({top: targetPosition, behavior: 'smooth'});
                                document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Issues-jie-xi">
+                       data-slug="Giscus-pei-zhi">
                         
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Tooltip"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Tooltip');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Tooltip">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#tong-ji-dai-ma"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('tong-ji-dai-ma');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="tong-ji-dai-ma">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#bian-ji-yuan-ma"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('bian-ji-yuan-ma');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="bian-ji-yuan-ma">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#zha-kan-yuan-ma"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('zha-kan-yuan-ma');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="zha-kan-yuan-ma">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Git-ti-jiao-xin-xi"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Git-ti-jiao-xin-xi');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Git-ti-jiao-xin-xi">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Git-ti-jiao-yong-hu"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Git-ti-jiao-yong-hu');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Git-ti-jiao-yong-hu">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#fan-hui-ding-bu"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('fan-hui-ding-bu');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="fan-hui-ding-bu">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Mermaid-tu-biao"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Mermaid-tu-biao');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Mermaid-tu-biao">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Diff-yu-fa"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Diff-yu-fa');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Diff-yu-fa">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
-    
-                    </a>
-                </div>
-                
-            
-                <div class="pl-4">
-                    <a href="#Dark-mo-shi"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('Dark-mo-shi');
-                               const offset = 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="Dark-mo-shi">
-                        
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
+        <span class="text-base text-gray-700 leading-7 my-2">Giscus 配置</span>
     
                     </a>
                 </div>
