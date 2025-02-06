@@ -167,6 +167,7 @@ nav:
       - /setup/banner
       - /setup/font-size
       - /setup/comment
+      - /setup/seo
       - InlineTemplate:
           - /setup/template/home
           - /setup/template/enterprise

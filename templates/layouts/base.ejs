@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pageData.title %> - <%= siteData.site.title %></title>
+    <%- include('../includes/seo.ejs', { pageData, siteData }) %>
+
+    <title><%= pageData.title %> - <%= siteData.site.title %></title>
     <link rel="icon" href="<%= pageData.basePath %>/<%= siteData.site.favicon || '/favicon.ico' %>" type="image/x-icon">
 
     <!-- 基础样式文件 -->
