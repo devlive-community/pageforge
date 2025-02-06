@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh" class="scroll-smooth">
 <head>
@@ -161,6 +163,24 @@
                                           text-sm font-medium leading-none 
                                           hover:text-gray-900  hover:bg-gray-50 ">
                                     Release Notes
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/en/template/home.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    Template
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/en/team.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    Team
                                 </a>
                             </li>
                         
@@ -358,6 +378,18 @@
                         Release Notes
                     </a>
                 
+                    <a href="/en/template/home.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        Template
+                    </a>
+                
+                    <a href="/en/team.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        Team
+                    </a>
+                
 
                 <!-- 移动端语言切换 -->
                 
@@ -380,15 +412,28 @@
 </div>
 
 <script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
 
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        // 只有当菜单元素存在时才添加事件监听
+        if (mobileMenu && menuButton) {
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) &&
+                    !menuButton.contains(event.target) &&
+                    !mobileMenu.classList.contains('hidden')) {
+
+                    mobileMenu.classList.add('hidden');
+
+                    const openIcon = menuButton.querySelector('svg:first-child');
+                    const closeIcon = menuButton.querySelector('svg:last-child');
+
+                    if (openIcon && closeIcon) {
+                        openIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
         }
     });
 </script>
@@ -1214,7 +1259,8 @@
 
             <!-- 右侧目录 -->
             
-                <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+                <!-- 桌面端目录 -->
+<div class="hidden lg:block flex-none w-64 pl-8 mr-8">
     <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
         <nav class="overflow-y-auto pr-4 -mr-4 space-y-1 pageforge-scrollbar"
@@ -1261,7 +1307,16 @@
     </div>
 </div>
 
-<!-- 移动端的模板也需要同样的修改 -->
+<!-- 移动端目录按钮 -->
+<button id="toc-mobile-trigger"
+        class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端目录 -->
 <div id="toc-mobile"
      class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
                 transform translate-y-full transition duration-200 ease-in-out
@@ -1316,6 +1371,24 @@
         
     </nav>
 </div>
+
+<!-- 控制脚本 -->
+<script>
+    const tocMobile = document.getElementById('toc-mobile');
+    const tocMobileTrigger = document.getElementById('toc-mobile-trigger');
+
+    tocMobileTrigger.addEventListener('click', () => {
+        tocMobile.classList.remove('translate-y-full');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!tocMobile.contains(e.target) &&
+            !tocMobileTrigger.contains(e.target) &&
+            !tocMobile.classList.contains('translate-y-full')) {
+            tocMobile.classList.add('translate-y-full');
+        }
+    });
+</script>
             
         </div>
     </div>

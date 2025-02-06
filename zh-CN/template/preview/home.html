@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh" class="scroll-smooth">
 <head>
@@ -141,7 +143,7 @@
                                 <a href="/zh-CN/setup/site.html"
                                    class="inline-flex items-center rounded-lg justify-center px-4 py-3
                                           text-sm font-medium leading-none 
-                                          text-blue-600  bg-blue-50/80  font-medium">
+                                          hover:text-gray-900  hover:bg-gray-50 ">
                                     设置
                                 </a>
                             </li>
@@ -161,6 +163,24 @@
                                           text-sm font-medium leading-none 
                                           hover:text-gray-900  hover:bg-gray-50 ">
                                     发布日志
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/template/home.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          text-blue-600  bg-blue-50/80  font-medium">
+                                    模版
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/team.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    团队
                                 </a>
                             </li>
                         
@@ -194,14 +214,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/setup/template/home.html"
+                <a href="/en/template/preview/home.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/setup/template/home.html"
+                <a href="/zh-CN/template/preview/home.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -342,7 +362,7 @@
                 
                     <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600  bg-blue-50/80 ">
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         设置
                     </a>
                 
@@ -358,19 +378,31 @@
                         发布日志
                     </a>
                 
+                    <a href="/zh-CN/template/home.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-blue-600  bg-blue-50/80 ">
+                        模版
+                    </a>
+                
+                    <a href="/zh-CN/team.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        团队
+                    </a>
+                
 
                 <!-- 移动端语言切换 -->
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/setup/template/home.html"
+        <a href="/en/template/preview/home.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
             <span>🇬🇧</span>
             <span>English</span>
         </a>
     
-        <a href="/zh-CN/setup/template/home.html"
+        <a href="/zh-CN/template/preview/home.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
             <span>🇨🇳</span>
@@ -380,15 +412,28 @@
 </div>
 
 <script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
 
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        // 只有当菜单元素存在时才添加事件监听
+        if (mobileMenu && menuButton) {
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) &&
+                    !menuButton.contains(event.target) &&
+                    !mobileMenu.classList.contains('hidden')) {
+
+                    mobileMenu.classList.add('hidden');
+
+                    const openIcon = menuButton.querySelector('svg:first-child');
+                    const closeIcon = menuButton.querySelector('svg:last-child');
+
+                    if (openIcon && closeIcon) {
+                        openIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
         }
     });
 </script>
@@ -543,7 +588,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/site.html"
+                    <a href="/zh-CN/template/home.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -556,7 +601,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                <!-- 图标 -->
-                               <i data-lucide="baseline"
+                               <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -565,7 +610,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>基础设置</span>
+                                <span>主页模板</span>
                                 
 
 
@@ -580,7 +625,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/page.html"
+                    <a href="/zh-CN/template/team.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -593,7 +638,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                <!-- 图标 -->
-                               <i data-lucide="book-open"
+                               <i data-lucide="users"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -602,732 +647,9 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>页面设置</span>
+                                <span>团队模板</span>
                                 
 
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="已更新" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-blue-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/feature.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="feather"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>特性设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/i18n.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="globe"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>国际化设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/compress.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="combine"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>压缩设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/share.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="share"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>分享设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/sitemap.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="map"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>站点地图设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/banner.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="circle-alert"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>Banner 设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/font-size.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="type"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>字体设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/comment.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="message-circle"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>评论设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/seo.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="search"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>SEO 设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
 
                             </span>
 
@@ -1351,7 +673,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>内置模版</span>
+                                <span>模版预览</span>
                                 
 
 
@@ -1378,7 +700,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/home.html"
+                    <a href="/zh-CN/template/preview/home.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1415,7 +737,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/enterprise.html"
+                    <a href="/zh-CN/template/preview/enterprise.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1452,7 +774,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/minimal.html"
+                    <a href="/zh-CN/template/preview/minimal.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1489,7 +811,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/modern.html"
+                    <a href="/zh-CN/template/preview/modern.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1526,7 +848,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/playful.html"
+                    <a href="/zh-CN/template/preview/playful.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2

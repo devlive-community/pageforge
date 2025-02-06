@@ -1,16 +1,18 @@
+
+
 <!DOCTYPE html>
 <html lang="zh" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主页模板(Playful) - PageForge</title>
+    <title>主页模板 - PageForge</title>
     <!-- 基础 SEO meta 标签 -->
 <meta name="description" content="PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。">
 <meta name="keywords" content="PageForge, Markdown, Static Site Generator, GitHub Pages, GitLab Pages, Vercel, Netlify, GitHub Actions, Cloudflare Pages, Vercel Pages, Netlify Pages, 静态网站生成器, 静态网站部署器">
 <meta name="author" content="PageForge">
 
-    <title>主页模板(Playful) - PageForge</title>
-    <link rel="icon" href="../../../assets/logo.svg" type="image/x-icon">
+    <title>主页模板 - PageForge</title>
+    <link rel="icon" href="../../assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -114,7 +116,7 @@
                     <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
                         
                             <a href="/zh-CN" class="flex items-center">
-                                <img src="../../..//assets/logo.svg"
+                                <img src="../..//assets/logo.svg"
                                      alt="PageForge"
                                      class="h-10 w-auto object-contain transition-transform hover:scale-105">
                             </a>
@@ -164,6 +166,24 @@
                                 </a>
                             </li>
                         
+                            <li class="shrink-0">
+                                <a href="/zh-CN/template/home.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          text-blue-600  bg-blue-50/80  font-medium">
+                                    模版
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/team.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    团队
+                                </a>
+                            </li>
+                        
                     </ul>
                 </div>
 
@@ -194,14 +214,14 @@
         <div id="language-menu"
              class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             
-                <a href="/en/setup/template/playful.html"
+                <a href="/en/template/home.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
             
-                <a href="/zh-CN/setup/template/playful.html"
+                <a href="/zh-CN/template/home.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -358,19 +378,31 @@
                         发布日志
                     </a>
                 
+                    <a href="/zh-CN/template/home.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-blue-600  bg-blue-50/80 ">
+                        模版
+                    </a>
+                
+                    <a href="/zh-CN/team.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        团队
+                    </a>
+                
 
                 <!-- 移动端语言切换 -->
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/setup/template/playful.html"
+        <a href="/en/template/home.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 ">
             <span>🇬🇧</span>
             <span>English</span>
         </a>
     
-        <a href="/zh-CN/setup/template/playful.html"
+        <a href="/zh-CN/template/home.html"
            class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                 bg-gray-50 dark:bg-gray-700">
             <span>🇨🇳</span>
@@ -380,15 +412,28 @@
 </div>
 
 <script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
 
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        // 只有当菜单元素存在时才添加事件监听
+        if (mobileMenu && menuButton) {
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) &&
+                    !menuButton.contains(event.target) &&
+                    !mobileMenu.classList.contains('hidden')) {
+
+                    mobileMenu.classList.add('hidden');
+
+                    const openIcon = menuButton.querySelector('svg:first-child');
+                    const closeIcon = menuButton.querySelector('svg:last-child');
+
+                    if (openIcon && closeIcon) {
+                        openIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
         }
     });
 </script>
@@ -543,11 +588,11 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/site.html"
+                    <a href="/zh-CN/template/home.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -556,16 +601,16 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                <!-- 图标 -->
-                               <i data-lucide="baseline"
+                               <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                                       text-blue-600 dark:text-blue-400">
                                </i>
                            </span>
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>基础设置</span>
+                                <span>主页模板</span>
                                 
 
 
@@ -580,7 +625,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/page.html"
+                    <a href="/zh-CN/template/team.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -593,7 +638,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                <!-- 图标 -->
-                               <i data-lucide="book-open"
+                               <i data-lucide="users"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -602,732 +647,9 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>页面设置</span>
+                                <span>团队模板</span>
                                 
 
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="已更新" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-blue-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/feature.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="feather"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>特性设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/i18n.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="globe"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>国际化设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/compress.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="combine"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>压缩设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/share.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="share"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>分享设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/sitemap.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="map"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>站点地图设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/banner.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="circle-alert"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>Banner 设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/font-size.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="type"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>字体设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/comment.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="message-circle"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>评论设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/seo.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                               <!-- 图标 -->
-                               <i data-lucide="search"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>SEO 设置</span>
-                                
-
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
 
                             </span>
 
@@ -1351,7 +673,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>内置模版</span>
+                                <span>模版预览</span>
                                 
 
 
@@ -1360,7 +682,7 @@
                             
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-3 w-3 sm:h-4 sm:w-4 ml-1 sm:ml-2 text-gray-400 transform transition-transform duration-200 ease-in-out
-                                        rotate-90 text-blue-600 dark:text-blue-400"
+                                        group-hover:text-gray-600 dark:group-hover:text-gray-300"
                                      viewBox="0 0 20 20"
                                      fill="currentColor">
                                     <path fill-rule="evenodd"
@@ -1372,13 +694,13 @@
                         
                 </button>
                 <div class="overflow-hidden transition-all duration-200 ease-in-out
-                               max-h-96 opacity-100">
+                               max-h-0 opacity-0">
                     
     <ul class="mt-1 mb-2 ml-2 sm:ml-3 md:ml-4 pl-2 sm:pl-3 md:pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1.5">
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/home.html"
+                    <a href="/zh-CN/template/preview/home.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1415,7 +737,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/enterprise.html"
+                    <a href="/zh-CN/template/preview/enterprise.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1452,7 +774,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/minimal.html"
+                    <a href="/zh-CN/template/preview/minimal.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1489,7 +811,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/modern.html"
+                    <a href="/zh-CN/template/preview/modern.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1526,11 +848,11 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/template/playful.html"
+                    <a href="/zh-CN/template/preview/playful.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
                                rounded-md transition-all duration-200 ease-in-out">
 
                             
@@ -1542,7 +864,7 @@
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       text-blue-600 dark:text-blue-400">
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
                                </i>
                            </span>
                             
@@ -1600,183 +922,545 @@
             <main class="flex-grow w-full md:w-2">
                 <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-full">
-                    
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-pink-100 to-purple-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div class="text-center relative">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
-                <h1 class="relative text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                    创新技术解决方案
-                </h1>
-                <p class="mt-6 text-xl text-purple-700 max-w-3xl mx-auto">
-                    为您的企业或网站提供最前沿的技术支持和解决方案
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    
-                        <a href="/zh-CN/getting-started/get-started.html"
-                           class="transform hover:-rotate-2 hover:scale-105 transition-all duration-300 inline-flex items-center px-8 py-4 rounded-2xl text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 shadow-xl hover:shadow-2xl">
-                            开始使用
-                        </a>
-                    
-                    
-                        <a href="/zh-CN/usage/href.html"
-                           class="transform hover:rotate-2 hover:scale-105 transition-all duration-300 inline-flex items-center px-8 py-4 rounded-2xl text-purple-600 font-bold bg-white shadow-xl hover:shadow-2xl">
-                            了解更多
-                        </a>
-                    
+                    <!-- 页面容器 -->
+<div class="relative lg:flex lg:gap-8">
+    <!-- 主要内容区域 -->
+    <div class="min-w-0 flex-1">
+        <!-- 页面标题部分 -->
+        <div class="mb-8">
+            
+    <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
+            主页模板
+        </h1>
+
+        <div class="flex items-center gap-4">
+            <!-- 字体大小控制按钮 -->
+            
+    <div class="flex items-center gap-2 p-0.5 bg-white dark:bg-gray-800 rounded-lg dark:border-gray-700 not-prose">
+        <button id="decrease-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" title="减小字体">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        <button id="reset-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-sm" title="重置字体">A</button>
+        <button id="increase-font" class="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded" title="增大字体">
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+    </div>
+
+
+            <!-- 分享按钮 -->
+            
+    <button type="button" id="share-btn" class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round" class="w-4 h-4">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+            <polyline points="16 6 12 2 8 6"/>
+            <line x1="12" y1="2" x2="12" y2="15"/>
+        </svg>
+    </button>
+
+    <div id="share-popup" class="hidden fixed inset-0 z-50" onclick="handleClickOutside(event)">
+        <div class="absolute inset-0 bg-gray-500 bg-opacity-75 dark:bg-gray-900 dark:bg-opacity-75"></div>
+        <div class="relative z-10 flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+            <div class="relative transform overflow-visible rounded-lg bg-white dark:bg-gray-800 px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 w-fit">
+                <div class="social-share text-center"
+                     data-sites="qq,wechat,weibo"
+                     data-mobile-sites="qq,wechat,weibo"
+                     data-wechat-qrcode-title="微信扫一扫：分享"
+                     data-wechat-qrcode-helper="微信扫一扫后点击右上角分享">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+    <style>
+        /* 修复微信二维码显示被遮挡的问题 */
+        .social-share .wechat-qrcode {
+            z-index: 9999;
+            width: fit-content;
+        }
+    </style>
+
+    <script>
+        document.getElementById('share-btn')?.addEventListener('click', function () {
+            document.getElementById('share-popup')?.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function handleClickOutside(event) {
+            const sharePopup = document.getElementById('share-popup');
+            const shareContent = sharePopup?.querySelector('.transform');
+
+            // 如果点击的是弹窗内容之外的区域
+            if (event.target === sharePopup || !shareContent?.contains(event.target)) {
+                hideSharePopup();
+            }
+        }
+
+        function hideSharePopup() {
+            document.getElementById('share-popup')?.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // 处理 ESC 键关闭
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                hideSharePopup();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // 初始化 social share
+            socialShare('.social-share', {
+                wechatQrcodeTitle: '微信扫一扫：分享',
+                wechatQrcodeHelper: '微信扫一扫后点击右上角分享',
+                url: window.location.href,
+                source: document.title,
+                wechat: function (elem, data) {
+                    // 自定义微信点击行为
+                    if (elem.classList.contains('icon-wechat')) {
+                        return false;  // 阻止默认跳转
+                    }
+                }
+            });
+
+            // 防止微信图标点击跳转
+            document.querySelector('.icon-wechat')?.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }, true);
+        });
+    </script>
 
 
+            <!-- 编辑源码 -->
+            
+    <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//template/home.md"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit w-4 h-4">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+    </a>
 
-    <!-- Features Section -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-base font-bold text-purple-600 uppercase tracking-wide">核心优势</h2>
-                <p class="mt-2 text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">为什么选择我们</p>
-                <p class="mt-4 text-xl text-purple-700 max-w-3xl mx-auto">提供全方位的技术支持和服务</p>
-            </div>
 
-            <div class="mt-20">
-                <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+            <!-- 查看源码 -->
+            
+    <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//template/home.md"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-4 h-4">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+        </svg>
+    </a>
+
+        </div>
+    </div>
+    
+
+        </div>
+
+        <!-- 主要内容部分 -->
+        <div class="prose prose-gray dark:prose-invert max-w-none text-base">
+            
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg my-2 overflow-hidden border border-red-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-red-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
+           </div>
+                   
+            <div class="w-full px-5 py-3">
+                <div class="text-sm text-red-700">
                     
-                        <div class="group hover:-rotate-2 hover:scale-105 transition-all duration-300">
-                            <div class="relative bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                                <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500">
-                                    <div class="text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-</svg>
-                                    </div>
-                                </div>
-                                <h3 class="mt-6 text-xl font-bold text-center text-purple-900">
-                                    高性能
-                                </h3>
-                                <p class="mt-4 text-purple-700 text-center">
-                                    采用最新技术架构，确保系统高效运行
-                                </p>
-                            </div>
-                        </div>
-                    
-                        <div class="group hover:-rotate-2 hover:scale-105 transition-all duration-300">
-                            <div class="relative bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                                <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500">
-                                    <div class="text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-</svg>
-                                    </div>
-                                </div>
-                                <h3 class="mt-6 text-xl font-bold text-center text-purple-900">
-                                    安全可靠
-                                </h3>
-                                <p class="mt-4 text-purple-700 text-center">
-                                    全方位的安全防护，保障数据安全
-                                </p>
-                            </div>
-                        </div>
-                    
-                        <div class="group hover:-rotate-2 hover:scale-105 transition-all duration-300">
-                            <div class="relative bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                                <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500">
-                                    <div class="text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-</svg>
-                                    </div>
-                                </div>
-                                <h3 class="mt-6 text-xl font-bold text-center text-purple-900">
-                                    易于使用
-                                </h3>
-                                <p class="mt-4 text-purple-700 text-center">
-                                    直观的界面设计，简单易上手
-                                </p>
-                            </div>
-                        </div>
-                    
+        <span class="text-base text-gray-700 leading-7 my-2">主页模版仅支持配置元数据，切勿填写内容。</span>
+    
                 </div>
             </div>
         </div>
-    </section>
-
-
-
-    <!-- Stats Section -->
-    <section class="bg-gradient-to-r from-pink-100 to-purple-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                    用数据说话
-                </h2>
-                <p class="mt-4 text-xl text-purple-700 max-w-3xl mx-auto">我们取得的成就</p>
-            </div>
-            <div class="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4">
-                
-                    <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-1 transform">
-                        <dt class="text-lg font-bold text-purple-600">GitHub Stars</dt>
-                        <dd class="mt-2 text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                            10+
-                        </dd>
-                    </div>
-                
-                    <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-1 transform">
-                        <dt class="text-lg font-bold text-purple-600">服务客户</dt>
-                        <dd class="mt-2 text-4xl font-black bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                            2+
-                        </dd>
-                    </div>
-                
-                    <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-1 transform">
-                        <dt class="text-lg font-bold text-purple-600">正常运行时间</dt>
-                        <dd class="mt-2 text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                            99.99%
-                        </dd>
-                    </div>
-                
-                    <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 hover:-translate-y-1 transform">
-                        <dt class="text-lg font-bold text-purple-600">客户满意度</dt>
-                        <dd class="mt-2 text-4xl font-black bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                            98%
-                        </dd>
-                    </div>
-                
-            </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="ji-ben-pei-zhi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">基本配置</span>
+    </div>
         </div>
-    </section>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token front-matter yaml language-yaml">title: 主页模板(默认)
+icon: home
+template: home
 
+config:
+  toc: false
 
+hero:
+  title: 创新技术解决方案
+  description: 为您的企业或网站提供最前沿的技术支持和解决方案
+  primaryCta:
+    url: /&lt;%= pageData.language %>/getting-started/get-started.html
+    text: 开始使用
+  secondaryCta:
+    url: /&lt;%= pageData.language %>/usage/href.html
+    text: 了解更多
 
-    <!-- CTA Section -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 transform -skew-y-6"></div>
-                <div class="relative bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="px-8 py-16 sm:px-16 sm:py-24 lg:py-32 lg:px-24 text-center">
-                        <h2 class="text-4xl font-black bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-                            准备好开始了吗？
-                        </h2>
-                        <p class="mt-4 text-xl text-purple-700">
-                            立即加入我们，开启您的技术创新之旅
-                        </p>
-                        <a href="/zh-CN/getting-started/get-started.html"
-                           class="mt-8 inline-flex transform hover:scale-105 transition-transform duration-300 items-center px-8 py-4 rounded-2xl text-white font-bold bg-gradient-to-r from-pink-500 to-purple-500 shadow-xl hover:shadow-2xl">
-                            立即注册
-                        </a>
-                    </div>
+features:
+  subtitle: 核心优势
+  title: 为什么选择我们
+  description: 提供全方位的技术支持和服务
+  items:
+    - icon: >-
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
+          &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        &lt;/svg>
+      title: 高性能
+      description: 采用最新技术架构，确保系统高效运行
+
+    - icon: >-
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
+          &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        &lt;/svg>
+      title: 安全可靠
+      description: 全方位的安全防护，保障数据安全
+
+    - icon: >-
+        &lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-indigo-600">
+          &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        &lt;/svg>
+      title: 易于使用
+      description: 直观的界面设计，简单易上手
+
+stats:
+  title: 用数据说话
+  description: 我们取得的成就
+  items:
+    - label: GitHub Stars
+      value: 10+
+    - label: 服务客户
+      value: 2+
+    - label: 正常运行时间
+      value: 99.99%
+    - label: 客户满意度
+      value: 98%
+
+cta:
+  title: 准备好开始了吗？
+  description: 立即加入我们，开启您的技术创新之旅
+  button:
+    url: /&lt;%= pageData.language %>/getting-started/get-started.html
+    text: 立即注册</span>
+<span class="token punctuation">---</span></span></code></pre>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="space-y-4"></div>
+    
+        <ul class="my-4 pl-4 list-inside list-disc">
+            
+            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none">•</span>
+                <span>
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">: 指定模板名称，可选值为 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home/modern</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home/enterprise</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home/modern</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home/minimal</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，</span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">home/playful</code>
+    </span>
+            </li>
+        </ul>
+    
+        </div>
 
+        <div class="clear-both"></div>
+
+        <!-- Git 信息部分 -->
+        
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700 not-prose">
+    <!-- 时间和提交信息 -->
+    <div class="space-x-6 text-sm text-gray-500 dark:text-gray-400 grid grid-cols-2 md:grid-cols-4 mb-4 gap-y-3 md:gap-y-0">
+        <!-- 首次提交时间 -->
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4">
+                <circle cx="12" cy="12" r="3"/>
+                <line x1="3" y1="12" y2="12" x2="9"/>
+                <line x1="15" y1="12" y2="12" x2="21"/>
+            </svg>
+            <span>提交于 2024年12月28日 08:28</span>
+        </div>
+
+        <!-- 最后修改时间 -->
+        <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+                <path d="M12 7v5l4 2"/>
+            </svg>
+            <span>修改于 2025年2月6日 13:29</span>
+        </div>
+
+        <!-- Hash 链接 -->
+        
+            <!-- 首次提交 -->
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="w-4 h-4">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <a href="https://github.com/devlive-community/pageforge/commit/53e0353519903ee6dd50a8c6a8cc597102ade34d"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-blue-600 dark:hover:text-blue-400">
+                    首次提交 (53e03535)
+                </a>
+            </div>
+
+            <!-- 末次提交 -->
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="w-4 h-4">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <a href="https://github.com/devlive-community/pageforge/commit/8805afff92f743422734b517f4633bd05851b7ad"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hover:text-blue-600 dark:hover:text-blue-400">
+                    末次提交 (8805afff)
+                </a>
+            </div>
+        
+    </div>
+</div>
+        
+
+        <!-- 贡献者信息 -->
+        
+            <div class="mt-4 pt-4 border-t border-dashed border-gray-200 dark:border-gray-700 not-prose">
+    <div class="flex items-center gap-2 mb-3 text-sm text-gray-600 dark:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             class="w-4 h-4">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span>贡献者</span>
+    </div>
+    <div class="flex flex-wrap gap-4">
+        
+            <a href="https://github.com/qianmoQ"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex items-center gap-2 group">
+                <div class="relative w-8 h-8">
+                    <!-- 骨架屏加载效果 -->
+                    <div class="absolute inset-0 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+
+                    <!-- 头像图片 -->
+                    <img src="https://github.com/qianmoQ.png?size=40"
+                         alt="qianmoQ"
+                         class="relative w-8 h-8 rounded-full"
+                         loading="lazy"
+                         onload="this.style.opacity='1'; this.previousElementSibling.style.display='none'"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.previousElementSibling.style.display='none'"
+                         style="opacity: 0; transition: opacity 0.2s;">
+
+                    <!-- 首字母占位符 -->
+                    <div class="hidden w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300
+                                font-medium text-sm flex items-center justify-center uppercase">
+                        q
+                    </div>
+                </div>
+                <div class="text-sm">
+                    <div class="text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        qianmoQ
+                    </div>
+                    <div class="text-gray-500 dark:text-gray-400">
+                        19 次提交
+                    </div>
+                </div>
+            </a>
+        
+    </div>
+</div>
+        
+
+        <!-- 评论部分 -->
+        
+            <div class="mt-8">
+                <script src="https://giscus.app/client.js"
+  data-repo="devlive-community/pageforge"
+  data-repo-id="R_kgDONjP-BA"
+  data-category="Q&A"
+  data-category-id="DIC_kwDONjP-BM4Cmr1n"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+
+            </div>
+        
+    </div>
+</div>
                 </article>
             </main>
 
             <!-- 右侧目录 -->
+            
+                <!-- 桌面端目录 -->
+<div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+    <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
+        <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
+        <nav class="overflow-y-auto pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+             style="max-height: calc(100vh - var(--header-height) - 8rem);"
+             id="table-of-contents">
+            
+            
+                
+                    <div class="pl-4">
+                        <a href="#ji-ben-pei-zhi"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           data-slug="ji-ben-pei-zhi">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">基本配置</span>
+    
+                        </a>
+                    </div>
+                    
+                
+            
+        </nav>
+    </div>
+</div>
+
+<!-- 移动端目录按钮 -->
+<button id="toc-mobile-trigger"
+        class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端目录 -->
+<div id="toc-mobile"
+     class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
+                transform translate-y-full transition duration-200 ease-in-out
+                p-4 rounded-t-2xl shadow-lg">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold">目录</h3>
+        <button onclick="document.getElementById('toc-mobile').classList.add('translate-y-full')"
+                class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <nav class="overflow-y-auto space-y-1"
+         style="max-height: calc(60vh - var(--header-height));">
+        
+        
+            
+                <div class="pl-4">
+                    <a href="#ji-ben-pei-zhi"
+                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       data-slug="ji-ben-pei-zhi">
+                        
+        <span class="text-base text-gray-700 leading-7 my-2">基本配置</span>
+    
+                    </a>
+                </div>
+                
+            
+        
+    </nav>
+</div>
+
+<!-- 控制脚本 -->
+<script>
+    const tocMobile = document.getElementById('toc-mobile');
+    const tocMobileTrigger = document.getElementById('toc-mobile-trigger');
+
+    tocMobileTrigger.addEventListener('click', () => {
+        tocMobile.classList.remove('translate-y-full');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!tocMobile.contains(e.target) &&
+            !tocMobileTrigger.contains(e.target) &&
+            !tocMobile.classList.contains('translate-y-full')) {
+            tocMobile.classList.add('translate-y-full');
+        }
+    });
+</script>
             
         </div>
     </div>
@@ -1790,7 +1474,7 @@
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/zh-CN" class="flex items-center">
-                            <img src="../../..//assets/logo.svg"
+                            <img src="../..//assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>

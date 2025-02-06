@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh" class="scroll-smooth">
 <head>
@@ -139,6 +141,18 @@
                             <li class="shrink-0">
                                 <a href="/en/release/2025.1.3.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
                                     Release Notes
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/en/template/home.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                    Template
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/en/team.html" class="inline-flex items-center rounded-lg justify-center px-4 py-3 text-sm font-medium leading-none hover:text-gray-900 hover:bg-gray-50">
+                                    Team
                                 </a>
                             </li>
                         
@@ -313,6 +327,14 @@
                         Release Notes
                     </a>
                 
+                    <a href="/en/template/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                        Template
+                    </a>
+                
+                    <a href="/en/team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                        Team
+                    </a>
+                
 
                 <!-- 移动端语言切换 -->
                 
@@ -331,15 +353,28 @@
 </div>
 
 <script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
 
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        // 只有当菜单元素存在时才添加事件监听
+        if (mobileMenu && menuButton) {
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) &&
+                    !menuButton.contains(event.target) &&
+                    !mobileMenu.classList.contains('hidden')) {
+
+                    mobileMenu.classList.add('hidden');
+
+                    const openIcon = menuButton.querySelector('svg:first-child');
+                    const closeIcon = menuButton.querySelector('svg:last-child');
+
+                    if (openIcon && closeIcon) {
+                        openIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
         }
     });
 </script>

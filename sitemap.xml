@@ -76,31 +76,6 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://pageforge.devlive.org/en/setup/template/home.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/en/setup/template/enterprise.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/en/setup/template/minimal.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/en/setup/template/modern.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/en/setup/template/playful.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://pageforge.devlive.org/en/usage/href.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -186,6 +161,46 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/en/template/home.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/team.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/preview/home.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/preview/enterprise.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/preview/minimal.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/preview/modern.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/template/preview/playful.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/team.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/zh-CN/getting-started/get-started.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -257,31 +272,6 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/setup/seo.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/zh-CN/setup/template/home.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/zh-CN/setup/template/enterprise.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/zh-CN/setup/template/minimal.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/zh-CN/setup/template/modern.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pageforge.devlive.org/zh-CN/setup/template/playful.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -367,6 +357,46 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/release/1.0.0.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/home.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/team.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/preview/home.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/preview/enterprise.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/preview/minimal.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/preview/modern.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/template/preview/playful.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/team.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>

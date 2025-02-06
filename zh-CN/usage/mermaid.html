@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zh" class="scroll-smooth">
 <head>
@@ -161,6 +163,24 @@
                                           text-sm font-medium leading-none 
                                           hover:text-gray-900  hover:bg-gray-50 ">
                                     发布日志
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/template/home.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    模版
+                                </a>
+                            </li>
+                        
+                            <li class="shrink-0">
+                                <a href="/zh-CN/team.html"
+                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none 
+                                          hover:text-gray-900  hover:bg-gray-50 ">
+                                    团队
                                 </a>
                             </li>
                         
@@ -358,6 +378,18 @@
                         发布日志
                     </a>
                 
+                    <a href="/zh-CN/template/home.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        模版
+                    </a>
+                
+                    <a href="/zh-CN/team.html"
+                       class="block px-3 py-2 rounded-md text-base font-medium
+                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                        团队
+                    </a>
+                
 
                 <!-- 移动端语言切换 -->
                 
@@ -380,15 +412,28 @@
 </div>
 
 <script>
-    // 点击外部区域关闭移动端菜单
-    document.addEventListener('click', function (event) {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
         const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
 
-        if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuButton.querySelector('svg:first-child').classList.remove('hidden');
-            menuButton.querySelector('svg:last-child').classList.add('hidden');
+        // 只有当菜单元素存在时才添加事件监听
+        if (mobileMenu && menuButton) {
+            document.addEventListener('click', function (event) {
+                if (!mobileMenu.contains(event.target) &&
+                    !menuButton.contains(event.target) &&
+                    !mobileMenu.classList.contains('hidden')) {
+
+                    mobileMenu.classList.add('hidden');
+
+                    const openIcon = menuButton.querySelector('svg:first-child');
+                    const closeIcon = menuButton.querySelector('svg:last-child');
+
+                    if (openIcon && closeIcon) {
+                        openIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
         }
     });
 </script>
@@ -1252,12 +1297,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-90xq7c4vd-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-x0gm7ucz2-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-90xq7c4vd" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-x0gm7ucz2" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 flowchart LR
     id
             </div>
@@ -1289,8 +1334,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-90xq7c4vd');
-                                const loadingElement = document.getElementById('mermaid-90xq7c4vd-loading');
+                                const chartElement = document.getElementById('mermaid-x0gm7ucz2');
+                                const loadingElement = document.getElementById('mermaid-x0gm7ucz2-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1304,7 +1349,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-90xq7c4vd'
+                                    querySelector: '#mermaid-x0gm7ucz2'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1318,7 +1363,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-90xq7c4vd-loading').innerHTML = 
+                                document.getElementById('mermaid-x0gm7ucz2-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1341,12 +1386,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-x43c1l206-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-h5evk95d3-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-x43c1l206" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-h5evk95d3" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
@@ -1379,8 +1424,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-x43c1l206');
-                                const loadingElement = document.getElementById('mermaid-x43c1l206-loading');
+                                const chartElement = document.getElementById('mermaid-h5evk95d3');
+                                const loadingElement = document.getElementById('mermaid-h5evk95d3-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1394,7 +1439,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-x43c1l206'
+                                    querySelector: '#mermaid-h5evk95d3'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1408,7 +1453,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-x43c1l206-loading').innerHTML = 
+                                document.getElementById('mermaid-h5evk95d3-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1431,12 +1476,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-1vh0yg2m5-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-z14mws9xc-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-1vh0yg2m5" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-z14mws9xc" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 mindmap
   root((mindmap))
     Origins
@@ -1483,8 +1528,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-1vh0yg2m5');
-                                const loadingElement = document.getElementById('mermaid-1vh0yg2m5-loading');
+                                const chartElement = document.getElementById('mermaid-z14mws9xc');
+                                const loadingElement = document.getElementById('mermaid-z14mws9xc-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1498,7 +1543,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-1vh0yg2m5'
+                                    querySelector: '#mermaid-z14mws9xc'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1512,7 +1557,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-1vh0yg2m5-loading').innerHTML = 
+                                document.getElementById('mermaid-z14mws9xc-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1674,7 +1719,8 @@ sequenceDiagram
 
             <!-- 右侧目录 -->
             
-                <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+                <!-- 桌面端目录 -->
+<div class="hidden lg:block flex-none w-64 pl-8 mr-8">
     <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
         <nav class="overflow-y-auto pr-4 -mr-4 space-y-1 pageforge-scrollbar"
@@ -1732,7 +1778,16 @@ sequenceDiagram
     </div>
 </div>
 
-<!-- 移动端的模板也需要同样的修改 -->
+<!-- 移动端目录按钮 -->
+<button id="toc-mobile-trigger"
+        class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端目录 -->
 <div id="toc-mobile"
      class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
                 transform translate-y-full transition duration-200 ease-in-out
@@ -1798,6 +1853,24 @@ sequenceDiagram
         
     </nav>
 </div>
+
+<!-- 控制脚本 -->
+<script>
+    const tocMobile = document.getElementById('toc-mobile');
+    const tocMobileTrigger = document.getElementById('toc-mobile-trigger');
+
+    tocMobileTrigger.addEventListener('click', () => {
+        tocMobile.classList.remove('translate-y-full');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!tocMobile.contains(e.target) &&
+            !tocMobileTrigger.contains(e.target) &&
+            !tocMobile.classList.contains('translate-y-full')) {
+            tocMobile.classList.add('translate-y-full');
+        }
+    });
+</script>
             
         </div>
     </div>
