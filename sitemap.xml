@@ -161,6 +161,11 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/en/release/2025.1.3.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/en/release/2025.1.2.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -337,6 +342,11 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/usage/icon.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/release/2025.1.3.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
