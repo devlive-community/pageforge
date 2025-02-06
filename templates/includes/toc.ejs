@@ -1,3 +1,4 @@
+<!-- 桌面端目录 -->
 <div class="hidden lg:block flex-none w-64 pl-8 mr-8">
     <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
@@ -23,7 +24,16 @@
     </div>
 </div>
 
-<!-- 移动端的模板也需要同样的修改 -->
+<!-- 移动端目录按钮 -->
+<button id="toc-mobile-trigger"
+        class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
+        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
+    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+    </svg>
+</button>
+
+<!-- 移动端目录 -->
 <div id="toc-mobile"
      class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
                 transform translate-y-full transition duration-200 ease-in-out
@@ -56,3 +66,21 @@
         <% renderTocItemMobile(locals.pageData.toc) %>
     </nav>
 </div>
+
+<!-- 控制脚本 -->
+<script>
+    const tocMobile = document.getElementById('toc-mobile');
+    const tocMobileTrigger = document.getElementById('toc-mobile-trigger');
+
+    tocMobileTrigger.addEventListener('click', () => {
+        tocMobile.classList.remove('translate-y-full');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!tocMobile.contains(e.target) &&
+            !tocMobileTrigger.contains(e.target) &&
+            !tocMobile.classList.contains('translate-y-full')) {
+            tocMobile.classList.add('translate-y-full');
+        }
+    });
+</script>

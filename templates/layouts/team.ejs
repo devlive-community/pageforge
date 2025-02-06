@@ -1,0 +1,56 @@
+<section class="bg-white dark:bg-gray-900">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                <%= pageData.title %>
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                <%= pageData.description %>
+            </p>
+        </div>
+
+        <div class="mx-auto mt-16 max-w-7xl">
+            <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <% pageData.members.forEach(function(member) { %>
+                    <li class="group relative">
+                        <div class="flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm ring-1 ring-gray-200/70 dark:ring-gray-700/50 hover:shadow-xl hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 ease-in-out">
+                            <div class="relative w-24 h-24 mb-4 transform group-hover:-rotate-6 transition-transform duration-300">
+                                <img class="w-full h-full rounded-full object-cover ring-2 ring-transparent group-hover:ring-indigo-500 transition-all duration-300"
+                                     src="<%= member.avatar %>"
+                                     alt="<%= member.name %>'s avatar"
+                                     loading="lazy">
+                                <% if (member.type === 'owner') { %>
+                                    <span class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full text-xs transform group-hover:scale-110 transition-transform duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                            <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                <% } %>
+                            </div>
+
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                                <%= member.name %>
+                            </h3>
+
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 capitalize">
+                                <%= member.type %>
+                            </p>
+
+                            <div class="mt-4 transform translate-y-0 opacity-100 group-hover:translate-y-1 group-hover:opacity-90 transition-all duration-300">
+                                <a href="<%= member.url %>"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300">
+                                    访问
+                                    <svg class="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</section>
