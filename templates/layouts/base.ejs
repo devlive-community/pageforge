@@ -87,44 +87,46 @@
         </button>
     <% } %>
 
-    <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
-        <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
-        <% if (locals.pageData?.config?.sidebar !== false) { %>
-            <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
+    <div class="pt-[--header-height] w-full">
+        <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row">
+            <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+            <% if (locals.pageData?.config?.sidebar !== false) { %>
+                <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
                          inset-y-0 left-0 transform -translate-x-full md:translate-x-0
                          transition duration-200 ease-in-out
                          md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
                          w-3/4 sm:w-64"
-                   id="sidebar-menu">
-                <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
-                    <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                            onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                       id="sidebar-menu">
+                    <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
+                        <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                                onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
                                      document.getElementById('sidebar-overlay').classList.add('hidden');">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="md:sticky md:top-20 p-4 md:p-0">
-                    <div class="space-y-4">
-                        <%- include('../includes/sidebar') %>
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
                     </div>
-                </nav>
-            </aside>
-        <% } %>
+                    <nav class="md:sticky p-4 md:p-0">
+                        <div class="space-y-4">
+                            <%- include('../includes/sidebar') %>
+                        </div>
+                    </nav>
+                </aside>
+            <% } %>
 
-        <!-- 中间内容 -->
-        <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
-            <article class="prose dark:prose-invert lg:prose-lg mx-auto
+            <!-- 中间内容 -->
+            <main class="flex-grow w-full md:w-2">
+                <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-full">
-                <%- include(`${pageData.template || 'content'}`) %>
-            </article>
-        </main>
+                    <%- include(`${pageData.template || 'content'}`) %>
+                </article>
+            </main>
 
-        <!-- 右侧目录 -->
-        <% if (locals.pageData?.config?.toc !== false) { %>
-            <%- include('../includes/toc') %>
-        <% } %>
+            <!-- 右侧目录 -->
+            <% if (locals.pageData?.config?.toc !== false) { %>
+                <%- include('../includes/toc') %>
+            <% } %>
+        </div>
     </div>
 
     <% if (locals.pageData?.config?.footer !== false) { %>
