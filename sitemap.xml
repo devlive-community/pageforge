@@ -71,6 +71,11 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/en/setup/seo.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/en/setup/template/home.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -242,6 +247,11 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/setup/comment.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/setup/seo.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
