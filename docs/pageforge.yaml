@@ -98,11 +98,13 @@ i18n:
     translations:
       GetStarted: Getting Started
       Setup: Setup
-      InlineTemplate: Inline Template
       Usage: Usage Docs
       EjsTemplate: EJS Template
       CodeBlock: Code Block
       ReleaseNotes: Release Notes
+      Team: Team
+      Template: Template
+      TemplatePreview: Template Preview
   zh-CN:
     name: 中文
     flag: 🇨🇳
@@ -114,6 +116,9 @@ i18n:
       EjsTemplate: EJS 模板
       CodeBlock: 代码块
       ReleaseNotes: 发布日志
+      Team: 团队
+      Template: 模版
+      TemplatePreview: 模版预览
 
 footer:
   copyright: © 2024 PageForge All Rights Reserved.
@@ -169,12 +174,6 @@ nav:
       - /setup/font-size
       - /setup/comment
       - /setup/seo
-      - InlineTemplate:
-          - /setup/template/home
-          - /setup/template/enterprise
-          - /setup/template/minimal
-          - /setup/template/modern
-          - /setup/template/playful
   - Usage:
       - /usage/href
       - /usage/image
@@ -194,3 +193,14 @@ nav:
       - /release/2025.1.1
       - /release/2025.1.0
       - /release/1.0.0
+  - Template:
+      - /template/home
+      - /template/team
+      - TemplatePreview:
+          - /template/preview/home
+          - /template/preview/enterprise
+          - /template/preview/minimal
+          - /template/preview/modern
+          - /template/preview/playful
+  - Team:
+      - /team
