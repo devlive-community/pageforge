@@ -1,5 +1,5 @@
 ---
-title: 站点地图
+title: 站点地图设置
 icon: map
 ---
 
