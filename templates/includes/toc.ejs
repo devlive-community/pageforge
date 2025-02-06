@@ -8,12 +8,6 @@
                 <% items?.forEach(item => { %>
                     <div class="pl-<%= (item.level - 1) * 4 %>">
                         <a href="#<%= item.slug %>"
-                           onclick="event.preventDefault();
-                                   const target = document.getElementById('<%= item.slug %>');
-                                   const header = document.querySelector('header nav');
-                                   const offset = header ? header.offsetHeight + 10 : 80;
-                                   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                                   window.scrollTo({top: targetPosition, behavior: 'smooth'});"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                            data-slug="<%= item.slug %>">
                             <%- item.text %>
@@ -29,15 +23,7 @@
     </div>
 </div>
 
-<!-- 移动端目录按钮 -->
-<button class="lg:hidden fixed right-4 bottom-4 z-20 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg"
-        onclick="document.getElementById('toc-mobile').classList.toggle('translate-y-full')">
-    <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
-    </svg>
-</button>
-
-<!-- 移动端底部目录面板 -->
+<!-- 移动端的模板也需要同样的修改 -->
 <div id="toc-mobile"
      class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white dark:bg-gray-800
                 transform translate-y-full transition duration-200 ease-in-out
@@ -57,13 +43,6 @@
             <% items?.forEach(item => { %>
                 <div class="pl-<%= (item.level - 1) * 4 %>">
                     <a href="#<%= item.slug %>"
-                       onclick="event.preventDefault();
-                               const target = document.getElementById('<%= item.slug %>');
-                               const header = document.querySelector('header nav');
-                               const offset = header ? header.offsetHeight + 20 : 80;
-                               const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                               window.scrollTo({top: targetPosition, behavior: 'smooth'});
-                               document.getElementById('toc-mobile').classList.add('translate-y-full');"
                        class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
                        data-slug="<%= item.slug %>">
                         <%- item.text %>
