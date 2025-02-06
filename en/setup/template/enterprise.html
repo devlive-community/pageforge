@@ -97,7 +97,7 @@
                 💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
             </div>
             <button class="text-blue-500 hover:text-blue-700 "
-                    onclick="this.closest('[data-banner]').remove()">
+                    data-banner-close>
                 <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
                 </svg>
@@ -506,27 +506,28 @@
         </button>
     
 
-    <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row pt-16">
-        <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
-        
-            <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
+    <div class="pt-[--header-height] w-full">
+        <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row">
+            <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+            
+                <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
                          inset-y-0 left-0 transform -translate-x-full md:translate-x-0
                          transition duration-200 ease-in-out
                          md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
                          w-3/4 sm:w-64"
-                   id="sidebar-menu">
-                <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
-                    <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-                            onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
+                       id="sidebar-menu">
+                    <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
+                        <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                                onclick="document.getElementById('sidebar-menu').classList.add('-translate-x-full');
                                      document.getElementById('sidebar-overlay').classList.add('hidden');">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="md:sticky md:top-20 p-4 md:p-0">
-                    <div class="space-y-4">
-                        
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="md:sticky p-4 md:p-0">
+                        <div class="space-y-4">
+                            
 
 
 
@@ -1590,16 +1591,16 @@
         }
     </script>
 
-                    </div>
-                </nav>
-            </aside>
-        
+                        </div>
+                    </nav>
+                </aside>
+            
 
-        <!-- 中间内容 -->
-        <main class="flex-grow w-full mt-4 md:w-2 md:mt-12">
-            <article class="prose dark:prose-invert lg:prose-lg mx-auto
+            <!-- 中间内容 -->
+            <main class="flex-grow w-full md:w-2">
+                <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-full">
-                
+                    
     <!-- Hero Section -->
     <section class="bg-slate-900 rounded-t-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -1751,11 +1752,12 @@
         </div>
     </section>
 
-            </article>
-        </main>
+                </article>
+            </main>
 
-        <!-- 右侧目录 -->
-        
+            <!-- 右侧目录 -->
+            
+        </div>
     </div>
 
     
