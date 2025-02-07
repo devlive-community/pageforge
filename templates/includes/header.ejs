@@ -37,6 +37,9 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
 
                     <!-- 桌面端导航 -->
                     <%- include('./header-nav', { darkClasses, isPathInNavItem }) %>
+
+                    <!-- 搜索框 -->
+                    <%- include('./header-search', { darkClasses }) %>
                 </div>
 
                 <!-- 右侧工具栏 -->
