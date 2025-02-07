@@ -91,6 +91,8 @@ feature:
       </script>
   search:
     enable: true
+  tabs:
+    enable: true
 
 i18n:
   default: zh-CN
