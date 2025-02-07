@@ -1,0 +1,482 @@
+[
+  {
+    "title": "GetStarted",
+    "content": "PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 PageForge 的使用过程非常简单，只需几步即可完成网站的构建、部署。你只需要编写 markdown 文件，PageForge 会帮你生成高质量的静态网站。无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 --- PageForge 提供以下安装方式: 在线安装 源码安装 --- 您可以使用 pnpm 或 yarn 等包管理工具进行在线安装: bash pnpm add -g pageforge yarn global add pageforge --- bash git clone https://github.com/devlive-community/pageforge.git cd pageforge pnpm install pnpm link --global",
+    "url": "https://pageforge.devlive.org/en/getting-started/get-started.html",
+    "lang": "en"
+  },
+  {
+    "title": "创建网站",
+    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
+    "url": "https://pageforge.devlive.org/en/getting-started/create-site/index.html",
+    "lang": "en"
+  },
+  {
+    "title": "发布网站",
+    "content": "在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。 --- 如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。 使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 .github/workflows/ci.yml，然后复制并粘贴以下内容： yaml name: ci on: push: branches: master main permissions: contents: write jobs: deploy: runs-on: ubuntu-latest steps: uses: actions/checkout@v4 name: Use Node.js 18.x uses: actions/setup-node@v3 with: node-version: 18.x name: Install pnpm uses: pnpm/action-setup@v2 with: version: 8 name: Install dependencies run: pnpm install name: Build site run: | pageforge build name: Deploy to GitHub Pages uses: peaceiris/actions-gh-pages@v3 with: githubtoken: ${{ secrets.GITHUBTOKEN }} publishdir: ./dist --- 您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 pageforge.yaml 文件，读取配置信息： yaml deploy: github: repository: devlive-community/pageforge branch: gh-pages cname: pageforge.devlive.community buildDir: dist username: devlive-community email: support@devlive.org",
+    "url": "https://pageforge.devlive.org/en/getting-started/publish-site.html",
+    "lang": "en"
+  },
+  {
+    "title": "自定义网站",
+    "content": "PageForge 提供了一些可选的自定义选项，以满足不同的需求。 --- 您可以在 pageforge.yaml 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。 yaml theme: extraCss: /assets/extra.css --- 您可以在 pageforge.yaml 文件中指定自定义的 JavaScript 文件，以便覆盖默认的 JavaScript 脚本。 yaml theme: extraJs: /assets/extra.js --- 您可以在项目根目录创建 templates 文件夹，并在其中创建自定义的模板文件，以便覆盖默认的模板文件。 bash templates ├── components │ ├── a.js │ ├── block-code.js │ ├── checkbox.js │ ├── h1.js │ ├── h2.js │ ├── h3.js │ ├── h4.js │ ├── h5.js │ ├── h6.js │ ├── hr.js │ ├── image.js │ ├── inline-code.js │ ├── list.js │ ├── p.js │ └── space.js ├── includes │ ├── footer.ejs │ ├── header.ejs │ ├── nav.ejs │ ├── sidebar.ejs │ └── toc.ejs └── layouts ├── base.ejs ├── content.ejs └── page.ejs 按照文件的路径，您可以覆盖默认的模板文件。 如果自定义模版，可以直接在 templates/layouts 文件夹中创建自定义的布局文件，文件名便是模版名称。 ejs <article> <div class=\"content\"> <%- pageData.content %> </div> </article> 页面相关的数据在 pageData 中",
+    "url": "https://pageforge.devlive.org/en/getting-started/customization.html",
+    "lang": "en"
+  },
+  {
+    "title": "基础设置",
+    "content": "yaml site: title: PageForge hiddenTitle: true description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 logo: /assets/logo.svg favicon: /assets/logo.svg > 请注意，这些设置只是一些示例，你可以根据自己的需求进行修改。 title: 网站标题 hiddenTitle: 是否隐藏标题，默认为 false，设置后 logo 右侧的标题将会隐藏 description: 网站描述 logo: 网站图标 favicon: 网站图标 --- yaml theme: extraCss: /assets/extra.css extraJs: /assets/extra.js extraCss: 附加的 CSS 文件路径 extraJs: 附加的 JavaScript 文件路径 --- yaml cdn: style: https://cdn.tailwindcss.com prismStyle: https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css script: https://cdn.tailwindcss.com style: Tailwind CSS CDN 地址 prismStyle: Prism CSS CDN 地址 script: Tailwind CSS CDN 地址 !!! info \"提示\" 如果您的站点是其他的样式，比如 bootstrap，您可以在 pageforge.yaml 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。 !!! --- yaml repo: owner: username name: pageforge url: https://github.com/username/pageforge owner: GitHub 用户名 name: 仓库名称 url: 仓库 URL > 如果您的站点是私有的，可以在 pageforge.yaml 文件中指定自定义的仓库，以便覆盖默认的 GitHub 仓库。 --- yaml nav: 快速开始: /getting-started/get-started /getting-started/create-site/index /getting-started/publish-site 相关的内容全部都存放在 content 文件夹中。 比如你的快速开始文档是 /get-started 则该文件的位置为 content/get-started.md。 /getting-started/get-started 该文件的位置为 content/getting-started/get-started.md。 --- yaml footer: copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建 social: github: title: GitHub href: https://github.com/devlive-community/pageforge links: 资源项目: title: PageForge href: https://github.com/devlive-community/pageforge title: TailwindCSS href: https://tailwindcss.com copyright: 底部版权信息 social: 社交媒体链接 links: 底部链接 其中 social 的子项包括: facebook: Facebook github: GitHub twitter: Twitter discord: Discord 其中 links 的子项包括: 分组名字 title: 链接标题 href: 链接地址",
+    "url": "https://pageforge.devlive.org/en/setup/site.html",
+    "lang": "en"
+  },
+  {
+    "title": "页面设置",
+    "content": "PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。 --- 在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。 yaml --- title: 这里是标题 icon: feather --- --- 每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。 生成的标题为 page.title - site.title 的格式。 --- PageForge 支持设置当前页面的描述，格式如下： markdown --- description: 这里是描述 --- --- 每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。 目前支持 Lucide 图标，可以在 Lucide 中找到更多图标。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。 yaml --- config: header: false --- 默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 header: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。 yaml --- config: sidebar: false --- 默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 sidebar: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的底部。 yaml --- config: footer: false --- 默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 footer: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 toc，页面的目录将不会显示。 yaml --- config: toc: false --- 默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 toc: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 content，但你可以在 markdown 文件的顶部设置 template: layout-name 以更改它。 > 你可以在 templates/layouts 中找到所有可用的布局。 > > 目前支持 content 和 page 布局。 如果是自定义的布局，可以直接在 templates/layouts 文件夹中创建自定义的布局文件，文件名便是模版名称。 比如模版名字是 foo，那么文件名就是 foo.ejs。在页面中使用以下代码配置模版: yaml --- template: foo --- --- PageForge 支持设置当前页面的状态，当前支持以下状态： draft: 草稿 new: 新添加 updated: 更新 deprecated: 已过期 custom: 自定义 通过配置 markdown 文件的元数据来支持，格式如下： markdown --- status: type: updated --- 如果需要设置自定义提示的内容，可以修改为以下方式： markdown --- status: type: updated text: 自定义提示 --- PageForge 还支持自定义状态，格式如下： markdown --- status: type: custom icon: feather text: 自定义提示 --- !!! danger \"注意\" 自定义状态情况下如果 feature.lucide.enable 为 true 时，icon 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。 !!!",
+    "url": "https://pageforge.devlive.org/en/setup/page.html",
+    "lang": "en"
+  },
+  {
+    "title": "特性设置",
+    "content": "PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。 所有的特性配置均在 pageforge.yaml 文件中进行配置，且支持嵌套配置。 格式为 yaml feature: xxx --- PageForge 默认支持 Lucide 图标库，需要启用后才能使用 Lucide 图标。 yaml lucide: enable: true cdn: https://unpkg.com/lucide@latest/dist/umd/lucide.js enable: 是否启用 Lucide 图标 cdn: Lucide CDN 链接，默认为 https://unpkg.com/lucide@latest/dist/umd/lucide.js ，可以根据自己的需求进行修改，这里要填写完整的 CDN 链接，例如 https://unpkg.com/lucide@latest/dist/umd/lucide.js --- PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。 yaml feature: issues: enable: true 启用后，可以在 Markdown 中使用 #123 格式来引用 Issues，例如 markdown #123 --- PageForge 支持解析 tooltip 的链接，需要启用后才能使用。 yaml feature: tooltip: enable: true --- PageForge 支持统计代码，需要启用后才能使用。 yaml feature: statistics: enable: true content: | 服务商返回的统计代码 content: 自定义统计代码，需要填写完整的统计代码。 --- PageForge 支持编辑文档，需要启用后才能使用。 yaml feature: edit: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成编辑文档的链接，默认为 main 分支，可以在 pageforge.yaml 中配置 repo.branch 来更改分支。 --- PageForge 支持查看源码，需要启用后才能使用。 yaml feature: view: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成查看源码的链接。默认为 main 分支，可以在 pageforge.yaml 中配置 repo.branch 来更改分支。 --- PageForge 支持 Git 提交信息，需要启用后才能使用。 yaml feature: revision: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成 Git 提交信息的链接。 支持以下信息: 创建时间 最后修改时间 首次提交 末次提交 --- PageForge 支持 Git 提交用户，需要启用后才能使用。 yaml feature: contributors: enable: true 启用后，系统会自动配置用户在 Github 中的头像。 --- PageForge 支持返回顶部，需要启用后才能使用。 yaml feature: backToTop: enable: true --- PageForge 支持使用 Mermaid 图表语言，需要启用后才能使用。 yaml feature: mermaid: enable: true options: theme: dark enable: 是否启用 Mermaid 图表 options: Mermaid 图表选项，可以根据自己的需求进行配置，例如 theme: dark，该选项是可选的，默认为 null !!! danger \"注意\" 如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 pageforge.yaml 中配置 cdn.mermaidJs 的值。 !!! --- PageForge 支持使用 Diff 语法，需要启用后才能使用。 yaml feature: diff: enable: true --- PageForge 支持 Dark Mode，需要启用后才能使用。 yaml feature: darkMode: enable: true --- PageForge 支持搜索功能，需要启用后才能使用。 yaml feature: search: enable: true",
+    "url": "https://pageforge.devlive.org/en/setup/feature.html",
+    "lang": "en"
+  },
+  {
+    "title": "国际化设置",
+    "content": "PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。 --- yaml i18n: enable: true 启用国际化后，需要配置国际化语言 yaml i18n: default: zh-CN en: name: English flag: 🇬🇧 translations: GetStarted: Getting Started Setup: Setup Usage: Usage Docs zh-CN: name: 中文 flag: 🇨🇳 translations: GetStarted: 快速开始 Setup: 设置 Usage: 使用文档 default: 默认语言 en、zh-CN: 自定义语言 translations: 对应语言的翻译，格式为 key: value 系统会通过 pageforge.yaml 中配置的语言来自动加载对应的翻译，如果没有找到翻译，则会返回原 key --- 在 pageforge.yaml 中配置国际化后，可以在 nav 中使用以下方式来获取翻译的结果。 yaml nav: GetStarted: /getting-started/get-started GetStarted: 要翻译的 key，如果没有找到翻译，则会返回原 key 在页面中使用使用以下方式来获取翻译的结果 yaml --- title: GetStarted icon: crosshair --- 只需要将 title 中替换为国际化的 key 就可以了 国际化的文档名格式为 file.lang.md ，比如我们的 index.md 如果要配置国际化文件名，可以这样写 index.en.md",
+    "url": "https://pageforge.devlive.org/en/setup/i18n.html",
+    "lang": "en"
+  },
+  {
+    "title": "压缩设置",
+    "content": "PageForge 支持压缩文件，可以帮助你快速构建和部署你的静态网站。使用的是 html-minifier 模块，默认是禁用的，需要在 pageforge.yaml 配置文件中启用 --- yaml feature: compress: enable: true enable: 是否启用压缩 --- PageForge 支持使用 html-minifier 模块的压缩配置，可以参考它来设置怎么压缩 yaml feature: compress: enable: true options: collapseWhitespace: true removeComments: true removeEmptyAttributes: true",
+    "url": "https://pageforge.devlive.org/en/setup/compress.html",
+    "lang": "en"
+  },
+  {
+    "title": "分享设置",
+    "content": "PageForge 的分享设置包含了一些用于在网站上分享文档的选项。您可以在文档的顶部设置是否启用分享，以及选择要分享的平台。 PageForge 的分享功能是使用 social-share.js 进行实现的。 --- yaml feature: share: enable: true enable: 是否启用分享 --- 可以配置分享平台的选项，可以参考它来设置怎么分享 yaml feature: share: enable: true options: facebook: true weibo: true linkedin: true 支持的分享平台可参考 social-share.js --- yaml feature: share: enable: true cdn: https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/ cdn: CDN 链接，可以根据自己的需求进行配置，这里要填写完整的 CDN 链接，例如 https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16，这里要填写前面部分，会自动拼接后面的 js 和 css。",
+    "url": "https://pageforge.devlive.org/en/setup/share.html",
+    "lang": "en"
+  },
+  {
+    "title": "站点地图设置",
+    "content": "PageForge 支持站点地图，可以帮助你快速找到你的网站。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml feature: sitemap: enable: true > 启用站点地图后，将在底部出现站点地图链接。 !!! danger \"注意\" 启用站点地图，必须要在 pageforge.yaml 文件中添加以下配置 yaml site: baseUrl: https://pageforge.devlive.org !!!",
+    "url": "https://pageforge.devlive.org/en/setup/sitemap.html",
+    "lang": "en"
+  },
+  {
+    "title": "Banner 设置",
+    "content": "PageForge 支持设置顶部 Banner，可以帮助你快速创建高质量的 Banner。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml banner: content: PageForge 2025.1.2 --- yaml banner: content: | <h1>PageForge 2025.1.2</h1>",
+    "url": "https://pageforge.devlive.org/en/setup/banner.html",
+    "lang": "en"
+  },
+  {
+    "title": "字体设置",
+    "content": "PageForge 支持设置字体大小。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml feature: fontSize: enable: true 启用后会在页面标题右侧出现一个字体调整按钮，可以调整字体大小。",
+    "url": "https://pageforge.devlive.org/en/setup/font-size.html",
+    "lang": "en"
+  },
+  {
+    "title": "评论设置",
+    "content": "PageForge 支持将您选择的第三方评论系统添加到任何页面的页脚。例如，我们将集成 Giscus，它是开源的、免费的，并使用 GitHub 讨论作为后端。 PageForge 的评论系统需要启用才可以。 --- yaml feature: comment: enable: true content: | 第三方评论系统返回的代码 --- 在使用 Giscus 评论系统时，您需要完成以下步骤： 安装 Giscus GitHub 应用程序 并授予对应将评论作为 GitHub 讨论托管的存储库的访问权限。请注意，这可能是与您的文档不同的存储库。 访问 Giscus 并通过其配置工具生成代码段以加载评论系统。复制代码段以进行下一步。生成的代码段应类似于以下内容： js <script src=\"https://giscus.app/client.js\" data-repo=\"<username>/<repository>\" data-repo-id=\"...\" data-category=\"...\" data-category-id=\"...\" data-mapping=\"pathname\" data-reactions-enabled=\"1\" data-emit-metadata=\"1\" data-theme=\"light\" data-lang=\"en\" crossorigin=\"anonymous\" async> </script> 将返回的代码粘贴到 feature.comment.content 的值中。",
+    "url": "https://pageforge.devlive.org/en/setup/comment.html",
+    "lang": "en"
+  },
+  {
+    "title": "SEO 设置",
+    "content": "PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO）。 --- PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO），包括标题、关键字和描述等。 yaml site: description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator author: devlive-community description: 网站描述 keywords: 网站关键字 author: 网站作者，默认为 PageForge > PageForge 支持的 SEO 设置包括标题、关键字和描述等，可以帮助你优化网站的搜索引擎优化（SEO），提高网站的排名。 --- PageForge 支持设置页面的 SEO 设置，可方便为不同的页面设置不同的 SEO 设置。只需要设置 markdown 文件的元数据即可。 yaml --- description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator --- !!! danger \"注意\" 页面配置文件的元数据会覆盖全局的 SEO 设置，即使你设置了全局的 SEO 设置，也会被覆盖，页面 SEO 无法设置 author。 !!!",
+    "url": "https://pageforge.devlive.org/en/setup/seo.html",
+    "lang": "en"
+  },
+  {
+    "title": "超链接",
+    "content": "PageForge 支持 Markdown 的默认超链接语法。您可以使用 []() 格式来创建链接，例如 链接文本。 PageForge 实现了更多的语义，支持更多的超链接格式。 --- 链接文本 PageForge --- 链接文本 PageForge --- 链接文本 PageForge <br /> 打开方式支持 blank self parent top",
+    "url": "https://pageforge.devlive.org/en/usage/href.html",
+    "lang": "en"
+  },
+  {
+    "title": "图片",
+    "content": "PageForge 支持 Markdown 的默认图片语法。您可以使用 ![](图片URL) 格式来插入图片，例如 ![](图片URL)。 PageForge 实现了更多的语义，支持更多的图片格式。 --- ![](图片URL) --- ![](图片URL \"可选标题\") --- 设置宽高的时候必须以 = 开始 ![](图片URL \"可选标题\" =100x200) !alt文本 只设置宽度 ![](图片URL \"可选标题\" =100x) !alt文本 只设置高度 ![](图片URL \"可选标题\" =x200) !alt文本 --- 设置对齐方式的时候必须要设置宽高，支持的值有 left center right 左对齐 ![](图片URL \"可选标题\" =100x200 left) !alt文本 中对齐 ![](图片URL \"可选标题\" =100x200 center) !alt文本 右对齐 ![](图片URL \"可选标题\" =100x200 right) !alt文本",
+    "url": "https://pageforge.devlive.org/en/usage/image.html",
+    "lang": "en"
+  },
+  {
+    "title": "提示",
+    "content": "PageForge 支持使用 markdown 实现了提示相关信息。 !!! danger \"注意\" 需要注意的是必须要使用 !!! 包裹，且后面的内容需要缩进。 !!! 支持的类型有: info danger success warning dark --- info 类型的提示信息可以使用如下的语法： markdown !!! info \"标题\" 这是一个提示信息 !!! !!! info \"一行\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- danger 类型的提示信息可以使用如下的语法： markdown !!! danger \"标题\" 这是一个提示信息 !!! !!! danger \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- success 类型的提示信息可以使用如下的语法： markdown !!! success \"标题\" 这是一个提示信息 !!! !!! success \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- warning 类型的提示信息可以使用如下的语法。 markdown !!! warning \"标题\" 这是一个提示信息 !!! !!! warning \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- dark 类型的提示信息可以使用如下的语法。 markdown !!! dark \"标题\" 这是一个提示信息 !!! !!! dark \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- 如果不设置标题，可将 \"\" 内容设置为空字符串。 markdown !!! info \"\" 这是一个提示信息 !!! !!! info \"\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!!",
+    "url": "https://pageforge.devlive.org/en/usage/alert.html",
+    "lang": "en"
+  },
+  {
+    "title": "选项卡",
+    "content": "PageForge 支持使用 markdown 实现了选项卡相关信息。 --- markdown ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 ::: ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 这是 dd 哈哈 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 :::",
+    "url": "https://pageforge.devlive.org/en/usage/tab.html",
+    "lang": "en"
+  },
+  {
+    "title": "EjsTemplate",
+    "content": "PageForge 支持使用 EJS 模版语言。默认我们提供两种数据: pageData: 当前页面的数据 siteData: 当前站点的数据 EJS 模版语言的用法请参考 EJS 文档 !!! danger \"注意\" 我们只支持 <% %> 和 <%= %> 语法 !!! --- 只需要在 markdown 文件中添加类似以下代码： <%= pageData.title %> 将渲染出来 PageForge",
+    "url": "https://pageforge.devlive.org/en/usage/ejs.html",
+    "lang": "en"
+  },
+  {
+    "title": "CodeBlock",
+    "content": "PageForge 支持使用代码块，用户可以自定义代码块的样式，以便更好地展示代码的语法和格式。 --- 以下是一个简单的示例： java public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } } --- > 默认情况下，代码块不会显示行号，但可以通过配置 showLineNumbers 或者 showLineNumbers=true 参数来启用行号显示。格式为 > java showLineNumbers > 或者 > java showLineNumbers=true java showLineNumbers public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }",
+    "url": "https://pageforge.devlive.org/en/usage/code.html",
+    "lang": "en"
+  },
+  {
+    "title": "Issues",
+    "content": "PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.issues.enable: true !!! markdown #123 支持所有平台的 Issues 链接，包括 GitHub、GitLab、Bitbucket、Gitea、Gitee 等等。需要依赖在 pageforge.yaml 中配置 repo.owner 和 repo.name，才会构建完整的链接路径。 #123: 这是一个示例的 Issues 编号，您可以根据实际情况替换为正确的编号 --- PageForge 支持自定义仓库，不依赖在 pageforge.yaml 中配置 repo.owner 和 repo.name，直接指定仓库路径即可。例如 markdown devlive-community/pageforge#1 这是一个自定义的 Issues 链接 devlive-community/pageforge#1，可以根据实际情况替换为正确的仓库路径。",
+    "url": "https://pageforge.devlive.org/en/usage/issues.html",
+    "lang": "en"
+  },
+  {
+    "title": "Tooltip",
+    "content": "PageForge 支持解析 tooltip 的链接，您可以在 Markdown 中使用以下语法来插入 tooltip。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.tooltip.enable: true !!! markdown !tip提示文本 这是一个普通文本，这里有一个!tip提示文本。 你可以用它来解释专业术语，比如：!tipREST 鼠标移向可以看到提示。",
+    "url": "https://pageforge.devlive.org/en/usage/tooltip.html",
+    "lang": "en"
+  },
+  {
+    "title": "Mermaid",
+    "content": "PageForge 支持使用 Mermaid 图表语言。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.mermaid.enable: true !!! --- markdown :::mermaid sequenceDiagram Alice->>John: Hello John, how are you? John-->>Alice: Great! ::: --- :::mermaid flowchart LR id ::: --- :::mermaid sequenceDiagram Alice->>John: Hello John, how are you? John-->>Alice: Great! ::: --- ::: mermaid mindmap root((mindmap)) Origins Long history ::icon(fa fa-book) Popularisation British popular psychology author Tony Buzan Research On effectiveness<br/>and features On Automatic creation Uses Creative techniques Strategic planning Argument mapping Tools Pen and paper Mermaid :::",
+    "url": "https://pageforge.devlive.org/en/usage/mermaid.html",
+    "lang": "en"
+  },
+  {
+    "title": "Diff",
+    "content": "PageForge 支持 diff 语法。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.diff.enable: true !!! --- 源代码 markdown :::diff 这是第1行（添加） 这是第2行（删除） ::: 显示效果 ::: diff 这是第1行（添加） 这是第2行（删除） ::: --- 源代码 markdown :::diff +1,3-5 -2,6 这是第1行（会显示为绿色添加） 这是第2行（会显示为红色删除） 这是第3行（会显示为绿色添加） 这是第4行（会显示为绿色添加） 这是第5行（会显示为绿色添加） 这是第6行（会显示为红色删除） 这是第7行（会显示为普通上下文） ::: 显示效果 :::diff +1,3-5 -2,6 这是第1行（会显示为绿色添加） 这是第2行（会显示为红色删除） 这是第3行（会显示为绿色添加） 这是第4行（会显示为绿色添加） 这是第5行（会显示为绿色添加） 这是第6行（会显示为红色删除） 这是第7行（会显示为普通上下文） ::: --- 源代码 markdown :::diff +1,3-5 -2,10-11 module.exports = function template(value) { return <div class=\"bg-gray-50 rounded-lg overflow-x-auto\"> <div class=\"min-w-full w-max\"> ${value.content.map(item => <div class=\"text-gray-900 font-mono px-2 py-0.5 ${item.type === 'addition' ? 'bg-green-50' : item.type === 'deletion' ? 'bg-red-50' : 'bg-transparent'}\"> <span class=\"inline-block w-4 text-gray-500 select-none\">${item.prefix}</span>${item.content} </div> ).join('')} </div> </div>; }; ::: 显示效果 :::diff +1,3-5 -2,10-11 module.exports = function template(value) { return <div class=\"bg-gray-50 rounded-lg overflow-x-auto\"> <div class=\"min-w-full w-max\"> ${value.content.map(item => <div class=\"text-gray-900 font-mono px-2 py-0.5 ${item.type === 'addition' ? 'bg-green-50' : item.type === 'deletion' ? 'bg-red-50' : 'bg-transparent'}\"> <span class=\"inline-block w-4 text-gray-500 select-none\">${item.prefix}</span>${item.content} </div> ).join('')} </div> </div>; }; :::",
+    "url": "https://pageforge.devlive.org/en/usage/diff.html",
+    "lang": "en"
+  },
+  {
+    "title": "按钮",
+    "content": "PageForge 支持按钮，您可以创建基于 Tailwind CSS 的按钮。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: button: enable: true !!! --- markdown !btn[点击我] !btn[点击我] --- markdown !btn点击我跳转到首页 !btn点击我跳转到首页 --- markdown !btn访问外部 !btn访问外部 --- !!! info \"提示\" 支持所有的 Tailwind CSS 的样式，可以使用自定义样式，例如 bg-green-500 hover:bg-green-600，只需要写类名即可，不需要加类名前面的 .，多个类名之间用空格分隔 !!! markdown !btn[自定义按钮]{bg-green-500 hover:bg-green-600} !btn[自定义按钮]{bg-green-500 hover:bg-green-600 text-white} --- markdown 前置内容!btn点击我跳转到首页{bg-green-500 hover:bg-green-600 text-white}后置内容 前置内容!btn点击我跳转到首页{bg-green-500 hover:bg-green-600 text-white}后置内容",
+    "url": "https://pageforge.devlive.org/en/usage/button.html",
+    "lang": "en"
+  },
+  {
+    "title": "Icon 图标",
+    "content": "PageForge 提供了一系列图标,可以用于页面中的按钮、链接等元素。 !!! danger \"注意\" 默认支持的是 Lucide 图标。相关图标库可以在 Lucide 中找到 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: lucide: enable: true !!! --- markdown :user: :user: --- !!! danger \"注意\" 图标的大小配置是通过在图标名称后面添加 {数字} 的方式进行的，例如 user{30} 表示图标的尺寸为 30px。 !!! markdown :user{30}: :user{30}: --- !!! danger \"注意\" 图标的颜色配置是通过在图标名称后面添加 {16,#ff0000} 的方式进行的，例如 user{16,#ff0000} 表示图标的颜色为红色，尺寸为 16px。 图标颜色必须要和尺寸配置一起使用。 !!! markdown :user{16,#ff0000}: :user{16,#ff0000}: --- markdown 我是前置内容:user{16,#ff0000}:后置内容 我是前置内容:user{18,#ff0000}:后置内容",
+    "url": "https://pageforge.devlive.org/en/usage/icon.html",
+    "lang": "en"
+  },
+  {
+    "title": "2025.1.3",
+    "content": "我们很高兴地宣布 PageForge 2025.1.3 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 支持页面 SEO 优化 (#7) 添加评论功能 (#9) 支持字体大小调节 (#13) 新增菜单顶部 Banner (#21) 支持页面分享功能 (#17) 支持站点地图生成 (#5) 支持 HTML 压缩 (#19) 支持 Dark 模式主题切换 支持图标功能与自定义按钮 新增多个主页模板 支持包含子项的导航项展开/收缩 优化顶部菜单布局 添加代码复制 hover 效果 支持 diff 代码复制 添加图标加载视觉效果 添加 git 贡献者头像加载状态和占位符 支持自定义页面状态显示 修复页面状态提示被容器遮挡问题 拆分主模版部分功能为独立组件 拆分查看源码和修改源码为独立组件 拆分移动端语言选择器 优化导航获取方式 支持国际化不存在的文件使用默认语言 修复缩进情况下代码片段无法解析 修复站点地图无法新页面打开问题 修复未启用国际化时构建站点地图错误 修复标题过长导致内容自动换行问题 修复嵌套路径导致跳转异常 添加 Google 广告代码支持 新增站点地图文档 添加压缩配置文档 GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本带来了多项重要功能更新，包括 Dark 模式、SEO 优化、评论功能等重要特性，同时优化了用户界面和架构设计，建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/en/release/2025.1.3.html",
+    "lang": "en"
+  },
+  {
+    "title": "2025.1.2",
+    "content": "我们很高兴地宣布 PageForge 2025.1.2 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 支持 Mermaid 图表渲染 (#11) 支持 Diff 语法展示 新增代码块一键复制功能 添加返回顶部功能 支持文档贡献者列表展示 集成 Git 提交信息显示 新增 Tooltip 提示功能 支持图片加载状态提示 支持 Issues 解析与链接 (#4) 支持添加统计代码 (#1) 优化页面布局结构 拆分页面标题为独立组件 优化目录导航体验 改进移动端 Git 提交信息显示 修复代码块内容过长导致的布局问题 修复点击目录后跳转被菜单遮挡问题 拆分国际化为独立模块 拆分目录为独立组件 拆分 Git 提交信息组件 优化 Mermaid 和 Diff 匹配方式 GitHub: https://github.com/devlive-community/pageforge 官网: http://pageforge.devlive.org 我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本带来了多项重要功能更新，优化了用户界面和架构设计，建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/en/release/2025.1.2.html",
+    "lang": "en"
+  },
+  {
+    "title": "2025.1.1",
+    "content": "我们很高兴地宣布 PageForge 2025.1.1 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 集成代码高亮功能 支持自定义 Prism 样式 CDN 支持配置代码块行号显示 修复列表中链接显示异常 (#2) 修复单链接解析失败问题 (#3) 优化语言选择器位置显示 GitHub: https://github.com/devlive-community/pageforge 官网: http://pageforge.devlive.org 我们将继续完善功能，提升用户体验，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本主要增强了代码展示功能，并修复了关键的链接解析问题。建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/en/release/2025.1.1.html",
+    "lang": "en"
+  },
+  {
+    "title": "2025.1.0",
+    "content": "我们很高兴地宣布 PageForge 2025.1.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 新增多语言支持系统 添加语言切换选择器 优化国际化资源文件管理 完善多语言路由处理 支持 EJS 模板语法 支持在 Markdown 中使用 EJS 模板 新增 404 错误页面模板 优化模板渲染机制 全面支持移动设备 优化移动端用户体验 响应式设计改进 集成 Lucide 图标库 添加加载动画效果 优化文档图标显示 支持自定义 CSS 和 JavaScript 修复列表渲染问题 优化文本段落换行处理 修复子目录编译问题 完善导航系统 GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 我们将继续完善功能，提升用户体验，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本在保持核心功能稳定的同时，重点加入了国际化支持，并对模板系统进行了重要升级。欢迎下载使用，共同推进 PageForge 的发展。",
+    "url": "https://pageforge.devlive.org/en/release/2025.1.0.html",
+    "lang": "en"
+  },
+  {
+    "title": "1.0.0",
+    "content": "我们很高兴地宣布 PageForge v1.0.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，为用户提供从创建到部署的一站式解决方案。 内容创作与渲染 完整支持 Markdown 语法渲染 支持代码高亮和 HTML 标签解析 支持表格、引用块和警告提示 自动生成目录（TOC） Tab 标签页支持 站点结构 可自定义导航和布局 支持多种首页模板 灵活的页面布局系统 支持静态资源文件管理 部署与集成 一键部署到 GitHub Pages 支持自定义配置重载 CI/CD 支持 优化模板编译系统 重构解析引擎架构 改进资源文件处理 升级依赖管理系统（使用 pnpm） GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 本项目采用开源协议授权 感谢社区的支持！我们期待您的反馈和建议，共同推进 PageForge 的发展。",
+    "url": "https://pageforge.devlive.org/en/release/1.0.0.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板",
+    "content": "!!! danger \"注意\" 主页模版仅支持配置元数据，切勿填写内容。 !!! --- markdown --- title: 主页模板(默认) icon: home template: home config: toc: false hero: title: 创新技术解决方案 description: 为您的企业或网站提供最前沿的技术支持和解决方案 primaryCta: url: /<%= pageData.language %>/getting-started/get-started.html text: 开始使用 secondaryCta: url: /<%= pageData.language %>/usage/href.html text: 了解更多 features: subtitle: 核心优势 title: 为什么选择我们 description: 提供全方位的技术支持和服务 items: icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\" /> </svg> title: 高性能 description: 采用最新技术架构，确保系统高效运行 icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\" /> </svg> title: 安全可靠 description: 全方位的安全防护，保障数据安全 icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2\" /> </svg> title: 易于使用 description: 直观的界面设计，简单易上手 stats: title: 用数据说话 description: 我们取得的成就 items: label: GitHub Stars value: 10+ label: 服务客户 value: 2+ label: 正常运行时间 value: 99.99% label: 客户满意度 value: 98% cta: title: 准备好开始了吗？ description: 立即加入我们，开启您的技术创新之旅 button: url: /<%= pageData.language %>/getting-started/get-started.html text: 立即注册 --- template: 指定模板名称，可选值为 home，home/modern，home/enterprise，home/modern，home/minimal，home/playful",
+    "url": "https://pageforge.devlive.org/en/template/home.html",
+    "lang": "en"
+  },
+  {
+    "title": "团队模板",
+    "content": "!!! danger \"注意\" 团队模版仅支持配置元数据，切勿填写内容。 !!! --- markdown --- title: 我们的团队 description: 我们是一个充满激情的开发者社区，致力于创造优秀的开源项目。 template: team members: name: devlive-community type: owner url: https://github.com/devlive-community avatar: https://github.com/devlive-community.png name: qianmoq type: contributor url: https://github.com/qianmoq avatar: https://github.com/qianmoq.png --- title: 页面标题 description: 页面描述 template: 模板名称，这里必须是 team members: 团队成员列表 name: 成员名称 type: 成员类型 url: 成员链接 avatar: 成员头像",
+    "url": "https://pageforge.devlive.org/en/template/team.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板(默认)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/template/preview/home.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板(Enterprise)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/template/preview/enterprise.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板(Minimal)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/template/preview/minimal.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板(Modern)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/template/preview/modern.html",
+    "lang": "en"
+  },
+  {
+    "title": "主页模板(Playful)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/template/preview/playful.html",
+    "lang": "en"
+  },
+  {
+    "title": "我们的团队",
+    "content": "",
+    "url": "https://pageforge.devlive.org/en/team.html",
+    "lang": "en"
+  },
+  {
+    "title": "GetStarted",
+    "content": "PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 PageForge 的使用过程非常简单，只需几步即可完成网站的构建、部署。你只需要编写 markdown 文件，PageForge 会帮你生成高质量的静态网站。无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 --- PageForge 提供以下安装方式: 在线安装 源码安装 --- 您可以使用 pnpm 或 yarn 等包管理工具进行在线安装: bash pnpm add -g pageforge yarn global add pageforge --- bash git clone https://github.com/devlive-community/pageforge.git cd pageforge pnpm install pnpm link --global",
+    "url": "https://pageforge.devlive.org/zh-CN/getting-started/get-started.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "创建网站",
+    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
+    "url": "https://pageforge.devlive.org/zh-CN/getting-started/create-site/index.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "发布网站",
+    "content": "在 git 存储库中托管项目文档的好处是能够在推送新更改时自动部署它。PageForge 将帮助您让这一切变得非常简单。 --- 如果您已经在 GitHub 上托管了您的代码，GitHub Pages 无疑是发布项目文档的最便捷方式。它是免费的，而且很容易设置。 使用 GitHub Actions，您可以自动部署项目文档。在仓库的根目录中，创建一个新的 GitHub Actions 工作流程，例如 .github/workflows/ci.yml，然后复制并粘贴以下内容： yaml name: ci on: push: branches: master main permissions: contents: write jobs: deploy: runs-on: ubuntu-latest steps: uses: actions/checkout@v4 name: Use Node.js 18.x uses: actions/setup-node@v3 with: node-version: 18.x name: Install pnpm uses: pnpm/action-setup@v2 with: version: 8 name: Install dependencies run: pnpm install name: Build site run: | pageforge build name: Deploy to GitHub Pages uses: peaceiris/actions-gh-pages@v3 with: githubtoken: ${{ secrets.GITHUBTOKEN }} publishdir: ./dist --- 您也可以使用 PageForge 的命令行工具来自动部署项目文档。PageForge 会在项目根目录中 pageforge.yaml 文件，读取配置信息： yaml deploy: github: repository: devlive-community/pageforge branch: gh-pages cname: pageforge.devlive.community buildDir: dist username: devlive-community email: support@devlive.org",
+    "url": "https://pageforge.devlive.org/zh-CN/getting-started/publish-site.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "自定义网站",
+    "content": "PageForge 提供了一些可选的自定义选项，以满足不同的需求。 --- 您可以在 pageforge.yaml 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。 yaml theme: extraCss: /assets/extra.css --- 您可以在 pageforge.yaml 文件中指定自定义的 JavaScript 文件，以便覆盖默认的 JavaScript 脚本。 yaml theme: extraJs: /assets/extra.js --- 您可以在项目根目录创建 templates 文件夹，并在其中创建自定义的模板文件，以便覆盖默认的模板文件。 bash templates ├── components │ ├── a.js │ ├── block-code.js │ ├── checkbox.js │ ├── h1.js │ ├── h2.js │ ├── h3.js │ ├── h4.js │ ├── h5.js │ ├── h6.js │ ├── hr.js │ ├── image.js │ ├── inline-code.js │ ├── list.js │ ├── p.js │ └── space.js ├── includes │ ├── footer.ejs │ ├── header.ejs │ ├── nav.ejs │ ├── sidebar.ejs │ └── toc.ejs └── layouts ├── base.ejs ├── content.ejs └── page.ejs 按照文件的路径，您可以覆盖默认的模板文件。 如果自定义模版，可以直接在 templates/layouts 文件夹中创建自定义的布局文件，文件名便是模版名称。 ejs <article> <div class=\"content\"> <%- pageData.content %> </div> </article> 页面相关的数据在 pageData 中",
+    "url": "https://pageforge.devlive.org/zh-CN/getting-started/customization.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "基础设置",
+    "content": "yaml site: title: PageForge hiddenTitle: true description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 logo: /assets/logo.svg favicon: /assets/logo.svg > 请注意，这些设置只是一些示例，你可以根据自己的需求进行修改。 title: 网站标题 hiddenTitle: 是否隐藏标题，默认为 false，设置后 logo 右侧的标题将会隐藏 description: 网站描述 logo: 网站图标 favicon: 网站图标 --- yaml theme: extraCss: /assets/extra.css extraJs: /assets/extra.js extraCss: 附加的 CSS 文件路径 extraJs: 附加的 JavaScript 文件路径 --- yaml cdn: style: https://cdn.tailwindcss.com prismStyle: https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css script: https://cdn.tailwindcss.com style: Tailwind CSS CDN 地址 prismStyle: Prism CSS CDN 地址 script: Tailwind CSS CDN 地址 !!! info \"提示\" 如果您的站点是其他的样式，比如 bootstrap，您可以在 pageforge.yaml 文件中指定自定义的 CSS 文件，以便覆盖默认的 CSS 样式。 !!! --- yaml repo: owner: username name: pageforge url: https://github.com/username/pageforge owner: GitHub 用户名 name: 仓库名称 url: 仓库 URL > 如果您的站点是私有的，可以在 pageforge.yaml 文件中指定自定义的仓库，以便覆盖默认的 GitHub 仓库。 --- yaml nav: 快速开始: /getting-started/get-started /getting-started/create-site/index /getting-started/publish-site 相关的内容全部都存放在 content 文件夹中。 比如你的快速开始文档是 /get-started 则该文件的位置为 content/get-started.md。 /getting-started/get-started 该文件的位置为 content/getting-started/get-started.md。 --- yaml footer: copyright: © 2024 PageForge All Rights Reserved. 使用 ❤️ PageForge 构建 social: github: title: GitHub href: https://github.com/devlive-community/pageforge links: 资源项目: title: PageForge href: https://github.com/devlive-community/pageforge title: TailwindCSS href: https://tailwindcss.com copyright: 底部版权信息 social: 社交媒体链接 links: 底部链接 其中 social 的子项包括: facebook: Facebook github: GitHub twitter: Twitter discord: Discord 其中 links 的子项包括: 分组名字 title: 链接标题 href: 链接地址",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/site.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "页面设置",
+    "content": "PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。 --- 在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。 yaml --- title: 这里是标题 icon: feather --- --- 每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。 生成的标题为 page.title - site.title 的格式。 --- PageForge 支持设置当前页面的描述，格式如下： markdown --- description: 这里是描述 --- --- 每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。 目前支持 Lucide 图标，可以在 Lucide 中找到更多图标。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。 yaml --- config: header: false --- 默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 header: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。 yaml --- config: sidebar: false --- 默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 sidebar: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的底部。 yaml --- config: footer: false --- 默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 footer: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 toc，页面的目录将不会显示。 yaml --- config: toc: false --- 默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 toc: false 以关闭它。 --- 在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 content，但你可以在 markdown 文件的顶部设置 template: layout-name 以更改它。 > 你可以在 templates/layouts 中找到所有可用的布局。 > > 目前支持 content 和 page 布局。 如果是自定义的布局，可以直接在 templates/layouts 文件夹中创建自定义的布局文件，文件名便是模版名称。 比如模版名字是 foo，那么文件名就是 foo.ejs。在页面中使用以下代码配置模版: yaml --- template: foo --- --- PageForge 支持设置当前页面的状态，当前支持以下状态： draft: 草稿 new: 新添加 updated: 更新 deprecated: 已过期 custom: 自定义 通过配置 markdown 文件的元数据来支持，格式如下： markdown --- status: type: updated --- 如果需要设置自定义提示的内容，可以修改为以下方式： markdown --- status: type: updated text: 自定义提示 --- PageForge 还支持自定义状态，格式如下： markdown --- status: type: custom icon: feather text: 自定义提示 --- !!! danger \"注意\" 自定义状态情况下如果 feature.lucide.enable 为 true 时，icon 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。 !!!",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/page.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "特性设置",
+    "content": "PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。 所有的特性配置均在 pageforge.yaml 文件中进行配置，且支持嵌套配置。 格式为 yaml feature: xxx --- PageForge 默认支持 Lucide 图标库，需要启用后才能使用 Lucide 图标。 yaml lucide: enable: true cdn: https://unpkg.com/lucide@latest/dist/umd/lucide.js enable: 是否启用 Lucide 图标 cdn: Lucide CDN 链接，默认为 https://unpkg.com/lucide@latest/dist/umd/lucide.js ，可以根据自己的需求进行修改，这里要填写完整的 CDN 链接，例如 https://unpkg.com/lucide@latest/dist/umd/lucide.js --- PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。 yaml feature: issues: enable: true 启用后，可以在 Markdown 中使用 #123 格式来引用 Issues，例如 markdown #123 --- PageForge 支持解析 tooltip 的链接，需要启用后才能使用。 yaml feature: tooltip: enable: true --- PageForge 支持统计代码，需要启用后才能使用。 yaml feature: statistics: enable: true content: | 服务商返回的统计代码 content: 自定义统计代码，需要填写完整的统计代码。 --- PageForge 支持编辑文档，需要启用后才能使用。 yaml feature: edit: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成编辑文档的链接，默认为 main 分支，可以在 pageforge.yaml 中配置 repo.branch 来更改分支。 --- PageForge 支持查看源码，需要启用后才能使用。 yaml feature: view: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成查看源码的链接。默认为 main 分支，可以在 pageforge.yaml 中配置 repo.branch 来更改分支。 --- PageForge 支持 Git 提交信息，需要启用后才能使用。 yaml feature: revision: enable: true 启用后，系统会根据 pageforge.yaml 中配置的 repo.url 和 repo.branch 生成 Git 提交信息的链接。 支持以下信息: 创建时间 最后修改时间 首次提交 末次提交 --- PageForge 支持 Git 提交用户，需要启用后才能使用。 yaml feature: contributors: enable: true 启用后，系统会自动配置用户在 Github 中的头像。 --- PageForge 支持返回顶部，需要启用后才能使用。 yaml feature: backToTop: enable: true --- PageForge 支持使用 Mermaid 图表语言，需要启用后才能使用。 yaml feature: mermaid: enable: true options: theme: dark enable: 是否启用 Mermaid 图表 options: Mermaid 图表选项，可以根据自己的需求进行配置，例如 theme: dark，该选项是可选的，默认为 null !!! danger \"注意\" 如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 pageforge.yaml 中配置 cdn.mermaidJs 的值。 !!! --- PageForge 支持使用 Diff 语法，需要启用后才能使用。 yaml feature: diff: enable: true --- PageForge 支持 Dark Mode，需要启用后才能使用。 yaml feature: darkMode: enable: true --- PageForge 支持搜索功能，需要启用后才能使用。 yaml feature: search: enable: true",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/feature.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "国际化设置",
+    "content": "PageForge 支持用户自定义的国际化设置，需要启用后才能使用国际化。 --- yaml i18n: enable: true 启用国际化后，需要配置国际化语言 yaml i18n: default: zh-CN en: name: English flag: 🇬🇧 translations: GetStarted: Getting Started Setup: Setup Usage: Usage Docs zh-CN: name: 中文 flag: 🇨🇳 translations: GetStarted: 快速开始 Setup: 设置 Usage: 使用文档 default: 默认语言 en、zh-CN: 自定义语言 translations: 对应语言的翻译，格式为 key: value 系统会通过 pageforge.yaml 中配置的语言来自动加载对应的翻译，如果没有找到翻译，则会返回原 key --- 在 pageforge.yaml 中配置国际化后，可以在 nav 中使用以下方式来获取翻译的结果。 yaml nav: GetStarted: /getting-started/get-started GetStarted: 要翻译的 key，如果没有找到翻译，则会返回原 key 在页面中使用使用以下方式来获取翻译的结果 yaml --- title: GetStarted icon: crosshair --- 只需要将 title 中替换为国际化的 key 就可以了 国际化的文档名格式为 file.lang.md ，比如我们的 index.md 如果要配置国际化文件名，可以这样写 index.en.md",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/i18n.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "压缩设置",
+    "content": "PageForge 支持压缩文件，可以帮助你快速构建和部署你的静态网站。使用的是 html-minifier 模块，默认是禁用的，需要在 pageforge.yaml 配置文件中启用 --- yaml feature: compress: enable: true enable: 是否启用压缩 --- PageForge 支持使用 html-minifier 模块的压缩配置，可以参考它来设置怎么压缩 yaml feature: compress: enable: true options: collapseWhitespace: true removeComments: true removeEmptyAttributes: true",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/compress.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "分享设置",
+    "content": "PageForge 的分享设置包含了一些用于在网站上分享文档的选项。您可以在文档的顶部设置是否启用分享，以及选择要分享的平台。 PageForge 的分享功能是使用 social-share.js 进行实现的。 --- yaml feature: share: enable: true enable: 是否启用分享 --- 可以配置分享平台的选项，可以参考它来设置怎么分享 yaml feature: share: enable: true options: facebook: true weibo: true linkedin: true 支持的分享平台可参考 social-share.js --- yaml feature: share: enable: true cdn: https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/ cdn: CDN 链接，可以根据自己的需求进行配置，这里要填写完整的 CDN 链接，例如 https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16，这里要填写前面部分，会自动拼接后面的 js 和 css。",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/share.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "站点地图设置",
+    "content": "PageForge 支持站点地图，可以帮助你快速找到你的网站。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml feature: sitemap: enable: true > 启用站点地图后，将在底部出现站点地图链接。 !!! danger \"注意\" 启用站点地图，必须要在 pageforge.yaml 文件中添加以下配置 yaml site: baseUrl: https://pageforge.devlive.org !!!",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/sitemap.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Banner 设置",
+    "content": "PageForge 支持设置顶部 Banner，可以帮助你快速创建高质量的 Banner。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml banner: content: PageForge 2025.1.2 --- yaml banner: content: | <h1>PageForge 2025.1.2</h1>",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/banner.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "字体设置",
+    "content": "PageForge 支持设置字体大小。默认是禁用的，需要在 pageforge.yaml 配置文件中启用。 --- yaml feature: fontSize: enable: true 启用后会在页面标题右侧出现一个字体调整按钮，可以调整字体大小。",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/font-size.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "评论设置",
+    "content": "PageForge 支持将您选择的第三方评论系统添加到任何页面的页脚。例如，我们将集成 Giscus，它是开源的、免费的，并使用 GitHub 讨论作为后端。 PageForge 的评论系统需要启用才可以。 --- yaml feature: comment: enable: true content: | 第三方评论系统返回的代码 --- 在使用 Giscus 评论系统时，您需要完成以下步骤： 安装 Giscus GitHub 应用程序 并授予对应将评论作为 GitHub 讨论托管的存储库的访问权限。请注意，这可能是与您的文档不同的存储库。 访问 Giscus 并通过其配置工具生成代码段以加载评论系统。复制代码段以进行下一步。生成的代码段应类似于以下内容： js <script src=\"https://giscus.app/client.js\" data-repo=\"<username>/<repository>\" data-repo-id=\"...\" data-category=\"...\" data-category-id=\"...\" data-mapping=\"pathname\" data-reactions-enabled=\"1\" data-emit-metadata=\"1\" data-theme=\"light\" data-lang=\"en\" crossorigin=\"anonymous\" async> </script> 将返回的代码粘贴到 feature.comment.content 的值中。",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/comment.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "SEO 设置",
+    "content": "PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO）。 --- PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO），包括标题、关键字和描述等。 yaml site: description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator author: devlive-community description: 网站描述 keywords: 网站关键字 author: 网站作者，默认为 PageForge > PageForge 支持的 SEO 设置包括标题、关键字和描述等，可以帮助你优化网站的搜索引擎优化（SEO），提高网站的排名。 --- PageForge 支持设置页面的 SEO 设置，可方便为不同的页面设置不同的 SEO 设置。只需要设置 markdown 文件的元数据即可。 yaml --- description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator --- !!! danger \"注意\" 页面配置文件的元数据会覆盖全局的 SEO 设置，即使你设置了全局的 SEO 设置，也会被覆盖，页面 SEO 无法设置 author。 !!!",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/seo.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "超链接",
+    "content": "PageForge 支持 Markdown 的默认超链接语法。您可以使用 []() 格式来创建链接，例如 链接文本。 PageForge 实现了更多的语义，支持更多的超链接格式。 --- 链接文本 PageForge --- 链接文本 PageForge --- 链接文本 PageForge <br /> 打开方式支持 blank self parent top",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/href.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "图片",
+    "content": "PageForge 支持 Markdown 的默认图片语法。您可以使用 ![](图片URL) 格式来插入图片，例如 ![](图片URL)。 PageForge 实现了更多的语义，支持更多的图片格式。 --- ![](图片URL) --- ![](图片URL \"可选标题\") --- 设置宽高的时候必须以 = 开始 ![](图片URL \"可选标题\" =100x200) !alt文本 只设置宽度 ![](图片URL \"可选标题\" =100x) !alt文本 只设置高度 ![](图片URL \"可选标题\" =x200) !alt文本 --- 设置对齐方式的时候必须要设置宽高，支持的值有 left center right 左对齐 ![](图片URL \"可选标题\" =100x200 left) !alt文本 中对齐 ![](图片URL \"可选标题\" =100x200 center) !alt文本 右对齐 ![](图片URL \"可选标题\" =100x200 right) !alt文本",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/image.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "提示",
+    "content": "PageForge 支持使用 markdown 实现了提示相关信息。 !!! danger \"注意\" 需要注意的是必须要使用 !!! 包裹，且后面的内容需要缩进。 !!! 支持的类型有: info danger success warning dark --- info 类型的提示信息可以使用如下的语法： markdown !!! info \"标题\" 这是一个提示信息 !!! !!! info \"一行\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- danger 类型的提示信息可以使用如下的语法： markdown !!! danger \"标题\" 这是一个提示信息 !!! !!! danger \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- success 类型的提示信息可以使用如下的语法： markdown !!! success \"标题\" 这是一个提示信息 !!! !!! success \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- warning 类型的提示信息可以使用如下的语法。 markdown !!! warning \"标题\" 这是一个提示信息 !!! !!! warning \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- dark 类型的提示信息可以使用如下的语法。 markdown !!! dark \"标题\" 这是一个提示信息 !!! !!! dark \"标题\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!! --- 如果不设置标题，可将 \"\" 内容设置为空字符串。 markdown !!! info \"\" 这是一个提示信息 !!! !!! info \"\" PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 !!!",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/alert.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "选项卡",
+    "content": "PageForge 支持使用 markdown 实现了选项卡相关信息。 --- markdown ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 ::: ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 这是 dd 哈哈 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 :::",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/tab.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "EjsTemplate",
+    "content": "PageForge 支持使用 EJS 模版语言。默认我们提供两种数据: pageData: 当前页面的数据 siteData: 当前站点的数据 EJS 模版语言的用法请参考 EJS 文档 !!! danger \"注意\" 我们只支持 <% %> 和 <%= %> 语法 !!! --- 只需要在 markdown 文件中添加类似以下代码： <%= pageData.title %> 将渲染出来 PageForge",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/ejs.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "CodeBlock",
+    "content": "PageForge 支持使用代码块，用户可以自定义代码块的样式，以便更好地展示代码的语法和格式。 --- 以下是一个简单的示例： java public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } } --- > 默认情况下，代码块不会显示行号，但可以通过配置 showLineNumbers 或者 showLineNumbers=true 参数来启用行号显示。格式为 > java showLineNumbers > 或者 > java showLineNumbers=true java showLineNumbers public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/code.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Issues",
+    "content": "PageForge 支持解析 Issues 的链接，您可以在 Markdown 中使用以下语法来插入 Issues。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.issues.enable: true !!! markdown #123 支持所有平台的 Issues 链接，包括 GitHub、GitLab、Bitbucket、Gitea、Gitee 等等。需要依赖在 pageforge.yaml 中配置 repo.owner 和 repo.name，才会构建完整的链接路径。 #123: 这是一个示例的 Issues 编号，您可以根据实际情况替换为正确的编号 --- PageForge 支持自定义仓库，不依赖在 pageforge.yaml 中配置 repo.owner 和 repo.name，直接指定仓库路径即可。例如 markdown devlive-community/pageforge#1 这是一个自定义的 Issues 链接 devlive-community/pageforge#1，可以根据实际情况替换为正确的仓库路径。",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/issues.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Tooltip",
+    "content": "PageForge 支持解析 tooltip 的链接，您可以在 Markdown 中使用以下语法来插入 tooltip。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.tooltip.enable: true !!! markdown !tip提示文本 这是一个普通文本，这里有一个!tip提示文本。 你可以用它来解释专业术语，比如：!tipREST 鼠标移向可以看到提示。",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/tooltip.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Mermaid",
+    "content": "PageForge 支持使用 Mermaid 图表语言。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.mermaid.enable: true !!! --- markdown :::mermaid sequenceDiagram Alice->>John: Hello John, how are you? John-->>Alice: Great! ::: --- :::mermaid flowchart LR id ::: --- :::mermaid sequenceDiagram Alice->>John: Hello John, how are you? John-->>Alice: Great! ::: --- ::: mermaid mindmap root((mindmap)) Origins Long history ::icon(fa fa-book) Popularisation British popular psychology author Tony Buzan Research On effectiveness<br/>and features On Automatic creation Uses Creative techniques Strategic planning Argument mapping Tools Pen and paper Mermaid :::",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/mermaid.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Diff",
+    "content": "PageForge 支持 diff 语法。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.diff.enable: true !!! --- 源代码 markdown :::diff 这是第1行（添加） 这是第2行（删除） ::: 显示效果 ::: diff 这是第1行（添加） 这是第2行（删除） ::: --- 源代码 markdown :::diff +1,3-5 -2,6 这是第1行（会显示为绿色添加） 这是第2行（会显示为红色删除） 这是第3行（会显示为绿色添加） 这是第4行（会显示为绿色添加） 这是第5行（会显示为绿色添加） 这是第6行（会显示为红色删除） 这是第7行（会显示为普通上下文） ::: 显示效果 :::diff +1,3-5 -2,6 这是第1行（会显示为绿色添加） 这是第2行（会显示为红色删除） 这是第3行（会显示为绿色添加） 这是第4行（会显示为绿色添加） 这是第5行（会显示为绿色添加） 这是第6行（会显示为红色删除） 这是第7行（会显示为普通上下文） ::: --- 源代码 markdown :::diff +1,3-5 -2,10-11 module.exports = function template(value) { return <div class=\"bg-gray-50 rounded-lg overflow-x-auto\"> <div class=\"min-w-full w-max\"> ${value.content.map(item => <div class=\"text-gray-900 font-mono px-2 py-0.5 ${item.type === 'addition' ? 'bg-green-50' : item.type === 'deletion' ? 'bg-red-50' : 'bg-transparent'}\"> <span class=\"inline-block w-4 text-gray-500 select-none\">${item.prefix}</span>${item.content} </div> ).join('')} </div> </div>; }; ::: 显示效果 :::diff +1,3-5 -2,10-11 module.exports = function template(value) { return <div class=\"bg-gray-50 rounded-lg overflow-x-auto\"> <div class=\"min-w-full w-max\"> ${value.content.map(item => <div class=\"text-gray-900 font-mono px-2 py-0.5 ${item.type === 'addition' ? 'bg-green-50' : item.type === 'deletion' ? 'bg-red-50' : 'bg-transparent'}\"> <span class=\"inline-block w-4 text-gray-500 select-none\">${item.prefix}</span>${item.content} </div> ).join('')} </div> </div>; }; :::",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/diff.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "按钮",
+    "content": "PageForge 支持按钮，您可以创建基于 Tailwind CSS 的按钮。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: button: enable: true !!! --- markdown !btn[点击我] !btn[点击我] --- markdown !btn点击我跳转到首页 !btn点击我跳转到首页 --- markdown !btn访问外部 !btn访问外部 --- !!! info \"提示\" 支持所有的 Tailwind CSS 的样式，可以使用自定义样式，例如 bg-green-500 hover:bg-green-600，只需要写类名即可，不需要加类名前面的 .，多个类名之间用空格分隔 !!! markdown !btn[自定义按钮]{bg-green-500 hover:bg-green-600} !btn[自定义按钮]{bg-green-500 hover:bg-green-600 text-white} --- markdown 前置内容!btn点击我跳转到首页{bg-green-500 hover:bg-green-600 text-white}后置内容 前置内容!btn点击我跳转到首页{bg-green-500 hover:bg-green-600 text-white}后置内容",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/button.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Icon 图标",
+    "content": "PageForge 提供了一系列图标,可以用于页面中的按钮、链接等元素。 !!! danger \"注意\" 默认支持的是 Lucide 图标。相关图标库可以在 Lucide 中找到 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: lucide: enable: true !!! --- markdown :user: :user: --- !!! danger \"注意\" 图标的大小配置是通过在图标名称后面添加 {数字} 的方式进行的，例如 user{30} 表示图标的尺寸为 30px。 !!! markdown :user{30}: :user{30}: --- !!! danger \"注意\" 图标的颜色配置是通过在图标名称后面添加 {16,#ff0000} 的方式进行的，例如 user{16,#ff0000} 表示图标的颜色为红色，尺寸为 16px。 图标颜色必须要和尺寸配置一起使用。 !!! markdown :user{16,#ff0000}: :user{16,#ff0000}: --- markdown 我是前置内容:user{16,#ff0000}:后置内容 我是前置内容:user{18,#ff0000}:后置内容",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/icon.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "2025.1.3",
+    "content": "我们很高兴地宣布 PageForge 2025.1.3 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 支持页面 SEO 优化 (#7) 添加评论功能 (#9) 支持字体大小调节 (#13) 新增菜单顶部 Banner (#21) 支持页面分享功能 (#17) 支持站点地图生成 (#5) 支持 HTML 压缩 (#19) 支持 Dark 模式主题切换 支持图标功能与自定义按钮 新增多个主页模板 支持包含子项的导航项展开/收缩 优化顶部菜单布局 添加代码复制 hover 效果 支持 diff 代码复制 添加图标加载视觉效果 添加 git 贡献者头像加载状态和占位符 支持自定义页面状态显示 修复页面状态提示被容器遮挡问题 拆分主模版部分功能为独立组件 拆分查看源码和修改源码为独立组件 拆分移动端语言选择器 优化导航获取方式 支持国际化不存在的文件使用默认语言 修复缩进情况下代码片段无法解析 修复站点地图无法新页面打开问题 修复未启用国际化时构建站点地图错误 修复标题过长导致内容自动换行问题 修复嵌套路径导致跳转异常 添加 Google 广告代码支持 新增站点地图文档 添加压缩配置文档 GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本带来了多项重要功能更新，包括 Dark 模式、SEO 优化、评论功能等重要特性，同时优化了用户界面和架构设计，建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/zh-CN/release/2025.1.3.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "2025.1.2",
+    "content": "我们很高兴地宣布 PageForge 2025.1.2 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 支持 Mermaid 图表渲染 (#11) 支持 Diff 语法展示 新增代码块一键复制功能 添加返回顶部功能 支持文档贡献者列表展示 集成 Git 提交信息显示 新增 Tooltip 提示功能 支持图片加载状态提示 支持 Issues 解析与链接 (#4) 支持添加统计代码 (#1) 优化页面布局结构 拆分页面标题为独立组件 优化目录导航体验 改进移动端 Git 提交信息显示 修复代码块内容过长导致的布局问题 修复点击目录后跳转被菜单遮挡问题 拆分国际化为独立模块 拆分目录为独立组件 拆分 Git 提交信息组件 优化 Mermaid 和 Diff 匹配方式 GitHub: https://github.com/devlive-community/pageforge 官网: http://pageforge.devlive.org 我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本带来了多项重要功能更新，优化了用户界面和架构设计，建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/zh-CN/release/2025.1.2.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "2025.1.1",
+    "content": "我们很高兴地宣布 PageForge 2025.1.1 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 集成代码高亮功能 支持自定义 Prism 样式 CDN 支持配置代码块行号显示 修复列表中链接显示异常 (#2) 修复单链接解析失败问题 (#3) 优化语言选择器位置显示 GitHub: https://github.com/devlive-community/pageforge 官网: http://pageforge.devlive.org 我们将继续完善功能，提升用户体验，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本主要增强了代码展示功能，并修复了关键的链接解析问题。建议所有用户升级到此版本。",
+    "url": "https://pageforge.devlive.org/zh-CN/release/2025.1.1.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "2025.1.0",
+    "content": "我们很高兴地宣布 PageForge 2025.1.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。 新增多语言支持系统 添加语言切换选择器 优化国际化资源文件管理 完善多语言路由处理 支持 EJS 模板语法 支持在 Markdown 中使用 EJS 模板 新增 404 错误页面模板 优化模板渲染机制 全面支持移动设备 优化移动端用户体验 响应式设计改进 集成 Lucide 图标库 添加加载动画效果 优化文档图标显示 支持自定义 CSS 和 JavaScript 修复列表渲染问题 优化文本段落换行处理 修复子目录编译问题 完善导航系统 GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 我们将继续完善功能，提升用户体验，欢迎社区贡献者参与项目开发。 如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！ --- 此版本在保持核心功能稳定的同时，重点加入了国际化支持，并对模板系统进行了重要升级。欢迎下载使用，共同推进 PageForge 的发展。",
+    "url": "https://pageforge.devlive.org/zh-CN/release/2025.1.0.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "1.0.0",
+    "content": "我们很高兴地宣布 PageForge v1.0.0 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，为用户提供从创建到部署的一站式解决方案。 内容创作与渲染 完整支持 Markdown 语法渲染 支持代码高亮和 HTML 标签解析 支持表格、引用块和警告提示 自动生成目录（TOC） Tab 标签页支持 站点结构 可自定义导航和布局 支持多种首页模板 灵活的页面布局系统 支持静态资源文件管理 部署与集成 一键部署到 GitHub Pages 支持自定义配置重载 CI/CD 支持 优化模板编译系统 重构解析引擎架构 改进资源文件处理 升级依赖管理系统（使用 pnpm） GitHub: https://github.com/devlive-community/pageforge 官网: https://pageforge.devlive.org 本项目采用开源协议授权 感谢社区的支持！我们期待您的反馈和建议，共同推进 PageForge 的发展。",
+    "url": "https://pageforge.devlive.org/zh-CN/release/1.0.0.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板",
+    "content": "!!! danger \"注意\" 主页模版仅支持配置元数据，切勿填写内容。 !!! --- markdown --- title: 主页模板(默认) icon: home template: home config: toc: false hero: title: 创新技术解决方案 description: 为您的企业或网站提供最前沿的技术支持和解决方案 primaryCta: url: /<%= pageData.language %>/getting-started/get-started.html text: 开始使用 secondaryCta: url: /<%= pageData.language %>/usage/href.html text: 了解更多 features: subtitle: 核心优势 title: 为什么选择我们 description: 提供全方位的技术支持和服务 items: icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\" /> </svg> title: 高性能 description: 采用最新技术架构，确保系统高效运行 icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\" /> </svg> title: 安全可靠 description: 全方位的安全防护，保障数据安全 icon: >- <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-6 h-6 text-indigo-600\"> <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2\" /> </svg> title: 易于使用 description: 直观的界面设计，简单易上手 stats: title: 用数据说话 description: 我们取得的成就 items: label: GitHub Stars value: 10+ label: 服务客户 value: 2+ label: 正常运行时间 value: 99.99% label: 客户满意度 value: 98% cta: title: 准备好开始了吗？ description: 立即加入我们，开启您的技术创新之旅 button: url: /<%= pageData.language %>/getting-started/get-started.html text: 立即注册 --- template: 指定模板名称，可选值为 home，home/modern，home/enterprise，home/modern，home/minimal，home/playful",
+    "url": "https://pageforge.devlive.org/zh-CN/template/home.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "团队模板",
+    "content": "!!! danger \"注意\" 团队模版仅支持配置元数据，切勿填写内容。 !!! --- markdown --- title: 我们的团队 description: 我们是一个充满激情的开发者社区，致力于创造优秀的开源项目。 template: team members: name: devlive-community type: owner url: https://github.com/devlive-community avatar: https://github.com/devlive-community.png name: qianmoq type: contributor url: https://github.com/qianmoq avatar: https://github.com/qianmoq.png --- title: 页面标题 description: 页面描述 template: 模板名称，这里必须是 team members: 团队成员列表 name: 成员名称 type: 成员类型 url: 成员链接 avatar: 成员头像",
+    "url": "https://pageforge.devlive.org/zh-CN/template/team.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板(默认)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/template/preview/home.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板(Enterprise)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/template/preview/enterprise.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板(Minimal)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/template/preview/minimal.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板(Modern)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/template/preview/modern.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "主页模板(Playful)",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/template/preview/playful.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "我们的团队",
+    "content": "",
+    "url": "https://pageforge.devlive.org/zh-CN/team.html",
+    "lang": "zh-CN"
+  }
+]
