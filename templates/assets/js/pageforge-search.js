@@ -132,6 +132,45 @@ const Search = {
         }
     },
 
+    // 高亮文本
+    highlightText(text, query) {
+        if (!text || !query) {
+            return text;
+        }
+
+        // 转义正则表达式特殊字符
+        const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(${escapedQuery})`, 'gi');
+
+        return text.replace(regex, `<mark class="bg-yellow-200 dark:bg-yellow-800 dark:text-gray-100">$1</mark>`);
+    },
+
+    // 获取包含匹配内容的摘要
+    getContentExcerpt(content, query, maxLength = 160) {
+        if (!content || !query) {
+            return content;
+        }
+
+        const lowerContent = content.toLowerCase();
+        const lowerQuery = query.toLowerCase();
+        const matchIndex = lowerContent.indexOf(lowerQuery);
+
+        if (matchIndex === -1) {
+            return content.substring(0, maxLength);
+        }
+
+        // 确定摘要的起始和结束位置
+        let start = Math.max(0, matchIndex - 60);
+        let end = Math.min(content.length, matchIndex + 100);
+
+        // 如果摘要不是从开头开始，添加省略号
+        let excerpt = (start > 0 ? '...' : '') +
+            content.substring(start, end) +
+            (end < content.length ? '...' : '');
+
+        return excerpt;
+    },
+
     // 执行搜索
     async performSearch(query) {
         // 确保索引已加载
@@ -164,17 +203,23 @@ const Search = {
 
         this.els.searchResults.innerHTML = `
             <div class="divide-y divide-gray-100 dark:divide-gray-800">
-                ${results.map(result => `
-                    <a href="${result.url}" 
-                       class="block px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50">
-                        <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                            ${result.title}
-                        </div>
-                        <div class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
-                            ${result.content.substring(0, 160)}...
-                        </div>
-                    </a>
-                `).join('')}
+                ${results.map(result => {
+            const highlightedTitle = this.highlightText(result.title, query);
+            const contentExcerpt = this.getContentExcerpt(result.content, query);
+            const highlightedContent = this.highlightText(contentExcerpt, query);
+
+            return `
+                        <a href="${result.url}" 
+                           class="block px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50">
+                            <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                                ${highlightedTitle}
+                            </div>
+                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
+                                ${highlightedContent}
+                            </div>
+                        </a>
+                    `;
+        }).join('')}
             </div>
         `;
     }

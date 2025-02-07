@@ -194,3 +194,15 @@ feature:
   darkMode:
     enable: true
 ```
+
+## 搜索功能
+
+---
+
+PageForge 支持搜索功能，需要启用后才能使用。
+
+```yaml
+feature:
+  search:
+    enable: true
+```
