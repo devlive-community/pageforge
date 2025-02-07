@@ -7,7 +7,7 @@
   },
   {
     "title": "创建网站",
-    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
+    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init !!! warning \"注意\" 如果使用的是 init 命令，即使后面指定了文件夹目录，也不会创建文件夹，只会在当前目录下初始化。 !!! 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
     "url": "https://pageforge.devlive.org/en/getting-started/create-site/index.html",
     "lang": "en"
   },
@@ -109,7 +109,7 @@
   },
   {
     "title": "选项卡",
-    "content": "PageForge 支持使用 markdown 实现了选项卡相关信息。 --- markdown ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 ::: ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 这是 dd 哈哈 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 :::",
+    "content": "PageForge 支持使用 Markdown 实现了选项卡相关信息。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.tabs.enable: true !!! --- markdown ::: tabs === \"Tab 1\" 这是第一个标签页的内容 可以包含多行内容 也可以包含 Markdown 格式 列表项 1 列表项 2 === \"Tab 2\" 这是第二个标签页的内容 === \"Tab 3\" 第三个标签页的内容 ::: ::: tabs === \"Tab 1\" 这是第一个标签页的内容 可以包含多行内容 也可以包含 Markdown 格式 列表项 1 列表项 2 === \"Tab 2\" 这是第二个标签页的内容 ### 可以使用标题 javascript // 甚至可以包含代码块 const x = 1; === \"Tab 3\" 第三个标签页的内容 :::",
     "url": "https://pageforge.devlive.org/en/usage/tab.html",
     "lang": "en"
   },
@@ -159,6 +159,12 @@
     "title": "Icon 图标",
     "content": "PageForge 提供了一系列图标,可以用于页面中的按钮、链接等元素。 !!! danger \"注意\" 默认支持的是 Lucide 图标。相关图标库可以在 Lucide 中找到 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: lucide: enable: true !!! --- markdown :user: :user: --- !!! danger \"注意\" 图标的大小配置是通过在图标名称后面添加 {数字} 的方式进行的，例如 user{30} 表示图标的尺寸为 30px。 !!! markdown :user{30}: :user{30}: --- !!! danger \"注意\" 图标的颜色配置是通过在图标名称后面添加 {16,#ff0000} 的方式进行的，例如 user{16,#ff0000} 表示图标的颜色为红色，尺寸为 16px。 图标颜色必须要和尺寸配置一起使用。 !!! markdown :user{16,#ff0000}: :user{16,#ff0000}: --- markdown 我是前置内容:user{16,#ff0000}:后置内容 我是前置内容:user{18,#ff0000}:后置内容",
     "url": "https://pageforge.devlive.org/en/usage/icon.html",
+    "lang": "en"
+  },
+  {
+    "title": "Grid",
+    "content": "PageForge 支持网格布局语法。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.grid.enable: true !!! --- 源代码 markdown ::: grid 第一个网格项 第二个网格项 第三个网格项 第四个网格项 ::: 显示效果 ::: grid 第一个网格项 第二个网格项 第三个网格项 第四个网格项 ::: --- 源代码 markdown ::: grid cols-3 第一列内容 第二列内容 第三列内容 第四列内容（自动换行） 第五列内容 第六列内容 ::: 显示效果 ::: grid cols-3 第一列内容 第二列内容 第三列内容 第四列内容（自动换行） 第五列内容 第六列内容 ::: --- 源代码 markdown ::: grid cols-2 gap-8 这是第一个网格项 可以包含多行内容 这是第二个网格项 间距设置为 8 (2rem) 这是第三个网格项 这是第四个网格项 ::: 显示效果 ::: grid cols-2 gap-8 这是第一个网格项 可以包含多行内容 这是第二个网格项 间距设置为 8 (2rem) 这是第三个网格项 这是第四个网格项 ::: --- 默认情况下，网格布局是响应式的： 移动设备：1列 平板设备：最多2列 桌面设备：完整列数 使用 no-responsive 可以禁用响应式布局： markdown ::: grid cols-4 no-responsive 第一列 第二列 第三列 第四列 ::: --- 网格布局支持以下选项： cols-{number}: 设置列数（默认：2） 例如：cols-3、cols-4、cols-6 gap-{number}: 设置网格间距（默认：4） 例如：gap-4、gap-6、gap-8 no-responsive: 禁用响应式布局 默认启用响应式 可以组合使用这些选项： markdown ::: grid cols-3 gap-6 no-responsive 内容1 内容2 内容3 ::: --- 创建特色卡片布局： markdown ::: grid cols-3 gap-6 ### 🚀 快速上手 零配置，开箱即用， 支持 Markdown 所有基础语法。 ### 📦 功能丰富 内置大量扩展组件， 支持自定义扩展。 ### 🎨 主题系统 提供多套主题， 支持自定义主题。 ::: ::: grid cols-3 gap-6 ### 🚀 快速上手 零配置，开箱即用， 支持 Markdown 所有基础语法。 ### 📦 功能丰富 内置大量扩展组件， 支持自定义扩展。 ### 🎨 主题系统 提供多套主题， 支持自定义主题。 java console.log(1) :::",
+    "url": "https://pageforge.devlive.org/en/usage/grid.html",
     "lang": "en"
   },
   {
@@ -253,7 +259,7 @@
   },
   {
     "title": "创建网站",
-    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
+    "content": "安装 PageForge 后，你可以使用它来创建你的网站。您需要跳转到需要创建网站的文件夹，该文件夹必须是一个空文件夹。然后，您可以使用 PageForge 的命令行工具来创建网站。 我们假设您的文件夹是 my-website。 bash pageforge init !!! warning \"注意\" 如果使用的是 init 命令，即使后面指定了文件夹目录，也不会创建文件夹，只会在当前目录下初始化。 !!! 或者 bash pageforge create-site . 或者指定文件夹路径 bash pageforge create-site my-website 安装完成后，它将是如下目录结构： ├── content │ └── index.md └── pageforge.yaml --- 默认会在当前目录下创建名为 pageforge.yaml 的配置文件，该文件包含了默认配置。 yaml site: title: PageForge description: PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。 nav: link: / text: 首页 如果您想要更改默认配置，可以在 pageforge.yaml 文件中进行修改。 --- PageForge 包括一个实时预览服务器，因此您可以在编写文档时预览您的更改。服务器将在保存时自动重建站点。从以下内容开始： bash pageforge serve 将浏览器指向 localhost:3000，您应该会看到： !img.png --- 完成编辑后，您可以使用以下方法从 Markdown 文件构建静态网站： bash pageforge build 此目录的内容构成了您的项目文档。无需操作数据库或服务器，因为它是完全独立的。该站点可以托管在 GitHub Pages、GitLab Pages、您选择的 CDN 或您的私有 Web 空间上。",
     "url": "https://pageforge.devlive.org/zh-CN/getting-started/create-site/index.html",
     "lang": "zh-CN"
   },
@@ -355,7 +361,7 @@
   },
   {
     "title": "选项卡",
-    "content": "PageForge 支持使用 markdown 实现了选项卡相关信息。 --- markdown ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 ::: ::: tabs === \"Tab 1\" 这是第一个 Tab 的内容 支持多行内容 这是 dd 哈哈 === \"Tab 2\" 这是第二个 Tab 的内容 也支持 Markdown 语法 === \"Tab 3\" 第三个 Tab 的内容 支持列表 支持其他 Markdown 内容 :::",
+    "content": "PageForge 支持使用 Markdown 实现了选项卡相关信息。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.tabs.enable: true !!! --- markdown ::: tabs === \"Tab 1\" 这是第一个标签页的内容 可以包含多行内容 也可以包含 Markdown 格式 列表项 1 列表项 2 === \"Tab 2\" 这是第二个标签页的内容 === \"Tab 3\" 第三个标签页的内容 ::: ::: tabs === \"Tab 1\" 这是第一个标签页的内容 可以包含多行内容 也可以包含 Markdown 格式 列表项 1 列表项 2 === \"Tab 2\" 这是第二个标签页的内容 ### 可以使用标题 javascript // 甚至可以包含代码块 const x = 1; === \"Tab 3\" 第三个标签页的内容 :::",
     "url": "https://pageforge.devlive.org/zh-CN/usage/tab.html",
     "lang": "zh-CN"
   },
@@ -405,6 +411,12 @@
     "title": "Icon 图标",
     "content": "PageForge 提供了一系列图标,可以用于页面中的按钮、链接等元素。 !!! danger \"注意\" 默认支持的是 Lucide 图标。相关图标库可以在 Lucide 中找到 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 yml feature: lucide: enable: true !!! --- markdown :user: :user: --- !!! danger \"注意\" 图标的大小配置是通过在图标名称后面添加 {数字} 的方式进行的，例如 user{30} 表示图标的尺寸为 30px。 !!! markdown :user{30}: :user{30}: --- !!! danger \"注意\" 图标的颜色配置是通过在图标名称后面添加 {16,#ff0000} 的方式进行的，例如 user{16,#ff0000} 表示图标的颜色为红色，尺寸为 16px。 图标颜色必须要和尺寸配置一起使用。 !!! markdown :user{16,#ff0000}: :user{16,#ff0000}: --- markdown 我是前置内容:user{16,#ff0000}:后置内容 我是前置内容:user{18,#ff0000}:后置内容",
     "url": "https://pageforge.devlive.org/zh-CN/usage/icon.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "Grid",
+    "content": "PageForge 支持网格布局语法。 !!! danger \"注意\" 该功能需要在配置文件中启用，可以在 pageforge.yaml 中配置 feature.grid.enable: true !!! --- 源代码 markdown ::: grid 第一个网格项 第二个网格项 第三个网格项 第四个网格项 ::: 显示效果 ::: grid 第一个网格项 第二个网格项 第三个网格项 第四个网格项 ::: --- 源代码 markdown ::: grid cols-3 第一列内容 第二列内容 第三列内容 第四列内容（自动换行） 第五列内容 第六列内容 ::: 显示效果 ::: grid cols-3 第一列内容 第二列内容 第三列内容 第四列内容（自动换行） 第五列内容 第六列内容 ::: --- 源代码 markdown ::: grid cols-2 gap-8 这是第一个网格项 可以包含多行内容 这是第二个网格项 间距设置为 8 (2rem) 这是第三个网格项 这是第四个网格项 ::: 显示效果 ::: grid cols-2 gap-8 这是第一个网格项 可以包含多行内容 这是第二个网格项 间距设置为 8 (2rem) 这是第三个网格项 这是第四个网格项 ::: --- 默认情况下，网格布局是响应式的： 移动设备：1列 平板设备：最多2列 桌面设备：完整列数 使用 no-responsive 可以禁用响应式布局： markdown ::: grid cols-4 no-responsive 第一列 第二列 第三列 第四列 ::: --- 网格布局支持以下选项： cols-{number}: 设置列数（默认：2） 例如：cols-3、cols-4、cols-6 gap-{number}: 设置网格间距（默认：4） 例如：gap-4、gap-6、gap-8 no-responsive: 禁用响应式布局 默认启用响应式 可以组合使用这些选项： markdown ::: grid cols-3 gap-6 no-responsive 内容1 内容2 内容3 ::: --- 创建特色卡片布局： markdown ::: grid cols-3 gap-6 ### 🚀 快速上手 零配置，开箱即用， 支持 Markdown 所有基础语法。 ### 📦 功能丰富 内置大量扩展组件， 支持自定义扩展。 ### 🎨 主题系统 提供多套主题， 支持自定义主题。 ::: ::: grid cols-3 gap-6 ### 🚀 快速上手 零配置，开箱即用， 支持 Markdown 所有基础语法。 ### 📦 功能丰富 内置大量扩展组件， 支持自定义扩展。 ### 🎨 主题系统 提供多套主题， 支持自定义主题。 java console.log(1) :::",
+    "url": "https://pageforge.devlive.org/zh-CN/usage/grid.html",
     "lang": "zh-CN"
   },
   {
