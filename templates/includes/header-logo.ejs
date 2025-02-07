@@ -1,0 +1,13 @@
+<div class="flex items-center space-x-4 shrink-0 lg:mr-8">
+    <% if (locals.siteData?.site?.logo) { %>
+        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
+            <img src="<%= pageData.basePath %>/<%= siteData.site.logo || '/assets/logo.svg' %>"
+                 alt="<%= siteData.site.title %>"
+                 class="h-10 w-auto object-contain transition-transform hover:scale-105">
+        </a>
+    <% } %>
+    <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>"
+       class="text-xl font-bold text-gray-900 <%= darkClasses('dark:text-white hover:text-gray-700 dark:hover:text-gray-200') %> transition-colors">
+        <%= !siteData.site.hiddenTitle ? siteData.site.title : '' %>
+    </a>
+</div>

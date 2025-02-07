@@ -1,0 +1,15 @@
+<ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3">
+    <% for(let item of siteData.nav) { %>
+        <li class="shrink-0">
+            <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
+               class="inline-flex items-center rounded-lg justify-center px-4 py-3
+                                          text-sm font-medium leading-none <%= darkClasses('dark:text-white') %>
+                                          <%= isPathInNavItem(pageData.noLocalePath, item)
+                       ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')} font-medium`
+                       : `hover:text-gray-900 ${darkClasses('dark:hover:text-gray-200')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-800/40')}`
+               %>">
+                <%= item.title %>
+            </a>
+        </li>
+    <% } %>
+</ul>
