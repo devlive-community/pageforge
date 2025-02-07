@@ -36,6 +36,7 @@ members:
 - `template`: 模板名称，这里必须是 `team`
 - `members`: 团队成员列表
   - `name`: 成员名称
-  - `type`: 成员类型
+  - `description`: 描述信息
+  - `type`: 成员类型，支持 `Enterprise`, `Individual`, `Creator`, `Reviewer`, `Default`
   - `url`: 成员链接
   - `avatar`: 成员头像
