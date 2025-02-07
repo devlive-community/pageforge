@@ -19,21 +19,63 @@
                                      src="<%= member.avatar %>"
                                      alt="<%= member.name %>'s avatar"
                                      loading="lazy">
-                                <% if (member.type === 'owner') { %>
-                                    <span class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full text-xs transform group-hover:scale-110 transition-transform duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
-                                            <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
-                                        </svg>
+                                <%
+                                    const validTypes = ['Enterprise', 'Individual', 'Creator', 'Reviewer'];
+                                    const memberType = member.type && validTypes.includes(member.type) ? member.type : 'Default';
+                                    const typeIcons = {
+                                        'Enterprise': {
+                                            icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                                        </svg>`,
+                                            bgColor: 'bg-blue-600 dark:bg-blue-500',
+                                            description: '企业用户'
+                                        },
+                                        'Individual': {
+                                            icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                        </svg>`,
+                                            bgColor: 'bg-green-600 dark:bg-green-500',
+                                            description: '个人用户'
+                                        },
+                                        'Creator': {
+                                            icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                            <path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"/>
+                                        </svg>`,
+                                            bgColor: 'bg-purple-600 dark:bg-purple-500',
+                                            description: '创作者'
+                                        },
+                                        'Reviewer': {
+                                            icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                        </svg>`,
+                                            bgColor: 'bg-amber-600 dark:bg-amber-500',
+                                            description: '审阅者'
+                                        },
+                                        'Default': {
+                                            icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        </svg>`,
+                                            bgColor: 'bg-gray-600 dark:bg-gray-500',
+                                            description: '普通用户'
+                                        }
+                                    };
+                                    const typeConfig = typeIcons[memberType];
+                                %>
+
+                                <span class="group/tooltip absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 <%= typeConfig.bgColor %> text-white rounded-full text-xs transform group-hover:scale-110 transition-transform duration-300">
+                                    <%- typeConfig.icon %>
+                                    <span class="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded-md opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                                        <%= typeConfig.description %>
                                     </span>
-                                <% } %>
+                                </span>
                             </div>
 
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
                                 <%= member.name %>
                             </h3>
 
-                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 capitalize">
-                                <%= member.type %>
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                                <%= member.description %>
                             </p>
 
                             <div class="mt-4 transform translate-y-0 opacity-100 group-hover:translate-y-1 group-hover:opacity-90 transition-all duration-300">
