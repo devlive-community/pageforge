@@ -11,6 +11,12 @@ icon: folder-plus
 pageforge init
 ```
 
+!!! warning "注意"
+
+    如果使用的是 init 命令，即使后面指定了文件夹目录，也不会创建文件夹，只会在当前目录下初始化。
+
+!!!
+
 或者
 
 ```bash
