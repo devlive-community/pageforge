@@ -89,6 +89,8 @@ feature:
         crossorigin="anonymous"
         async>
       </script>
+  search:
+    enable: true
 
 i18n:
   default: zh-CN

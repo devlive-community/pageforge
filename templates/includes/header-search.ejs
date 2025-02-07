@@ -1,0 +1,67 @@
+<% if (locals.siteData?.feature?.search?.enable) { %>
+    <!-- 搜索按钮 -->
+    <button type="button"
+            class="p-2 text-sm font-medium rounded-md hover:bg-gray-100 <%= darkClasses('dark:hover:bg-gray-700') %>"
+            id="search-trigger">
+        <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <kbd class="hidden sm:inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium text-gray-500 <%= darkClasses('dark:text-gray-400 dark:border-gray-700') %>">
+                <span class="text-xs">⌘</span>K
+            </kbd>
+        </div>
+    </button>
+
+    <!-- 搜索弹窗 -->
+    <div id="search-dialog"
+         class="fixed inset-0 z-50 bg-gray-500/70 items-start justify-center p-4 sm:p-6 md:p-20 hidden"
+         aria-modal="true"
+         role="dialog">
+        <!-- 弹窗内容 -->
+        <div class="mx-auto max-w-2xl w-full relative">
+            <!-- 搜索框和结果区域 -->
+            <div class="overflow-hidden rounded-xl bg-white shadow-2xl <%= darkClasses('dark:bg-gray-800') %>">
+                <!-- 搜索框组 -->
+                <div class="relative border-b <%= darkClasses('dark:border-gray-700') %>">
+                    <!-- 搜索图标 -->
+                    <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+                        <svg class="h-5 w-5 text-gray-400 <%= darkClasses('dark:text-gray-500') %>" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+
+                    <!-- 搜索输入框 -->
+                    <input type="text"
+                           id="site-search"
+                           class="block h-12 w-full rounded-none border-0 py-3 pl-10 pr-12 text-gray-900 outline-none <%= darkClasses('dark:text-gray-100') %> placeholder:text-gray-400 <%= darkClasses('dark:placeholder:text-gray-500') %> bg-transparent focus:outline-none focus:ring-0 sm:text-sm focus:bg-blue-50/5"
+                           placeholder="搜索文档..."
+                           autocomplete="off"
+                           spellcheck="false"/>
+
+                    <!-- 快捷键提示 -->
+                    <div class="absolute inset-y-0 right-3 flex items-center">
+                        <kbd class="hidden sm:inline-flex h-5 items-center rounded border px-1.5 font-mono text-[10px] font-medium text-gray-400 <%= darkClasses('dark:text-gray-500 dark:border-gray-600') %>">
+                            ESC
+                        </kbd>
+                    </div>
+                </div>
+
+                <!-- 搜索结果区域 -->
+                <div id="search-results"
+                     class="max-h-[32rem] scroll-py-3 overflow-y-auto p-3">
+                    <!-- 初始提示 -->
+                    <div class="search-empty-state px-6 py-14 text-center text-sm sm:px-14">
+                        <svg class="mx-auto h-6 w-6 text-gray-400 <%= darkClasses('dark:text-gray-500') %>" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        <p class="mt-4 text-gray-500 <%= darkClasses('dark:text-gray-400') %>">开始输入关键词搜索...</p>
+                        <p class="mt-2 text-xs text-gray-400 <%= darkClasses('dark:text-gray-500') %>">按 ESC 关闭</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>

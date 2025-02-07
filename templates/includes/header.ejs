@@ -33,36 +33,13 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
                 <!-- 左侧Logo和导航 -->
                 <div class="flex items-center flex-1">
                     <!-- Logo和标题 -->
-                    <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
-                        <% if (locals.siteData?.site?.logo) { %>
-                            <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
-                                <img src="<%= pageData.basePath %>/<%= siteData.site.logo || '/assets/logo.svg' %>"
-                                     alt="<%= siteData.site.title %>"
-                                     class="h-10 w-auto object-contain transition-transform hover:scale-105">
-                            </a>
-                        <% } %>
-                        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>"
-                           class="text-xl font-bold text-gray-900 <%= darkClasses('dark:text-white hover:text-gray-700 dark:hover:text-gray-200') %> transition-colors">
-                            <%= !siteData.site.hiddenTitle ? siteData.site.title : '' %>
-                        </a>
-                    </div>
+                    <%- include('./header-logo', { darkClasses }) %>
 
                     <!-- 桌面端导航 -->
-                    <ul class="hidden lg:flex items-center gap-6 md:gap-8 py-3">
-                        <% for(let item of siteData.nav) { %>
-                            <li class="shrink-0">
-                                <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
-                                   class="inline-flex items-center rounded-lg justify-center px-4 py-3
-                                          text-sm font-medium leading-none <%= darkClasses('dark:text-white') %>
-                                          <%= isPathInNavItem(pageData.noLocalePath, item)
-                                           ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')} font-medium`
-                                           : `hover:text-gray-900 ${darkClasses('dark:hover:text-gray-200')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-800/40')}`
-                                   %>">
-                                    <%= item.title %>
-                                </a>
-                            </li>
-                        <% } %>
-                    </ul>
+                    <%- include('./header-nav', { darkClasses, isPathInNavItem }) %>
+
+                    <!-- 搜索框 -->
+                    <%- include('./header-search', { darkClasses }) %>
                 </div>
 
                 <!-- 右侧工具栏 -->
