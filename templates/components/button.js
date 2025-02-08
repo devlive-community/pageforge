@@ -1,5 +1,5 @@
 module.exports = function template(item) {
-    const baseStyles = "inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors";
+    const baseStyles = "inline-flex items-center justify-center px-2.5 py-1.5 rounded-md text-xs font-medium transition-colors";
     const defaultStyles = "bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500";
 
     // 判断按钮类型：无链接、外部链接、内部链接
