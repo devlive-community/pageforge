@@ -1,6 +1,6 @@
 module.exports = function template(item) {
     // 构建样式类
-    let classes = ['max-w-full', 'h-auto'];
+    let classes = ['max-w-full', 'h-auto', 'my-1'];
 
     // 添加对齐方式的类
     if (item.align) {
