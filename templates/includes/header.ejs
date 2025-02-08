@@ -37,13 +37,13 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
 
                     <!-- 桌面端导航 -->
                     <%- include('./header-nav', { darkClasses, isPathInNavItem }) %>
-
-                    <!-- 搜索框 -->
-                    <%- include('./header-search', { darkClasses }) %>
                 </div>
 
                 <!-- 右侧工具栏 -->
                 <div class="flex items-center gap-2 lg:gap-4">
+                    <!-- 搜索框 -->
+                    <%- include('./header-search', { darkClasses }) %>
+
                     <!-- 桌面端主题切换按钮 -->
                     <% if (darkModeEnabled) { %>
                         <button type="button"
