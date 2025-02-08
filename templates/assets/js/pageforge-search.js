@@ -204,22 +204,23 @@ const Search = {
         this.els.searchResults.innerHTML = `
             <div class="divide-y divide-gray-100 dark:divide-gray-800">
                 ${results.map(result => {
-            const highlightedTitle = this.highlightText(result.title, query);
-            const contentExcerpt = this.getContentExcerpt(result.content, query);
-            const highlightedContent = this.highlightText(contentExcerpt, query);
-
-            return `
+                    const highlightedTitle = this.highlightText(result.title, query);
+                    const contentExcerpt = this.getContentExcerpt(result.content, query);
+                    const highlightedContent = this.highlightText(contentExcerpt, query);
+        
+                    return `
                         <a href="${result.url}" 
                            class="block px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50">
                             <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
                                 ${highlightedTitle}
+                                ${result.lang ? `<span class="ml-2 text-xs px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">${result.lang}</span>` : ''}
                             </div>
                             <div class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
                                 ${highlightedContent}
                             </div>
                         </a>
                     `;
-        }).join('')}
+                }).join('')}
             </div>
         `;
     }
