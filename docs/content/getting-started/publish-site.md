@@ -70,3 +70,9 @@ deploy:
     username: devlive-community
     email: support@devlive.org
 ```
+
+使用以下命令发布到 Github Pages:
+
+```bash
+pageforge deploy-github
+```
