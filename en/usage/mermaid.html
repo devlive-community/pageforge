@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,7 @@
 <meta name="keywords" content="PageForge, Markdown, Static Site Generator, GitHub Pages, GitLab Pages, Vercel, Netlify, GitHub Actions, Cloudflare Pages, Vercel Pages, Netlify Pages, 静态网站生成器, 静态网站部署器">
 <meta name="author" content="PageForge">
 
-    <title>Mermaid - PageForge</title>
-    <link rel="icon" href="../../../assets/logo.svg" type="image/x-icon">
+    <link rel="icon" href="/assets/logo.svg" type="image/x-icon">
 
     <!-- 基础样式文件 -->
     <link rel="stylesheet" href="/assets/pageforge.min.css">
@@ -32,20 +31,41 @@
 
                 e.preventDefault();
 
-                // 获取目标语言
-                const targetLang = href.split('/')[1];
+                // 获取当前路径信息
+                const pathParts = window.location.pathname.split('/').filter(Boolean);
+                let version = null;
+                let lang = null;
+
+                // 解析当前 URL 中的版本和语言信息
+                if (pathParts.length > 0) {
+                    if (/^\d+\.\d+(\.\d+)?$/.test(pathParts[0]) || pathParts[0] === 'current') {
+                        version = pathParts[0];
+                        lang = pathParts[1];
+                    } else {
+                        lang = pathParts[0];
+                    }
+                }
+
+                // 构建 404 页面路径
+                let notFoundPath = '';
+                if (version) {
+                    notFoundPath += '/' + version;
+                }
+                if (lang) {
+                    notFoundPath += '/' + lang;
+                }
+                notFoundPath += '/404.html';
 
                 fetch(href)
                     .then(response => {
                         if (response.ok) {
                             window.location.href = href;
-                        }
-                        else {
-                            window.location.href = `/${targetLang}/404.html`;
+                        } else {
+                            window.location.href = notFoundPath;
                         }
                     })
                     .catch(() => {
-                        window.location.href = `/${targetLang}/404.html`;
+                        window.location.href = notFoundPath;
                     });
             });
         })();
@@ -113,10 +133,11 @@
                 <!-- 左侧Logo和导航 -->
                 <div class="flex items-center flex-1">
                     <!-- Logo和标题 -->
-                    <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
+                    
+<div class="flex items-center space-x-4 shrink-0 lg:mr-8">
     
         <a href="/en" class="flex items-center">
-            <img src="../../..//assets/logo.svg"
+            <img src="/assets/logo.svg"
                  alt="PageForge"
                  class="h-10 w-auto object-contain transition-transform hover:scale-105">
         </a>
@@ -215,6 +236,7 @@
 
     <!-- 搜索弹窗 -->
     <div id="search-dialog"
+         data-version=""
          class="fixed inset-0 z-50 bg-gray-500/70 items-start justify-center p-4 sm:p-6 md:p-20 hidden"
          aria-modal="true"
          role="dialog">
@@ -266,48 +288,54 @@
     </div>
 
 
+                    <!-- 版本选择器 -->
+                    <!-- 版本切换器 -->
+
+
                     <!-- 桌面端主题切换按钮 -->
                     
 
                     <!-- 语言切换器 -->
                     
                         <!-- 语言切换器 -->
-<div class="hidden lg:flex items-center ml-4">
-    <div class="relative">
-        <button type="button"
-                onclick="document.getElementById('language-menu').classList.toggle('hidden')"
-                class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
-            <!-- 当前语言 -->
-            
-            <span>🇬🇧</span>
-            <span>English</span>
-            <!-- 下拉箭头 -->
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-        </button>
 
-        <!-- 语言选择下拉菜单 -->
-        <div id="language-menu"
-             class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-            
+    <div class="hidden lg:flex items-center">
+        <div class="relative">
+            <button type="button"
+                    onclick="document.getElementById('language-menu').classList.toggle('hidden')"
+                    class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                <!-- 当前语言 -->
+                
+                <span>🇬🇧</span>
+                <span>English</span>
+                <!-- 下拉箭头 -->
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <!-- 语言选择下拉菜单 -->
+            <div id="language-menu"
+                 class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                
                 <a href="/en/usage/mermaid.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
-            
+                
                 <a href="/zh-CN/usage/mermaid.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇨🇳</span>
                     <span>中文</span>
                 </a>
-            
+                
+            </div>
         </div>
     </div>
-</div>
+
                     
 
                     <!-- 仓库链接 -->
@@ -433,65 +461,68 @@
                 
                     <a href="/en/getting-started/get-started.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Getting Started
                     </a>
                 
                     <a href="/en/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Setup
                     </a>
                 
                     <a href="/en/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-blue-600  bg-blue-50/80 ">
+                      text-blue-600  bg-blue-50/80 ">
                         Usage Docs
                     </a>
                 
                     <a href="/en/template/home.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Template
                     </a>
                 
                     <a href="/en/team.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Team
                     </a>
                 
                     <a href="/en/release/2025.1.4.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Release Notes
                     </a>
+                
+
+                <!-- 移动端版本切换 -->
                 
 
                 <!-- 移动端语言切换 -->
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-        <a href="/en/usage/mermaid.html"
-           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                bg-gray-50 dark:bg-gray-700">
-            <span>🇬🇧</span>
-            <span>English</span>
-        </a>
+    <a href="/en/usage/mermaid.html"
+       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                            bg-gray-50 dark:bg-gray-700">
+        <span>🇬🇧</span>
+        <span>English</span>
+    </a>
     
-        <a href="/zh-CN/usage/mermaid.html"
-           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                ">
-            <span>🇨🇳</span>
-            <span>中文</span>
-        </a>
+    <a href="/zh-CN/usage/mermaid.html"
+       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                            ">
+        <span>🇨🇳</span>
+        <span>中文</span>
+    </a>
     
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
+        const menuButton = document.querySelector('button[data-menu-toggle]');
 
         // 只有当菜单元素存在时才添加事件监听
         if (mobileMenu && menuButton) {
@@ -502,11 +533,11 @@
 
                     mobileMenu.classList.add('hidden');
 
-                    const openIcon = menuButton.querySelector('svg:first-child');
-                    const closeIcon = menuButton.querySelector('svg:last-child');
+                    const menuIcon = menuButton.querySelector('.menu-icon');
+                    const closeIcon = menuButton.querySelector('.close-icon');
 
-                    if (openIcon && closeIcon) {
-                        openIcon.classList.remove('hidden');
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
                     }
                 }
@@ -630,13 +661,13 @@
 
     <div class="pt-[--header-height] w-full">
         <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row">
-            <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+            <!-- 左侧列表 -->
             
                 <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
                          inset-y-0 left-0 transform -translate-x-full md:translate-x-0
                          transition duration-200 ease-in-out
                          md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
-                          w-3/4 sm:w-64 top-[--header-height] md:top-auto"
+                         w-3/4 sm:w-64 top-[--header-height] md:top-auto"
                        id="sidebar-menu">
                     <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
                         <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
@@ -1415,12 +1446,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-0a16nrlit-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-ppjbc122p-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-0a16nrlit" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-ppjbc122p" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 flowchart LR
     id
             </div>
@@ -1452,8 +1483,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-0a16nrlit');
-                                const loadingElement = document.getElementById('mermaid-0a16nrlit-loading');
+                                const chartElement = document.getElementById('mermaid-ppjbc122p');
+                                const loadingElement = document.getElementById('mermaid-ppjbc122p-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1467,7 +1498,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-0a16nrlit'
+                                    querySelector: '#mermaid-ppjbc122p'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1481,7 +1512,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-0a16nrlit-loading').innerHTML = 
+                                document.getElementById('mermaid-ppjbc122p-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1504,12 +1535,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-8l57mpvx2-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-hc4fzpyi2-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-8l57mpvx2" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-hc4fzpyi2" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 sequenceDiagram
     Alice->>John: Hello John, how are you?
     John-->>Alice: Great!
@@ -1542,8 +1573,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-8l57mpvx2');
-                                const loadingElement = document.getElementById('mermaid-8l57mpvx2-loading');
+                                const chartElement = document.getElementById('mermaid-hc4fzpyi2');
+                                const loadingElement = document.getElementById('mermaid-hc4fzpyi2-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1557,7 +1588,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-8l57mpvx2'
+                                    querySelector: '#mermaid-hc4fzpyi2'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1571,7 +1602,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-8l57mpvx2-loading').innerHTML = 
+                                document.getElementById('mermaid-hc4fzpyi2-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1594,12 +1625,12 @@ sequenceDiagram
     
         <div class="mermaid-wrapper my-4 relative w-full" style="min-width: min-content;">
             <!-- 加载提示 -->
-            <div id="mermaid-n41ry6h8b-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
+            <div id="mermaid-5ky5ijwuv-loading" class="absolute inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 z-10">
                 <span class="text-gray-500 text-sm">加载图...</span>
             </div>
             
             <!-- Mermaid 图表容器 -->
-            <div id="mermaid-n41ry6h8b" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+            <div id="mermaid-5ky5ijwuv" class="mermaid overflow-x-auto w-full" style="opacity: 0; transition: opacity 0.2s ease-in-out;">
                 mindmap
   root((mindmap))
     Origins
@@ -1646,8 +1677,8 @@ sequenceDiagram
                         // 初始化 mermaid
                         window.mermaidReady.then(mermaid => {
                             try {
-                                const chartElement = document.getElementById('mermaid-n41ry6h8b');
-                                const loadingElement = document.getElementById('mermaid-n41ry6h8b-loading');
+                                const chartElement = document.getElementById('mermaid-5ky5ijwuv');
+                                const loadingElement = document.getElementById('mermaid-5ky5ijwuv-loading');
 
                                 // 先设置容器的最小宽度
                                 chartElement.closest('.mermaid-wrapper').style.minWidth = 'min-content';
@@ -1661,7 +1692,7 @@ sequenceDiagram
 
                                 // 渲染图表
                                 mermaid.run({
-                                    querySelector: '#mermaid-n41ry6h8b'
+                                    querySelector: '#mermaid-5ky5ijwuv'
                                 }).then(() => {
                                     // 平滑显示图表
                                     chartElement.style.opacity = '1';
@@ -1675,7 +1706,7 @@ sequenceDiagram
                                 });
                             } catch (error) {
                                 console.error('Mermaid init error:', error);
-                                document.getElementById('mermaid-n41ry6h8b-loading').innerHTML = 
+                                document.getElementById('mermaid-5ky5ijwuv-loading').innerHTML = 
                                     '<span class="text-red-500">无法初始化图</span>';
                             }
                         });
@@ -1994,7 +2025,9 @@ sequenceDiagram
     </div>
 
     
-        <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        
+
+<footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="flex flex-col md:flex-row md:justify-between gap-8">
             <!-- Logo 和描述部分 -->
@@ -2002,7 +2035,7 @@ sequenceDiagram
                 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                         <a href="/en" class="flex items-center">
-                            <img src="../../..//assets/logo.svg"
+                            <img src="/assets/logo.svg"
                                  alt="PageForge"
                                  class="h-12">
                         </a>
@@ -2164,7 +2197,7 @@ sequenceDiagram
                 © 2024 PageForge All Rights Reserved. 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
 
                 
-                    <a href="https://pageforge.devlive.org/sitemap.xml" target="_blank" class="ml-3 dark:hover:text-white hover:underline hover:text-blue-600">站点地图</a>
+                    <a href="/sitemap.xml" target="_blank" class="ml-3 dark:hover:text-white hover:underline hover:text-blue-600">站点地图</a>
                 
             </span>
 
@@ -2220,7 +2253,7 @@ sequenceDiagram
     </script>
 
 
-<!-- 遮罩层 - 移动端菜单打开时显示 -->
+<!-- 遮罩层 -->
 
     <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
          id="sidebar-overlay"

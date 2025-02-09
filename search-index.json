@@ -90,6 +90,12 @@
     "lang": "en"
   },
   {
+    "title": "版本设置",
+    "content": "PageForge 支持多版本管理，可以帮助你快速部署不同版本的网站。 !!! info \"注意\" PageForge 多版本管理是通过归档方式来实现的。 !!! --- bash pageforge archive 1.0.0 1.0.0 是你要归档的版本号，可以根据实际情况进行修改。 执行命令后，PageForge 会在输出目录下生成一个 1.0.0 的文件夹，里面包含了你的网站的所有文件，可以直接部署到 GitHub Pages、GitLab Pages、Vercel、Netlify 等服务上。 归档后会在 pageforge.yaml 文件中添加一个如下新的版本配置： yaml versions: 1.0.0 !!! danger \"注意\" 多版本的情况下，不要删除 pageforge.yaml 文件中的 versions 配置。否则会导致多版本无效。 !!!",
+    "url": "https://pageforge.devlive.org/en/setup/version.html",
+    "lang": "en"
+  },
+  {
     "title": "超链接",
     "content": "PageForge 支持 Markdown 的默认超链接语法。您可以使用 []() 格式来创建链接，例如 链接文本。 PageForge 实现了更多的语义，支持更多的超链接格式。 --- 链接文本 PageForge --- 链接文本 PageForge --- 链接文本 PageForge <br /> 打开方式支持 blank self parent top",
     "url": "https://pageforge.devlive.org/en/usage/href.html",
@@ -339,6 +345,12 @@
     "title": "SEO 设置",
     "content": "PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO）。 --- PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO），包括标题、关键字和描述等。 yaml site: description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator author: devlive-community description: 网站描述 keywords: 网站关键字 author: 网站作者，默认为 PageForge > PageForge 支持的 SEO 设置包括标题、关键字和描述等，可以帮助你优化网站的搜索引擎优化（SEO），提高网站的排名。 --- PageForge 支持设置页面的 SEO 设置，可方便为不同的页面设置不同的 SEO 设置。只需要设置 markdown 文件的元数据即可。 yaml --- description: PageForge 是一个简单的静态网站生成器，可以将 Markdown 文档转换为静态 HTML 页面。 keywords: PageForge, Markdown, Static Site Generator --- !!! danger \"注意\" 页面配置文件的元数据会覆盖全局的 SEO 设置，即使你设置了全局的 SEO 设置，也会被覆盖，页面 SEO 无法设置 author。 !!!",
     "url": "https://pageforge.devlive.org/zh-CN/setup/seo.html",
+    "lang": "zh-CN"
+  },
+  {
+    "title": "版本设置",
+    "content": "PageForge 支持多版本管理，可以帮助你快速部署不同版本的网站。 !!! info \"注意\" PageForge 多版本管理是通过归档方式来实现的。 !!! --- bash pageforge archive 1.0.0 1.0.0 是你要归档的版本号，可以根据实际情况进行修改。 执行命令后，PageForge 会在输出目录下生成一个 1.0.0 的文件夹，里面包含了你的网站的所有文件，可以直接部署到 GitHub Pages、GitLab Pages、Vercel、Netlify 等服务上。 归档后会在 pageforge.yaml 文件中添加一个如下新的版本配置： yaml versions: 1.0.0 !!! danger \"注意\" 多版本的情况下，不要删除 pageforge.yaml 文件中的 versions 配置。否则会导致多版本无效。 !!!",
+    "url": "https://pageforge.devlive.org/zh-CN/setup/version.html",
     "lang": "zh-CN"
   },
   {
