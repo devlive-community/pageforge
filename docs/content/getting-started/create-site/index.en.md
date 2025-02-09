@@ -1,5 +1,5 @@
 ---
-title: 创建网站
+title: Create Site
 icon: folder-plus
 ---
 
