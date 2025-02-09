@@ -213,7 +213,3 @@ nav:
       - /release/2025.1.1
       - /release/2025.1.0
       - /release/1.0.0
-
-versions:
-  - current
-  - 1.0.0
