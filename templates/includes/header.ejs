@@ -44,6 +44,9 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
                     <!-- 搜索框 -->
                     <%- include('./header-search', { darkClasses }) %>
 
+                    <!-- 版本选择器 -->
+                    <%- include('./header-version', { darkClasses }) %>
+
                     <!-- 桌面端主题切换按钮 -->
                     <% if (darkModeEnabled) { %>
                         <button type="button"
