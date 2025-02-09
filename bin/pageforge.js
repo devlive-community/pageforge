@@ -9,6 +9,7 @@ const HelpCommand = require('../lib/commands/help');
 const InitCommand = require('../lib/commands/init');
 const ServeCommand = require('../lib/commands/serve');
 const BuildCommand = require('../lib/commands/build');
+const ArchiveCommand = require('../lib/commands/archive');
 
 // 获取当前工作目录
 const cwd = process.cwd();
@@ -33,6 +34,18 @@ async function main() {
 
                 const createSite = new CreateSiteCommand();
                 await createSite.execute(sitePath);
+            }
+            catch (error) {
+                console.error(error.message);
+                process.exit(1);
+            }
+            break;
+
+        case 'archive':
+            try {
+                const version = args[1];
+                const archive = new ArchiveCommand(configManager);
+                await archive.execute(version);
             }
             catch (error) {
                 console.error(error.message);
