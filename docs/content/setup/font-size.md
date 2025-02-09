@@ -1,8 +1,6 @@
 ---
 title: 字体设置
 icon: type
-status:
-    type: new
 ---
 
 PageForge 支持设置字体大小。默认是禁用的，需要在 `pageforge.yaml` 配置文件中启用。

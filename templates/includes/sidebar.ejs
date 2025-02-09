@@ -30,7 +30,16 @@ sidebar = siteData.nav.find(item => {
                         class="group block w-full text-left"
                         onclick="toggleSubmenu(this)">
                     <% } else { %>
-                    <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
+                    <a href="<%
+                        let href = '';
+                        if (pageData.version) {
+                            href += '/' + pageData.version;
+                        }
+                        if (locals.siteData.feature?.i18n?.enable && pageData.language) {
+                            href += '/' + pageData.language;
+                        }
+                        href += item.href.startsWith('/') ? item.href : '/' + item.href;
+                    %><%= href %>"
                        class="group block">
                         <% } %>
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2

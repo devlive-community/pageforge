@@ -124,7 +124,9 @@ const Search = {
         }
 
         try {
-            const response = await fetch('/search-index.json');
+            const version = this.els.searchDialog.dataset.version;
+
+            const response = await fetch(version ? `/${version}/search-index.json` : '/search-index.json');
             this.searchIndex = await response.json();
         }
         catch (error) {

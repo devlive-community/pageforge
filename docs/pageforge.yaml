@@ -180,6 +180,7 @@ nav:
       - /setup/font-size
       - /setup/comment
       - /setup/seo
+      - /setup/version
   - Usage:
       - /usage/href
       - /usage/image

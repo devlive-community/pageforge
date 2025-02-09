@@ -1,8 +1,6 @@
 ---
 title: 评论设置
 icon: message-circle
-status:
-    type: new
 ---
 
 PageForge 支持将您选择的第三方评论系统添加到任何页面的页脚。例如，我们将集成 [Giscus](https://giscus.app "Giscus" "_blank")，它是开源的、免费的，并使用 GitHub 讨论作为后端。

@@ -1,3 +1,26 @@
+<%
+// 构建主页链接函数
+function buildHomeLink() {
+    let path = '';
+    if (pageData.version) {
+        path += '/' + pageData.version;
+    }
+    if (locals.siteData.feature?.i18n?.enable && pageData.language) {
+        path += '/' + pageData.language;
+    }
+    return path || '/';
+}
+
+// 构建资源路径函数
+function buildAssetPath(assetPath) {
+    let path = '';
+    if (pageData.version) {
+        path += '/' + pageData.version;
+    }
+    return path + (assetPath.startsWith('/') ? assetPath : '/' + assetPath);
+}
+%>
+
 <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="flex flex-col md:flex-row md:justify-between gap-8">
@@ -5,8 +28,8 @@
             <div class="md:w-1/3">
                 <% if (locals.siteData?.site?.logo) { %>
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                        <a href="<%= pageData.language ? `/${pageData.language}` : '/' %>" class="flex items-center">
-                            <img src="<%= pageData.basePath %>/<%= siteData.site.logo || '/assets/logo.svg' %>"
+                        <a href="<%= buildHomeLink() %>" class="flex items-center">
+                            <img src="<%= buildAssetPath(siteData.site.logo || '/assets/logo.svg') %>"
                                  alt="<%= siteData.site.title %>"
                                  class="h-12">
                         </a>
@@ -56,7 +79,7 @@
                 <%= locals.siteData?.footer?.copyright %> 使用 ❤️ <a href="https://pageforge.devlive.org" class="hover:text-blue-600" target="_blank">PageForge</a> 构建
 
                 <% if (locals.siteData?.feature?.sitemap?.enable) { %>
-                    <a href="<%= locals.siteData?.site?.baseUrl %>/sitemap.xml" target="_blank" class="ml-3 dark:hover:text-white hover:underline hover:text-blue-600">站点地图</a>
+                    <a href="<%= pageData.version ? '/' + pageData.version : '' %>/sitemap.xml" target="_blank" class="ml-3 dark:hover:text-white hover:underline hover:text-blue-600">站点地图</a>
                 <% } %>
             </span>
 
