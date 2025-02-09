@@ -2,21 +2,41 @@
 if (pageData.template === 'team') {
     pageData.config = { toc: false, sidebar: false };
 }
+
+// 构建静态资源路径函数（只考虑版本）
+function buildAssetPath(assetPath) {
+    let path = '';
+    if (pageData.version) {
+        path += '/' + pageData.version;
+    }
+    return path + (assetPath.startsWith('/') ? assetPath : '/' + assetPath);
+}
+
+// 构建页面路径函数（考虑版本和国际化）
+function buildPagePath(pagePath) {
+    let path = '';
+    if (pageData.version) {
+        path += '/' + pageData.version;
+    }
+    if (locals.siteData.feature?.i18n?.enable && pageData.language) {
+        path += '/' + pageData.language;
+    }
+    return path + (pagePath.startsWith('/') ? pagePath : '/' + pagePath);
+}
 %>
 
 <!DOCTYPE html>
-<html lang="zh" class="scroll-smooth">
+<html lang="<%= pageData.language || 'zh' %>" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pageData.title %> - <%= siteData.site.title %></title>
     <%- include('../includes/seo.ejs', { pageData, siteData }) %>
 
-    <title><%= pageData.title %> - <%= siteData.site.title %></title>
-    <link rel="icon" href="<%= pageData.basePath %>/<%= siteData.site.favicon || '/favicon.ico' %>" type="image/x-icon">
+    <link rel="icon" href="<%= buildAssetPath(siteData.site.favicon || '/favicon.ico') %>" type="image/x-icon">
 
     <!-- 基础样式文件 -->
-    <link rel="stylesheet" href="/assets/pageforge.min.css">
+    <link rel="stylesheet" href="<%= buildAssetPath('/assets/pageforge.min.css') %>">
 
     <script>
         (function () {
@@ -33,20 +53,41 @@ if (pageData.template === 'team') {
 
                 e.preventDefault();
 
-                // 获取目标语言
-                const targetLang = href.split('/')[1];
+                // 获取当前路径信息
+                const pathParts = window.location.pathname.split('/').filter(Boolean);
+                let version = null;
+                let lang = null;
+
+                // 解析当前 URL 中的版本和语言信息
+                if (pathParts.length > 0) {
+                    if (/^\d+\.\d+(\.\d+)?$/.test(pathParts[0]) || pathParts[0] === 'current') {
+                        version = pathParts[0];
+                        lang = pathParts[1];
+                    } else {
+                        lang = pathParts[0];
+                    }
+                }
+
+                // 构建 404 页面路径
+                let notFoundPath = '';
+                if (version) {
+                    notFoundPath += '/' + version;
+                }
+                if (lang) {
+                    notFoundPath += '/' + lang;
+                }
+                notFoundPath += '/404.html';
 
                 fetch(href)
                     .then(response => {
                         if (response.ok) {
                             window.location.href = href;
-                        }
-                        else {
-                            window.location.href = `/${targetLang}/404.html`;
+                        } else {
+                            window.location.href = notFoundPath;
                         }
                     })
                     .catch(() => {
-                        window.location.href = `/${targetLang}/404.html`;
+                        window.location.href = notFoundPath;
                     });
             });
         })();
@@ -55,7 +96,7 @@ if (pageData.template === 'team') {
     <!-- 加载主题配置中的额外 CSS 文件 -->
     <% if (locals.siteData?.theme?.extraCss && Array.isArray(locals.siteData?.theme?.extraCss)) { %>
         <% locals.siteData?.theme?.extraCss.forEach(css_path => { %>
-            <link rel="stylesheet" href="<%= css_path %>">
+            <link rel="stylesheet" href="<%= buildAssetPath(css_path) %>">
         <% }); %>
     <% } %>
 
@@ -95,13 +136,13 @@ if (pageData.template === 'team') {
 
     <div class="pt-[--header-height] w-full">
         <div class="container mx-auto px-4 py-4 md:py-8 flex-grow flex flex-col md:flex-row">
-            <!-- 左侧列表 - 移动端隐藏，可通过菜单触发显示 -->
+            <!-- 左侧列表 -->
             <% if (locals.pageData?.config?.sidebar !== false) { %>
                 <aside class="fixed md:relative md:w-56 lg:w-64 flex-shrink-0 md:pr-4 lg:pr-8
                          inset-y-0 left-0 transform -translate-x-full md:translate-x-0
                          transition duration-200 ease-in-out
                          md:block z-30 bg-white dark:bg-gray-900 md:bg-transparent
-                          w-3/4 sm:w-64 top-[--header-height] md:top-auto"
+                         w-3/4 sm:w-64 top-[--header-height] md:top-auto"
                        id="sidebar-menu">
                     <div class="h-16 md:hidden flex items-center justify-end px-4 border-b dark:border-gray-800">
                         <button class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
@@ -143,7 +184,7 @@ if (pageData.template === 'team') {
 <!-- 返回顶部按钮 -->
 <%- include('../includes/feature-backTop') %>
 
-<!-- 遮罩层 - 移动端菜单打开时显示 -->
+<!-- 遮罩层 -->
 <% if (locals.pageData?.config?.sidebar !== false) { %>
     <div class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden"
          id="sidebar-overlay"
@@ -154,7 +195,7 @@ if (pageData.template === 'team') {
 </body>
 
 <!-- 基础脚本文件 -->
-<script src="/assets/pageforge.min.js"></script>
+<script src="<%= buildAssetPath('/assets/pageforge.min.js') %>"></script>
 
 <script>
     // 移动端侧边栏打开时显示遮罩
@@ -166,7 +207,7 @@ if (pageData.template === 'team') {
 <!-- 加载主题配置中的额外 JS 文件 -->
 <% if (locals.siteData?.theme?.extraJs && Array.isArray(locals.siteData?.theme?.extraJs)) { %>
     <% locals.siteData.theme.extraJs.forEach(js_path => { %>
-        <script src="<%= js_path %>"></script>
+        <script src="<%= buildAssetPath(js_path) %>"></script>
     <% }); %>
 <% } %>
 
