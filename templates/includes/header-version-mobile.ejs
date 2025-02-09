@@ -1,0 +1,25 @@
+<!-- 移动端版本切换 -->
+<% if (locals.siteData.versions) { %>
+    <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
+        <div class="px-4 py-2 text-xs text-gray-500 dark:text-gray-400">
+            版本切换
+        </div>
+        <% locals.siteData.versions.forEach(version => {
+            let href = '';
+            // 添加版本路径
+            href += '/' + version;
+            // 添加语言路径
+            if (locals.siteData.feature?.i18n?.enable && pageData.language) {
+                href += '/' + pageData.language;
+            }
+            // 添加页面路径
+            href += pageData.noLocalePath.startsWith('/') ? pageData.noLocalePath : '/' + pageData.noLocalePath;
+        %>
+        <a href="<%= href %>"
+           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                                <%= version === pageData.version ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
+            <span><%= version %></span>
+        </a>
+        <% }) %>
+    </div>
+<% } %>

@@ -1,8 +1,6 @@
 ---
 title: SEO 设置
 icon: search
-status:
-    type: new
 ---
 
 PageForge 支持 SEO 设置，可以帮助你优化网站的搜索引擎优化（SEO）。

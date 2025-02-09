@@ -117,14 +117,28 @@ const darkClasses = (classes) => darkModeEnabled ? classes : '';
         <div class="hidden lg:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-2 border-t <%= darkClasses('dark:border-gray-700') %>">
                 <% for(let item of siteData.nav) { %>
-                    <a href="<%= pageData.language ? `/${pageData.language}${item.href}` : item.href %>"
+                    <a href="<%
+                        let href = '';
+                        if (pageData.version) {
+                            href += '/' + pageData.version;
+                        }
+                        if (locals.siteData.feature?.i18n?.enable && pageData.language) {
+                            href += '/' + pageData.language;
+                        }
+                        href += item.href.startsWith('/') ? item.href : '/' + item.href;
+                    %><%= href %>"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                              <%= isPathInNavItem(pageData.noLocalePath, item)
+                      <%= isPathInNavItem(pageData.noLocalePath, item)
                                ? `text-blue-600 ${darkClasses('dark:text-blue-400')} bg-blue-50/80 ${darkClasses('dark:bg-blue-900/20')}`
                                : `text-gray-700 ${darkClasses('dark:text-gray-200')} hover:text-gray-900 ${darkClasses('dark:hover:text-white')} hover:bg-gray-50 ${darkClasses('dark:hover:bg-gray-700')}`
                        %>">
                         <%= item.title %>
                     </a>
+                <% } %>
+
+                <!-- 移动端版本切换 -->
+                <% if (locals.siteData.versions) { %>
+                    <%- include('./header-version-mobile') %>
                 <% } %>
 
                 <!-- 移动端语言切换 -->

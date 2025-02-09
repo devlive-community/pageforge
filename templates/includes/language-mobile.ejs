@@ -1,18 +1,28 @@
 <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
-    <% locals.siteData.languages.forEach(locale => { %>
-        <a href="<%= `/${locale.key}${pageData.noLocalePath}` %>"
-           class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
-                                <%= locale.key === locals.pageData.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
-            <span><%= locale.flag %></span>
-            <span><%= locale.name %></span>
-        </a>
+    <% locals.siteData.languages.forEach(locale => {
+        let href = '';
+        // 添加版本路径
+        if (pageData.version) {
+            href += '/' + pageData.version;
+        }
+        // 添加语言路径
+        href += '/' + locale.key;
+        // 添加页面路径
+        href += pageData.noLocalePath.startsWith('/') ? pageData.noLocalePath : '/' + pageData.noLocalePath;
+    %>
+    <a href="<%= href %>"
+       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
+                            <%= locale.key === locals.pageData.language ? 'bg-gray-50 dark:bg-gray-700' : '' %>">
+        <span><%= locale.flag %></span>
+        <span><%= locale.name %></span>
+    </a>
     <% }) %>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuButton = document.querySelector('button[onclick*="mobile-menu"]');
+        const menuButton = document.querySelector('button[data-menu-toggle]');
 
         // 只有当菜单元素存在时才添加事件监听
         if (mobileMenu && menuButton) {
@@ -23,11 +33,11 @@
 
                     mobileMenu.classList.add('hidden');
 
-                    const openIcon = menuButton.querySelector('svg:first-child');
-                    const closeIcon = menuButton.querySelector('svg:last-child');
+                    const menuIcon = menuButton.querySelector('.menu-icon');
+                    const closeIcon = menuButton.querySelector('.close-icon');
 
-                    if (openIcon && closeIcon) {
-                        openIcon.classList.remove('hidden');
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.remove('hidden');
                         closeIcon.classList.add('hidden');
                     }
                 }

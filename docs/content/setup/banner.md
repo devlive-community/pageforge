@@ -1,8 +1,6 @@
 ---
 title: Banner 设置
 icon: circle-alert
-status: 
-    type: new
 ---
 
 PageForge 支持设置顶部 Banner，可以帮助你快速创建高质量的 Banner。默认是禁用的，需要在 `pageforge.yaml` 配置文件中启用。
