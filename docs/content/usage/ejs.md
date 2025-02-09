@@ -28,6 +28,4 @@ EJS 模版语言的用法请参考 [EJS 文档](https://www.ejs.co/ "EJS" "_blan
 
 将渲染出来
 
-```
-PageForge
-```
+<%= pageData.title %>
