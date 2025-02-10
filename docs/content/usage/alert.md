@@ -6,9 +6,7 @@ icon: alert-triangle
 PageForge 支持使用 markdown 实现了提示相关信息。
 
 !!! danger "注意"
-
     需要注意的是必须要使用 `!!!` 包裹，且后面的内容需要缩进。
-
 !!!
 
 支持的类型有:
@@ -18,6 +16,7 @@ PageForge 支持使用 markdown 实现了提示相关信息。
 - `success`
 - `warning`
 - `dark`
+- `note`
 
 ## Info
 
@@ -113,9 +112,29 @@ PageForge 支持使用 markdown 实现了提示相关信息。
 !!!
 ```
 
-!!! dark "标题"
+!!! dark
 
     PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。
+
+!!!
+
+## Note
+
+---
+
+`note` 类型的提示信息可以使用如下的语法。
+
+```markdown
+!!! note
+
+    这是一个提示信息
+
+!!!
+```
+
+!!! note
+
+    这是一个提示信息
 
 !!!
 

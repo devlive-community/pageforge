@@ -1,4 +1,14 @@
 module.exports = function alert({type = 'info', title, content}) {
+    // 设置默认标题
+    const defaultTitles = {
+        info: 'Information',
+        danger: 'Danger',
+        success: 'Success',
+        warning: 'Warning',
+        dark: 'Note',
+        note: 'Note'
+    };
+
     const styles = {
         info: {
             wrapper: 'border border-blue-200',
@@ -34,20 +44,32 @@ module.exports = function alert({type = 'info', title, content}) {
             icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`,
             title: 'text-gray-800',
             content: 'text-gray-700'
+        },
+        note: {
+            wrapper: 'border border-purple-200',
+            headerWrapper: 'bg-purple-50',
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`,
+            title: 'text-purple-800',
+            content: 'text-purple-700'
         }
     };
 
     const style = styles[type];
 
+    // 只有当 title 不是空字符串时才显示标题部分
+    // 如果 title 是 undefined，则使用默认标题
+    const shouldShowTitle = title !== '';
+    const displayTitle = title === undefined ? defaultTitles[type] : title;
+
     return `
         <div class="rounded-lg my-2 overflow-hidden ${style.wrapper}">
         
-        ${title
-            ? `<div class="flex items-start space-x-2 p-2 rounded-t-lg ${style.headerWrapper}">
+        ${shouldShowTitle
+        ? `<div class="flex items-start space-x-2 p-2 rounded-t-lg ${style.headerWrapper}">
                <div class="flex-shrink-0">${style.icon}</div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">${title}</h3>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">${displayTitle}</h3>
            </div>`
-            : ''}
+        : ''}
                    
             <div class="w-full px-5 py-3">
                 <div class="text-sm ${style.content}">
