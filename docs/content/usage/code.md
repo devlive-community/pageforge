@@ -35,3 +35,19 @@ public class HelloWorld {
     }
 }
 ```
+
+## 设置标题
+
+---
+
+!!! note
+    添加标题只需要在语言后面添加 ` title="xxxx"`
+!!!
+
+``` vue title="正确示例"
+export default defineComponent({
+  name: 'RoleHome'
+})
+
+const showName = ref(false)
+```
