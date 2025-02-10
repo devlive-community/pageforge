@@ -6,9 +6,7 @@ icon: alert-triangle
 PageForge 支持使用 markdown 实现了提示相关信息。
 
 !!! danger "注意"
-
     需要注意的是必须要使用 `!!!` 包裹，且后面的内容需要缩进。
-
 !!!
 
 支持的类型有:
