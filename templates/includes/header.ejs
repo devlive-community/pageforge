@@ -1,20 +1,27 @@
 <%
 function isPathInNavItem(currentPath, navItem) {
-    if (navItem.href && currentPath.startsWith(navItem.href)) {
+    // 如果该项是选中状态，返回true
+    if (navItem.href === currentPath) {
         return true;
     }
-    if (!navItem.items) {
-        return false;
+
+    // 检查当前项是否包含在路径中（处理父级菜单）
+    if (navItem.items && navItem.items.length > 0) {
+        // 检查所有子项
+        return navItem.items.some(subItem => {
+            // 直接匹配
+            if (subItem.href === currentPath) {
+                return true;
+            }
+            // 递归检查子项的子项
+            if (subItem.items) {
+                return isPathInNavItem(currentPath, subItem);
+            }
+            return false;
+        });
     }
-    return navItem.items.some(item => {
-        if (item.href) {
-            return currentPath.startsWith(item.href);
-        }
-        if (item.items) {
-            return isPathInNavItem(currentPath, item);
-        }
-        return false;
-    });
+
+    return false;
 }
 
 // 检查是否启用深色模式
