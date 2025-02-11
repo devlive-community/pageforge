@@ -14,11 +14,10 @@ module.exports = function template(item) {
     }
     else {
         // 处理普通列表项
-        // 使用Grid布局来确保内容正确对齐
         listItemContent = `
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>${item.text}</span>
+            <li class="mb-2 flex gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none w-4">•</span>
+                <span class="flex-1 w-[calc(100%-1rem)]">${item.text}</span>
             </li>`;
     }
 
