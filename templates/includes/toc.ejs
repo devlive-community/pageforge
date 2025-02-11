@@ -1,15 +1,15 @@
 <!-- 桌面端目录 -->
-<div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+<div class="hidden lg:block flex-none md:w-56 lg:w-64 pl-8 mr-8">
     <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-        <nav class="overflow-y-auto pr-4 -mr-4 space-y-1 pageforge-scrollbar"
+        <nav class="overflow-y-auto overflow-x-auto pr-4 space-y-1 pageforge-scrollbar min-w-full"
              style="max-height: calc(100vh - var(--header-height) - 8rem);"
              id="table-of-contents">
             <% function renderTocItem(items) { %>
                 <% items?.forEach(item => { %>
                     <div class="pl-<%= (item.level - 1) * 4 %>">
                         <a href="#<%= item.slug %>"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                           class="block w-fit px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="<%= item.slug %>">
                             <%- item.text %>
                         </a>
@@ -47,13 +47,13 @@
             </svg>
         </button>
     </div>
-    <nav class="overflow-y-auto space-y-1"
+    <nav class="overflow-y-auto overflow-x-auto space-y-1 min-w-full"
          style="max-height: calc(60vh - var(--header-height));">
         <% function renderTocItemMobile(items) { %>
             <% items?.forEach(item => { %>
                 <div class="pl-<%= (item.level - 1) * 4 %>">
                     <a href="#<%= item.slug %>"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
+                       class="block px-3 py-1 w-fit text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link break-words whitespace-normal"
                        data-slug="<%= item.slug %>">
                         <%- item.text %>
                     </a>
