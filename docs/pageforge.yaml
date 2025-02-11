@@ -195,6 +195,7 @@ nav:
       - /usage/button
       - /usage/icon
       - /usage/grid
+      - /usage/api
   - Template:
       - /template/home
       - /template/team
