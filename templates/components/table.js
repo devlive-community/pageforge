@@ -18,7 +18,7 @@ module.exports = function table(props) {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             ${headers.map(header => `
-                                <th scope="col" class="px-6 py-3 ${getAlignClass(header.align)}">
+                                <th scope="col" class="px-3.5 py-1 ${getAlignClass(header.align)}">
                                     ${header.text}
                                 </th>
                             `).join('')}
@@ -28,7 +28,7 @@ module.exports = function table(props) {
                         ${rows.map((row, index) => `
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 ${row.map(cell => `
-                                    <td class="px-6 py-4 ${getAlignClass(cell.align)}">
+                                    <td class="px-3 py-1.5 ${getAlignClass(cell.align)}">
                                         ${cell.text}
                                     </td>
                                 `).join('')}
