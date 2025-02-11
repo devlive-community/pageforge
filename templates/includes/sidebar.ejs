@@ -19,7 +19,15 @@ sidebar = siteData.nav.find(item => {
 });
 %>
 
-<% function isActive(href) { return href === pageData.noLocalePath } %>
+<% function isActive(item) {
+    // 检查当前项是否匹配
+    const isSelfActive = item.href === pageData.noLocalePath;
+
+    // 检查子项是否有匹配
+    const hasActiveChild = item.items && item.items.some(child => isPathInItem(child, pageData.noLocalePath));
+
+    return isSelfActive || hasActiveChild;
+} %>
 
 <% function renderNavItems(items, level = 0) { %>
     <ul class="<%= level === 0 ? 'space-y-1.5' : 'mt-1 mb-2 ml-2 sm:ml-3 md:ml-4 pl-2 sm:pl-3 md:pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1.5' %>">
@@ -43,10 +51,10 @@ sidebar = siteData.nav.find(item => {
                        class="group block">
                         <% } %>
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                <%= isActive(item.href)
-                                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
-                                    : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
-                                %>
+                                <%= isActive(item)
+                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-900/20 font-medium'
+                                : 'hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40'
+                        %>
                                rounded-md transition-all duration-200 ease-in-out">
 
                             <% if (locals.siteData?.feature?.lucide?.enable && item.icon) { %>
@@ -54,11 +62,11 @@ sidebar = siteData.nav.find(item => {
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="<%= item.icon %>"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
-                                       <%= isActive(item.href)
+                                       <%= isActive(item)
                                           ? 'text-blue-600 dark:text-blue-400'
                                           : 'group-hover:text-gray-900 dark:group-hover:text-gray-200'
                                   %>">
@@ -74,7 +82,7 @@ sidebar = siteData.nav.find(item => {
                             <% if (item.items && item.items.length > 0) { %>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-3 w-3 sm:h-4 sm:w-4 ml-1 sm:ml-2 text-gray-400 transform transition-transform duration-200 ease-in-out
-                                        <%= isActive(item.href) || item.items.some(child => isPathInItem(child, pageData.noLocalePath))
+                                        <%= isActive(item)
                                              ? 'rotate-90 text-blue-600 dark:text-blue-400'
                                              : 'group-hover:text-gray-600 dark:group-hover:text-gray-300' %>"
                                      viewBox="0 0 20 20"
@@ -88,10 +96,10 @@ sidebar = siteData.nav.find(item => {
                         <% if (item.items && item.items.length > 0) { %>
                 </button>
                 <div class="overflow-hidden transition-all duration-200 ease-in-out
-                               <%= isActive(item.href) || item.items.some(child => isPathInItem(child, pageData.noLocalePath))
-                                    ? 'h-auto opacity-100'
-                                    : 'max-h-0 opacity-0' %>">
-                                <%- renderNavItems(item.items, level + 1) %>
+                               <%= isActive(item)
+                        ? 'h-auto opacity-100'
+                        : 'max-h-0 opacity-0' %>">
+                    <%- renderNavItems(item.items, level + 1) %>
                 </div>
                 <% } else { %>
                     </a>
