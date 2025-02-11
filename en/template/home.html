@@ -131,7 +131,7 @@
         <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0">
             <div class="flex items-center h-16">
                 <!-- 左侧Logo和导航 -->
-                <div class="flex items-center flex-1">
+                <div class="flex items-center flex-1 min-w-0">
                     <!-- Logo和标题 -->
                     
 <div class="flex items-center space-x-4 shrink-0 lg:mr-8">
@@ -708,7 +708,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -745,7 +745,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="users"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -803,7 +803,7 @@
                 </button>
                 <div class="overflow-hidden transition-all duration-200 ease-in-out
                                max-h-0 opacity-0">
-                                
+                    
     <ul class="mt-1 mb-2 ml-2 sm:ml-3 md:ml-4 pl-2 sm:pl-3 md:pl-4 border-l border-gray-200 dark:border-gray-700 space-y-1.5">
         
             <li class="relative">
@@ -820,7 +820,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -857,7 +857,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -894,7 +894,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -931,7 +931,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -968,7 +968,7 @@
                                <!-- 骨架屏 -->
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
-                               <!-- 图标 -->
+                                    <!-- 图标 -->
                                <i data-lucide="home"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
@@ -1301,9 +1301,9 @@ cta:
     
         <ul class="my-4 pl-4 list-inside list-disc">
             
-            <li class="mb-2 grid grid-cols-[1em_1fr] gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
-                <span class="text-gray-600 text-xl select-none">•</span>
-                <span>
+            <li class="mb-2 flex gap-2 text-gray-700 leading-relaxed hover:text-gray-900">
+                <span class="text-gray-600 text-xl select-none w-4">•</span>
+                <span class="flex-1 w-[calc(100%-1rem)]">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template</code>
     
         <span class="text-base text-gray-700 leading-7 my-2">: 指定模板名称，可选值为 </span>
@@ -1487,28 +1487,30 @@ cta:
             <!-- 右侧目录 -->
             
                 <!-- 桌面端目录 -->
-<div class="hidden lg:block flex-none w-64 pl-8 mr-8">
+<div class="hidden lg:block flex-none md:w-56 lg:w-64 pl-8 mr-8">
     <div class="sticky" style="top: calc(var(--header-height) + 1rem)">
         <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">目录</div>
-        <nav class="overflow-y-auto pr-4 -mr-4 space-y-1 pageforge-scrollbar"
-             style="max-height: calc(100vh - var(--header-height) - 8rem);"
-             id="table-of-contents">
-            
-            
+        <div class="overflow-y-auto overflow-x-auto pr-4 pageforge-scrollbar"
+             style="max-height: calc(100vh - var(--header-height) - 8rem);">
+            <nav class="space-y-1 inline-block min-w-full"
+                 id="table-of-contents">
                 
-                    <div class="pl-4">
-                        <a href="#ji-ben-pei-zhi"
-                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                           data-slug="ji-ben-pei-zhi">
-                            
+                
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#ji-ben-pei-zhi"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="ji-ben-pei-zhi">
+                                
         <span class="text-base text-gray-700 leading-7 my-2">基本配置</span>
     
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                        
                     
                 
-            
-        </nav>
+            </nav>
+        </div>
     </div>
 </div>
 
@@ -1535,24 +1537,26 @@ cta:
             </svg>
         </button>
     </div>
-    <nav class="overflow-y-auto space-y-1"
+    <div class="overflow-y-auto overflow-x-auto"
          style="max-height: calc(60vh - var(--header-height));">
-        
-        
+        <nav class="space-y-1 inline-block min-w-full">
             
-                <div class="pl-4">
-                    <a href="#ji-ben-pei-zhi"
-                       class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link"
-                       data-slug="ji-ben-pei-zhi">
-                        
+            
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#ji-ben-pei-zhi"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="ji-ben-pei-zhi">
+                            
         <span class="text-base text-gray-700 leading-7 my-2">基本配置</span>
     
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                    
                 
             
-        
-    </nav>
+        </nav>
+    </div>
 </div>
 
 <!-- 控制脚本 -->
