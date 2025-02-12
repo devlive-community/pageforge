@@ -208,6 +208,7 @@ nav:
   - Team:
       - /team
   - ReleaseNotes:
+      - /release/2025.1.5
       - /release/2025.1.4
       - /release/2025.1.3
       - /release/2025.1.2
