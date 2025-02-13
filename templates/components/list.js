@@ -1,9 +1,17 @@
 module.exports = function template(item) {
     const type = item.ordered ? 'ol' : 'ul';
-    const listClasses = 'my-4 pl-4 list-inside ' + (item.ordered ? 'list-decimal' : 'list-disc');
+
+    // 移除 list-inside 类，让数字显示在外部
+    const listClasses = ['my-4', 'pl-8'];
+    if (item.ordered) {
+        listClasses.push('list-decimal');
+    }
+    else {
+        listClasses.push('list-disc');
+    }
 
     return `
-        <${type} class="${listClasses}">
+        <${type} class="${listClasses.join(' ')}">
             ${item.body}
         </${type}>
     `;
