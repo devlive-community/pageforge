@@ -95,6 +95,8 @@ feature:
     enable: true
   grid:
     enable: true
+  katex:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -196,6 +198,7 @@ nav:
       - /usage/icon
       - /usage/grid
       - /usage/api
+      - /usage/katex
   - Template:
       - /template/home
       - /template/team

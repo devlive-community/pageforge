@@ -1,6 +1,6 @@
 <%
 if (pageData.template === 'team') {
-    pageData.config = { toc: false, sidebar: false };
+    pageData.config = {toc: false, sidebar: false};
 }
 
 // 构建静态资源路径函数（只考虑版本）
@@ -63,7 +63,8 @@ function buildPagePath(pagePath) {
                     if (/^\d+\.\d+(\.\d+)?$/.test(pathParts[0]) || pathParts[0] === 'current') {
                         version = pathParts[0];
                         lang = pathParts[1];
-                    } else {
+                    }
+                    else {
                         lang = pathParts[0];
                     }
                 }
@@ -82,7 +83,8 @@ function buildPagePath(pagePath) {
                     .then(response => {
                         if (response.ok) {
                             window.location.href = href;
-                        } else {
+                        }
+                        else {
                             window.location.href = notFoundPath;
                         }
                     })
@@ -114,6 +116,12 @@ function buildPagePath(pagePath) {
     <!-- Mermaid 图表 -->
     <% if (locals.siteData.feature?.mermaid?.enable) { %>
         <script src="<%= locals.siteData.cdn?.mermaidJs || 'https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js' %>"></script>
+    <% } %>
+
+    <!-- KaTeX 数学公式 -->
+    <% if (locals.siteData.feature?.katex?.enable) { %>
+        <link rel="stylesheet" href="<%= locals.siteData.cdn?.katexCss || 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css' %>">
+        <script src="<%= locals.siteData.cdn?.katexJs || 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js' %>"></script>
     <% } %>
 </head>
 
