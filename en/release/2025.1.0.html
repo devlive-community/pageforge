@@ -41,7 +41,8 @@
                     if (/^\d+\.\d+(\.\d+)?$/.test(pathParts[0]) || pathParts[0] === 'current') {
                         version = pathParts[0];
                         lang = pathParts[1];
-                    } else {
+                    }
+                    else {
                         lang = pathParts[0];
                     }
                 }
@@ -60,7 +61,8 @@
                     .then(response => {
                         if (response.ok) {
                             window.location.href = href;
-                        } else {
+                        }
+                        else {
                             window.location.href = notFoundPath;
                         }
                     })
@@ -101,6 +103,12 @@
     <!-- Mermaid 图表 -->
     
         <script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
+    
+
+    <!-- KaTeX 数学公式 -->
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
     
 </head>
 
