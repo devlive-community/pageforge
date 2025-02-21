@@ -1,9 +1,59 @@
 <% if (locals.siteData?.banner?.content) { %>
     <div class="w-full bg-blue-50 <%= darkClasses('dark:bg-blue-900/20') %>" data-banner>
         <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
-            <div class="text-blue-700 <%= darkClasses('dark:text-blue-300') %>">
-                <%- locals.siteData.banner.content %>
-            </div>
+            <% if (Array.isArray(locals.siteData.banner.content)) { %>
+                <div class="text-blue-700 <%= darkClasses('dark:text-blue-300') %> banner-container">
+                    <div class="swiper banner-swiper">
+                        <div class="swiper-wrapper">
+                            <% locals.siteData.banner.content.forEach((item) => { %>
+                                <div class="swiper-slide"><%- item %></div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+
+                <link rel="stylesheet" href="<%= locals.siteData.cdn?.swiperCss || 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css' %>">
+                <script src="<%= locals.siteData.cdn?.swiperJs || 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js' %>"></script>
+
+                <style>
+                    .banner-container {
+                        height: 1.5rem;
+                        overflow: hidden;
+                    }
+
+                    .banner-swiper {
+                        height: 100%;
+                    }
+
+                    .swiper-slide {
+                        height: 1.5rem;
+                        line-height: 1.5rem;
+                        text-align: left;
+                    }
+                </style>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        if (document.querySelector('.banner-swiper')) {
+                            new Swiper('.banner-swiper', {
+                                direction: 'vertical',
+                                loop: true,
+                                autoplay: {
+                                    delay: 2000,
+                                    disableOnInteraction: false,
+                                    pauseOnMouseEnter: true
+                                },
+                                speed: 1000,
+                                allowTouchMove: false
+                            });
+                        }
+                    });
+                </script>
+            <% } else { %>
+                <div class="text-blue-700 <%= darkClasses('dark:text-blue-300') %>">
+                    <%- locals.siteData.banner.content %>
+                </div>
+            <% } %>
             <button class="text-blue-500 hover:text-blue-700 <%= darkClasses('dark:text-blue-400 dark:hover:text-blue-200') %>"
                     data-banner-close>
                 <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
