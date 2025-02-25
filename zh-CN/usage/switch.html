@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>版本设置 - PageForge</title>
+    <title>开关 - PageForge</title>
     <!-- 基础 SEO meta 标签 -->
 <meta name="description" content="PageForge 是一款现代化的静态页面生成与部署平台，旨在帮助用户快速创建精美的静态网站，并一键部署到 GitHub Pages。 无论是个人博客、项目文档还是企业官网，PageForge 都能让你轻松实现高效构建、智能部署和即时上线。">
 <meta name="keywords" content="PageForge, Markdown, Static Site Generator, GitHub Pages, GitLab Pages, Vercel, Netlify, GitHub Actions, Cloudflare Pages, Vercel Pages, Netlify Pages, 静态网站生成器, 静态网站部署器">
@@ -177,7 +177,7 @@
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
-                          text-blue-600  bg-blue-50/80  font-medium">
+                          hover:text-gray-900  hover:bg-gray-50 ">
                     设置
                 </a>
             </li>
@@ -187,7 +187,7 @@
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
-                          hover:text-gray-900  hover:bg-gray-50 ">
+                          text-blue-600  bg-blue-50/80  font-medium">
                     使用文档
                 </a>
             </li>
@@ -338,14 +338,14 @@
             <div id="language-menu"
                  class="hidden absolute right-0 mt-2 py-2 w-36 space-y-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 
-                <a href="/en/setup/version.html"
+                <a href="/en/usage/switch.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     ">
                     <span>🇬🇧</span>
                     <span>English</span>
                 </a>
                 
-                <a href="/zh-CN/setup/version.html"
+                <a href="/zh-CN/usage/switch.html"
                    class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                                     bg-gray-50 dark:bg-gray-700">
                     <span>🇨🇳</span>
@@ -487,13 +487,13 @@
                 
                     <a href="/zh-CN/setup/site.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                      text-blue-600  bg-blue-50/80 ">
+                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         设置
                     </a>
                 
                     <a href="/zh-CN/usage/href.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
-                      text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
+                      text-blue-600  bg-blue-50/80 ">
                         使用文档
                     </a>
                 
@@ -529,14 +529,14 @@
                 
                     <div class="px-3 py-2 space-y-1 border-t dark:border-gray-700">
     
-    <a href="/en/setup/version.html"
+    <a href="/en/usage/switch.html"
        class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                             ">
         <span>🇬🇧</span>
         <span>English</span>
     </a>
     
-    <a href="/zh-CN/setup/version.html"
+    <a href="/zh-CN/usage/switch.html"
        class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700
                             bg-gray-50 dark:bg-gray-700">
         <span>🇨🇳</span>
@@ -722,7 +722,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/site.html"
+                    <a href="/zh-CN/usage/href.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -735,7 +735,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="baseline"
+                               <i data-lucide="link"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -744,7 +744,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>基础设置</span>
+                                <span>超链接</span>
                                 
 
 
@@ -759,7 +759,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/page.html"
+                    <a href="/zh-CN/usage/image.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -772,7 +772,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="book-open"
+                               <i data-lucide="image"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -781,87 +781,9 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>页面设置</span>
+                                <span>图片</span>
                                 
 
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="已更新" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-blue-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
 
                             </span>
 
@@ -874,7 +796,340 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/feature.html"
+                    <a href="/zh-CN/usage/alert.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="alert-triangle"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>提示</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/tab.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="pill"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>选项卡</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/ejs.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="code"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>EJS 模板</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/code.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="code"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>代码块</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/issues.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="git-merge"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>Issues</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/tooltip.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="figma"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>Tooltip</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/mermaid.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="merge"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>Mermaid</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/diff.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="code"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>Diff</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/button.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                               <!-- 骨架屏 -->
+                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
+
+                                    <!-- 图标 -->
+                               <i data-lucide="circle-arrow-up"
+                                  style="display: none;"
+                                  class="w-3 h-3 sm:w-4 sm:h-4
+                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
+                               </i>
+                           </span>
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>按钮</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/usage/icon.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -896,7 +1151,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>特性设置</span>
+                                <span>Icon 图标</span>
                                 
 
 
@@ -911,7 +1166,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/i18n.html"
+                    <a href="/zh-CN/usage/grid.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -924,7 +1179,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="globe"
+                               <i data-lucide="grid"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -933,7 +1188,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>国际化设置</span>
+                                <span>Grid</span>
                                 
 
 
@@ -948,7 +1203,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/compress.html"
+                    <a href="/zh-CN/usage/api.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -961,7 +1216,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="combine"
+                               <i data-lucide="webhook"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -970,7 +1225,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>压缩设置</span>
+                                <span>Api</span>
                                 
 
 
@@ -985,7 +1240,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/share.html"
+                    <a href="/zh-CN/usage/katex.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -998,7 +1253,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="share"
+                               <i data-lucide="square-function"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        group-hover:text-gray-900 dark:group-hover:text-gray-200">
@@ -1007,7 +1262,7 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>分享设置</span>
+                                <span>KaTeX</span>
                                 
 
 
@@ -1022,192 +1277,7 @@
         
             <li class="relative">
                 
-                    <a href="/zh-CN/setup/sitemap.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                    <!-- 图标 -->
-                               <i data-lucide="map"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>站点地图设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/banner.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                    <!-- 图标 -->
-                               <i data-lucide="circle-alert"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>Banner 设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/font-size.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                    <!-- 图标 -->
-                               <i data-lucide="type"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>字体设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/comment.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                    <!-- 图标 -->
-                               <i data-lucide="message-circle"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>评论设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/seo.html"
-                       class="group block">
-                        
-                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
-                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
-                               rounded-md transition-all duration-200 ease-in-out">
-
-                            
-                                <span class="inline-flex mr-1 sm:mr-2 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                               <!-- 骨架屏 -->
-                               <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
-
-                                    <!-- 图标 -->
-                               <i data-lucide="search"
-                                  style="display: none;"
-                                  class="w-3 h-3 sm:w-4 sm:h-4
-                                       group-hover:text-gray-900 dark:group-hover:text-gray-200">
-                               </i>
-                           </span>
-                            
-
-                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>SEO 设置</span>
-                                
-
-
-                            </span>
-
-                            
-                        </div>
-                        
-                    </a>
-                
-            </li>
-        
-            <li class="relative">
-                
-                    <a href="/zh-CN/setup/version.html"
+                    <a href="/zh-CN/usage/switch.html"
                        class="group block">
                         
                         <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
@@ -1220,7 +1290,7 @@
                                <div class="w-3 h-3 sm:w-4 sm:h-4 animate-pulse bg-gray-200 dark:bg-gray-700 rounded"></div>
 
                                     <!-- 图标 -->
-                               <i data-lucide="history"
+                               <i data-lucide="toggle-left"
                                   style="display: none;"
                                   class="w-3 h-3 sm:w-4 sm:h-4
                                        text-blue-600 dark:text-blue-400">
@@ -1229,87 +1299,9 @@
                             
 
                             <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
-                                <span>版本设置</span>
+                                <span>开关</span>
                                 
 
-
-    <div class="inline-flex items-center">
-        <div data-tooltip="新添加" class="relative status-container">
-            
-                <svg class="w-4 h-4 text-green-500 hover:opacity-80 cursor-pointer status-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-            
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 创建或获取 tooltips 容器
-            let tooltipContainer = document.getElementById('tooltip-container');
-            if (!tooltipContainer) {
-                tooltipContainer = document.createElement('div');
-                tooltipContainer.id = 'tooltip-container';
-                document.body.appendChild(tooltipContainer);
-            }
-
-            // 创建单个 tooltip 元素
-            const tooltip = document.createElement('div');
-            tooltip.className = 'fixed hidden px-2 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-[9999] pointer-events-none transition-opacity duration-200';
-            tooltipContainer.appendChild(tooltip);
-
-            // 监听所有状态图标
-            document.querySelectorAll('.status-container').forEach(container => {
-                const icon = container.querySelector('.status-icon');
-                const text = container.dataset.tooltip;
-
-                container.addEventListener('mouseenter', () => {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.textContent = text;
-                    tooltip.style.display = 'block';
-
-                    // 获取 tooltip 的尺寸
-                    const tooltipRect = tooltip.getBoundingClientRect();
-
-                    // 计算位置
-                    let top = rect.top - tooltipRect.height - 8;
-                    const left = rect.left + (rect.width - tooltipRect.width) / 2;
-
-                    // 如果顶部空间不足，显示在底部
-                    if (top < 8) {
-                        top = rect.bottom + 8;
-                    }
-
-                    tooltip.style.top = `${top}px`;
-                    tooltip.style.left = `${left}px`;
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    tooltip.style.display = 'none';
-                });
-            });
-
-            // 处理页面滚动时更新位置
-            window.addEventListener('scroll', () => {
-                const visibleTooltip = document.querySelector('#tooltip-container div[style*="display: block"]');
-                if (visibleTooltip) {
-                    const container = document.querySelector('.status-container:hover');
-                    if (container) {
-                        const rect = container.getBoundingClientRect();
-                        const tooltipRect = visibleTooltip.getBoundingClientRect();
-
-                        let top = rect.top - tooltipRect.height - 8;
-                        if (top < 8) {
-                            top = rect.bottom + 8;
-                        }
-
-                        visibleTooltip.style.top = `${top}px`;
-                        visibleTooltip.style.left = `${rect.left + (rect.width - tooltipRect.width) / 2}px`;
-                    }
-                }
-            }, {passive: true});
-        });
-    </script>
 
                             </span>
 
@@ -1362,7 +1354,7 @@
             
     <div class="flex items-center justify-between">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl lg:text-3xl">
-            版本设置
+            开关
         </h1>
 
         <div class="flex items-center gap-4">
@@ -1474,7 +1466,7 @@
 
             <!-- 编辑源码 -->
             
-    <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//setup/version.md"
+    <a href="https://github.com/devlive-community/pageforge/edit/dev-2025.1.2/docs/content//usage/switch.md"
        target="_blank"
        rel="noopener noreferrer"
        class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -1488,7 +1480,7 @@
 
             <!-- 查看源码 -->
             
-    <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//setup/version.md"
+    <a href="https://github.com/devlive-community/pageforge/blob/dev-2025.1.2/docs/content//usage/switch.md"
        target="_blank"
        rel="noopener noreferrer"
        class="text-gray-400 hover:text-blue-700 dark:text-gray-400 dark:hover:text-gray-300">
@@ -1510,99 +1502,8 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持多版本管理，可以帮助你快速部署不同版本的网站。</span>
+        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持开关组件，您可以创建基于 Tailwind CSS 的开关控件。</span>
     
-        <div class="space-y-4"></div>
-    
-        <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
-        
-        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-blue-50">
-               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
-               <h3 class="text-sm font-medium text-gray-900 mb-2">注意</h3>
-           </div>
-                   
-            <div class="w-full px-5 py-3">
-                <div class="text-sm text-blue-700">
-                    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 多版本管理是通过归档方式来实现的。</span>
-    
-                </div>
-            </div>
-        </div>
-    
-        <div class="space-y-4"></div>
-    
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="ji-ben-yong-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
-    </div>
-        </div>
-    
-        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">bash</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-bash">pageforge archive <span class="token number">1.0</span>.0</code></pre>
-                </div>
-            </div>
-        </div>
-        <div class="space-y-4"></div>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">1.0.0</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 是你要归档的版本号，可以根据实际情况进行修改。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">执行命令后，PageForge 会在输出目录下生成一个 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">1.0.0</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 的文件夹，里面包含了你的网站的所有文件，可以直接部署到 GitHub Pages、GitLab Pages、Vercel、Netlify 等服务上。</span>
-    
-        <div class="space-y-4"></div>
-    
-        <span class="text-base text-gray-700 leading-7 my-2">归档后会在 </span>
-    
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
-    
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中添加一个如下新的版本配置：</span>
-    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
-            
-            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
-            
-        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
-            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-        </button>
-    
-            <div class="!overflow-x-auto !flex">
-                
-                <div class="!flex-1">
-                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">versions</span><span class="token punctuation">:</span>
-  <span class="token punctuation">-</span> 1.0.0</code></pre>
-                </div>
-            </div>
-        </div>
         <div class="space-y-4"></div>
     
         <div class="rounded-lg my-2 overflow-hidden border border-red-200">
@@ -1617,19 +1518,513 @@
                     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">多版本的情况下，不要删除 </span>
+        <span class="text-base text-gray-700 leading-7 my-2">该功能需要在配置文件中启用，可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中的 </span>
+        <span class="text-base text-gray-700 leading-7 my-2"> 中配置</span>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
     
-        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">versions</code>
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
+    <span class="token key atrule">switch</span><span class="token punctuation">:</span>
+        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 配置。否则会导致多版本无效。</span>
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="ji-ben-yu-fa" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch[开关选项]</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-pqipixub" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-pqipixub" class="sr-only" >
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-gray-200 border-gray-200"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-0 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">开关选项</span>
+            </label>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="she-zhi-zhuang-tai" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">设置状态</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">默认打开的开关</span>](<span class="token url">true</span>)</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-wb9p0380" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-wb9p0380" class="sr-only" checked>
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-blue-600 border-blue-600"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-4 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">默认打开的开关</span>
+            </label>
+        </div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">默认关闭的开关</span>](<span class="token url">false</span>)</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-ylbzo3gv" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-ylbzo3gv" class="sr-only" >
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-gray-200 border-gray-200"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-0 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">默认关闭的开关</span>
+            </label>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="zi-ding-yi-yang-shi" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="rounded-lg my-2 overflow-hidden border border-blue-200">
+        
+        <div class="flex items-start space-x-2 p-2 rounded-t-lg bg-blue-50">
+               <div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+               <h3 class="text-sm font-medium text-gray-900 mb-2">提示</h3>
+           </div>
+                   
+            <div class="w-full px-5 py-3">
+                <div class="text-sm text-blue-700">
+                    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">支持所有的 Tailwind CSS 的样式，可以使用自定义样式，例如 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">focus:ring-green-500</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，只需要写类名即可，不需要加类名前面的 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">.</code>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">，多个类名之间用空格分隔</span>
     
                 </div>
             </div>
         </div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch[自定义开关]{focus:ring-green-500 focus:ring-offset-green-200}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-sfh6ez7b" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-green-500 focus:ring-offset-green-200">
+                <div class="relative">
+                    <input type="checkbox" id="switch-sfh6ez7b" class="sr-only" >
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-gray-200 border-gray-200"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-0 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">自定义开关</span>
+            </label>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="zi-ding-yi-yan-se" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">自定义颜色</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">您可以通过添加背景颜色类来自定义开关的颜色：</span>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">红色开关</span>](<span class="token url">true</span>)</span>{bg-red-500 border-red-500}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-r2owj893" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-r2owj893" class="sr-only" checked>
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-red-500 border-red-500"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-4 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">红色开关</span>
+            </label>
+        </div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">绿色开关</span>](<span class="token url">true</span>)</span>{bg-green-500 border-green-500}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-7b2nzjya" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-7b2nzjya" class="sr-only" checked>
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-green-500 border-green-500"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-4 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">绿色开关</span>
+            </label>
+        </div>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">紫色开关</span>](<span class="token url">true</span>)</span>{bg-purple-500 border-purple-500}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-dyvekpre" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ">
+                <div class="relative">
+                    <input type="checkbox" id="switch-dyvekpre" class="sr-only" checked>
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-purple-500 border-purple-500"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-4 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">紫色开关</span>
+            </label>
+        </div>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="zu-he-shi-yong" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">组合使用</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">前置内容!switch<span class="token url">[<span class="token content">带状态的自定义开关</span>](<span class="token url">on</span>)</span>{focus:ring-green-500 focus:ring-offset-green-200}后置内容</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">前置内容</span>
+    
+        <div class="inline-flex items-center">
+            <label for="switch-ntd0mi3l" class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-green-500 focus:ring-offset-green-200">
+                <div class="relative">
+                    <input type="checkbox" id="switch-ntd0mi3l" class="sr-only" checked>
+                    <div class="block w-10 h-6 rounded-full border-2 transition bg-blue-600 border-blue-600"></div>
+                    <div class="dot absolute left-1 top-1 w-4 h-4 rounded-full transition-transform translate-x-4 bg-white"></div>
+                </div>
+                <span class="ml-3 text-sm font-medium">带状态的自定义开关</span>
+            </label>
+        </div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">后置内容</span>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
+            <div id="zhuang-tai-zhi-shuo-ming" class="inline-flex items-center">
+        <span class="text-base text-gray-700 leading-7 my-2">状态值说明</span>
+    </div>
+        </div>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">开关的状态支持多种形式的表示：</span>
+    
+        <div class="space-y-4"></div>
+    
+        <div class="space-y-4">
+            <div class="relative overflow-x-auto shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 sm:rounded-lg">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            
+                                <th scope="col" class="px-3.5 py-1 text-left">
+                                    
+        <span class="text-base text-gray-700 leading-7 my-2">开启状态</span>
+    
+                                </th>
+                            
+                                <th scope="col" class="px-3.5 py-1 text-left">
+                                    
+        <span class="text-base text-gray-700 leading-7 my-2">关闭状态</span>
+    
+                                </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">true</span>
+    
+                                    </td>
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">false</span>
+    
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">on</span>
+    
+                                    </td>
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">off</span>
+    
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">1</span>
+    
+                                    </td>
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">0</span>
+    
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">yes</span>
+    
+                                    </td>
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="text-base text-gray-700 leading-7 my-2">no</span>
+    
+                                    </td>
+                                
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">例如以下写法都表示开关为开启状态：</span>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-markdown">!switch<span class="token url">[<span class="token content">示例1</span>](<span class="token url">true</span>)</span>
+!switch<span class="token url">[<span class="token content">示例2</span>](<span class="token url">on</span>)</span>
+!switch<span class="token url">[<span class="token content">示例3</span>](<span class="token url">1</span>)</span>
+!switch<span class="token url">[<span class="token content">示例4</span>](<span class="token url">yes</span>)</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <span class="text-base text-gray-700 leading-7 my-2">不提供状态值时，开关默认为关闭状态。</span>
     
         </div>
 
@@ -1649,7 +2044,7 @@
                 <line x1="3" y1="12" y2="12" x2="9"/>
                 <line x1="15" y1="12" y2="12" x2="21"/>
             </svg>
-            <span>提交于 2025年2月9日 11:52</span>
+            <span>提交于 2025年2月25日 11:30</span>
         </div>
 
         <!-- 最后修改时间 -->
@@ -1661,7 +2056,7 @@
                 <path d="M3 3v5h5"/>
                 <path d="M12 7v5l4 2"/>
             </svg>
-            <span>修改于 2025年2月9日 12:04</span>
+            <span>修改于 2025年2月25日 11:30</span>
         </div>
 
         <!-- Hash 链接 -->
@@ -1674,11 +2069,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/f483f06f46a67f1550f65fb17419ff1fbc7bd145"
+                <a href="https://github.com/devlive-community/pageforge/commit/a5a603cbae0f693703394bd44a86516976975cea"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    首次提交 (f483f06f)
+                    首次提交 (a5a603cb)
                 </a>
             </div>
 
@@ -1690,11 +2085,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/25878429444bef675208a9cb19f535fdde2e4e96"
+                <a href="https://github.com/devlive-community/pageforge/commit/a5a603cbae0f693703394bd44a86516976975cea"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    末次提交 (25878429)
+                    末次提交 (a5a603cb)
                 </a>
             </div>
         
@@ -1746,7 +2141,7 @@
                         qianmoQ
                     </div>
                     <div class="text-gray-500 dark:text-gray-400">
-                        2 次提交
+                        1 次提交
                     </div>
                 </div>
             </a>
@@ -1796,11 +2191,66 @@
                 
                     
                         <div class="pl-4 inline-block min-w-full">
-                            <a href="#ji-ben-yong-fa"
+                            <a href="#ji-ben-yu-fa"
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
-                               data-slug="ji-ben-yong-fa">
+                               data-slug="ji-ben-yu-fa">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#she-zhi-zhuang-tai"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="she-zhi-zhuang-tai">
+                                
+        <span class="text-base text-gray-700 leading-7 my-2">设置状态</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#zi-ding-yi-yang-shi"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="zi-ding-yi-yang-shi">
+                                
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#zi-ding-yi-yan-se"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="zi-ding-yi-yan-se">
+                                
+        <span class="text-base text-gray-700 leading-7 my-2">自定义颜色</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#zu-he-shi-yong"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="zu-he-shi-yong">
+                                
+        <span class="text-base text-gray-700 leading-7 my-2">组合使用</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#zhuang-tai-zhi-shuo-ming"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="zhuang-tai-zhi-shuo-ming">
+                                
+        <span class="text-base text-gray-700 leading-7 my-2">状态值说明</span>
     
                             </a>
                         </div>
@@ -1842,11 +2292,66 @@
             
                 
                     <div class="pl-4 inline-block min-w-full">
-                        <a href="#ji-ben-yong-fa"
+                        <a href="#ji-ben-yu-fa"
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
-                           data-slug="ji-ben-yong-fa">
+                           data-slug="ji-ben-yu-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
+        <span class="text-base text-gray-700 leading-7 my-2">基本语法</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#she-zhi-zhuang-tai"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="she-zhi-zhuang-tai">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">设置状态</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#zi-ding-yi-yang-shi"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="zi-ding-yi-yang-shi">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#zi-ding-yi-yan-se"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="zi-ding-yi-yan-se">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">自定义颜色</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#zu-he-shi-yong"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="zu-he-shi-yong">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">组合使用</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#zhuang-tai-zhi-shuo-ming"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="zhuang-tai-zhi-shuo-ming">
+                            
+        <span class="text-base text-gray-700 leading-7 my-2">状态值说明</span>
     
                         </a>
                     </div>

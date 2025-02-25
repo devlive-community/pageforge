@@ -156,6 +156,11 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/en/usage/switch.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/en/template/home.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -192,6 +197,11 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/en/team.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/en/technology/extension.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -386,6 +396,11 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://pageforge.devlive.org/zh-CN/usage/switch.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://pageforge.devlive.org/zh-CN/template/home.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
@@ -422,6 +437,11 @@
     </url>
     <url>
         <loc>https://pageforge.devlive.org/zh-CN/team.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://pageforge.devlive.org/zh-CN/technology/extension.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
