@@ -1,6 +1,8 @@
 ---
 title: 开关
 icon: toggle-left
+status:
+    type: new
 ---
 
 PageForge 支持开关组件，您可以创建基于 Tailwind CSS 的开关控件。
