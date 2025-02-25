@@ -97,6 +97,8 @@ feature:
     enable: true
   katex:
     enable: true
+  switch:
+    enable: true
 
 i18n:
   default: zh-CN
@@ -113,6 +115,7 @@ i18n:
       Team: Team
       Template: Template
       TemplatePreview: Template Preview
+      Technology: Technology
   zh-CN:
     name: 中文
     flag: 🇨🇳
@@ -127,6 +130,7 @@ i18n:
       Team: 团队
       Template: 模版
       TemplatePreview: 模版预览
+      Technology: 技术细节
 
 footer:
   copyright: © 2024 PageForge All Rights Reserved.
@@ -199,6 +203,7 @@ nav:
       - /usage/grid
       - /usage/api
       - /usage/katex
+      - /usage/switch
   - Template:
       - /template/home
       - /template/team
@@ -210,7 +215,10 @@ nav:
           - /template/preview/playful
   - Team:
       - /team
+  - Technology:
+      - /technology/extension
   - ReleaseNotes:
+      - /release/2025.1.6
       - /release/2025.1.5
       - /release/2025.1.4
       - /release/2025.1.3
