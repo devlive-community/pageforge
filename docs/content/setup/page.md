@@ -175,3 +175,17 @@ status:
     自定义状态情况下如果 `feature.lucide.enable` 为 `true` 时，`icon` 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。
 
 !!!
+
+### 设置 `tags`
+
+---
+
+PageForge 支持设置当前页面的标签，格式如下：
+
+```markdown
+---
+tags:
+  - tag-1
+  - tag-2
+---
+```
