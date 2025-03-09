@@ -18,6 +18,12 @@
             <%- include('./page-source') %>
         </div>
     </div>
+
+    <!-- 阅读时间 -->
+    <div class="mt-2 flex flex-wrap items-center gap-4">
+        <%- include('./page-reader-time') %>
+    </div>
+
     <% if (pageData.description) { %>
         <p class="mt-6 text-sm sm:text-base leading-6 text-gray-500 dark:text-gray-400 border-l-4 border-gray-200 dark:border-gray-700 pl-4 py-1 italic">
             <%- pageData.description %>
