@@ -47,9 +47,9 @@ stats:
   description: 我们取得的成就
   items:
     - label: GitHub Stars
-      value: 10+
-    - label: 服务客户
-      value: 2+
+      value: 20+
+    - label: Gitee Stars
+      value: 30+
     - label: 正常运行时间
       value: 99.99%
     - label: 客户满意度
