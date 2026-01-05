@@ -76,8 +76,49 @@
     <!-- 加载主题配置中的额外 CSS 文件 -->
     
 
+    <style>
+        :root {
+            
+            --header-height: 112px; /* banner 48px + nav 64px */
+            
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                h1: { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h2: { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h3: { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h4: { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h5: { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h6: { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: [
+                function({ addBase }) {
+                    addBase({
+                        'h1': { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h2': { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h3': { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h4': { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h5': { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h6': { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        '.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6': { color: 'rgb(255, 255, 255)' }
+                    })
+                }
+            ]
+        }
+    </script>
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
@@ -111,8 +152,8 @@
     <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <!-- Banner -->
         
-    <div class="w-full bg-blue-50 " data-banner>
-        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+    <div class="w-full bg-blue-50  h-12" data-banner>
+        <div class="max-w-screen-xl px-6 mx-auto flex items-center justify-between h-full">
             
                 <div class="text-blue-700 ">
                     💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
@@ -213,7 +254,7 @@
             </li>
         
             <li class="shrink-0">
-                <a href="/zh-CN/release/2025.1.7.html"
+                <a href="/zh-CN/release/2026.0.0.html"
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
@@ -351,11 +392,11 @@
                     <!-- 仓库链接 -->
                     <div class="hidden lg:block">
                         
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -505,7 +546,7 @@
                         技术细节
                     </a>
                 
-                    <a href="/zh-CN/release/2025.1.7.html"
+                    <a href="/zh-CN/release/2026.0.0.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                       text-blue-600  bg-blue-50/80 ">
                         发布日志
@@ -566,11 +607,11 @@
                 <!-- 移动端的仓库链接 -->
                 <div class="px-3 py-2 border-t ">
                     
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -709,6 +750,31 @@
             <div class="min-w-fit">
                 
     <ul class="space-y-1.5">
+        
+            <li class="relative">
+                
+                    <a href="/zh-CN/release/2026.0.0.html"
+                       class="group block">
+                        
+                        <div class="relative flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2
+                                hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/40
+                               rounded-md transition-all duration-200 ease-in-out">
+
+                            
+
+                            <span class="flex flex-grow items-center space-x-4 text-sm sm:text-base whitespace-nowrap">
+                                <span>2026.0.0</span>
+                                
+
+
+                            </span>
+
+                            
+                        </div>
+                        
+                    </a>
+                
+            </li>
         
             <li class="relative">
                 
@@ -1124,7 +1190,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <span>10 分钟阅读</span>
+        <span>5 分钟阅读</span>
         
             <span class="mx-1">•</span>
             <span>
@@ -1135,7 +1201,7 @@
                     +
                 
                 
-                    776 词
+                    489 词
                 
             </span>
         
@@ -1155,19 +1221,19 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">我们很高兴地宣布 PageForge 2025.1.5 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。此版本带来了多版本文档支持、API 文档模板等重要功能。</span>
+        <span class="leading-7">我们很高兴地宣布 PageForge 2025.1.5 正式发布。PageForge 是一款现代化的静态页面生成与部署平台，致力于为用户提供从创建到部署的一站式解决方案。此版本带来了多版本文档支持、API 文档模板等重要功能。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="xin-zeng-gong-neng" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">新增功能</span>
-    </div>
-        </div>
+        <h2 id="xin-zeng-gong-neng">
+            
+        <span class="leading-7">新增功能</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持 API 文档模版 (</span>
+        <span class="leading-7">支持 API 文档模版 (</span>
     
         <a href="https://github.com/devlive-community/pageforge/issues/20" 
            target="_blank" 
@@ -1190,167 +1256,167 @@
             </span>
         </a>
     
-        <span class="text-base text-gray-700 leading-7 my-2">)</span>
+        <span class="leading-7">)</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持 GitHub 多版本文档发布</span>
+        <span class="leading-7">支持 GitHub 多版本文档发布</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持代码块设置标题</span>
+        <span class="leading-7">支持代码块设置标题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持表格标题排列方式配置</span>
+        <span class="leading-7">支持表格标题排列方式配置</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">新增 properties 代码块支持</span>
+        <span class="leading-7">新增 properties 代码块支持</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持 grid 布局扩展</span>
+        <span class="leading-7">支持 grid 布局扩展</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持 note 类型提示信息</span>
+        <span class="leading-7">支持 note 类型提示信息</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">添加标签内容多匹配模式</span>
+        <span class="leading-7">添加标签内容多匹配模式</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">新增归档命令功能</span>
+        <span class="leading-7">新增归档命令功能</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="duo-ban-ben-zhi-chi-you-hua" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">多版本支持优化</span>
-    </div>
-        </div>
+        <h2 id="duo-ban-ben-zhi-chi-you-hua">
+            
+        <span class="leading-7">多版本支持优化</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复多版本情况下搜索问题</span>
+        <span class="leading-7">修复多版本情况下搜索问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复多版本情况下页面跳转问题</span>
+        <span class="leading-7">修复多版本情况下页面跳转问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复站点地图多版本问题</span>
+        <span class="leading-7">修复站点地图多版本问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复多版本资源目录问题</span>
+        <span class="leading-7">修复多版本资源目录问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">添加搜索结果归属语言显示</span>
+        <span class="leading-7">添加搜索结果归属语言显示</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="jie-mian-you-hua" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">界面优化</span>
-    </div>
-        </div>
+        <h2 id="jie-mian-you-hua">
+            
+        <span class="leading-7">界面优化</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">优化按钮和图片间距</span>
+        <span class="leading-7">优化按钮和图片间距</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">优化 team 模板展示</span>
+        <span class="leading-7">优化 team 模板展示</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">改进提示信息匹配规则</span>
+        <span class="leading-7">改进提示信息匹配规则</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">支持 grid 子选项内容解析</span>
+        <span class="leading-7">支持 grid 子选项内容解析</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="wen-ti-xiu-fu" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">问题修复</span>
-    </div>
-        </div>
+        <h2 id="wen-ti-xiu-fu">
+            
+        <span class="leading-7">问题修复</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复左侧导航菜单子集选中主菜单未标记问题</span>
+        <span class="leading-7">修复左侧导航菜单子集选中主菜单未标记问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复目录内容过长自动换行问题</span>
+        <span class="leading-7">修复目录内容过长自动换行问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复代码块在其他组件缩进情况下导致宽度拉伸问题</span>
+        <span class="leading-7">修复代码块在其他组件缩进情况下导致宽度拉伸问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复左侧菜单由于高度问题显示不完整</span>
+        <span class="leading-7">修复左侧菜单由于高度问题显示不完整</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复移动端链接和导航重叠问题</span>
+        <span class="leading-7">修复移动端链接和导航重叠问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复 404 页面静态资源问题</span>
+        <span class="leading-7">修复 404 页面静态资源问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复默认语言获取问题</span>
+        <span class="leading-7">修复默认语言获取问题</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复国际化情况下导致语言错误</span>
+        <span class="leading-7">修复国际化情况下导致语言错误</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复顶部菜单过多时导致其他组件重叠</span>
+        <span class="leading-7">修复顶部菜单过多时导致其他组件重叠</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复解析链接前后内容受影响</span>
+        <span class="leading-7">修复解析链接前后内容受影响</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复 codespan 解析错误</span>
+        <span class="leading-7">修复 codespan 解析错误</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">修复表格情况下单元格内容未解析问题</span>
+        <span class="leading-7">修复表格情况下单元格内容未解析问题</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="jia-gou-gai-jin" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">架构改进</span>
-    </div>
-        </div>
+        <h2 id="jia-gou-gai-jin">
+            
+        <span class="leading-7">架构改进</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">拆分页面数据为独立功能</span>
+        <span class="leading-7">拆分页面数据为独立功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">拆分菜单为独立功能</span>
+        <span class="leading-7">拆分菜单为独立功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">拆分国际化为独立功能</span>
+        <span class="leading-7">拆分国际化为独立功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">拆分获取 git 信息功能</span>
+        <span class="leading-7">拆分获取 git 信息功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">拆分压缩功能</span>
+        <span class="leading-7">拆分压缩功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">重构标签扩展系统</span>
+        <span class="leading-7">重构标签扩展系统</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="lian-jie" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
-    </div>
-        </div>
+        <h2 id="lian-jie">
+            
+        <span class="leading-7">链接</span>
+    
+        </h2>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">GitHub: </span>
+        <span class="leading-7">GitHub: </span>
     <a href="https://github.com/devlive-community/pageforge">
-        <span class="text-base text-gray-700 leading-7 my-2">https://github.com/devlive-community/pageforge</span>
+        <span class="leading-7">https://github.com/devlive-community/pageforge</span>
     </a></li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">官网: </span>
+        <span class="leading-7">官网: </span>
     <a href="https://pageforge.devlive.org">
-        <span class="text-base text-gray-700 leading-7 my-2">https://pageforge.devlive.org</span>
+        <span class="leading-7">https://pageforge.devlive.org</span>
     </a></li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="hou-xu-ji-hua" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
-    </div>
-        </div>
+        <h2 id="hou-xu-ji-hua">
+            
+        <span class="leading-7">后续计划</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。</span>
+        </h2>
+    
+        <span class="leading-7">我们将持续优化用户体验，提升文档展示效果，欢迎社区贡献者参与项目开发。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="fan-kui-yu-zhi-chi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
-    </div>
-        </div>
+        <h2 id="fan-kui-yu-zhi-chi">
+            
+        <span class="leading-7">反馈与支持</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！</span>
+        </h2>
+    
+        <span class="leading-7">如果您在使用过程中遇到任何问题，请通过 GitHub Issues 向我们反馈。您的建议对我们至关重要！</span>
     
         <div class="space-y-4"></div>
     
@@ -1358,7 +1424,7 @@
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">此版本重点优化了多版本文档支持，新增了 API 文档模板，同时对系统架构进行了重构优化，建议所有用户升级到此版本。</span>
+        <span class="leading-7">此版本重点优化了多版本文档支持，新增了 API 文档模板，同时对系统架构进行了重构优化，建议所有用户升级到此版本。</span>
     
         </div>
 
@@ -1529,7 +1595,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="xin-zeng-gong-neng">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">新增功能</span>
+        <span class="leading-7">新增功能</span>
     
                             </a>
                         </div>
@@ -1540,7 +1606,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="duo-ban-ben-zhi-chi-you-hua">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">多版本支持优化</span>
+        <span class="leading-7">多版本支持优化</span>
     
                             </a>
                         </div>
@@ -1551,7 +1617,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="jie-mian-you-hua">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">界面优化</span>
+        <span class="leading-7">界面优化</span>
     
                             </a>
                         </div>
@@ -1562,7 +1628,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="wen-ti-xiu-fu">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">问题修复</span>
+        <span class="leading-7">问题修复</span>
     
                             </a>
                         </div>
@@ -1573,7 +1639,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="jia-gou-gai-jin">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">架构改进</span>
+        <span class="leading-7">架构改进</span>
     
                             </a>
                         </div>
@@ -1584,7 +1650,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="lian-jie">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
+        <span class="leading-7">链接</span>
     
                             </a>
                         </div>
@@ -1595,7 +1661,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="hou-xu-ji-hua">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
+        <span class="leading-7">后续计划</span>
     
                             </a>
                         </div>
@@ -1606,7 +1672,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="fan-kui-yu-zhi-chi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
+        <span class="leading-7">反馈与支持</span>
     
                             </a>
                         </div>
@@ -1652,7 +1718,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="xin-zeng-gong-neng">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">新增功能</span>
+        <span class="leading-7">新增功能</span>
     
                         </a>
                     </div>
@@ -1663,7 +1729,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="duo-ban-ben-zhi-chi-you-hua">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">多版本支持优化</span>
+        <span class="leading-7">多版本支持优化</span>
     
                         </a>
                     </div>
@@ -1674,7 +1740,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="jie-mian-you-hua">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">界面优化</span>
+        <span class="leading-7">界面优化</span>
     
                         </a>
                     </div>
@@ -1685,7 +1751,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="wen-ti-xiu-fu">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">问题修复</span>
+        <span class="leading-7">问题修复</span>
     
                         </a>
                     </div>
@@ -1696,7 +1762,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="jia-gou-gai-jin">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">架构改进</span>
+        <span class="leading-7">架构改进</span>
     
                         </a>
                     </div>
@@ -1707,7 +1773,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="lian-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">链接</span>
+        <span class="leading-7">链接</span>
     
                         </a>
                     </div>
@@ -1718,7 +1784,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="hou-xu-ji-hua">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">后续计划</span>
+        <span class="leading-7">后续计划</span>
     
                         </a>
                     </div>
@@ -1729,7 +1795,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="fan-kui-yu-zhi-chi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">反馈与支持</span>
+        <span class="leading-7">反馈与支持</span>
     
                         </a>
                     </div>

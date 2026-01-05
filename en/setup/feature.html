@@ -76,8 +76,49 @@
     <!-- 加载主题配置中的额外 CSS 文件 -->
     
 
+    <style>
+        :root {
+            
+            --header-height: 112px; /* banner 48px + nav 64px */
+            
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                h1: { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h2: { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h3: { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h4: { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h5: { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h6: { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: [
+                function({ addBase }) {
+                    addBase({
+                        'h1': { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h2': { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h3': { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h4': { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h5': { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h6': { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        '.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6': { color: 'rgb(255, 255, 255)' }
+                    })
+                }
+            ]
+        }
+    </script>
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
@@ -111,8 +152,8 @@
     <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <!-- Banner -->
         
-    <div class="w-full bg-blue-50 " data-banner>
-        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+    <div class="w-full bg-blue-50  h-12" data-banner>
+        <div class="max-w-screen-xl px-6 mx-auto flex items-center justify-between h-full">
             
                 <div class="text-blue-700 ">
                     💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
@@ -213,7 +254,7 @@
             </li>
         
             <li class="shrink-0">
-                <a href="/en/release/2025.1.7.html"
+                <a href="/en/release/2026.0.0.html"
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
@@ -351,11 +392,11 @@
                     <!-- 仓库链接 -->
                     <div class="hidden lg:block">
                         
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -505,7 +546,7 @@
                         Technology
                     </a>
                 
-                    <a href="/en/release/2025.1.7.html"
+                    <a href="/en/release/2026.0.0.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                       text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         Release Notes
@@ -566,11 +607,11 @@
                 <!-- 移动端的仓库链接 -->
                 <div class="px-3 py-2 border-t ">
                     
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -1510,7 +1551,7 @@
                     +
                 
                 
-                    3419 词
+                    3010 词
                 
             </span>
         
@@ -1530,15 +1571,15 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。</span>
+        <span class="leading-7">PageForge 支持众多的特性，可以帮助你快速构建和部署你的静态网站。下面是 PageForge 支持的特性列表。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">所有的特性配置均在 </span>
+        <span class="leading-7">所有的特性配置均在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件中进行配置，且支持嵌套配置。 格式为</span>
+        <span class="leading-7"> 文件中进行配置，且支持嵌套配置。 格式为</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1562,17 +1603,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Lucide-tu-biao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
-    </div>
-        </div>
+        <h2 id="Lucide-tu-biao">
+            
+        <span class="leading-7">Lucide 图标</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 默认支持 </span>
+        <span class="leading-7">PageForge 默认支持 </span>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://lucide.dev"
@@ -1581,7 +1622,7 @@
             Lucide
         </a>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 图标库，需要启用后才能使用 Lucide 图标。</span>
+        <span class="leading-7"> 图标库，需要启用后才能使用 Lucide 图标。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1610,15 +1651,15 @@
             <li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 是否启用 Lucide 图标</span>
+        <span class="leading-7">: 是否启用 Lucide 图标</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">cdn</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: Lucide CDN 链接，默认为 </span>
+        <span class="leading-7">: Lucide CDN 链接，默认为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">https://unpkg.com/lucide@latest/dist/umd/lucide.js</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> ，可以根据自己的需求进行修改，这里要填写完整的 CDN 链接，例如 </span>
+        <span class="leading-7"> ，可以根据自己的需求进行修改，这里要填写完整的 CDN 链接，例如 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">https://unpkg.com/lucide@latest/dist/umd/lucide.js</code>
     </li>
@@ -1626,17 +1667,17 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Issues-jie-xi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
-    </div>
-        </div>
+        <h2 id="Issues-jie-xi">
+            
+        <span class="leading-7">Issues 解析</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持解析 GitHub Issues 的链接，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1661,11 +1702,11 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，可以在 Markdown 中使用 </span>
+        <span class="leading-7">启用后，可以在 Markdown 中使用 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">#123</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 格式来引用 Issues，例如</span>
+        <span class="leading-7"> 格式来引用 Issues，例如</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1688,17 +1729,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Tooltip" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
-    </div>
-        </div>
+        <h2 id="Tooltip">
+            
+        <span class="leading-7">Tooltip</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持解析 tooltip 的链接，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持解析 tooltip 的链接，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1723,17 +1764,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="tong-ji-dai-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
-    </div>
-        </div>
+        <h2 id="tong-ji-dai-ma">
+            
+        <span class="leading-7">统计代码</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持统计代码，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持统计代码，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1764,23 +1805,23 @@
             <li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">content</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 自定义统计代码，需要填写完整的统计代码。</span>
+        <span class="leading-7">: 自定义统计代码，需要填写完整的统计代码。</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="bian-ji-yuan-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
-    </div>
-        </div>
+        <h2 id="bian-ji-yuan-ma">
+            
+        <span class="leading-7">编辑源码</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持编辑文档，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持编辑文档，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1805,45 +1846,45 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
+        <span class="leading-7">启用后，系统会根据 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
+        <span class="leading-7"> 中配置的 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+        <span class="leading-7"> 和 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成编辑文档的链接，默认为 </span>
+        <span class="leading-7"> 生成编辑文档的链接，默认为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">main</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 分支，可以在 </span>
+        <span class="leading-7"> 分支，可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
+        <span class="leading-7"> 中配置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 来更改分支。</span>
+        <span class="leading-7"> 来更改分支。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="zha-kan-yuan-ma" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
-    </div>
-        </div>
+        <h2 id="zha-kan-yuan-ma">
+            
+        <span class="leading-7">查看源码</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持查看源码，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持查看源码，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1868,45 +1909,45 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
+        <span class="leading-7">启用后，系统会根据 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
+        <span class="leading-7"> 中配置的 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+        <span class="leading-7"> 和 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成查看源码的链接。默认为 </span>
+        <span class="leading-7"> 生成查看源码的链接。默认为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">main</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 分支，可以在 </span>
+        <span class="leading-7"> 分支，可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
+        <span class="leading-7"> 中配置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 来更改分支。</span>
+        <span class="leading-7"> 来更改分支。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Git-ti-jiao-xin-xi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
-    </div>
-        </div>
+        <h2 id="Git-ti-jiao-xin-xi">
+            
+        <span class="leading-7">Git 提交信息</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Git 提交信息，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持 Git 提交信息，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1931,51 +1972,51 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会根据 </span>
+        <span class="leading-7">启用后，系统会根据 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置的 </span>
+        <span class="leading-7"> 中配置的 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.url</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+        <span class="leading-7"> 和 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">repo.branch</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 生成 Git 提交信息的链接。</span>
+        <span class="leading-7"> 生成 Git 提交信息的链接。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">支持以下信息:</span>
+        <span class="leading-7">支持以下信息:</span>
     
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">创建时间</span>
+        <span class="leading-7">创建时间</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">最后修改时间</span>
+        <span class="leading-7">最后修改时间</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">首次提交</span>
+        <span class="leading-7">首次提交</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">末次提交</span>
+        <span class="leading-7">末次提交</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Git-ti-jiao-yong-hu" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
-    </div>
-        </div>
+        <h2 id="Git-ti-jiao-yong-hu">
+            
+        <span class="leading-7">Git 提交用户</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Git 提交用户，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持 Git 提交用户，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2000,21 +2041,21 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">启用后，系统会自动配置用户在 Github 中的头像。</span>
+        <span class="leading-7">启用后，系统会自动配置用户在 Github 中的头像。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="fan-hui-ding-bu" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
-    </div>
-        </div>
+        <h2 id="fan-hui-ding-bu">
+            
+        <span class="leading-7">返回顶部</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持返回顶部，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持返回顶部，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2039,17 +2080,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Mermaid-tu-biao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
-    </div>
-        </div>
+        <h2 id="Mermaid-tu-biao">
+            
+        <span class="leading-7">Mermaid 图表</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持使用 </span>
+        <span class="leading-7">PageForge 支持使用 </span>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://mermaid.js.org"
@@ -2058,7 +2099,7 @@
             Mermaid
         </a>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 图表语言，需要启用后才能使用。</span>
+        <span class="leading-7"> 图表语言，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2089,15 +2130,15 @@
             <li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 是否启用 Mermaid 图表</span>
+        <span class="leading-7">: 是否启用 Mermaid 图表</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">options</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: Mermaid 图表选项，可以根据自己的需求进行配置，例如 </span>
+        <span class="leading-7">: Mermaid 图表选项，可以根据自己的需求进行配置，例如 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">theme: dark</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">，该选项是可选的，默认为 null</span>
+        <span class="leading-7">，该选项是可选的，默认为 null</span>
     </li>
         </ul>
     
@@ -2115,15 +2156,15 @@
                     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 </span>
+        <span class="leading-7">如果需要使用自定义 CDN 加载 Mermaid 图表，可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中配置 </span>
+        <span class="leading-7"> 中配置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">cdn.mermaidJs</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 的值。</span>
+        <span class="leading-7"> 的值。</span>
     
                 </div>
             </div>
@@ -2131,17 +2172,17 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Diff-yu-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
-    </div>
-        </div>
+        <h2 id="Diff-yu-fa">
+            
+        <span class="leading-7">Diff 语法</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持使用 Diff 语法，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持使用 Diff 语法，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2166,17 +2207,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="Dark-mo-shi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
-    </div>
-        </div>
+        <h2 id="Dark-mo-shi">
+            
+        <span class="leading-7">Dark 模式</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持 Dark Mode，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持 Dark Mode，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2201,17 +2242,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="sou-suo-gong-neng" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">搜索功能</span>
-    </div>
-        </div>
+        <h2 id="sou-suo-gong-neng">
+            
+        <span class="leading-7">搜索功能</span>
+    
+        </h2>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持搜索功能，需要启用后才能使用。</span>
+        <span class="leading-7">PageForge 支持搜索功能，需要启用后才能使用。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2403,7 +2444,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Lucide-tu-biao">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
+        <span class="leading-7">Lucide 图标</span>
     
                             </a>
                         </div>
@@ -2414,7 +2455,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Issues-jie-xi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
+        <span class="leading-7">Issues 解析</span>
     
                             </a>
                         </div>
@@ -2425,7 +2466,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Tooltip">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
+        <span class="leading-7">Tooltip</span>
     
                             </a>
                         </div>
@@ -2436,7 +2477,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="tong-ji-dai-ma">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
+        <span class="leading-7">统计代码</span>
     
                             </a>
                         </div>
@@ -2447,7 +2488,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="bian-ji-yuan-ma">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
+        <span class="leading-7">编辑源码</span>
     
                             </a>
                         </div>
@@ -2458,7 +2499,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="zha-kan-yuan-ma">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
+        <span class="leading-7">查看源码</span>
     
                             </a>
                         </div>
@@ -2469,7 +2510,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Git-ti-jiao-xin-xi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
+        <span class="leading-7">Git 提交信息</span>
     
                             </a>
                         </div>
@@ -2480,7 +2521,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Git-ti-jiao-yong-hu">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
+        <span class="leading-7">Git 提交用户</span>
     
                             </a>
                         </div>
@@ -2491,7 +2532,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="fan-hui-ding-bu">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
+        <span class="leading-7">返回顶部</span>
     
                             </a>
                         </div>
@@ -2502,7 +2543,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Mermaid-tu-biao">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
+        <span class="leading-7">Mermaid 图表</span>
     
                             </a>
                         </div>
@@ -2513,7 +2554,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Diff-yu-fa">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
+        <span class="leading-7">Diff 语法</span>
     
                             </a>
                         </div>
@@ -2524,7 +2565,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="Dark-mo-shi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
+        <span class="leading-7">Dark 模式</span>
     
                             </a>
                         </div>
@@ -2535,7 +2576,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="sou-suo-gong-neng">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">搜索功能</span>
+        <span class="leading-7">搜索功能</span>
     
                             </a>
                         </div>
@@ -2581,7 +2622,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Lucide-tu-biao">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Lucide 图标</span>
+        <span class="leading-7">Lucide 图标</span>
     
                         </a>
                     </div>
@@ -2592,7 +2633,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Issues-jie-xi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Issues 解析</span>
+        <span class="leading-7">Issues 解析</span>
     
                         </a>
                     </div>
@@ -2603,7 +2644,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Tooltip">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Tooltip</span>
+        <span class="leading-7">Tooltip</span>
     
                         </a>
                     </div>
@@ -2614,7 +2655,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="tong-ji-dai-ma">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">统计代码</span>
+        <span class="leading-7">统计代码</span>
     
                         </a>
                     </div>
@@ -2625,7 +2666,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="bian-ji-yuan-ma">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">编辑源码</span>
+        <span class="leading-7">编辑源码</span>
     
                         </a>
                     </div>
@@ -2636,7 +2677,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="zha-kan-yuan-ma">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">查看源码</span>
+        <span class="leading-7">查看源码</span>
     
                         </a>
                     </div>
@@ -2647,7 +2688,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Git-ti-jiao-xin-xi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交信息</span>
+        <span class="leading-7">Git 提交信息</span>
     
                         </a>
                     </div>
@@ -2658,7 +2699,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Git-ti-jiao-yong-hu">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Git 提交用户</span>
+        <span class="leading-7">Git 提交用户</span>
     
                         </a>
                     </div>
@@ -2669,7 +2710,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="fan-hui-ding-bu">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">返回顶部</span>
+        <span class="leading-7">返回顶部</span>
     
                         </a>
                     </div>
@@ -2680,7 +2721,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Mermaid-tu-biao">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Mermaid 图表</span>
+        <span class="leading-7">Mermaid 图表</span>
     
                         </a>
                     </div>
@@ -2691,7 +2732,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Diff-yu-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Diff 语法</span>
+        <span class="leading-7">Diff 语法</span>
     
                         </a>
                     </div>
@@ -2702,7 +2743,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="Dark-mo-shi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">Dark 模式</span>
+        <span class="leading-7">Dark 模式</span>
     
                         </a>
                     </div>
@@ -2713,7 +2754,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="sou-suo-gong-neng">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">搜索功能</span>
+        <span class="leading-7">搜索功能</span>
     
                         </a>
                     </div>

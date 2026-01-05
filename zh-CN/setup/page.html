@@ -76,8 +76,49 @@
     <!-- 加载主题配置中的额外 CSS 文件 -->
     
 
+    <style>
+        :root {
+            
+            --header-height: 112px; /* banner 48px + nav 64px */
+            
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                h1: { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h2: { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h3: { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h4: { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h5: { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h6: { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: [
+                function({ addBase }) {
+                    addBase({
+                        'h1': { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h2': { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h3': { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h4': { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h5': { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h6': { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        '.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6': { color: 'rgb(255, 255, 255)' }
+                    })
+                }
+            ]
+        }
+    </script>
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
@@ -111,8 +152,8 @@
     <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <!-- Banner -->
         
-    <div class="w-full bg-blue-50 " data-banner>
-        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+    <div class="w-full bg-blue-50  h-12" data-banner>
+        <div class="max-w-screen-xl px-6 mx-auto flex items-center justify-between h-full">
             
                 <div class="text-blue-700 ">
                     💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
@@ -213,7 +254,7 @@
             </li>
         
             <li class="shrink-0">
-                <a href="/zh-CN/release/2025.1.7.html"
+                <a href="/zh-CN/release/2026.0.0.html"
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
@@ -351,11 +392,11 @@
                     <!-- 仓库链接 -->
                     <div class="hidden lg:block">
                         
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -505,7 +546,7 @@
                         技术细节
                     </a>
                 
-                    <a href="/zh-CN/release/2025.1.7.html"
+                    <a href="/zh-CN/release/2026.0.0.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                       text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         发布日志
@@ -566,11 +607,11 @@
                 <!-- 移动端的仓库链接 -->
                 <div class="px-3 py-2 border-t ">
                     
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -1499,7 +1540,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <span>20 分钟阅读</span>
+        <span>15 分钟阅读</span>
         
             <span class="mx-1">•</span>
             <span>
@@ -1510,7 +1551,7 @@
                     +
                 
                 
-                    2780 词
+                    2424 词
                 
             </span>
         
@@ -1530,21 +1571,21 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。</span>
+        <span class="leading-7">PageForge 的材料包含许多强大的功能，使技术写作成为一项令人愉快的活动。文档的这一部分解释了如何设置页面，并展示了所有可以直接在 PageForge 文件中使用的可用样本。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="ji-ben-yong-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
-    </div>
-        </div>
+        <h3 id="ji-ben-yong-fa">
+            
+        <span class="leading-7">基本用法</span>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。</span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置页面的标题和描述。这些信息将显示在浏览器的标题栏和搜索引擎中。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1570,43 +1611,43 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-title" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-title">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。</span>
+        <span class="leading-7">每个页面都有一个指定的标题，该标题用于导航侧边栏、社交卡片和其他地方。PageForge 将自动为你的文档生成一个标题，但你可以在 markdown 文件的顶部覆盖它。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">生成的标题为 </span>
+        <span class="leading-7">生成的标题为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">page.title - site.title</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 的格式。</span>
+        <span class="leading-7"> 的格式。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-description" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-description">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">description</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持设置当前页面的描述，格式如下：</span>
+        <span class="leading-7">PageForge 支持设置当前页面的描述，格式如下：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1631,23 +1672,23 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-icon" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-icon">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。</span>
+        <span class="leading-7">每个页面都有可以设置一个图标，该图标用于导航侧边栏。PageForge 将自动为你的文档生成一个图标，但你可以在 markdown 文件的顶部覆盖它。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">目前支持 Lucide 图标，可以在 </span>
+        <span class="leading-7">目前支持 Lucide 图标，可以在 </span>
     
         <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
            href="https://lucide.dev"
@@ -1656,23 +1697,23 @@
             Lucide
         </a>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中找到更多图标。</span>
+        <span class="leading-7"> 中找到更多图标。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-header" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-header">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。</span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置是否关闭页面的顶部的导航。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1698,27 +1739,27 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 </span>
+        <span class="leading-7">默认情况下，页面的顶部导航将显示在每个页面的顶部，但你可以在 markdown 文件的顶部设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header: false</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 以关闭它。</span>
+        <span class="leading-7"> 以关闭它。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-sidebar" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-sidebar">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。</span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置是否关闭页面的侧边栏。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1744,27 +1785,27 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 </span>
+        <span class="leading-7">默认情况下，页面的侧边栏将显示在每个页面的左侧，但你可以在 markdown 文件的顶部设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar: false</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 以关闭它。</span>
+        <span class="leading-7"> 以关闭它。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-footer" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-footer">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的底部。</span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置是否关闭页面的底部。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1790,31 +1831,31 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 </span>
+        <span class="leading-7">默认情况下，页面的底部将显示在每个页面的底部，但你可以在 markdown 文件的顶部设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer: false</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 以关闭它。</span>
+        <span class="leading-7"> 以关闭它。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-toc" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-toc">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 </span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置是否关闭页面的目录。如果当前页面没有解析到 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">，页面的目录将不会显示。</span>
+        <span class="leading-7">，页面的目录将不会显示。</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1840,75 +1881,75 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 </span>
+        <span class="leading-7">默认情况下，页面的目录将显示在每个页面的右侧，但你可以在 markdown 文件的顶部设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc: false</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 以关闭它。</span>
+        <span class="leading-7"> 以关闭它。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-template" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-template">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 </span>
+        <span class="leading-7">在 markdown 文件的顶部，你可以设置页面的布局。默认情况下，页面的布局为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">content</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">，但你可以在 markdown 文件的顶部设置 </span>
+        <span class="leading-7">，但你可以在 markdown 文件的顶部设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template: layout-name</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 以更改它。</span>
+        <span class="leading-7"> 以更改它。</span>
     
         <div class="space-y-4"></div>
     <div class="pl-4 my-2 border-l-4 border-gray-200 dark:border-gray-700">
             <div class="py-1">
-        <span class="text-base text-gray-700 leading-7 my-2">你可以在 </span>
+        <span class="leading-7">你可以在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">templates/layouts</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 中找到所有可用的布局。</span>
+        <span class="leading-7"> 中找到所有可用的布局。</span>
     </div>
 <div class="h-4"></div>
 <div class="py-1">
-        <span class="text-base text-gray-700 leading-7 my-2">目前支持 </span>
+        <span class="leading-7">目前支持 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">content</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 和 </span>
+        <span class="leading-7"> 和 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">page</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 布局。</span>
+        <span class="leading-7"> 布局。</span>
     </div>
         </div>
-        <span class="text-base text-gray-700 leading-7 my-2">如果是自定义的布局，可以直接在 </span>
+        <span class="leading-7">如果是自定义的布局，可以直接在 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">templates/layouts</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 文件夹中创建自定义的布局文件，文件名便是模版名称。</span>
+        <span class="leading-7"> 文件夹中创建自定义的布局文件，文件名便是模版名称。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">比如模版名字是 </span>
+        <span class="leading-7">比如模版名字是 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">foo</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">，那么文件名就是 </span>
+        <span class="leading-7">，那么文件名就是 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">foo.ejs</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">。在页面中使用以下代码配置模版:</span>
+        <span class="leading-7">。在页面中使用以下代码配置模版:</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -1933,19 +1974,19 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-status" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-status">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">status</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持设置当前页面的状态，当前支持以下状态：</span>
+        <span class="leading-7">PageForge 支持设置当前页面的状态，当前支持以下状态：</span>
     
         <div class="space-y-4"></div>
     
@@ -1953,29 +1994,29 @@
             <li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">draft</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 草稿</span>
+        <span class="leading-7">: 草稿</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">new</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 新添加</span>
+        <span class="leading-7">: 新添加</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">updated</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 更新</span>
+        <span class="leading-7">: 更新</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">deprecated</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 已过期</span>
+        <span class="leading-7">: 已过期</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">custom</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">: 自定义</span>
+        <span class="leading-7">: 自定义</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">通过配置 markdown 文件的元数据来支持，格式如下：</span>
+        <span class="leading-7">通过配置 markdown 文件的元数据来支持，格式如下：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -2001,7 +2042,7 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果需要设置自定义提示的内容，可以修改为以下方式：</span>
+        <span class="leading-7">如果需要设置自定义提示的内容，可以修改为以下方式：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -2028,7 +2069,7 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 还支持自定义状态，格式如下：</span>
+        <span class="leading-7">PageForge 还支持自定义状态，格式如下：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -2068,19 +2109,19 @@
                     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">自定义状态情况下如果 </span>
+        <span class="leading-7">自定义状态情况下如果 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">feature.lucide.enable</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 为 </span>
+        <span class="leading-7"> 为 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">true</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 时，</span>
+        <span class="leading-7"> 时，</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。</span>
+        <span class="leading-7"> 将使用 Lucide 图标。否则需要传递自定义图标，比如完整的 svg。</span>
     
                 </div>
             </div>
@@ -2088,19 +2129,19 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="she-zhi-tags" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <h3 id="she-zhi-tags">
+            
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">tags</code>
-    </div>
-        </div>
+    
+        </h3>
     
         <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge 支持设置当前页面的标签，格式如下：</span>
+        <span class="leading-7">PageForge 支持设置当前页面的标签，格式如下：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -2294,7 +2335,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="ji-ben-yong-fa">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
+        <span class="leading-7">基本用法</span>
     
                             </a>
                         </div>
@@ -2305,7 +2346,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-title">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
     
@@ -2318,7 +2359,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-description">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">description</code>
     
@@ -2331,7 +2372,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-icon">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
     
@@ -2344,7 +2385,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-header">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
     
@@ -2357,7 +2398,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-sidebar">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
     
@@ -2370,7 +2411,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-footer">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
     
@@ -2383,7 +2424,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-toc">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
     
@@ -2396,7 +2437,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-template">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template</code>
     
@@ -2409,7 +2450,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-status">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">status</code>
     
@@ -2422,7 +2463,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="she-zhi-tags">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">tags</code>
     
@@ -2470,7 +2511,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="ji-ben-yong-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">基本用法</span>
+        <span class="leading-7">基本用法</span>
     
                         </a>
                     </div>
@@ -2481,7 +2522,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-title">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">title</code>
     
@@ -2494,7 +2535,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-description">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">description</code>
     
@@ -2507,7 +2548,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-icon">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">icon</code>
     
@@ -2520,7 +2561,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-header">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">header</code>
     
@@ -2533,7 +2574,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-sidebar">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">sidebar</code>
     
@@ -2546,7 +2587,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-footer">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">footer</code>
     
@@ -2559,7 +2600,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-toc">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">toc</code>
     
@@ -2572,7 +2613,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-template">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">template</code>
     
@@ -2585,7 +2626,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-status">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">status</code>
     
@@ -2598,7 +2639,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="she-zhi-tags">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">设置 </span>
+        <span class="leading-7">设置 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">tags</code>
     

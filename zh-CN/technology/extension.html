@@ -76,8 +76,49 @@
     <!-- 加载主题配置中的额外 CSS 文件 -->
     
 
+    <style>
+        :root {
+            
+            --header-height: 112px; /* banner 48px + nav 64px */
+            
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                h1: { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h2: { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h3: { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h4: { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h5: { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h6: { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: [
+                function({ addBase }) {
+                    addBase({
+                        'h1': { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h2': { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h3': { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h4': { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h5': { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h6': { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        '.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6': { color: 'rgb(255, 255, 255)' }
+                    })
+                }
+            ]
+        }
+    </script>
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css" rel="stylesheet"/>
@@ -111,8 +152,8 @@
     <nav class="fixed top-0 w-full bg-white  border-b z-40">
         <!-- Banner -->
         
-    <div class="w-full bg-blue-50 " data-banner>
-        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+    <div class="w-full bg-blue-50  h-12" data-banner>
+        <div class="max-w-screen-xl px-6 mx-auto flex items-center justify-between h-full">
             
                 <div class="text-blue-700 ">
                     💗 <a href="https://afdian.com/a/devlive-community" target="_blank">如果喜欢我们的软件，请点击这里支持我们</a> ❤️
@@ -213,7 +254,7 @@
             </li>
         
             <li class="shrink-0">
-                <a href="/zh-CN/release/2025.1.7.html"
+                <a href="/zh-CN/release/2026.0.0.html"
                    class="inline-flex items-center rounded-lg justify-center px-3.5 py-3
                           text-sm font-medium leading-none whitespace-nowrap
                           
@@ -351,11 +392,11 @@
                     <!-- 仓库链接 -->
                     <div class="hidden lg:block">
                         
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -505,7 +546,7 @@
                         技术细节
                     </a>
                 
-                    <a href="/zh-CN/release/2025.1.7.html"
+                    <a href="/zh-CN/release/2026.0.0.html"
                        class="block px-3 py-2 rounded-md text-base font-medium
                       text-gray-700  hover:text-gray-900  hover:bg-gray-50 ">
                         发布日志
@@ -566,11 +607,11 @@
                 <!-- 移动端的仓库链接 -->
                 <div class="px-3 py-2 border-t ">
                     
-    <div class="hidden lg:flex items-center space-x-4 text-sm" id="github-stats-desktop">
+    <div class="hidden lg:flex items-center space-x-4 text-sm min-w-[200px]" id="github-stats-desktop">
         <a href="https://github.com/devlive-community/pageforge"
            target="_blank"
            rel="noopener noreferrer"
-           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors">
+           class="inline-flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors min-w-full">
             <div class="inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -935,7 +976,7 @@
                     +
                 
                 
-                    6528 词
+                    5489 词
                 
             </span>
         
@@ -955,7 +996,7 @@
             
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在现代网页设计中，交互元素是提升用户体验的关键。开关（Switch）作为一种直观的交互控件，广泛应用于设置项、特性切换和状态控制等场景。本教程将详细介绍如何在PageForge中使用开关组件，帮助您打造更具交互性的文档和网站。</span>
+        <span class="leading-7">在现代网页设计中，交互元素是提升用户体验的关键。开关（Switch）作为一种直观的交互控件，广泛应用于设置项、特性切换和状态控制等场景。本教程将详细介绍如何在PageForge中使用开关组件，帮助您打造更具交互性的文档和网站。</span>
     
         <div class="space-y-4"></div>
     
@@ -969,7 +1010,7 @@
             <div class="w-full px-5 py-3">
                 <div class="text-sm text-purple-700">
                     
-        <span class="text-base text-gray-700 leading-7 my-2">这里我们使用开关组件来讲解。</span>
+        <span class="leading-7">这里我们使用开关组件来讲解。</span>
     
                 </div>
             </div>
@@ -977,63 +1018,63 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="1-kai-guan-zu-jian-jian-jie" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">1. 开关组件简介</span>
-    </div>
-        </div>
+        <h2 id="1-kai-guan-zu-jian-jian-jie">
+            
+        <span class="leading-7">1. 开关组件简介</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge的开关组件基于Tailwind CSS构建，提供了美观且可高度自定义的UI控件。与传统的复选框相比，开关组件提供了更直观的视觉反馈，特别适合表示开/关、是/否等二元状态。</span>
+        </h2>
+    
+        <span class="leading-7">PageForge的开关组件基于Tailwind CSS构建，提供了美观且可高度自定义的UI控件。与传统的复选框相比，开关组件提供了更直观的视觉反馈，特别适合表示开/关、是/否等二元状态。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="zhu-yao-te-xing" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">主要特性</span>
-    </div>
-        </div>
+        <h3 id="zhu-yao-te-xing">
+            
+        <span class="leading-7">主要特性</span>
+    
+        </h3>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">简洁的语法</span>
+        <span class="leading-7">简洁的语法</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：使用类似Markdown的语法轻松添加开关</span>
+        <span class="leading-7">：使用类似Markdown的语法轻松添加开关</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">状态控制</span>
+        <span class="leading-7">状态控制</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：支持预设开关的默认状态（开启/关闭）</span>
+        <span class="leading-7">：支持预设开关的默认状态（开启/关闭）</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">高度可定制</span>
+        <span class="leading-7">高度可定制</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：完全兼容Tailwind CSS，支持自定义颜色和样式</span>
+        <span class="leading-7">：完全兼容Tailwind CSS，支持自定义颜色和样式</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">无缝集成</span>
+        <span class="leading-7">无缝集成</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：可与文本内容自然融合，支持内联使用</span>
+        <span class="leading-7">：可与文本内容自然融合，支持内联使用</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="2-kai-shi-shi-yong-qian-de-zhun-bei" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">2. 开始使用前的准备</span>
-    </div>
-        </div>
+        <h2 id="2-kai-shi-shi-yong-qian-de-zhun-bei">
+            
+        <span class="leading-7">2. 开始使用前的准备</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在使用开关组件前，需要在PageForge配置文件中启用该功能。</span>
+        </h2>
+    
+        <span class="leading-7">在使用开关组件前，需要在PageForge配置文件中启用该功能。</span>
     
         <div class="space-y-4"></div>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">打开您的 </span>
+        <span class="leading-7">打开您的 </span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge.yaml</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2"> 配置文件</span>
+        <span class="leading-7"> 配置文件</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">添加或修改以下配置：</span>
+        <span class="leading-7">添加或修改以下配置：</span>
     </li>
         </ol>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1060,19 +1101,19 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="3-ji-ben-yong-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">3. 基本用法</span>
-    </div>
-        </div>
+        <h2 id="3-ji-ben-yong-fa">
+            
+        <span class="leading-7">3. 基本用法</span>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="31-tian-jia-yi-ge-jian-dan-de-kai-guan" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">3.1 添加一个简单的开关</span>
-    </div>
-        </div>
+        </h2>
     
-        <span class="text-base text-gray-700 leading-7 my-2">最基本的开关只需一行代码：</span>
+        <h3 id="31-tian-jia-yi-ge-jian-dan-de-kai-guan">
+            
+        <span class="leading-7">3.1 添加一个简单的开关</span>
+    
+        </h3>
+    
+        <span class="leading-7">最基本的开关只需一行代码：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1095,17 +1136,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">这将创建一个默认状态为"关闭"的开关，右侧显示"开关文本"。</span>
+        <span class="leading-7">这将创建一个默认状态为"关闭"的开关，右侧显示"开关文本"。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="32-she-zhi-mo-ren-zhuang-tai" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">3.2 设置默认状态</span>
-    </div>
-        </div>
+        <h3 id="32-she-zhi-mo-ren-zhuang-tai">
+            
+        <span class="leading-7">3.2 设置默认状态</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">您可以通过在括号中指定状态值来设置开关的默认状态：</span>
+        </h3>
+    
+        <span class="leading-7">您可以通过在括号中指定状态值来设置开关的默认状态：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1129,7 +1170,7 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge支持多种状态值表示法：</span>
+        <span class="leading-7">PageForge支持多种状态值表示法：</span>
     
         <div class="space-y-4"></div>
     
@@ -1141,13 +1182,13 @@
                             
                                 <th scope="col" class="px-3.5 py-1 text-left">
                                     
-        <span class="text-base text-gray-700 leading-7 my-2">开启状态</span>
+        <span class="leading-7">开启状态</span>
     
                                 </th>
                             
                                 <th scope="col" class="px-3.5 py-1 text-left">
                                     
-        <span class="text-base text-gray-700 leading-7 my-2">关闭状态</span>
+        <span class="leading-7">关闭状态</span>
     
                                 </th>
                             
@@ -1159,29 +1200,13 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">true</span>
+        <span class="leading-7">true</span>
     
                                     </td>
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">false</span>
-    
-                                    </td>
-                                
-                            </tr>
-                        
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                
-                                    <td class="px-3 py-1.5 text-left">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">on</span>
-    
-                                    </td>
-                                
-                                    <td class="px-3 py-1.5 text-left">
-                                        
-        <span class="text-base text-gray-700 leading-7 my-2">off</span>
+        <span class="leading-7">false</span>
     
                                     </td>
                                 
@@ -1191,13 +1216,13 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">1</span>
+        <span class="leading-7">on</span>
     
                                     </td>
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">0</span>
+        <span class="leading-7">off</span>
     
                                     </td>
                                 
@@ -1207,13 +1232,29 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">yes</span>
+        <span class="leading-7">1</span>
     
                                     </td>
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">no</span>
+        <span class="leading-7">0</span>
+    
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="leading-7">yes</span>
+    
+                                    </td>
+                                
+                                    <td class="px-3 py-1.5 text-left">
+                                        
+        <span class="leading-7">no</span>
     
                                     </td>
                                 
@@ -1224,19 +1265,19 @@
             </div>
         </div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="4-yang-shi-ding-zhi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">4. 样式定制</span>
-    </div>
-        </div>
+        <h2 id="4-yang-shi-ding-zhi">
+            
+        <span class="leading-7">4. 样式定制</span>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="41-shi-yong-Tailwind-lei-zi-ding-yi-yang-shi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">4.1 使用Tailwind类自定义样式</span>
-    </div>
-        </div>
+        </h2>
     
-        <span class="text-base text-gray-700 leading-7 my-2">您可以使用花括号添加Tailwind CSS类来自定义开关样式：</span>
+        <h3 id="41-shi-yong-Tailwind-lei-zi-ding-yi-yang-shi">
+            
+        <span class="leading-7">4.1 使用Tailwind类自定义样式</span>
+    
+        </h3>
+    
+        <span class="leading-7">您可以使用花括号添加Tailwind CSS类来自定义开关样式：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1259,13 +1300,13 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="42-zi-ding-yi-yan-se" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">4.2 自定义颜色</span>
-    </div>
-        </div>
+        <h3 id="42-zi-ding-yi-yan-se">
+            
+        <span class="leading-7">4.2 自定义颜色</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开关组件最常见的自定义需求是更改颜色。您可以通过添加背景色和边框色类来实现：</span>
+        </h3>
+    
+        <span class="leading-7">开关组件最常见的自定义需求是更改颜色。您可以通过添加背景色和边框色类来实现：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1290,33 +1331,33 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">色彩选择遵循Tailwind的命名规则，例如：</span>
+        <span class="leading-7">色彩选择遵循Tailwind的命名规则，例如：</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">bg-blue-500</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">：中等亮度的蓝色</span>
+        <span class="leading-7">：中等亮度的蓝色</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">bg-green-600</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">：稍深的绿色</span>
+        <span class="leading-7">：稍深的绿色</span>
     </li><li class="mb-2 text-gray-700">
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">bg-yellow-300</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">：浅黄色</span>
+        <span class="leading-7">：浅黄色</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="43-zi-ding-yi-jiao-dian-yang-shi" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">4.3 自定义焦点样式</span>
-    </div>
-        </div>
+        <h3 id="43-zi-ding-yi-jiao-dian-yang-shi">
+            
+        <span class="leading-7">4.3 自定义焦点样式</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开关在获得焦点时会显示环形轮廓。您可以自定义这个轮廓的颜色：</span>
+        </h3>
+    
+        <span class="leading-7">开关在获得焦点时会显示环形轮廓。您可以自定义这个轮廓的颜色：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1339,19 +1380,19 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="5-gao-ji-yong-fa" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">5. 高级用法</span>
-    </div>
-        </div>
+        <h2 id="5-gao-ji-yong-fa">
+            
+        <span class="leading-7">5. 高级用法</span>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="51-zu-he-shi-yong" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">5.1 组合使用</span>
-    </div>
-        </div>
+        </h2>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开关组件可以与其他文本内容组合使用：</span>
+        <h3 id="51-zu-he-shi-yong">
+            
+        <span class="leading-7">5.1 组合使用</span>
+    
+        </h3>
+    
+        <span class="leading-7">开关组件可以与其他文本内容组合使用：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1374,17 +1415,17 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">这种用法特别适合在句子中添加交互元素。</span>
+        <span class="leading-7">这种用法特别适合在句子中添加交互元素。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="52-wan-zheng-ding-zhi-shi-li" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">5.2 完整定制示例</span>
-    </div>
-        </div>
+        <h3 id="52-wan-zheng-ding-zhi-shi-li">
+            
+        <span class="leading-7">5.2 完整定制示例</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">下面是一个结合状态设置和样式定制的完整示例：</span>
+        </h3>
+    
+        <span class="leading-7">下面是一个结合状态设置和样式定制的完整示例：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">markdown</div>
@@ -1407,25 +1448,25 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">这将创建一个标题为"夜间模式"、默认开启、使用靛蓝色调的开关。</span>
+        <span class="leading-7">这将创建一个标题为"夜间模式"、默认开启、使用靛蓝色调的开关。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="53-zai-bu-tong-chang-jing-zhong-de-ying-yong" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">5.3 在不同场景中的应用</span>
-    </div>
-        </div>
+        <h3 id="53-zai-bu-tong-chang-jing-zhong-de-ying-yong">
+            
+        <span class="leading-7">5.3 在不同场景中的应用</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开关组件适用于多种场景：</span>
+        </h3>
+    
+        <span class="leading-7">开关组件适用于多种场景：</span>
     
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">设置页面</span>
+        <span class="leading-7">设置页面</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：控制用户偏好</span>
+        <span class="leading-7">：控制用户偏好</span>
     </li>
         </ul>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1456,9 +1497,9 @@
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">功能展示</span>
+        <span class="leading-7">功能展示</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：突出显示可选功能</span>
+        <span class="leading-7">：突出显示可选功能</span>
     </li>
         </ul>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1488,9 +1529,9 @@
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">交互式文档</span>
+        <span class="leading-7">交互式文档</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：增强阅读体验</span>
+        <span class="leading-7">：增强阅读体验</span>
     </li>
         </ul>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
@@ -1515,85 +1556,85 @@
         </div>
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="6-zui-jia-shi-jian" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">6. 最佳实践</span>
-    </div>
-        </div>
+        <h2 id="6-zui-jia-shi-jian">
+            
+        <span class="leading-7">6. 最佳实践</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">使用PageForge开关组件时，请记住以下最佳实践：</span>
+        </h2>
+    
+        <span class="leading-7">使用PageForge开关组件时，请记住以下最佳实践：</span>
     
         <div class="space-y-4"></div>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">保持文本简洁</span>
+        <span class="leading-7">保持文本简洁</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：开关文本应清晰明了，避免过长</span>
+        <span class="leading-7">：开关文本应清晰明了，避免过长</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">配色一致性</span>
+        <span class="leading-7">配色一致性</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：在同一文档中保持一致的颜色主题</span>
+        <span class="leading-7">：在同一文档中保持一致的颜色主题</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">使用适当的默认值</span>
+        <span class="leading-7">使用适当的默认值</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：根据用户期望设置合理的默认状态</span>
+        <span class="leading-7">：根据用户期望设置合理的默认状态</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">考虑无障碍性</span>
+        <span class="leading-7">考虑无障碍性</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：确保颜色对比度足够，方便所有用户识别状态</span>
+        <span class="leading-7">：确保颜色对比度足够，方便所有用户识别状态</span>
     </li>
         </ol>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="7-ji-shu-shi-xian-xiang-jie" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7. 技术实现详解</span>
-    </div>
-        </div>
+        <h2 id="7-ji-shu-shi-xian-xiang-jie">
+            
+        <span class="leading-7">7. 技术实现详解</span>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="71-jia-gou-gai-lan" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.1 架构概览</span>
-    </div>
-        </div>
+        </h2>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge开关组件的实现分为两个主要部分：</span>
+        <h3 id="71-jia-gou-gai-lan">
+            
+        <span class="leading-7">7.1 架构概览</span>
+    
+        </h3>
+    
+        <span class="leading-7">PageForge开关组件的实现分为两个主要部分：</span>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">扩展模块</span>
+        <span class="leading-7">扩展模块</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2"> (</span>
+        <span class="leading-7"> (</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">PageForgeSwitchExtension.js</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">): 负责解析Markdown中的特殊语法并转换为数据结构</span>
+        <span class="leading-7">): 负责解析Markdown中的特殊语法并转换为数据结构</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">模板文件</span>
+        <span class="leading-7">模板文件</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2"> (</span>
+        <span class="leading-7"> (</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">switch.js</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">): 将数据结构渲染为HTML和CSS</span>
+        <span class="leading-7">): 将数据结构渲染为HTML和CSS</span>
     </li>
         </ol>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">这种分离设计使开关组件具有良好的可维护性和可扩展性。</span>
+        <span class="leading-7">这种分离设计使开关组件具有良好的可维护性和可扩展性。</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="72-kuo-zhan-mo-kuai-shi-xian" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.2 扩展模块实现</span>
-    </div>
-        </div>
+        <h3 id="72-kuo-zhan-mo-kuai-shi-xian">
+            
+        <span class="leading-7">7.2 扩展模块实现</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">扩展模块主要处理Markdown中的开关语法解析，其核心代码如下：</span>
+        </h3>
+    
+        <span class="leading-7">扩展模块主要处理Markdown中的开关语法解析，其核心代码如下：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
@@ -1671,33 +1712,33 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">该模块实现了三个关键方法：</span>
+        <span class="leading-7">该模块实现了三个关键方法：</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">start</span>
+        <span class="leading-7">start</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 快速检测Markdown内容中是否包含开关语法</span>
+        <span class="leading-7">: 快速检测Markdown内容中是否包含开关语法</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">tokenizer</span>
+        <span class="leading-7">tokenizer</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 详细解析语法并提取参数（文本、状态、样式类）</span>
+        <span class="leading-7">: 详细解析语法并提取参数（文本、状态、样式类）</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">renderer</span>
+        <span class="leading-7">renderer</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 调用模板渲染最终的HTML</span>
+        <span class="leading-7">: 调用模板渲染最终的HTML</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="73-mu-ban-wen-jian-shi-xian" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.3 模板文件实现</span>
-    </div>
-        </div>
+        <h3 id="73-mu-ban-wen-jian-shi-xian">
+            
+        <span class="leading-7">7.3 模板文件实现</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">模板文件负责将数据转换为HTML和CSS，处理样式分离和应用：</span>
+        </h3>
+    
+        <span class="leading-7">模板文件负责将数据转换为HTML和CSS，处理样式分离和应用：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
@@ -1766,37 +1807,37 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">模板实现中的关键技术点：</span>
+        <span class="leading-7">模板实现中的关键技术点：</span>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">样式分离</span>
+        <span class="leading-7">样式分离</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 将用户提供的样式分为轨道颜色类和其他样式类</span>
+        <span class="leading-7">: 将用户提供的样式分为轨道颜色类和其他样式类</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">正则表达式处理</span>
+        <span class="leading-7">正则表达式处理</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 使用精确的正则表达式匹配确保样式类正确提取</span>
+        <span class="leading-7">: 使用精确的正则表达式匹配确保样式类正确提取</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">条件渲染</span>
+        <span class="leading-7">条件渲染</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 根据开关状态应用不同的样式</span>
+        <span class="leading-7">: 根据开关状态应用不同的样式</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">无障碍支持</span>
+        <span class="leading-7">无障碍支持</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 使用适当的HTML结构确保无障碍性</span>
+        <span class="leading-7">: 使用适当的HTML结构确保无障碍性</span>
     </li>
         </ol>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="74HTML-jie-gou-shuo-ming" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.4 HTML结构说明</span>
-    </div>
-        </div>
+        <h3 id="74HTML-jie-gou-shuo-ming">
+            
+        <span class="leading-7">7.4 HTML结构说明</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">生成的HTML结构具有以下特点：</span>
+        </h3>
+    
+        <span class="leading-7">生成的HTML结构具有以下特点：</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">html</div>
@@ -1832,91 +1873,91 @@
         </div>
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">这种结构确保了:</span>
+        <span class="leading-7">这种结构确保了:</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">语义正确性</span>
+        <span class="leading-7">语义正确性</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 使用适当的HTML元素表达组件含义</span>
+        <span class="leading-7">: 使用适当的HTML元素表达组件含义</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">无障碍支持</span>
+        <span class="leading-7">无障碍支持</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 通过label和input关联，确保屏幕阅读器可以理解</span>
+        <span class="leading-7">: 通过label和input关联，确保屏幕阅读器可以理解</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">样式隔离</span>
+        <span class="leading-7">样式隔离</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 将不同样式应用到正确的元素上</span>
+        <span class="leading-7">: 将不同样式应用到正确的元素上</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="75-shi-xian-zhong-de-ji-shu-tiao-zhan-yu-jie-jue-fang-an" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.5 实现中的技术挑战与解决方案</span>
-    </div>
-        </div>
+        <h3 id="75-shi-xian-zhong-de-ji-shu-tiao-zhan-yu-jie-jue-fang-an">
+            
+        <span class="leading-7">7.5 实现中的技术挑战与解决方案</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">在实现过程中解决了几个关键技术挑战：</span>
+        </h3>
+    
+        <span class="leading-7">在实现过程中解决了几个关键技术挑战：</span>
     
         <div class="space-y-4"></div>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">样式冲突问题</span>
+        <span class="leading-7">样式冲突问题</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">:</span>
+        <span class="leading-7">:</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">挑战</span>
+        <span class="leading-7">挑战</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 用户提供的背景色类可能错误地应用到整个组件而不仅是轨道部分</span>
+        <span class="leading-7">: 用户提供的背景色类可能错误地应用到整个组件而不仅是轨道部分</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">解决方案</span>
+        <span class="leading-7">解决方案</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 实现样式分离逻辑，使用正则表达式精确提取颜色类并仅应用于轨道元素</span>
+        <span class="leading-7">: 实现样式分离逻辑，使用正则表达式精确提取颜色类并仅应用于轨道元素</span>
     </li>
         </ul>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">位置对齐问题</span>
+        <span class="leading-7">位置对齐问题</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">:</span>
+        <span class="leading-7">:</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">挑战</span>
+        <span class="leading-7">挑战</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 开关按钮在开启状态下位置偏移过大，视觉效果不佳</span>
+        <span class="leading-7">: 开关按钮在开启状态下位置偏移过大，视觉效果不佳</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">解决方案</span>
+        <span class="leading-7">解决方案</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 将</span>
+        <span class="leading-7">: 将</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">translate-x-5</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">调整为</span>
+        <span class="leading-7">调整为</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">translate-x-4</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">，实现更平衡的视觉效果</span>
+        <span class="leading-7">，实现更平衡的视觉效果</span>
     </li>
         </ul>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">语法解析的健壮性</span>
+        <span class="leading-7">语法解析的健壮性</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">:</span>
+        <span class="leading-7">:</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">挑战</span>
+        <span class="leading-7">挑战</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 需要支持多种语法格式，同时避免在代码块中错误解析</span>
+        <span class="leading-7">: 需要支持多种语法格式，同时避免在代码块中错误解析</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">解决方案</span>
+        <span class="leading-7">解决方案</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">: 实现代码块检测逻辑，并使用灵活的正则表达式解析多种语法形式</span>
+        <span class="leading-7">: 实现代码块检测逻辑，并使用灵活的正则表达式解析多种语法形式</span>
     </li>
         </ul>
     </li>
@@ -1924,83 +1965,83 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="76-gu-zhang-pai-chu-zhi-nan" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">7.6 故障排除指南</span>
-    </div>
-        </div>
+        <h3 id="76-gu-zhang-pai-chu-zhi-nan">
+            
+        <span class="leading-7">7.6 故障排除指南</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">遇到问题时可参考以下排查步骤：</span>
+        </h3>
+    
+        <span class="leading-7">遇到问题时可参考以下排查步骤：</span>
     
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">开关不显示</span>
+        <span class="leading-7">开关不显示</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：</span>
+        <span class="leading-7">：</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">检查配置文件中是否正确启用了switch功能</span>
+        <span class="leading-7">检查配置文件中是否正确启用了switch功能</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">确认语法格式是否正确，特别是括号和花括号的匹配</span>
+        <span class="leading-7">确认语法格式是否正确，特别是括号和花括号的匹配</span>
     </li>
         </ul>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">颜色不生效</span>
+        <span class="leading-7">颜色不生效</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：</span>
+        <span class="leading-7">：</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">确保使用了正确的Tailwind类名格式（如</span>
+        <span class="leading-7">确保使用了正确的Tailwind类名格式（如</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">bg-red-500</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">而非</span>
+        <span class="leading-7">而非</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">.bg-red-500</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">）</span>
+        <span class="leading-7">）</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">检查类名拼写是否正确，Tailwind使用美式拼写（如</span>
+        <span class="leading-7">检查类名拼写是否正确，Tailwind使用美式拼写（如</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">gray</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">而非</span>
+        <span class="leading-7">而非</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">grey</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">）</span>
+        <span class="leading-7">）</span>
     </li>
         </ul>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">状态设置不起作用</span>
+        <span class="leading-7">状态设置不起作用</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：</span>
+        <span class="leading-7">：</span>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">检查状态值拼写是否正确（例如</span>
+        <span class="leading-7">检查状态值拼写是否正确（例如</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">true</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">而非</span>
+        <span class="leading-7">而非</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">True</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">）</span>
+        <span class="leading-7">）</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">确认使用的是支持的状态值（</span>
+        <span class="leading-7">确认使用的是支持的状态值（</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">true/on/1/yes</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">或</span>
+        <span class="leading-7">或</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">false/off/0/no</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">）</span>
+        <span class="leading-7">）</span>
     </li>
         </ul>
     </li>
@@ -2008,27 +2049,27 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="8-kuo-zhan-kai-fa-zhi-nan" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">8. 扩展开发指南</span>
-    </div>
-        </div>
+        <h2 id="8-kuo-zhan-kai-fa-zhi-nan">
+            
+        <span class="leading-7">8. 扩展开发指南</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">如果您想基于现有的PageForgeSwitchExtension开发自己的扩展组件，以下是一些关键步骤和最佳实践：</span>
+        </h2>
+    
+        <span class="leading-7">如果您想基于现有的PageForgeSwitchExtension开发自己的扩展组件，以下是一些关键步骤和最佳实践：</span>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="81-chuang-jian-xin-kuo-zhan-de-bu-zhou" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">8.1 创建新扩展的步骤</span>
-    </div>
-        </div>
+        <h3 id="81-chuang-jian-xin-kuo-zhan-de-bu-zhou">
+            
+        <span class="leading-7">8.1 创建新扩展的步骤</span>
+    
+        </h3>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">定义扩展结构</span>
+        <span class="leading-7">定义扩展结构</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：复制并修改PageForgeSwitchExtension的基本结构</span>
+        <span class="leading-7">：复制并修改PageForgeSwitchExtension的基本结构</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
@@ -2053,9 +2094,9 @@
                 </div>
             </div>
         </div></li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">设计语法</span>
+        <span class="leading-7">设计语法</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：为您的组件设计一个直观的Markdown语法</span>
+        <span class="leading-7">：为您的组件设计一个直观的Markdown语法</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             
@@ -2076,9 +2117,9 @@
                 </div>
             </div>
         </div></li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">实现解析逻辑</span>
+        <span class="leading-7">实现解析逻辑</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：编写正则表达式来解析您的语法</span>
+        <span class="leading-7">：编写正则表达式来解析您的语法</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
@@ -2102,13 +2143,13 @@
                 </div>
             </div>
         </div></li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">创建模板</span>
+        <span class="leading-7">创建模板</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：在</span>
+        <span class="leading-7">：在</span>
     
         <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">templates</code>
     
-        <span class="text-base text-gray-700 leading-7 my-2">目录创建组件模板文件</span>
+        <span class="leading-7">目录创建组件模板文件</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">javascript</div>
@@ -2131,9 +2172,9 @@
                 </div>
             </div>
         </div></li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">添加配置选项</span>
+        <span class="leading-7">添加配置选项</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：在配置文件中添加对应的功能开关</span>
+        <span class="leading-7">：在配置文件中添加对应的功能开关</span>
     <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
             
             <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
@@ -2160,75 +2201,75 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="82-kai-fa-zui-jia-shi-jian" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">8.2 开发最佳实践</span>
-    </div>
-        </div>
+        <h3 id="82-kai-fa-zui-jia-shi-jian">
+            
+        <span class="leading-7">8.2 开发最佳实践</span>
+    
+        </h3>
     
         <ol class="my-4 pl-8 list-decimal">
             <li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">样式分离</span>
+        <span class="leading-7">样式分离</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：将固定样式和用户自定义样式分开处理</span>
+        <span class="leading-7">：将固定样式和用户自定义样式分开处理</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">无障碍设计</span>
+        <span class="leading-7">无障碍设计</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：确保生成的HTML符合无障碍标准</span>
+        <span class="leading-7">：确保生成的HTML符合无障碍标准</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">错误处理</span>
+        <span class="leading-7">错误处理</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：添加适当的错误检查和回退机制</span>
+        <span class="leading-7">：添加适当的错误检查和回退机制</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">性能考虑</span>
+        <span class="leading-7">性能考虑</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：优化正则表达式和渲染逻辑</span>
+        <span class="leading-7">：优化正则表达式和渲染逻辑</span>
     </li><li class="mb-2 text-gray-700"><strong>
-        <span class="text-base text-gray-700 leading-7 my-2">文档完善</span>
+        <span class="leading-7">文档完善</span>
     </strong>
-        <span class="text-base text-gray-700 leading-7 my-2">：为新组件编写清晰的使用文档</span>
+        <span class="leading-7">：为新组件编写清晰的使用文档</span>
     </li>
         </ol>
     
         <div class="space-y-4"></div>
     
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-xl [&_span]:sm:!text-2xl">
-            <div id="83-ce-shi-kuo-zhan-zu-jian" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">8.3 测试扩展组件</span>
-    </div>
-        </div>
+        <h3 id="83-ce-shi-kuo-zhan-zu-jian">
+            
+        <span class="leading-7">8.3 测试扩展组件</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开发新扩展时，应测试以下场景：</span>
+        </h3>
+    
+        <span class="leading-7">开发新扩展时，应测试以下场景：</span>
     
         <div class="space-y-4"></div>
     
         <ul class="my-4 pl-8 list-disc">
             <li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">基本功能测试：组件是否正确渲染</span>
+        <span class="leading-7">基本功能测试：组件是否正确渲染</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">边界情况：特殊字符、空值等</span>
+        <span class="leading-7">边界情况：特殊字符、空值等</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">样式覆盖：自定义样式是否正确应用</span>
+        <span class="leading-7">样式覆盖：自定义样式是否正确应用</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">嵌套使用：在不同上下文中的表现</span>
+        <span class="leading-7">嵌套使用：在不同上下文中的表现</span>
     </li><li class="mb-2 text-gray-700">
-        <span class="text-base text-gray-700 leading-7 my-2">配置控制：启用/禁用功能的效果</span>
+        <span class="leading-7">配置控制：启用/禁用功能的效果</span>
     </li>
         </ul>
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="9-zong-jie" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">9. 总结</span>
-    </div>
-        </div>
+        <h2 id="9-zong-jie">
+            
+        <span class="leading-7">9. 总结</span>
     
-        <span class="text-base text-gray-700 leading-7 my-2">PageForge的开关组件为您的文档增添了交互性和现代感。通过本教程，您已经掌握了从基础用法到高级定制的全部技巧，同时深入了解了其技术实现原理。现在，您不仅可以使用这一强大工具创建出更具吸引力的页面，还可以基于相同的架构开发自己的扩展组件。</span>
+        </h2>
+    
+        <span class="leading-7">PageForge的开关组件为您的文档增添了交互性和现代感。通过本教程，您已经掌握了从基础用法到高级定制的全部技巧，同时深入了解了其技术实现原理。现在，您不仅可以使用这一强大工具创建出更具吸引力的页面，还可以基于相同的架构开发自己的扩展组件。</span>
     
         <div class="space-y-4"></div>
     
-        <span class="text-base text-gray-700 leading-7 my-2">开始在您的PageForge项目中尝试开关组件吧，您会发现它不仅提升了用户体验，还为您的内容增添了专业气息。</span>
+        <span class="leading-7">开始在您的PageForge项目中尝试开关组件吧，您会发现它不仅提升了用户体验，还为您的内容增添了专业气息。</span>
     
         <div class="space-y-4"></div>
     
@@ -2236,11 +2277,11 @@
     
         <div class="space-y-4"></div>
     
-        <div class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white my-3 [&_span]:!font-inherit [&_span]:!text-inherit [&_code]:!text-inherit [&_span]:!text-2xl [&_span]:sm:!text-3xl">
-            <div id="fu-lu-yu-fa-su-cha-biao" class="inline-flex items-center">
-        <span class="text-base text-gray-700 leading-7 my-2">附录：语法速查表</span>
-    </div>
-        </div>
+        <h2 id="fu-lu-yu-fa-su-cha-biao">
+            
+        <span class="leading-7">附录：语法速查表</span>
+    
+        </h2>
     
         <div class="space-y-4">
             <div class="relative overflow-x-auto shadow-sm ring-1 ring-gray-200 dark:ring-gray-700 sm:rounded-lg">
@@ -2250,19 +2291,19 @@
                             
                                 <th scope="col" class="px-3.5 py-1 text-left">
                                     
-        <span class="text-base text-gray-700 leading-7 my-2">功能</span>
+        <span class="leading-7">功能</span>
     
                                 </th>
                             
                                 <th scope="col" class="px-3.5 py-1 text-left">
                                     
-        <span class="text-base text-gray-700 leading-7 my-2">语法</span>
+        <span class="leading-7">语法</span>
     
                                 </th>
                             
                                 <th scope="col" class="px-3.5 py-1 text-left">
                                     
-        <span class="text-base text-gray-700 leading-7 my-2">示例</span>
+        <span class="leading-7">示例</span>
     
                                 </th>
                             
@@ -2274,7 +2315,7 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">基本开关</span>
+        <span class="leading-7">基本开关</span>
     
                                     </td>
                                 
@@ -2296,7 +2337,7 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">设置状态</span>
+        <span class="leading-7">设置状态</span>
     
                                     </td>
                                 
@@ -2318,7 +2359,7 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">自定义样式</span>
+        <span class="leading-7">自定义样式</span>
     
                                     </td>
                                 
@@ -2340,7 +2381,7 @@
                                 
                                     <td class="px-3 py-1.5 text-left">
                                         
-        <span class="text-base text-gray-700 leading-7 my-2">完整语法</span>
+        <span class="leading-7">完整语法</span>
     
                                     </td>
                                 
@@ -2532,7 +2573,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="1-kai-guan-zu-jian-jian-jie">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">1. 开关组件简介</span>
+        <span class="leading-7">1. 开关组件简介</span>
     
                             </a>
                         </div>
@@ -2544,7 +2585,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="zhu-yao-te-xing">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">主要特性</span>
+        <span class="leading-7">主要特性</span>
     
                             </a>
                         </div>
@@ -2558,7 +2599,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="2-kai-shi-shi-yong-qian-de-zhun-bei">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">2. 开始使用前的准备</span>
+        <span class="leading-7">2. 开始使用前的准备</span>
     
                             </a>
                         </div>
@@ -2569,7 +2610,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="3-ji-ben-yong-fa">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">3. 基本用法</span>
+        <span class="leading-7">3. 基本用法</span>
     
                             </a>
                         </div>
@@ -2581,7 +2622,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="31-tian-jia-yi-ge-jian-dan-de-kai-guan">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">3.1 添加一个简单的开关</span>
+        <span class="leading-7">3.1 添加一个简单的开关</span>
     
                             </a>
                         </div>
@@ -2592,7 +2633,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="32-she-zhi-mo-ren-zhuang-tai">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">3.2 设置默认状态</span>
+        <span class="leading-7">3.2 设置默认状态</span>
     
                             </a>
                         </div>
@@ -2606,7 +2647,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="4-yang-shi-ding-zhi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">4. 样式定制</span>
+        <span class="leading-7">4. 样式定制</span>
     
                             </a>
                         </div>
@@ -2618,7 +2659,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="41-shi-yong-Tailwind-lei-zi-ding-yi-yang-shi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">4.1 使用Tailwind类自定义样式</span>
+        <span class="leading-7">4.1 使用Tailwind类自定义样式</span>
     
                             </a>
                         </div>
@@ -2629,7 +2670,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="42-zi-ding-yi-yan-se">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">4.2 自定义颜色</span>
+        <span class="leading-7">4.2 自定义颜色</span>
     
                             </a>
                         </div>
@@ -2640,7 +2681,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="43-zi-ding-yi-jiao-dian-yang-shi">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">4.3 自定义焦点样式</span>
+        <span class="leading-7">4.3 自定义焦点样式</span>
     
                             </a>
                         </div>
@@ -2654,7 +2695,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="5-gao-ji-yong-fa">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">5. 高级用法</span>
+        <span class="leading-7">5. 高级用法</span>
     
                             </a>
                         </div>
@@ -2666,7 +2707,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="51-zu-he-shi-yong">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">5.1 组合使用</span>
+        <span class="leading-7">5.1 组合使用</span>
     
                             </a>
                         </div>
@@ -2677,7 +2718,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="52-wan-zheng-ding-zhi-shi-li">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">5.2 完整定制示例</span>
+        <span class="leading-7">5.2 完整定制示例</span>
     
                             </a>
                         </div>
@@ -2688,7 +2729,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="53-zai-bu-tong-chang-jing-zhong-de-ying-yong">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">5.3 在不同场景中的应用</span>
+        <span class="leading-7">5.3 在不同场景中的应用</span>
     
                             </a>
                         </div>
@@ -2702,7 +2743,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="6-zui-jia-shi-jian">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">6. 最佳实践</span>
+        <span class="leading-7">6. 最佳实践</span>
     
                             </a>
                         </div>
@@ -2713,7 +2754,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="7-ji-shu-shi-xian-xiang-jie">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7. 技术实现详解</span>
+        <span class="leading-7">7. 技术实现详解</span>
     
                             </a>
                         </div>
@@ -2725,7 +2766,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="71-jia-gou-gai-lan">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.1 架构概览</span>
+        <span class="leading-7">7.1 架构概览</span>
     
                             </a>
                         </div>
@@ -2736,7 +2777,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="72-kuo-zhan-mo-kuai-shi-xian">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.2 扩展模块实现</span>
+        <span class="leading-7">7.2 扩展模块实现</span>
     
                             </a>
                         </div>
@@ -2747,7 +2788,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="73-mu-ban-wen-jian-shi-xian">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.3 模板文件实现</span>
+        <span class="leading-7">7.3 模板文件实现</span>
     
                             </a>
                         </div>
@@ -2758,7 +2799,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="74HTML-jie-gou-shuo-ming">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.4 HTML结构说明</span>
+        <span class="leading-7">7.4 HTML结构说明</span>
     
                             </a>
                         </div>
@@ -2769,7 +2810,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="75-shi-xian-zhong-de-ji-shu-tiao-zhan-yu-jie-jue-fang-an">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.5 实现中的技术挑战与解决方案</span>
+        <span class="leading-7">7.5 实现中的技术挑战与解决方案</span>
     
                             </a>
                         </div>
@@ -2780,7 +2821,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="76-gu-zhang-pai-chu-zhi-nan">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">7.6 故障排除指南</span>
+        <span class="leading-7">7.6 故障排除指南</span>
     
                             </a>
                         </div>
@@ -2794,7 +2835,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="8-kuo-zhan-kai-fa-zhi-nan">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">8. 扩展开发指南</span>
+        <span class="leading-7">8. 扩展开发指南</span>
     
                             </a>
                         </div>
@@ -2806,7 +2847,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="81-chuang-jian-xin-kuo-zhan-de-bu-zhou">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">8.1 创建新扩展的步骤</span>
+        <span class="leading-7">8.1 创建新扩展的步骤</span>
     
                             </a>
                         </div>
@@ -2817,7 +2858,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="82-kai-fa-zui-jia-shi-jian">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">8.2 开发最佳实践</span>
+        <span class="leading-7">8.2 开发最佳实践</span>
     
                             </a>
                         </div>
@@ -2828,7 +2869,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="83-ce-shi-kuo-zhan-zu-jian">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">8.3 测试扩展组件</span>
+        <span class="leading-7">8.3 测试扩展组件</span>
     
                             </a>
                         </div>
@@ -2842,7 +2883,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="9-zong-jie">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">9. 总结</span>
+        <span class="leading-7">9. 总结</span>
     
                             </a>
                         </div>
@@ -2853,7 +2894,7 @@
                                class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                                data-slug="fu-lu-yu-fa-su-cha-biao">
                                 
-        <span class="text-base text-gray-700 leading-7 my-2">附录：语法速查表</span>
+        <span class="leading-7">附录：语法速查表</span>
     
                             </a>
                         </div>
@@ -2899,7 +2940,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="1-kai-guan-zu-jian-jian-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">1. 开关组件简介</span>
+        <span class="leading-7">1. 开关组件简介</span>
     
                         </a>
                     </div>
@@ -2911,7 +2952,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="zhu-yao-te-xing">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">主要特性</span>
+        <span class="leading-7">主要特性</span>
     
                         </a>
                     </div>
@@ -2925,7 +2966,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="2-kai-shi-shi-yong-qian-de-zhun-bei">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">2. 开始使用前的准备</span>
+        <span class="leading-7">2. 开始使用前的准备</span>
     
                         </a>
                     </div>
@@ -2936,7 +2977,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="3-ji-ben-yong-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">3. 基本用法</span>
+        <span class="leading-7">3. 基本用法</span>
     
                         </a>
                     </div>
@@ -2948,7 +2989,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="31-tian-jia-yi-ge-jian-dan-de-kai-guan">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">3.1 添加一个简单的开关</span>
+        <span class="leading-7">3.1 添加一个简单的开关</span>
     
                         </a>
                     </div>
@@ -2959,7 +3000,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="32-she-zhi-mo-ren-zhuang-tai">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">3.2 设置默认状态</span>
+        <span class="leading-7">3.2 设置默认状态</span>
     
                         </a>
                     </div>
@@ -2973,7 +3014,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="4-yang-shi-ding-zhi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">4. 样式定制</span>
+        <span class="leading-7">4. 样式定制</span>
     
                         </a>
                     </div>
@@ -2985,7 +3026,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="41-shi-yong-Tailwind-lei-zi-ding-yi-yang-shi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">4.1 使用Tailwind类自定义样式</span>
+        <span class="leading-7">4.1 使用Tailwind类自定义样式</span>
     
                         </a>
                     </div>
@@ -2996,7 +3037,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="42-zi-ding-yi-yan-se">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">4.2 自定义颜色</span>
+        <span class="leading-7">4.2 自定义颜色</span>
     
                         </a>
                     </div>
@@ -3007,7 +3048,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="43-zi-ding-yi-jiao-dian-yang-shi">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">4.3 自定义焦点样式</span>
+        <span class="leading-7">4.3 自定义焦点样式</span>
     
                         </a>
                     </div>
@@ -3021,7 +3062,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="5-gao-ji-yong-fa">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">5. 高级用法</span>
+        <span class="leading-7">5. 高级用法</span>
     
                         </a>
                     </div>
@@ -3033,7 +3074,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="51-zu-he-shi-yong">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">5.1 组合使用</span>
+        <span class="leading-7">5.1 组合使用</span>
     
                         </a>
                     </div>
@@ -3044,7 +3085,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="52-wan-zheng-ding-zhi-shi-li">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">5.2 完整定制示例</span>
+        <span class="leading-7">5.2 完整定制示例</span>
     
                         </a>
                     </div>
@@ -3055,7 +3096,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="53-zai-bu-tong-chang-jing-zhong-de-ying-yong">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">5.3 在不同场景中的应用</span>
+        <span class="leading-7">5.3 在不同场景中的应用</span>
     
                         </a>
                     </div>
@@ -3069,7 +3110,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="6-zui-jia-shi-jian">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">6. 最佳实践</span>
+        <span class="leading-7">6. 最佳实践</span>
     
                         </a>
                     </div>
@@ -3080,7 +3121,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="7-ji-shu-shi-xian-xiang-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7. 技术实现详解</span>
+        <span class="leading-7">7. 技术实现详解</span>
     
                         </a>
                     </div>
@@ -3092,7 +3133,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="71-jia-gou-gai-lan">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.1 架构概览</span>
+        <span class="leading-7">7.1 架构概览</span>
     
                         </a>
                     </div>
@@ -3103,7 +3144,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="72-kuo-zhan-mo-kuai-shi-xian">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.2 扩展模块实现</span>
+        <span class="leading-7">7.2 扩展模块实现</span>
     
                         </a>
                     </div>
@@ -3114,7 +3155,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="73-mu-ban-wen-jian-shi-xian">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.3 模板文件实现</span>
+        <span class="leading-7">7.3 模板文件实现</span>
     
                         </a>
                     </div>
@@ -3125,7 +3166,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="74HTML-jie-gou-shuo-ming">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.4 HTML结构说明</span>
+        <span class="leading-7">7.4 HTML结构说明</span>
     
                         </a>
                     </div>
@@ -3136,7 +3177,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="75-shi-xian-zhong-de-ji-shu-tiao-zhan-yu-jie-jue-fang-an">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.5 实现中的技术挑战与解决方案</span>
+        <span class="leading-7">7.5 实现中的技术挑战与解决方案</span>
     
                         </a>
                     </div>
@@ -3147,7 +3188,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="76-gu-zhang-pai-chu-zhi-nan">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">7.6 故障排除指南</span>
+        <span class="leading-7">7.6 故障排除指南</span>
     
                         </a>
                     </div>
@@ -3161,7 +3202,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="8-kuo-zhan-kai-fa-zhi-nan">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">8. 扩展开发指南</span>
+        <span class="leading-7">8. 扩展开发指南</span>
     
                         </a>
                     </div>
@@ -3173,7 +3214,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="81-chuang-jian-xin-kuo-zhan-de-bu-zhou">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">8.1 创建新扩展的步骤</span>
+        <span class="leading-7">8.1 创建新扩展的步骤</span>
     
                         </a>
                     </div>
@@ -3184,7 +3225,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="82-kai-fa-zui-jia-shi-jian">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">8.2 开发最佳实践</span>
+        <span class="leading-7">8.2 开发最佳实践</span>
     
                         </a>
                     </div>
@@ -3195,7 +3236,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="83-ce-shi-kuo-zhan-zu-jian">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">8.3 测试扩展组件</span>
+        <span class="leading-7">8.3 测试扩展组件</span>
     
                         </a>
                     </div>
@@ -3209,7 +3250,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="9-zong-jie">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">9. 总结</span>
+        <span class="leading-7">9. 总结</span>
     
                         </a>
                     </div>
@@ -3220,7 +3261,7 @@
                            class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
                            data-slug="fu-lu-yu-fa-su-cha-biao">
                             
-        <span class="text-base text-gray-700 leading-7 my-2">附录：语法速查表</span>
+        <span class="leading-7">附录：语法速查表</span>
     
                         </a>
                     </div>
