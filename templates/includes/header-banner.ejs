@@ -1,6 +1,6 @@
 <% if (locals.siteData?.banner?.content) { %>
-    <div class="w-full bg-blue-50 <%= darkClasses('dark:bg-blue-900/20') %>" data-banner>
-        <div class="max-w-screen-xl px-6 py-3 mx-auto flex items-center justify-between">
+    <div class="w-full bg-blue-50 <%= darkClasses('dark:bg-blue-900/20') %> h-12" data-banner>
+        <div class="max-w-screen-xl px-6 mx-auto flex items-center justify-between h-full">
             <% if (Array.isArray(locals.siteData.banner.content)) { %>
                 <div class="text-blue-700 <%= darkClasses('dark:text-blue-300') %> banner-container">
                     <div class="swiper banner-swiper">

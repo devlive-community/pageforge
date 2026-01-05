@@ -102,6 +102,16 @@ function buildPagePath(pagePath) {
         <% }); %>
     <% } %>
 
+    <style>
+        :root {
+            <% if (locals.siteData?.banner?.content) { %>
+            --header-height: 112px; /* banner 48px + nav 64px */
+            <% } else { %>
+            --header-height: 64px; /* nav 64px */
+            <% } %>
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="<%= locals.siteData.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
     <script>
