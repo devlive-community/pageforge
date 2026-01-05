@@ -104,6 +104,39 @@ function buildPagePath(pagePath) {
 
     <!-- Tailwind CSS -->
     <script src="<%= locals.siteData.cdn?.style || 'https://cdn.tailwindcss.com' %>"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                h1: { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h2: { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h3: { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h4: { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h5: { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                                h6: { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: [
+                function({ addBase }) {
+                    addBase({
+                        'h1': { fontWeight: '700', fontSize: '1.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h2': { fontWeight: '700', fontSize: '1.5rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h3': { fontWeight: '700', fontSize: '1.25rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h4': { fontWeight: '700', fontSize: '1.125rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h5': { fontWeight: '700', fontSize: '1rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        'h6': { fontWeight: '700', fontSize: '0.875rem', marginTop: '0.75rem', marginBottom: '0.75rem', color: 'rgb(17, 24, 39)' },
+                        '.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6': { color: 'rgb(255, 255, 255)' }
+                    })
+                }
+            ]
+        }
+    </script>
 
     <!-- Prism.js 语法高亮样式 -->
     <link href="<%= locals.siteData.cdn?.prismStyle || 'https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-ghcolors.css' %>" rel="stylesheet"/>
