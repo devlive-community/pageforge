@@ -1384,7 +1384,10 @@
             <main class="flex-grow w-full md:w-2">
                 <article class="prose dark:prose-invert lg:prose-lg mx-auto
                           max-w-none md:max-w-2xl lg:max-w-full">
-                    <!-- 页面容器 -->
+                    
+
+
+<!-- 页面容器 -->
 <div class="relative lg:flex lg:gap-8">
     <!-- 主要内容区域 -->
     <div class="min-w-0 flex-1">
@@ -1545,13 +1548,13 @@
             <span class="mx-1">•</span>
             <span>
                 
-                    574 字
+                    774 字
                 
                 
                     +
                 
                 
-                    3010 词
+                    3564 词
                 
             </span>
         
@@ -2275,6 +2278,161 @@
                 </div>
             </div>
         </div>
+        <div class="space-y-4"></div>
+    
+        <h2 id="biao-qian-xi-tong">
+            
+        <span class="leading-7">标签系统</span>
+    
+        </h2>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">PageForge 支持标签系统，启用后会自动生成标签索引页和标签详情页。</span>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <ul class="my-4 pl-8 list-disc">
+            <li class="mb-2 text-gray-700">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
+    
+        <span class="leading-7">: 是否启用标签系统</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">启用后，PageForge 会：</span>
+    
+        <div class="space-y-4"></div>
+    
+        <ol class="my-4 pl-8 list-decimal">
+            <li class="mb-2 text-gray-700">
+        <span class="leading-7">自动收集所有页面的 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">tags</code>
+    
+        <span class="leading-7"> 元数据</span>
+    </li><li class="mb-2 text-gray-700">
+        <span class="leading-7">生成 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">/tags.html</code>
+    
+        <span class="leading-7"> 标签索引页，展示所有标签及其文章数量</span>
+    </li><li class="mb-2 text-gray-700">
+        <span class="leading-7">为每个标签生成 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">/tags/<tag-name>.html</code>
+    
+        <span class="leading-7"> 详情页，列出该标签下的所有文章</span>
+    </li>
+        </ol>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">在页面中设置标签的方式请参考 </span>
+    
+        <a class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 cursor-pointer"
+           href="/setup/page#设置-tags"
+           target="_self"
+           title="">
+            页面设置 - tags
+        </a>
+    
+        <span class="leading-7">。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <h2 id="cao-gao-mo-shi">
+            
+        <span class="leading-7">草稿模式</span>
+    
+        </h2>
+    
+        <hr class="my-4 h-0.5 border-0 bg-gray-200 dark:bg-gray-700"/>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">PageForge 支持草稿模式，启用后所有标记为 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">draft: true</code>
+    
+        <span class="leading-7"> 的页面都会被编译并在页面顶部显示草稿标记。</span>
+    <div class="!block !w-full !bg-gray-100 !dark:bg-gray-800 !dark:text-gray-300 !text-gray-900 !my-3 !rounded !font-mono !leading-normal !overflow-hidden !relative">
+            
+            <div class="!absolute !right-12 !top-2 !text-sm !text-gray-500 !dark:text-gray-400 !bg-gray-100 !dark:bg-gray-800 !z-10">yaml</div>
+            
+        <button onclick="window.PageForge.CodeCopy.copy(this)" class="!absolute !right-2 !top-1 !p-1 !rounded !text-gray-400 hover:!text-blue-600 !dark:text-gray-500 hover:!dark:text-blue-300 !transition-colors !duration-200 !z-10">
+            <svg class="copy-icon !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <svg class="check-icon !hidden !w-5 !h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </button>
+    
+            <div class="!overflow-x-auto !flex">
+                
+                <div class="!flex-1">
+                    <pre class="!px-3 !py-2.5 !m-0"><code class="language-yaml"><span class="token key atrule">feature</span><span class="token punctuation">:</span>
+  <span class="token key atrule">draft</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4"></div>
+    
+        <ul class="my-4 pl-8 list-disc">
+            <li class="mb-2 text-gray-700">
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">enable</code>
+    
+        <span class="leading-7">: 是否启用草稿模式</span>
+    </li>
+        </ul>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">启用后，草稿页面在 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge build</code>
+    
+        <span class="leading-7"> 和 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge serve</code>
+    
+        <span class="leading-7"> 时都会被编译。</span>
+    
+        <div class="space-y-4"></div>
+    
+        <span class="leading-7">如果不想全局启用，也可以通过 </span>
+    
+        <code class="bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono mx-1 inline-block max-w-full break-all whitespace-pre-wrap overflow-wrap-anywhere">pageforge serve --drafts</code>
+    
+        <span class="leading-7"> 仅在开发模式下预览草稿页面。</span>
+    
         </div>
 
         <div class="clear-both"></div>
@@ -2305,7 +2463,7 @@
                 <path d="M3 3v5h5"/>
                 <path d="M12 7v5l4 2"/>
             </svg>
-            <span>修改于 2025年2月7日 01:48</span>
+            <span>修改于 2026年7月1日 06:30</span>
         </div>
 
         <!-- Hash 链接 -->
@@ -2334,11 +2492,11 @@
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                 </svg>
-                <a href="https://github.com/devlive-community/pageforge/commit/d25ec32927b6257642f6239e251ce179316d97a6"
+                <a href="https://github.com/devlive-community/pageforge/commit/a7098b8f981836d1c3c71ec5f3080960b63db889"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="hover:text-blue-600 dark:hover:text-blue-400">
-                    末次提交 (d25ec329)
+                    末次提交 (a7098b8f)
                 </a>
             </div>
         
@@ -2390,7 +2548,7 @@
                         qianmoQ
                     </div>
                     <div class="text-gray-500 dark:text-gray-400">
-                        20 次提交
+                        22 次提交
                     </div>
                 </div>
             </a>
@@ -2582,6 +2740,28 @@
                         </div>
                         
                     
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#biao-qian-xi-tong"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="biao-qian-xi-tong">
+                                
+        <span class="leading-7">标签系统</span>
+    
+                            </a>
+                        </div>
+                        
+                    
+                        <div class="pl-4 inline-block min-w-full">
+                            <a href="#cao-gao-mo-shi"
+                               class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                               data-slug="cao-gao-mo-shi">
+                                
+        <span class="leading-7">草稿模式</span>
+    
+                            </a>
+                        </div>
+                        
+                    
                 
             </nav>
         </div>
@@ -2755,6 +2935,28 @@
                            data-slug="sou-suo-gong-neng">
                             
         <span class="leading-7">搜索功能</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#biao-qian-xi-tong"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="biao-qian-xi-tong">
+                            
+        <span class="leading-7">标签系统</span>
+    
+                        </a>
+                    </div>
+                    
+                
+                    <div class="pl-4 inline-block min-w-full">
+                        <a href="#cao-gao-mo-shi"
+                           class="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-150 toc-link whitespace-nowrap"
+                           data-slug="cao-gao-mo-shi">
+                            
+        <span class="leading-7">草稿模式</span>
     
                         </a>
                     </div>
