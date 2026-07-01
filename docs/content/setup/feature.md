@@ -206,3 +206,43 @@ feature:
   search:
     enable: true
 ```
+
+## 标签系统
+
+---
+
+PageForge 支持标签系统，启用后会自动生成标签索引页和标签详情页。
+
+```yaml
+feature:
+  tags:
+    enable: true
+```
+
+- `enable`: 是否启用标签系统
+
+启用后，PageForge 会：
+
+1. 自动收集所有页面的 `tags` 元数据
+2. 生成 `/tags.html` 标签索引页，展示所有标签及其文章数量
+3. 为每个标签生成 `/tags/<tag-name>.html` 详情页，列出该标签下的所有文章
+
+在页面中设置标签的方式请参考 [页面设置 - tags](/setup/page#设置-tags)。
+
+## 草稿模式
+
+---
+
+PageForge 支持草稿模式，启用后所有标记为 `draft: true` 的页面都会被编译并在页面顶部显示草稿标记。
+
+```yaml
+feature:
+  draft:
+    enable: true
+```
+
+- `enable`: 是否启用草稿模式
+
+启用后，草稿页面在 `pageforge build` 和 `pageforge serve` 时都会被编译。
+
+如果不想全局启用，也可以通过 `pageforge serve --drafts` 仅在开发模式下预览草稿页面。

@@ -176,6 +176,31 @@ status:
 
 !!!
 
+### 设置 `draft`
+
+---
+
+PageForge 支持将页面标记为草稿状态。草稿页面在正式构建时会被跳过，仅在开发模式下可以预览。
+
+```yaml
+---
+draft: true
+---
+```
+
+默认情况下，`draft` 为 `false`。设置为 `true` 后：
+
+- 执行 `pageforge build` 时，草稿页面不会被编译输出
+- 执行 `pageforge serve --drafts` 时，草稿页面会被编译，并在页面顶部显示草稿标记
+
+也可以通过 `pageforge.yaml` 全局启用草稿模式，此时所有草稿页面都会被编译：
+
+```yaml
+feature:
+  draft:
+    enable: true
+```
+
 ### 设置 `tags`
 
 ---
@@ -189,3 +214,10 @@ tags:
   - tag-2
 ---
 ```
+
+标签会显示在页面标题下方，以彩色标签形式呈现。
+
+如果启用了 [标签系统](/setup/feature#标签系统)（`feature.tags.enable: true`），PageForge 还会自动生成：
+
+- `/tags.html` - 标签索引页，展示所有标签
+- `/tags/<tag-name>.html` - 标签详情页，列出该标签下的所有文章
