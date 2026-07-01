@@ -214,3 +214,10 @@ tags:
   - tag-2
 ---
 ```
+
+标签会显示在页面标题下方，以彩色标签形式呈现。
+
+如果启用了 [标签系统](/setup/feature#标签系统)（`feature.tags.enable: true`），PageForge 还会自动生成：
+
+- `/tags.html` - 标签索引页，展示所有标签
+- `/tags/<tag-name>.html` - 标签详情页，列出该标签下的所有文章
