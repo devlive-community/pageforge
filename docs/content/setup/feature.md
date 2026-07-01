@@ -206,3 +206,21 @@ feature:
   search:
     enable: true
 ```
+
+## 草稿模式
+
+---
+
+PageForge 支持草稿模式，启用后所有标记为 `draft: true` 的页面都会被编译并在页面顶部显示草稿标记。
+
+```yaml
+feature:
+  draft:
+    enable: true
+```
+
+- `enable`: 是否启用草稿模式
+
+启用后，草稿页面在 `pageforge build` 和 `pageforge serve` 时都会被编译。
+
+如果不想全局启用，也可以通过 `pageforge serve --drafts` 仅在开发模式下预览草稿页面。

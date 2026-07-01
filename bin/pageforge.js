@@ -71,7 +71,8 @@ async function main() {
 
         case 'serve':
             const serveOptions = {
-                port: args.includes('--port') ? parseInt(args[args.indexOf('--port') + 1]) : undefined
+                port: args.includes('--port') ? parseInt(args[args.indexOf('--port') + 1]) : undefined,
+                drafts: args.includes('--drafts')
             };
             const serve = new ServeCommand(configManager);
             await serve.execute(serveOptions);
